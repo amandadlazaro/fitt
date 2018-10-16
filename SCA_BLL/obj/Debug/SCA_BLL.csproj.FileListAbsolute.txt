@@ -1,0 +1,15 @@
+C:\Users\amanda.lima\source\repos\fitt\FittSistema\SCA_BLL\bin\Debug\SCA_BLL.dll.config
+C:\Users\amanda.lima\source\repos\fitt\FittSistema\SCA_BLL\bin\Debug\SCA_BLL.dll
+C:\Users\amanda.lima\source\repos\fitt\FittSistema\SCA_BLL\bin\Debug\SCA_BLL.pdb
+C:\Users\amanda.lima\source\repos\fitt\FittSistema\SCA_BLL\bin\Debug\DAL.dll
+C:\Users\amanda.lima\source\repos\fitt\FittSistema\SCA_BLL\bin\Debug\EntityFramework.dll
+C:\Users\amanda.lima\source\repos\fitt\FittSistema\SCA_BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\amanda.lima\source\repos\fitt\FittSistema\SCA_BLL\bin\Debug\DAL.pdb
+C:\Users\amanda.lima\source\repos\fitt\FittSistema\SCA_BLL\bin\Debug\DAL.dll.config
+C:\Users\amanda.lima\source\repos\fitt\FittSistema\SCA_BLL\bin\Debug\EntityFramework.xml
+C:\Users\amanda.lima\source\repos\fitt\FittSistema\SCA_BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\amanda.lima\source\repos\fitt\FittSistema\SCA_BLL\obj\Debug\SCA_BLL.csprojAssemblyReference.cache
+C:\Users\amanda.lima\source\repos\fitt\FittSistema\SCA_BLL\obj\Debug\SCA_BLL.csproj.CoreCompileInputs.cache
+C:\Users\amanda.lima\source\repos\fitt\FittSistema\SCA_BLL\obj\Debug\SCA_BLL.csproj.CopyComplete
+C:\Users\amanda.lima\source\repos\fitt\FittSistema\SCA_BLL\obj\Debug\SCA_BLL.dll
+C:\Users\amanda.lima\source\repos\fitt\FittSistema\SCA_BLL\obj\Debug\SCA_BLL.pdb

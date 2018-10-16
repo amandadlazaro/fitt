@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FittDataBaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Administrador">
+    <Key>
+      <PropertyRef Name="idAdm" />
+    </Key>
+    <Property Name="idAdm" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="email" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="senha" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Aluno">
+    <Key>
+      <PropertyRef Name="CPF" />
+    </Key>
+    <Property Name="CPF" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Endereco" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Telefone" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DataNasc" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EstCivil" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NumFilhos" Type="Int32" Nullable="false" />
+    <Property Name="Sexo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Altura" Type="Double" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Matricula" Relationship="Self.FK__Matricula__CPF__3E52440B" FromRole="Aluno" ToRole="Matricula" />
+  </EntityType>
+  <EntityType Name="Anamnese">
+    <Key>
+      <PropertyRef Name="idAnamnese" />
+    </Key>
+    <Property Name="idAnamnese" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idMatricula" Type="Int32" Nullable="false" />
+    <Property Name="DtAnamnese" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="QP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Esporte" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PosicaoQueDorme" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Humor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Dor" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="DescricaoDor" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="DiagnosticoMedico" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Medicacao" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Patologias" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Matricula" Relationship="Self.FK__Anamnese__idMatr__45F365D3" FromRole="Anamnese" ToRole="Matricula" />
+  </EntityType>
+  <EntityType Name="Boleto">
+    <Key>
+      <PropertyRef Name="idBoleto" />
+    </Key>
+    <Property Name="idBoleto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idMatricula" Type="Int32" Nullable="false" />
+    <Property Name="DtVencimento" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Multa" Type="Double" />
+    <Property Name="Desconto" Type="Double" />
+    <Property Name="ValorTotal" Type="Double" Nullable="false" />
+    <Property Name="ValorPago" Type="Double" Nullable="false" />
+    <Property Name="DtPagamento" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Matricula" Relationship="Self.FK__Boleto__idMatric__48CFD27E" FromRole="Boleto" ToRole="Matricula" />
+  </EntityType>
+  <EntityType Name="Frequencia">
+    <Key>
+      <PropertyRef Name="idFrequencia" />
+    </Key>
+    <Property Name="idFrequencia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idMatricula" Type="Int32" Nullable="false" />
+    <Property Name="idTurma" Type="Int32" Nullable="false" />
+    <Property Name="DtDia" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Matricula" Relationship="Self.FK__Frequenci__idMat__4222D4EF" FromRole="Frequencia" ToRole="Matricula" />
+    <NavigationProperty Name="Turma" Relationship="Self.FK__Frequenci__idTur__4316F928" FromRole="Frequencia" ToRole="Turma" />
+  </EntityType>
+  <EntityType Name="Matricula">
+    <Key>
+      <PropertyRef Name="idMatricula" />
+    </Key>
+    <Property Name="idMatricula" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CPF" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="idTurma" Type="Int32" Nullable="false" />
+    <Property Name="TipoPlano" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ValorMensal" Type="Double" Nullable="false" />
+    <Property Name="DataInicio" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DataFim" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ValorFinal" Type="Double" Nullable="false" />
+    <Property Name="SituacaoMatricula" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Aluno" Relationship="Self.FK__Matricula__CPF__3E52440B" FromRole="Matricula" ToRole="Aluno" />
+    <NavigationProperty Name="Anamnese" Relationship="Self.FK__Anamnese__idMatr__45F365D3" FromRole="Matricula" ToRole="Anamnese" />
+    <NavigationProperty Name="Boleto" Relationship="Self.FK__Boleto__idMatric__48CFD27E" FromRole="Matricula" ToRole="Boleto" />
+    <NavigationProperty Name="Frequencia" Relationship="Self.FK__Frequenci__idMat__4222D4EF" FromRole="Matricula" ToRole="Frequencia" />
+    <NavigationProperty Name="Turma" Relationship="Self.FK__Matricula__idTur__3F466844" FromRole="Matricula" ToRole="Turma" />
+  </EntityType>
+  <EntityType Name="Professor">
+    <Key>
+      <PropertyRef Name="CPF" />
+    </Key>
+    <Property Name="CPF" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Telefone" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Endereco" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Sexo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DataNasc" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Senha" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Turma" Relationship="Self.FK__Turma__CPF__3B75D760" FromRole="Professor" ToRole="Turma" />
+  </EntityType>
+  <EntityType Name="Turma">
+    <Key>
+      <PropertyRef Name="idTurma" />
+    </Key>
+    <Property Name="idTurma" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CPF" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DiaSemana" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Horario" Type="Time" Precision="7" />
+    <NavigationProperty Name="Frequencia" Relationship="Self.FK__Frequenci__idTur__4316F928" FromRole="Turma" ToRole="Frequencia" />
+    <NavigationProperty Name="Matricula" Relationship="Self.FK__Matricula__idTur__3F466844" FromRole="Turma" ToRole="Matricula" />
+    <NavigationProperty Name="Professor" Relationship="Self.FK__Turma__CPF__3B75D760" FromRole="Turma" ToRole="Professor" />
+  </EntityType>
+  <Association Name="FK__Matricula__CPF__3E52440B">
+    <End Role="Aluno" Type="Self.Aluno" Multiplicity="1" />
+    <End Role="Matricula" Type="Self.Matricula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Aluno">
+        <PropertyRef Name="CPF" />
+      </Principal>
+      <Dependent Role="Matricula">
+        <PropertyRef Name="CPF" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Anamnese__idMatr__45F365D3">
+    <End Role="Matricula" Type="Self.Matricula" Multiplicity="1" />
+    <End Role="Anamnese" Type="Self.Anamnese" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Matricula">
+        <PropertyRef Name="idMatricula" />
+      </Principal>
+      <Dependent Role="Anamnese">
+        <PropertyRef Name="idMatricula" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Boleto__idMatric__48CFD27E">
+    <End Role="Matricula" Type="Self.Matricula" Multiplicity="1" />
+    <End Role="Boleto" Type="Self.Boleto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Matricula">
+        <PropertyRef Name="idMatricula" />
+      </Principal>
+      <Dependent Role="Boleto">
+        <PropertyRef Name="idMatricula" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Frequenci__idMat__4222D4EF">
+    <End Role="Matricula" Type="Self.Matricula" Multiplicity="1" />
+    <End Role="Frequencia" Type="Self.Frequencia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Matricula">
+        <PropertyRef Name="idMatricula" />
+      </Principal>
+      <Dependent Role="Frequencia">
+        <PropertyRef Name="idMatricula" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Frequenci__idTur__4316F928">
+    <End Role="Turma" Type="Self.Turma" Multiplicity="1" />
+    <End Role="Frequencia" Type="Self.Frequencia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Turma">
+        <PropertyRef Name="idTurma" />
+      </Principal>
+      <Dependent Role="Frequencia">
+        <PropertyRef Name="idTurma" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Matricula__idTur__3F466844">
+    <End Role="Turma" Type="Self.Turma" Multiplicity="1" />
+    <End Role="Matricula" Type="Self.Matricula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Turma">
+        <PropertyRef Name="idTurma" />
+      </Principal>
+      <Dependent Role="Matricula">
+        <PropertyRef Name="idTurma" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Turma__CPF__3B75D760">
+    <End Role="Professor" Type="Self.Professor" Multiplicity="1" />
+    <End Role="Turma" Type="Self.Turma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Professor">
+        <PropertyRef Name="CPF" />
+      </Principal>
+      <Dependent Role="Turma">
+        <PropertyRef Name="CPF" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="FittSistemaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Administrador" EntityType="Self.Administrador" />
+    <EntitySet Name="Aluno" EntityType="Self.Aluno" />
+    <EntitySet Name="Anamnese" EntityType="Self.Anamnese" />
+    <EntitySet Name="Boleto" EntityType="Self.Boleto" />
+    <EntitySet Name="Frequencia" EntityType="Self.Frequencia" />
+    <EntitySet Name="Matricula" EntityType="Self.Matricula" />
+    <EntitySet Name="Professor" EntityType="Self.Professor" />
+    <EntitySet Name="Turma" EntityType="Self.Turma" />
+    <AssociationSet Name="FK__Matricula__CPF__3E52440B" Association="Self.FK__Matricula__CPF__3E52440B">
+      <End Role="Aluno" EntitySet="Aluno" />
+      <End Role="Matricula" EntitySet="Matricula" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Anamnese__idMatr__45F365D3" Association="Self.FK__Anamnese__idMatr__45F365D3">
+      <End Role="Matricula" EntitySet="Matricula" />
+      <End Role="Anamnese" EntitySet="Anamnese" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Boleto__idMatric__48CFD27E" Association="Self.FK__Boleto__idMatric__48CFD27E">
+      <End Role="Matricula" EntitySet="Matricula" />
+      <End Role="Boleto" EntitySet="Boleto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Frequenci__idMat__4222D4EF" Association="Self.FK__Frequenci__idMat__4222D4EF">
+      <End Role="Matricula" EntitySet="Matricula" />
+      <End Role="Frequencia" EntitySet="Frequencia" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Frequenci__idTur__4316F928" Association="Self.FK__Frequenci__idTur__4316F928">
+      <End Role="Turma" EntitySet="Turma" />
+      <End Role="Frequencia" EntitySet="Frequencia" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Matricula__idTur__3F466844" Association="Self.FK__Matricula__idTur__3F466844">
+      <End Role="Turma" EntitySet="Turma" />
+      <End Role="Matricula" EntitySet="Matricula" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Turma__CPF__3B75D760" Association="Self.FK__Turma__CPF__3B75D760">
+      <End Role="Professor" EntitySet="Professor" />
+      <End Role="Turma" EntitySet="Turma" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

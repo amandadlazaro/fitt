@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D43CFA2F-EB47-4B31-8285-AB1830DC85D9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SCA</RootNamespace>
+    <AssemblyName>SCA</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\Util.cs" />
+    <Compile Include="FrmAlunos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAlunos.Designer.cs">
+      <DependentUpon>FrmAlunos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAnamneses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAnamneses.Designer.cs">
+      <DependentUpon>FrmAnamneses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMatricula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMatricula.Designer.cs">
+      <DependentUpon>FrmMatricula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenu.Designer.cs">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenuPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenuPagamento.Designer.cs">
+      <DependentUpon>FrmMenuPagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPagamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPagamentos.Designer.cs">
+      <DependentUpon>FrmPagamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProfessor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProfessor.Designer.cs">
+      <DependentUpon>FrmProfessor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRecibo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRecibo.Designer.cs">
+      <DependentUpon>FrmRecibo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTurma.Designer.cs">
+      <DependentUpon>FrmTurma.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FrmAlunos.resx">
+      <DependentUpon>FrmAlunos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAnamneses.resx">
+      <DependentUpon>FrmAnamneses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.aa.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMatricula.resx">
+      <DependentUpon>FrmMatricula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenu.resx">
+      <DependentUpon>FrmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenuPagamento.resx">
+      <DependentUpon>FrmMenuPagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPagamentos.resx">
+      <DependentUpon>FrmPagamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProfessor.resx">
+      <DependentUpon>FrmProfessor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRecibo.resx">
+      <DependentUpon>FrmRecibo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTurma.resx">
+      <DependentUpon>FrmTurma.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\183835017-170667a.jpg" />
+    <Content Include="Resources\183835017-170667a.png" />
+    <Content Include="Resources\183835017-170667a1.png" />
+    <Content Include="Resources\183835017-170667a2.png" />
+    <Content Include="Resources\add.jpg" />
+    <Content Include="Resources\add1.jpg" />
+    <Content Include="Resources\bg.png" />
+    <Content Include="Resources\cancel.jpg" />
+    <Content Include="Resources\cifrão.jpg" />
+    <Content Include="Resources\cifrão3.jpg" />
+    <Content Include="Resources\errado2.jpg" />
+    <Content Include="Resources\kisspng-check-mark-computer-icons-clip-art-green-tick-5abe6e2dae5689.4635117015224294857141.jpg" />
+    <Content Include="Resources\logo.JPG" />
+    <Content Include="Resources\lupa.jpg" />
+    <Content Include="Resources\suica-fitness-bola-D_NQ_NP_884311-MLB20526204570_122015-F.jpg" />
+    <Content Include="Resources\user-2493635_960_720.png" />
+    <Content Include="Resources\voltar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{AD0C1B24-CB67-4495-A776-236A338322EE}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SCA_BLL\SCA_BLL.csproj">
+      <Project>{EB2141E7-4324-4B06-95FC-6B39DD2FF3F9}</Project>
+      <Name>SCA_BLL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -66,7 +66,11 @@
             this.btnOk = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.grpTipo = new System.Windows.Forms.GroupBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.grpTipo.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnFecharTela
@@ -173,7 +177,7 @@
             this.rbMensal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbMensal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbMensal.ForeColor = System.Drawing.Color.DeepPink;
-            this.rbMensal.Location = new System.Drawing.Point(162, 89);
+            this.rbMensal.Location = new System.Drawing.Point(4, 24);
             this.rbMensal.Name = "rbMensal";
             this.rbMensal.Size = new System.Drawing.Size(13, 12);
             this.rbMensal.TabIndex = 68;
@@ -185,7 +189,7 @@
             this.lblMensal.BackColor = System.Drawing.Color.Transparent;
             this.lblMensal.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensal.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.lblMensal.Location = new System.Drawing.Point(181, 81);
+            this.lblMensal.Location = new System.Drawing.Point(23, 16);
             this.lblMensal.Name = "lblMensal";
             this.lblMensal.Size = new System.Drawing.Size(53, 25);
             this.lblMensal.TabIndex = 69;
@@ -199,7 +203,7 @@
             this.rbTrimestral.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbTrimestral.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbTrimestral.ForeColor = System.Drawing.Color.DeepPink;
-            this.rbTrimestral.Location = new System.Drawing.Point(287, 89);
+            this.rbTrimestral.Location = new System.Drawing.Point(129, 24);
             this.rbTrimestral.Name = "rbTrimestral";
             this.rbTrimestral.Size = new System.Drawing.Size(13, 12);
             this.rbTrimestral.TabIndex = 70;
@@ -211,7 +215,7 @@
             this.label2lblTrimestral.BackColor = System.Drawing.Color.Transparent;
             this.label2lblTrimestral.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2lblTrimestral.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label2lblTrimestral.Location = new System.Drawing.Point(306, 81);
+            this.label2lblTrimestral.Location = new System.Drawing.Point(148, 16);
             this.label2lblTrimestral.Name = "label2lblTrimestral";
             this.label2lblTrimestral.Size = new System.Drawing.Size(72, 25);
             this.label2lblTrimestral.TabIndex = 71;
@@ -225,7 +229,7 @@
             this.rbSemestral.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbSemestral.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbSemestral.ForeColor = System.Drawing.Color.DeepPink;
-            this.rbSemestral.Location = new System.Drawing.Point(432, 90);
+            this.rbSemestral.Location = new System.Drawing.Point(274, 25);
             this.rbSemestral.Name = "rbSemestral";
             this.rbSemestral.Size = new System.Drawing.Size(13, 12);
             this.rbSemestral.TabIndex = 72;
@@ -237,7 +241,7 @@
             this.lblSemestral.BackColor = System.Drawing.Color.Transparent;
             this.lblSemestral.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSemestral.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.lblSemestral.Location = new System.Drawing.Point(451, 81);
+            this.lblSemestral.Location = new System.Drawing.Point(293, 16);
             this.lblSemestral.Name = "lblSemestral";
             this.lblSemestral.Size = new System.Drawing.Size(73, 25);
             this.lblSemestral.TabIndex = 73;
@@ -251,7 +255,7 @@
             this.rbAnual.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbAnual.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbAnual.ForeColor = System.Drawing.Color.DeepPink;
-            this.rbAnual.Location = new System.Drawing.Point(595, 91);
+            this.rbAnual.Location = new System.Drawing.Point(437, 26);
             this.rbAnual.Name = "rbAnual";
             this.rbAnual.Size = new System.Drawing.Size(13, 12);
             this.rbAnual.TabIndex = 74;
@@ -263,7 +267,7 @@
             this.lblAnual.BackColor = System.Drawing.Color.Transparent;
             this.lblAnual.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAnual.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.lblAnual.Location = new System.Drawing.Point(614, 83);
+            this.lblAnual.Location = new System.Drawing.Point(456, 18);
             this.lblAnual.Name = "lblAnual";
             this.lblAnual.Size = new System.Drawing.Size(44, 25);
             this.lblAnual.TabIndex = 75;
@@ -331,7 +335,7 @@
             this.rbUmaAula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbUmaAula.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbUmaAula.ForeColor = System.Drawing.Color.DeepPink;
-            this.rbUmaAula.Location = new System.Drawing.Point(164, 179);
+            this.rbUmaAula.Location = new System.Drawing.Point(4, 21);
             this.rbUmaAula.Name = "rbUmaAula";
             this.rbUmaAula.Size = new System.Drawing.Size(13, 12);
             this.rbUmaAula.TabIndex = 81;
@@ -343,7 +347,7 @@
             this.lblUmaAula.BackColor = System.Drawing.Color.Transparent;
             this.lblUmaAula.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUmaAula.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.lblUmaAula.Location = new System.Drawing.Point(187, 171);
+            this.lblUmaAula.Location = new System.Drawing.Point(27, 13);
             this.lblUmaAula.Name = "lblUmaAula";
             this.lblUmaAula.Size = new System.Drawing.Size(15, 25);
             this.lblUmaAula.TabIndex = 82;
@@ -357,7 +361,7 @@
             this.rbDuasAulas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbDuasAulas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbDuasAulas.ForeColor = System.Drawing.Color.DeepPink;
-            this.rbDuasAulas.Location = new System.Drawing.Point(289, 179);
+            this.rbDuasAulas.Location = new System.Drawing.Point(129, 21);
             this.rbDuasAulas.Name = "rbDuasAulas";
             this.rbDuasAulas.Size = new System.Drawing.Size(13, 12);
             this.rbDuasAulas.TabIndex = 83;
@@ -369,7 +373,7 @@
             this.lblDuasAulas.BackColor = System.Drawing.Color.Transparent;
             this.lblDuasAulas.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDuasAulas.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.lblDuasAulas.Location = new System.Drawing.Point(308, 171);
+            this.lblDuasAulas.Location = new System.Drawing.Point(148, 13);
             this.lblDuasAulas.Name = "lblDuasAulas";
             this.lblDuasAulas.Size = new System.Drawing.Size(21, 25);
             this.lblDuasAulas.TabIndex = 84;
@@ -383,7 +387,7 @@
             this.rbTresAulas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rbTresAulas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbTresAulas.ForeColor = System.Drawing.Color.DeepPink;
-            this.rbTresAulas.Location = new System.Drawing.Point(434, 179);
+            this.rbTresAulas.Location = new System.Drawing.Point(274, 21);
             this.rbTresAulas.Name = "rbTresAulas";
             this.rbTresAulas.Size = new System.Drawing.Size(13, 12);
             this.rbTresAulas.TabIndex = 85;
@@ -395,7 +399,7 @@
             this.lblTresAulas.BackColor = System.Drawing.Color.Transparent;
             this.lblTresAulas.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTresAulas.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.lblTresAulas.Location = new System.Drawing.Point(453, 170);
+            this.lblTresAulas.Location = new System.Drawing.Point(293, 12);
             this.lblTresAulas.Name = "lblTresAulas";
             this.lblTresAulas.Size = new System.Drawing.Size(21, 25);
             this.lblTresAulas.TabIndex = 86;
@@ -509,6 +513,37 @@
             this.maskedTextBox2.Size = new System.Drawing.Size(62, 20);
             this.maskedTextBox2.TabIndex = 99;
             // 
+            // grpTipo
+            // 
+            this.grpTipo.Controls.Add(this.lblMensal);
+            this.grpTipo.Controls.Add(this.rbMensal);
+            this.grpTipo.Controls.Add(this.rbTrimestral);
+            this.grpTipo.Controls.Add(this.label2lblTrimestral);
+            this.grpTipo.Controls.Add(this.rbSemestral);
+            this.grpTipo.Controls.Add(this.lblSemestral);
+            this.grpTipo.Controls.Add(this.rbAnual);
+            this.grpTipo.Controls.Add(this.lblAnual);
+            this.grpTipo.Location = new System.Drawing.Point(148, 61);
+            this.grpTipo.Name = "grpTipo";
+            this.grpTipo.Size = new System.Drawing.Size(509, 47);
+            this.grpTipo.TabIndex = 100;
+            this.grpTipo.TabStop = false;
+            this.grpTipo.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rbUmaAula);
+            this.groupBox1.Controls.Add(this.lblUmaAula);
+            this.groupBox1.Controls.Add(this.rbDuasAulas);
+            this.groupBox1.Controls.Add(this.lblDuasAulas);
+            this.groupBox1.Controls.Add(this.rbTresAulas);
+            this.groupBox1.Controls.Add(this.lblTresAulas);
+            this.groupBox1.Location = new System.Drawing.Point(148, 158);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(346, 44);
+            this.groupBox1.TabIndex = 101;
+            this.groupBox1.TabStop = false;
+            // 
             // FrmMatricula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -516,6 +551,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(743, 387);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grpTipo);
             this.Controls.Add(this.maskedTextBox2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnOk);
@@ -527,25 +564,11 @@
             this.Controls.Add(this.cmbDiasdaSemana2);
             this.Controls.Add(this.lblDiasSemana);
             this.Controls.Add(this.cmbDiasdaSemana1);
-            this.Controls.Add(this.lblTresAulas);
-            this.Controls.Add(this.rbTresAulas);
-            this.Controls.Add(this.lblDuasAulas);
-            this.Controls.Add(this.rbDuasAulas);
-            this.Controls.Add(this.lblUmaAula);
-            this.Controls.Add(this.rbUmaAula);
             this.Controls.Add(this.lblAulas);
             this.Controls.Add(this.maskDataFinal);
             this.Controls.Add(this.lblDataFinal);
             this.Controls.Add(this.maskDataInicial);
             this.Controls.Add(this.lblDataInicial);
-            this.Controls.Add(this.lblAnual);
-            this.Controls.Add(this.rbAnual);
-            this.Controls.Add(this.lblSemestral);
-            this.Controls.Add(this.rbSemestral);
-            this.Controls.Add(this.label2lblTrimestral);
-            this.Controls.Add(this.rbTrimestral);
-            this.Controls.Add(this.lblMensal);
-            this.Controls.Add(this.rbMensal);
             this.Controls.Add(this.lblTipo);
             this.Controls.Add(this.btnCadastrarProfessor);
             this.Controls.Add(this.btnExcluirProfessor);
@@ -559,6 +582,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Matricula";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.grpTipo.ResumeLayout(false);
+            this.grpTipo.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -602,5 +629,7 @@
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.GroupBox grpTipo;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

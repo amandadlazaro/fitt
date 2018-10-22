@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAnamneses));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblBuscarAnamnese = new System.Windows.Forms.Label();
-            this.txtAnamnese = new System.Windows.Forms.TextBox();
+            this.txtBusca = new System.Windows.Forms.TextBox();
             this.btnBuscarAnamnese = new System.Windows.Forms.Button();
             this.btnFecharForm = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -59,7 +60,9 @@
             this.lblPatologias = new System.Windows.Forms.Label();
             this.txtPatologias = new System.Windows.Forms.TextBox();
             this.btnOk = new System.Windows.Forms.Button();
+            this.grpAlunos = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpAlunos)).BeginInit();
             this.SuspendLayout();
             // 
             // lblBuscarAnamnese
@@ -73,12 +76,12 @@
             this.lblBuscarAnamnese.TabIndex = 0;
             this.lblBuscarAnamnese.Text = "Buscar Aluno:";
             // 
-            // txtAnamnese
+            // txtBusca
             // 
-            this.txtAnamnese.Location = new System.Drawing.Point(166, 41);
-            this.txtAnamnese.Name = "txtAnamnese";
-            this.txtAnamnese.Size = new System.Drawing.Size(401, 20);
-            this.txtAnamnese.TabIndex = 1;
+            this.txtBusca.Location = new System.Drawing.Point(166, 41);
+            this.txtBusca.Name = "txtBusca";
+            this.txtBusca.Size = new System.Drawing.Size(401, 20);
+            this.txtBusca.TabIndex = 1;
             // 
             // btnBuscarAnamnese
             // 
@@ -92,6 +95,7 @@
             this.btnBuscarAnamnese.Size = new System.Drawing.Size(32, 20);
             this.btnBuscarAnamnese.TabIndex = 2;
             this.btnBuscarAnamnese.UseVisualStyleBackColor = false;
+            this.btnBuscarAnamnese.Click += new System.EventHandler(this.btnBuscarAnamnese_Click);
             // 
             // btnFecharForm
             // 
@@ -378,6 +382,25 @@
             this.btnOk.UseVisualStyleBackColor = false;
             this.btnOk.Visible = false;
             // 
+            // grpAlunos
+            // 
+            this.grpAlunos.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.grpAlunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grpAlunos.GridColor = System.Drawing.Color.LightCoral;
+            this.grpAlunos.Location = new System.Drawing.Point(-4, 92);
+            this.grpAlunos.Name = "grpAlunos";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grpAlunos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.grpAlunos.Size = new System.Drawing.Size(750, 216);
+            this.grpAlunos.TabIndex = 71;
+            this.grpAlunos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpAlunos_CellDoubleClick);
+            // 
             // FrmAnamneses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -385,6 +408,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(743, 387);
+            this.Controls.Add(this.grpAlunos);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.txtPatologias);
             this.Controls.Add(this.lblPatologias);
@@ -413,13 +437,15 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btnFecharForm);
             this.Controls.Add(this.btnBuscarAnamnese);
-            this.Controls.Add(this.txtAnamnese);
+            this.Controls.Add(this.txtBusca);
             this.Controls.Add(this.lblBuscarAnamnese);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmAnamneses";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Anamneses";
+            this.Load += new System.EventHandler(this.FrmAnamneses_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpAlunos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -428,7 +454,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblBuscarAnamnese;
-        private System.Windows.Forms.TextBox txtAnamnese;
+        private System.Windows.Forms.TextBox txtBusca;
         private System.Windows.Forms.Button btnBuscarAnamnese;
         private System.Windows.Forms.Button btnFecharForm;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -457,5 +483,6 @@
         private System.Windows.Forms.Label lblPatologias;
         private System.Windows.Forms.TextBox txtPatologias;
         private System.Windows.Forms.Button btnOk;
+        private System.Windows.Forms.DataGridView grpAlunos;
     }
 }

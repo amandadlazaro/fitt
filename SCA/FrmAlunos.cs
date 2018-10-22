@@ -43,6 +43,9 @@ namespace FittSistema.View
             btnEditar.Hide();
             btnExcluir.Hide();
             btnVoltar.Hide();
+            btnMatricula.Hide();
+            btnBuscar.Show();
+            txtBusca.Show();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -85,32 +88,13 @@ namespace FittSistema.View
             {
                 grpAlunos.Hide();
                 btnVoltar.Show();
+                btnMatricula.Show();
+                btnCadastrar.Hide();
+                btnBuscar.Hide();
+                txtBusca.Hide();
                 limpaCampos();
             }
-            else if (ValidaCampos() != "")
-            {
-                MessageBox.Show(ValidaCampos(), "ERRO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                var aluno = new Aluno
-                {
-                    CPF = txtCPF.Text,
-                    Nome = txtNome.Text,
-                    Endereco = txtEnd.Text,
-                    Telefone = txtTel.Text,
-                    DataNasc = DateTime.ParseExact(txtDtNasc.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
-                    EstCivil = cmbEstCivil.SelectedItem.ToString(),
-                    NumFilhos = Convert.ToInt32(txtNumFilhos.Value),
-                    Sexo = cmbSexo.SelectedItem.ToString(),
-                    Altura = Convert.ToDouble(txtAltura.Text),
-                    Email = txtEmail.Text
-                };
-                MessageBox.Show(alunoBLL.AdicionarAluno(aluno));
-                listarAlunos();
-                btnVoltar.Hide();
-                grpAlunos.Show();
-            }
+           
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
@@ -235,7 +219,44 @@ namespace FittSistema.View
                 btnEditar.Show();
                 btnExcluir.Show();
                 btnVoltar.Show();
+                btnBuscar.Hide();
+                txtBusca.Hide();
             }
+        }
+
+        private void btnMatricula_Click(object sender, EventArgs e)
+        {
+            if (ValidaCampos() != "")
+            {
+                MessageBox.Show(ValidaCampos(), "ERRO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                var aluno = new Aluno
+                {
+                    CPF = txtCPF.Text,
+                    Nome = txtNome.Text,
+                    Endereco = txtEnd.Text,
+                    Telefone = txtTel.Text,
+                    DataNasc = DateTime.ParseExact(txtDtNasc.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
+                    EstCivil = cmbEstCivil.SelectedItem.ToString(),
+                    NumFilhos = Convert.ToInt32(txtNumFilhos.Value),
+                    Sexo = cmbSexo.SelectedItem.ToString(),
+                    Altura = Convert.ToDouble(txtAltura.Text),
+                    Email = txtEmail.Text
+                };
+                MessageBox.Show(alunoBLL.AdicionarAluno(aluno));
+                this.Hide();
+                FrmMatricula matricula = new FrmMatricula();
+                matricula.ShowDialog();
+                this.Close();
+            }
+
+        }
+
+        private void grpAlunos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

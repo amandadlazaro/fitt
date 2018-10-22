@@ -36,9 +36,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnFecharTela = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.btnExcluirProfessor = new System.Windows.Forms.Button();
-            this.btnEditarProfessor = new System.Windows.Forms.Button();
-            this.btnCadastrarProfessor = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lblProfessor = new System.Windows.Forms.Label();
             this.cmbProfessor = new System.Windows.Forms.ComboBox();
@@ -46,9 +46,9 @@
             this.lblHorario = new System.Windows.Forms.Label();
             this.cmbDiaSemana = new System.Windows.Forms.ComboBox();
             this.cmbHorario = new System.Windows.Forms.ComboBox();
-            this.tabSegunda = new System.Windows.Forms.TabControl();
+            this.tabSemanas = new System.Windows.Forms.TabControl();
             this.Segunda = new System.Windows.Forms.TabPage();
-            this.grpAlunos = new System.Windows.Forms.DataGridView();
+            this.grpTurmaSeg = new System.Windows.Forms.DataGridView();
             this.tabTerca = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabQuarta = new System.Windows.Forms.TabPage();
@@ -57,10 +57,11 @@
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.tabSexta = new System.Windows.Forms.TabPage();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.lblID = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.tabSegunda.SuspendLayout();
+            this.tabSemanas.SuspendLayout();
             this.Segunda.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grpAlunos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpTurmaSeg)).BeginInit();
             this.tabTerca.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabQuarta.SuspendLayout();
@@ -98,47 +99,50 @@
             this.pictureBox3.TabIndex = 38;
             this.pictureBox3.TabStop = false;
             // 
-            // btnExcluirProfessor
+            // btnExcluir
             // 
-            this.btnExcluirProfessor.BackColor = System.Drawing.Color.Transparent;
-            this.btnExcluirProfessor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluirProfessor.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluirProfessor.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnExcluirProfessor.Location = new System.Drawing.Point(651, 338);
-            this.btnExcluirProfessor.Name = "btnExcluirProfessor";
-            this.btnExcluirProfessor.Size = new System.Drawing.Size(80, 27);
-            this.btnExcluirProfessor.TabIndex = 49;
-            this.btnExcluirProfessor.Text = "Excluir";
-            this.btnExcluirProfessor.UseVisualStyleBackColor = false;
-            this.btnExcluirProfessor.Visible = false;
+            this.btnExcluir.BackColor = System.Drawing.Color.Transparent;
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluir.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.ForeColor = System.Drawing.Color.DeepPink;
+            this.btnExcluir.Location = new System.Drawing.Point(651, 338);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(80, 27);
+            this.btnExcluir.TabIndex = 49;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Visible = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
-            // btnEditarProfessor
+            // btnEditar
             // 
-            this.btnEditarProfessor.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditarProfessor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditarProfessor.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarProfessor.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnEditarProfessor.Location = new System.Drawing.Point(565, 338);
-            this.btnEditarProfessor.Name = "btnEditarProfessor";
-            this.btnEditarProfessor.Size = new System.Drawing.Size(80, 27);
-            this.btnEditarProfessor.TabIndex = 48;
-            this.btnEditarProfessor.Text = "Editar";
-            this.btnEditarProfessor.UseVisualStyleBackColor = false;
-            this.btnEditarProfessor.Visible = false;
+            this.btnEditar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.ForeColor = System.Drawing.Color.DeepPink;
+            this.btnEditar.Location = new System.Drawing.Point(565, 338);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(80, 27);
+            this.btnEditar.TabIndex = 48;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Visible = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // btnCadastrarProfessor
+            // btnCadastrar
             // 
-            this.btnCadastrarProfessor.BackColor = System.Drawing.Color.Transparent;
-            this.btnCadastrarProfessor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCadastrarProfessor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrarProfessor.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrarProfessor.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnCadastrarProfessor.Location = new System.Drawing.Point(651, 338);
-            this.btnCadastrarProfessor.Name = "btnCadastrarProfessor";
-            this.btnCadastrarProfessor.Size = new System.Drawing.Size(80, 27);
-            this.btnCadastrarProfessor.TabIndex = 47;
-            this.btnCadastrarProfessor.Text = "Cadastrar";
-            this.btnCadastrarProfessor.UseVisualStyleBackColor = false;
+            this.btnCadastrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCadastrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrar.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.ForeColor = System.Drawing.Color.DeepPink;
+            this.btnCadastrar.Location = new System.Drawing.Point(651, 338);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(80, 27);
+            this.btnCadastrar.TabIndex = 47;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrarProfessor_Click);
             // 
             // label2
             // 
@@ -212,22 +216,22 @@
             this.cmbHorario.Size = new System.Drawing.Size(369, 21);
             this.cmbHorario.TabIndex = 58;
             // 
-            // tabSegunda
+            // tabSemanas
             // 
-            this.tabSegunda.Controls.Add(this.Segunda);
-            this.tabSegunda.Controls.Add(this.tabTerca);
-            this.tabSegunda.Controls.Add(this.tabQuarta);
-            this.tabSegunda.Controls.Add(this.tabQuinta);
-            this.tabSegunda.Controls.Add(this.tabSexta);
-            this.tabSegunda.Location = new System.Drawing.Point(6, 89);
-            this.tabSegunda.Name = "tabSegunda";
-            this.tabSegunda.SelectedIndex = 0;
-            this.tabSegunda.Size = new System.Drawing.Size(737, 198);
-            this.tabSegunda.TabIndex = 59;
+            this.tabSemanas.Controls.Add(this.Segunda);
+            this.tabSemanas.Controls.Add(this.tabTerca);
+            this.tabSemanas.Controls.Add(this.tabQuarta);
+            this.tabSemanas.Controls.Add(this.tabQuinta);
+            this.tabSemanas.Controls.Add(this.tabSexta);
+            this.tabSemanas.Location = new System.Drawing.Point(6, 89);
+            this.tabSemanas.Name = "tabSemanas";
+            this.tabSemanas.SelectedIndex = 0;
+            this.tabSemanas.Size = new System.Drawing.Size(737, 198);
+            this.tabSemanas.TabIndex = 59;
             // 
             // Segunda
             // 
-            this.Segunda.Controls.Add(this.grpAlunos);
+            this.Segunda.Controls.Add(this.grpTurmaSeg);
             this.Segunda.Location = new System.Drawing.Point(4, 22);
             this.Segunda.Name = "Segunda";
             this.Segunda.Padding = new System.Windows.Forms.Padding(3);
@@ -236,13 +240,13 @@
             this.Segunda.Text = "Segunda";
             this.Segunda.UseVisualStyleBackColor = true;
             // 
-            // grpAlunos
+            // grpTurmaSeg
             // 
-            this.grpAlunos.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.grpAlunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grpAlunos.GridColor = System.Drawing.Color.LightCoral;
-            this.grpAlunos.Location = new System.Drawing.Point(-11, -15);
-            this.grpAlunos.Name = "grpAlunos";
+            this.grpTurmaSeg.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.grpTurmaSeg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grpTurmaSeg.GridColor = System.Drawing.Color.LightCoral;
+            this.grpTurmaSeg.Location = new System.Drawing.Point(-11, -15);
+            this.grpTurmaSeg.Name = "grpTurmaSeg";
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -250,9 +254,9 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grpAlunos.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.grpAlunos.Size = new System.Drawing.Size(750, 203);
-            this.grpAlunos.TabIndex = 71;
+            this.grpTurmaSeg.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.grpTurmaSeg.Size = new System.Drawing.Size(750, 203);
+            this.grpTurmaSeg.TabIndex = 71;
             // 
             // tabTerca
             // 
@@ -370,6 +374,15 @@
             this.dataGridView4.Size = new System.Drawing.Size(750, 203);
             this.dataGridView4.TabIndex = 71;
             // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(12, 5);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(10, 13);
+            this.lblID.TabIndex = 60;
+            this.lblID.Text = " ";
+            // 
             // FrmTurma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -377,7 +390,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(743, 387);
-            this.Controls.Add(this.tabSegunda);
+            this.Controls.Add(this.lblID);
+            this.Controls.Add(this.tabSemanas);
             this.Controls.Add(this.cmbHorario);
             this.Controls.Add(this.cmbDiaSemana);
             this.Controls.Add(this.lblHorario);
@@ -385,19 +399,20 @@
             this.Controls.Add(this.cmbProfessor);
             this.Controls.Add(this.lblProfessor);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnExcluirProfessor);
-            this.Controls.Add(this.btnEditarProfessor);
-            this.Controls.Add(this.btnCadastrarProfessor);
+            this.Controls.Add(this.btnExcluir);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btnFecharTela);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmTurma";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Turma";
+            this.Load += new System.EventHandler(this.FrmTurma_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.tabSegunda.ResumeLayout(false);
+            this.tabSemanas.ResumeLayout(false);
             this.Segunda.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grpAlunos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpTurmaSeg)).EndInit();
             this.tabTerca.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabQuarta.ResumeLayout(false);
@@ -414,9 +429,9 @@
         #endregion
         private System.Windows.Forms.Button btnFecharTela;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button btnExcluirProfessor;
-        private System.Windows.Forms.Button btnEditarProfessor;
-        private System.Windows.Forms.Button btnCadastrarProfessor;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblProfessor;
         private System.Windows.Forms.ComboBox cmbProfessor;
@@ -424,16 +439,17 @@
         private System.Windows.Forms.Label lblHorario;
         private System.Windows.Forms.ComboBox cmbDiaSemana;
         private System.Windows.Forms.ComboBox cmbHorario;
-        private System.Windows.Forms.TabControl tabSegunda;
+        private System.Windows.Forms.TabControl tabSemanas;
         private System.Windows.Forms.TabPage Segunda;
         private System.Windows.Forms.TabPage tabTerca;
         private System.Windows.Forms.TabPage tabQuarta;
         private System.Windows.Forms.TabPage tabQuinta;
         private System.Windows.Forms.TabPage tabSexta;
-        private System.Windows.Forms.DataGridView grpAlunos;
+        private System.Windows.Forms.DataGridView grpTurmaSeg;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.Label lblID;
     }
 }

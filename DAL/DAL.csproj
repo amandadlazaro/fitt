@@ -92,32 +92,32 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
     <EntityDeploy Include="FittEntity.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>FittEntity.Designer.cs</LastGenOutput>
     </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.Config" />
     <None Include="FittEntity.edmx.diagram">
       <DependentUpon>FittEntity.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="FittEntity.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>FittEntity.Context.cs</LastGenOutput>
       <DependentUpon>FittEntity.edmx</DependentUpon>
+      <LastGenOutput>FittEntity.Context.cs</LastGenOutput>
     </Content>
     <Content Include="FittEntity.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>FittEntity.edmx</DependentUpon>
       <LastGenOutput>FittEntity.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -43,6 +43,13 @@ namespace SCA_BLL
             return lista;
         }
 
+        public List<string> ListarProfessores()
+        {
+            var lista = bd.Professor.Select(p => p.Nome).ToList();
+            return lista;
+            
+        }
+
         public string AdicionarProfessor(Professor prof)
         {
             try

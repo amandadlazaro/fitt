@@ -97,7 +97,7 @@
     <Property Name="idTurma" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="CPF" Type="varchar" MaxLength="11" Nullable="false" />
     <Property Name="DiaSemana" Type="varchar" MaxLength="50" />
-    <Property Name="Horario" Type="time" Precision="7" />
+    <Property Name="Horario" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <Association Name="FK__Anamnese__idMatr__45F365D3">
     <End Role="Matricula" Type="Self.Matricula" Multiplicity="1" />

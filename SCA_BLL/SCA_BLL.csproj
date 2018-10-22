@@ -49,9 +49,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AlunoBLL.cs" />
+    <Compile Include="AnamneseBLL.cs" />
     <Compile Include="LoginBLL.cs" />
     <Compile Include="ProfessorBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TurmaBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

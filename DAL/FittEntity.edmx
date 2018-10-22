@@ -102,7 +102,7 @@
           <Property Name="idTurma" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CPF" Type="varchar" MaxLength="11" Nullable="false" />
           <Property Name="DiaSemana" Type="varchar" MaxLength="50" />
-          <Property Name="Horario" Type="time" Precision="7" />
+          <Property Name="Horario" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <Association Name="FK__Anamnese__idMatr__45F365D3">
           <End Role="Matricula" Type="Self.Matricula" Multiplicity="1" />
@@ -339,7 +339,7 @@
           <Property Name="idTurma" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CPF" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="DiaSemana" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Horario" Type="Time" Precision="7" />
+          <Property Name="Horario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Frequencia" Relationship="Self.FK__Frequenci__idTur__4316F928" FromRole="Turma" ToRole="Frequencia" />
           <NavigationProperty Name="Matricula" Relationship="Self.FK__Matricula__idTur__3F466844" FromRole="Turma" ToRole="Matricula" />
           <NavigationProperty Name="Professor" Relationship="Self.FK__Turma__CPF__3B75D760" FromRole="Turma" ToRole="Professor" />
@@ -428,7 +428,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="FittSistemaEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="FittDataBaseEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Administrador" EntityType="Self.Administrador" />
           <EntitySet Name="Aluno" EntityType="Self.Aluno" />
           <EntitySet Name="Anamnese" EntityType="Self.Anamnese" />
@@ -471,7 +471,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="FittDataBaseModelStoreContainer" CdmEntityContainer="FittSistemaEntities">
+        <EntityContainerMapping StorageEntityContainer="FittDataBaseModelStoreContainer" CdmEntityContainer="FittDataBaseEntities">
           <EntitySetMapping Name="Administrador">
             <EntityTypeMapping TypeName="FittDataBaseModel.Administrador">
               <MappingFragment StoreEntitySet="Administrador">

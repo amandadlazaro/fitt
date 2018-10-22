@@ -32,18 +32,39 @@ namespace SCA_BLL
         public IEnumerable<DadosAlunos> LerAlunos()
         {
             var lista = bd.Aluno.Select(a => new DadosAlunos
-                {
-                    CPF = a.CPF,
-                    Nome = a.Nome,
-                    Endereco = a.Endereco,
-                    Telefone = a.Telefone,
-                    DataNasc = a.DataNasc,
-                    EstCivil = a.EstCivil,
-                    NumFilhos = a.NumFilhos,
-                    Sexo = a.Sexo,
-                    Altura = a.Altura,
-                    Email = a.Email,
-                }).ToList();
+            {
+                CPF = a.CPF,
+                Nome = a.Nome,
+                Endereco = a.Endereco,
+                Telefone = a.Telefone,
+                DataNasc = a.DataNasc,
+                EstCivil = a.EstCivil,
+                NumFilhos = a.NumFilhos,
+                Sexo = a.Sexo,
+                Altura = a.Altura,
+                Email = a.Email,
+            }).ToList();
+
+            return lista;
+        }
+
+
+        public IEnumerable<DadosAlunos> LerAlunosPorNome(string nome = null)
+        {
+            var lista = bd.Aluno.Where(a => a.Nome.StartsWith(nome)).
+            Select(a => new DadosAlunos
+            {
+                CPF = a.CPF,
+                Nome = a.Nome,
+                Endereco = a.Endereco,
+                Telefone = a.Telefone,
+                DataNasc = a.DataNasc,
+                EstCivil = a.EstCivil,
+                NumFilhos = a.NumFilhos,
+                Sexo = a.Sexo,
+                Altura = a.Altura,
+                Email = a.Email,
+            }).ToList();
 
             return lista;
         }

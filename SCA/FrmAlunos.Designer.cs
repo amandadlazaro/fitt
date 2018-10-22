@@ -59,7 +59,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.grpAlunos = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.txtFrequencia = new System.Windows.Forms.TextBox();
+            this.txtBusca = new System.Windows.Forms.TextBox();
             this.btnMatricula = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumFilhos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -379,6 +379,7 @@
             this.grpAlunos.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grpAlunos.Size = new System.Drawing.Size(750, 203);
             this.grpAlunos.TabIndex = 70;
+            this.grpAlunos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpAlunos_CellContentClick);
             this.grpAlunos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpAlunos_CellDoubleClick);
             // 
             // btnBuscar
@@ -394,17 +395,16 @@
             this.btnBuscar.TabIndex = 72;
             this.btnBuscar.UseVisualStyleBackColor = false;
             // 
-            // txtFrequencia
+            // txtBusca
             // 
-            this.txtFrequencia.Location = new System.Drawing.Point(0, 66);
-            this.txtFrequencia.Name = "txtFrequencia";
-            this.txtFrequencia.Size = new System.Drawing.Size(482, 20);
-            this.txtFrequencia.TabIndex = 71;
+            this.txtBusca.Location = new System.Drawing.Point(0, 66);
+            this.txtBusca.Name = "txtBusca";
+            this.txtBusca.Size = new System.Drawing.Size(482, 20);
+            this.txtBusca.TabIndex = 71;
             // 
             // btnMatricula
             // 
             this.btnMatricula.BackColor = System.Drawing.Color.DeepPink;
-            this.btnMatricula.Enabled = false;
             this.btnMatricula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMatricula.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMatricula.ForeColor = System.Drawing.Color.White;
@@ -415,6 +415,7 @@
             this.btnMatricula.Text = "Matrícula";
             this.btnMatricula.UseVisualStyleBackColor = false;
             this.btnMatricula.Visible = false;
+            this.btnMatricula.Click += new System.EventHandler(this.btnMatricula_Click);
             // 
             // FrmAlunos
             // 
@@ -425,7 +426,7 @@
             this.ClientSize = new System.Drawing.Size(743, 387);
             this.Controls.Add(this.btnMatricula);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.txtFrequencia);
+            this.Controls.Add(this.txtBusca);
             this.Controls.Add(this.grpAlunos);
             this.Controls.Add(this.cmbEstCivil);
             this.Controls.Add(this.txtNumFilhos);
@@ -497,7 +498,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.DataGridView grpAlunos;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.TextBox txtFrequencia;
+        private System.Windows.Forms.TextBox txtBusca;
         private System.Windows.Forms.Button btnMatricula;
     }
 }

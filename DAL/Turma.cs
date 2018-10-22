@@ -24,7 +24,7 @@ namespace DAL
         public int idTurma { get; set; }
         public string CPF { get; set; }
         public string DiaSemana { get; set; }
-        public Nullable<System.TimeSpan> Horario { get; set; }
+        public string Horario { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Frequencia> Frequencia { get; set; }

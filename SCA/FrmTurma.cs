@@ -34,7 +34,9 @@ namespace FittSistema.View
             if (tabSemanas.Visible == true)
             {
                 tabSemanas.Hide();
+                LimpaCampos();
                 btnCadastrar.Show();
+                btnVoltar.Show();
             }
             else if (ValidaCampos() != "")
             {
@@ -50,6 +52,7 @@ namespace FittSistema.View
                 };
                 MessageBox.Show(turmaBLL.Adicionar(turma));
                 tabSemanas.Show();
+                btnVoltar.Hide();
                 ListaTurmas();
                 LimpaCampos();
 
@@ -118,6 +121,7 @@ namespace FittSistema.View
                     btnCadastrar.Show();
                     btnEditar.Hide();
                     btnExcluir.Hide();
+                    btnVoltar.Hide();
                 }
             }
         }
@@ -136,6 +140,7 @@ namespace FittSistema.View
                 btnCadastrar.Show();
                 btnEditar.Hide();
                 btnExcluir.Hide();
+                btnVoltar.Hide();
             }
         }
 
@@ -144,7 +149,7 @@ namespace FittSistema.View
             cmbProfessor.DataSource = professorBLL.ListarProfessores().ToList();
             cmbProfessor.ValueMember = "CPF";
             cmbProfessor.SelectedValue = "CPF";
-            cmbProfessor.DisplayMember = "Nome"; ;
+            cmbProfessor.DisplayMember = "Nome"; 
 
             cmbDiaSemana.Items.Add("Segunda");
             cmbDiaSemana.Items.Add("Terça");
@@ -176,7 +181,7 @@ namespace FittSistema.View
                 foreach (DataGridViewRow row in dt.SelectedRows)
                 {
                     txtId.Text = row.Cells[0].Value.ToString();
-                    cmbProfessor.SelectedItem = row.Cells[1].Value.ToString();
+                    cmbProfessor.Text = row.Cells[1].Value.ToString();
                     cmbDiaSemana.SelectedItem = row.Cells[2].Value.ToString();
                     cmbHorario.SelectedItem = row.Cells[3].Value.ToString();
 
@@ -185,6 +190,7 @@ namespace FittSistema.View
                 btnCadastrar.Hide();
                 btnEditar.Show();
                 btnExcluir.Show();
+                btnVoltar.Show();
             }
         }
 
@@ -211,6 +217,15 @@ namespace FittSistema.View
         private void grpSexta_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             cliqueDataGrid(grpSexta);
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            tabSemanas.Show();
+            btnCadastrar.Show();
+            btnEditar.Hide();
+            btnExcluir.Hide();
+            btnVoltar.Hide();
         }
     }
 }

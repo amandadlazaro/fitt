@@ -22,6 +22,12 @@ namespace SCA_BLL
             public string Email { get; set; }
             public string senha { get; set; }
         }
+
+        public class NomeProf
+        {
+            public string CPF { get; set; }
+            public string Nome { get; set; }
+        }
         #endregion
         //comunicação com o BD
         public FittSistemaEntities bd = new FittSistemaEntities();
@@ -43,11 +49,15 @@ namespace SCA_BLL
             return lista;
         }
 
-        public List<string> ListarProfessores()
+        public List<DadosProfessores> ListarProfessores()
         {
-            var lista = bd.Professor.Select(p => p.Nome).ToList();
+            var lista = bd.Professor.Select(p => new DadosProfessores
+            {
+                CPF = p.CPF,
+                Nome = p.Nome
+            }).ToList();
+
             return lista;
-            
         }
 
         public string AdicionarProfessor(Professor prof)

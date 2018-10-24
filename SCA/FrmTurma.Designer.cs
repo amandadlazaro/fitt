@@ -36,8 +36,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnFecharTela = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lblProfessor = new System.Windows.Forms.Label();
@@ -48,28 +46,31 @@
             this.cmbHorario = new System.Windows.Forms.ComboBox();
             this.tabSemanas = new System.Windows.Forms.TabControl();
             this.Segunda = new System.Windows.Forms.TabPage();
-            this.grpTurmaSeg = new System.Windows.Forms.DataGridView();
+            this.grpSegunda = new System.Windows.Forms.DataGridView();
             this.tabTerca = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.grpTerca = new System.Windows.Forms.DataGridView();
             this.tabQuarta = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.grpQuarta = new System.Windows.Forms.DataGridView();
             this.tabQuinta = new System.Windows.Forms.TabPage();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.grpQuinta = new System.Windows.Forms.DataGridView();
             this.tabSexta = new System.Windows.Forms.TabPage();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.grpSexta = new System.Windows.Forms.DataGridView();
             this.lblID = new System.Windows.Forms.Label();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.txtId = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tabSemanas.SuspendLayout();
             this.Segunda.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grpTurmaSeg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpSegunda)).BeginInit();
             this.tabTerca.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpTerca)).BeginInit();
             this.tabQuarta.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpQuarta)).BeginInit();
             this.tabQuinta.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpQuinta)).BeginInit();
             this.tabSexta.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpSexta)).BeginInit();
             this.SuspendLayout();
             // 
             // btnFecharTela
@@ -98,36 +99,6 @@
             this.pictureBox3.Size = new System.Drawing.Size(71, 65);
             this.pictureBox3.TabIndex = 38;
             this.pictureBox3.TabStop = false;
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.BackColor = System.Drawing.Color.Transparent;
-            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluir.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnExcluir.Location = new System.Drawing.Point(651, 338);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(80, 27);
-            this.btnExcluir.TabIndex = 49;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = false;
-            this.btnExcluir.Visible = false;
-            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnEditar.Location = new System.Drawing.Point(565, 338);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(80, 27);
-            this.btnEditar.TabIndex = 48;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = false;
-            this.btnEditar.Visible = false;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnCadastrar
             // 
@@ -223,30 +194,30 @@
             this.tabSemanas.Controls.Add(this.tabQuarta);
             this.tabSemanas.Controls.Add(this.tabQuinta);
             this.tabSemanas.Controls.Add(this.tabSexta);
-            this.tabSemanas.Location = new System.Drawing.Point(6, 89);
+            this.tabSemanas.Location = new System.Drawing.Point(88, 87);
             this.tabSemanas.Name = "tabSemanas";
             this.tabSemanas.SelectedIndex = 0;
-            this.tabSemanas.Size = new System.Drawing.Size(737, 198);
+            this.tabSemanas.Size = new System.Drawing.Size(589, 198);
             this.tabSemanas.TabIndex = 59;
             // 
             // Segunda
             // 
-            this.Segunda.Controls.Add(this.grpTurmaSeg);
+            this.Segunda.Controls.Add(this.grpSegunda);
             this.Segunda.Location = new System.Drawing.Point(4, 22);
             this.Segunda.Name = "Segunda";
             this.Segunda.Padding = new System.Windows.Forms.Padding(3);
-            this.Segunda.Size = new System.Drawing.Size(729, 172);
+            this.Segunda.Size = new System.Drawing.Size(581, 172);
             this.Segunda.TabIndex = 0;
             this.Segunda.Text = "Segunda";
             this.Segunda.UseVisualStyleBackColor = true;
             // 
-            // grpTurmaSeg
+            // grpSegunda
             // 
-            this.grpTurmaSeg.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.grpTurmaSeg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grpTurmaSeg.GridColor = System.Drawing.Color.LightCoral;
-            this.grpTurmaSeg.Location = new System.Drawing.Point(-11, -15);
-            this.grpTurmaSeg.Name = "grpTurmaSeg";
+            this.grpSegunda.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.grpSegunda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grpSegunda.GridColor = System.Drawing.Color.LightCoral;
+            this.grpSegunda.Location = new System.Drawing.Point(3, 3);
+            this.grpSegunda.Name = "grpSegunda";
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -254,28 +225,29 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grpTurmaSeg.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.grpTurmaSeg.Size = new System.Drawing.Size(750, 203);
-            this.grpTurmaSeg.TabIndex = 71;
+            this.grpSegunda.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.grpSegunda.Size = new System.Drawing.Size(486, 139);
+            this.grpSegunda.TabIndex = 72;
+            this.grpSegunda.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpSegunda_CellDoubleClick_1);
             // 
             // tabTerca
             // 
-            this.tabTerca.Controls.Add(this.dataGridView1);
+            this.tabTerca.Controls.Add(this.grpTerca);
             this.tabTerca.Location = new System.Drawing.Point(4, 22);
             this.tabTerca.Name = "tabTerca";
             this.tabTerca.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTerca.Size = new System.Drawing.Size(729, 172);
+            this.tabTerca.Size = new System.Drawing.Size(581, 172);
             this.tabTerca.TabIndex = 1;
             this.tabTerca.Text = "Terça";
             this.tabTerca.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // grpTerca
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.Color.LightCoral;
-            this.dataGridView1.Location = new System.Drawing.Point(-11, -15);
-            this.dataGridView1.Name = "dataGridView1";
+            this.grpTerca.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.grpTerca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grpTerca.GridColor = System.Drawing.Color.LightCoral;
+            this.grpTerca.Location = new System.Drawing.Point(5, 3);
+            this.grpTerca.Name = "grpTerca";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -283,28 +255,29 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Size = new System.Drawing.Size(750, 203);
-            this.dataGridView1.TabIndex = 71;
+            this.grpTerca.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.grpTerca.Size = new System.Drawing.Size(486, 139);
+            this.grpTerca.TabIndex = 71;
+            this.grpTerca.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpTerca_CellDoubleClick);
             // 
             // tabQuarta
             // 
-            this.tabQuarta.Controls.Add(this.dataGridView2);
+            this.tabQuarta.Controls.Add(this.grpQuarta);
             this.tabQuarta.Location = new System.Drawing.Point(4, 22);
             this.tabQuarta.Name = "tabQuarta";
             this.tabQuarta.Padding = new System.Windows.Forms.Padding(3);
-            this.tabQuarta.Size = new System.Drawing.Size(729, 172);
+            this.tabQuarta.Size = new System.Drawing.Size(581, 172);
             this.tabQuarta.TabIndex = 2;
             this.tabQuarta.Text = "Quarta";
             this.tabQuarta.UseVisualStyleBackColor = true;
             // 
-            // dataGridView2
+            // grpQuarta
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.GridColor = System.Drawing.Color.LightCoral;
-            this.dataGridView2.Location = new System.Drawing.Point(-11, -15);
-            this.dataGridView2.Name = "dataGridView2";
+            this.grpQuarta.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.grpQuarta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grpQuarta.GridColor = System.Drawing.Color.LightCoral;
+            this.grpQuarta.Location = new System.Drawing.Point(3, 6);
+            this.grpQuarta.Name = "grpQuarta";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -312,28 +285,29 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView2.Size = new System.Drawing.Size(750, 203);
-            this.dataGridView2.TabIndex = 71;
+            this.grpQuarta.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.grpQuarta.Size = new System.Drawing.Size(488, 146);
+            this.grpQuarta.TabIndex = 71;
+            this.grpQuarta.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpQuarta_CellDoubleClick);
             // 
             // tabQuinta
             // 
-            this.tabQuinta.Controls.Add(this.dataGridView3);
+            this.tabQuinta.Controls.Add(this.grpQuinta);
             this.tabQuinta.Location = new System.Drawing.Point(4, 22);
             this.tabQuinta.Name = "tabQuinta";
             this.tabQuinta.Padding = new System.Windows.Forms.Padding(3);
-            this.tabQuinta.Size = new System.Drawing.Size(729, 172);
+            this.tabQuinta.Size = new System.Drawing.Size(581, 172);
             this.tabQuinta.TabIndex = 3;
             this.tabQuinta.Text = "Quinta";
             this.tabQuinta.UseVisualStyleBackColor = true;
             // 
-            // dataGridView3
+            // grpQuinta
             // 
-            this.dataGridView3.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.GridColor = System.Drawing.Color.LightCoral;
-            this.dataGridView3.Location = new System.Drawing.Point(-11, -15);
-            this.dataGridView3.Name = "dataGridView3";
+            this.grpQuinta.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.grpQuinta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grpQuinta.GridColor = System.Drawing.Color.LightCoral;
+            this.grpQuinta.Location = new System.Drawing.Point(3, 6);
+            this.grpQuinta.Name = "grpQuinta";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -341,28 +315,29 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView3.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView3.Size = new System.Drawing.Size(750, 203);
-            this.dataGridView3.TabIndex = 71;
+            this.grpQuinta.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.grpQuinta.Size = new System.Drawing.Size(480, 144);
+            this.grpQuinta.TabIndex = 71;
+            this.grpQuinta.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpQuinta_CellDoubleClick);
             // 
             // tabSexta
             // 
-            this.tabSexta.Controls.Add(this.dataGridView4);
+            this.tabSexta.Controls.Add(this.grpSexta);
             this.tabSexta.Location = new System.Drawing.Point(4, 22);
             this.tabSexta.Name = "tabSexta";
             this.tabSexta.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSexta.Size = new System.Drawing.Size(729, 172);
+            this.tabSexta.Size = new System.Drawing.Size(581, 172);
             this.tabSexta.TabIndex = 4;
             this.tabSexta.Text = "Sexta";
             this.tabSexta.UseVisualStyleBackColor = true;
             // 
-            // dataGridView4
+            // grpSexta
             // 
-            this.dataGridView4.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.GridColor = System.Drawing.Color.LightCoral;
-            this.dataGridView4.Location = new System.Drawing.Point(-11, -15);
-            this.dataGridView4.Name = "dataGridView4";
+            this.grpSexta.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.grpSexta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grpSexta.GridColor = System.Drawing.Color.LightCoral;
+            this.grpSexta.Location = new System.Drawing.Point(3, 6);
+            this.grpSexta.Name = "grpSexta";
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -370,9 +345,10 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView4.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridView4.Size = new System.Drawing.Size(750, 203);
-            this.dataGridView4.TabIndex = 71;
+            this.grpSexta.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.grpSexta.Size = new System.Drawing.Size(510, 148);
+            this.grpSexta.TabIndex = 71;
+            this.grpSexta.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpSexta_CellDoubleClick);
             // 
             // lblID
             // 
@@ -383,6 +359,45 @@
             this.lblID.TabIndex = 60;
             this.lblID.Text = " ";
             // 
+            // btnExcluir
+            // 
+            this.btnExcluir.BackColor = System.Drawing.Color.Transparent;
+            this.btnExcluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluir.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.ForeColor = System.Drawing.Color.DeepPink;
+            this.btnExcluir.Location = new System.Drawing.Point(651, 338);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(80, 27);
+            this.btnExcluir.TabIndex = 61;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click_1);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.ForeColor = System.Drawing.Color.DeepPink;
+            this.btnEditar.Location = new System.Drawing.Point(556, 338);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(80, 27);
+            this.btnEditar.TabIndex = 62;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click_1);
+            // 
+            // txtId
+            // 
+            this.txtId.AutoSize = true;
+            this.txtId.Enabled = false;
+            this.txtId.Location = new System.Drawing.Point(12, 5);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(0, 13);
+            this.txtId.TabIndex = 63;
+            // 
             // FrmTurma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -390,6 +405,9 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(743, 387);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.tabSemanas);
             this.Controls.Add(this.cmbHorario);
@@ -399,8 +417,6 @@
             this.Controls.Add(this.cmbProfessor);
             this.Controls.Add(this.lblProfessor);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnExcluir);
-            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btnFecharTela);
@@ -412,15 +428,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.tabSemanas.ResumeLayout(false);
             this.Segunda.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.grpTurmaSeg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpSegunda)).EndInit();
             this.tabTerca.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpTerca)).EndInit();
             this.tabQuarta.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpQuarta)).EndInit();
             this.tabQuinta.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpQuinta)).EndInit();
             this.tabSexta.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpSexta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -429,8 +445,6 @@
         #endregion
         private System.Windows.Forms.Button btnFecharTela;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button btnExcluir;
-        private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblProfessor;
@@ -445,11 +459,14 @@
         private System.Windows.Forms.TabPage tabQuarta;
         private System.Windows.Forms.TabPage tabQuinta;
         private System.Windows.Forms.TabPage tabSexta;
-        private System.Windows.Forms.DataGridView grpTurmaSeg;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.DataGridView grpTerca;
+        private System.Windows.Forms.DataGridView grpQuarta;
+        private System.Windows.Forms.DataGridView grpQuinta;
+        private System.Windows.Forms.DataGridView grpSexta;
         private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.DataGridView grpSegunda;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Label txtId;
     }
 }

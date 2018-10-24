@@ -18,7 +18,6 @@ namespace FittSistema.View
         {
             InitializeComponent();
         }
-
         ProfessorBLL professorBLL = new ProfessorBLL();
         TurmaBLL turmaBLL = new TurmaBLL();
         private void btnFecharTela_Click(object sender, EventArgs e)
@@ -43,16 +42,16 @@ namespace FittSistema.View
             }
             else
             {
-                var cpf = "";
                 var turma = new Turma
                 {
-                    CPF = cpf,
+                    CPF = cmbProfessor.SelectedValue.ToString(),
                     DiaSemana = cmbDiaSemana.SelectedItem.ToString(),
                     Horario = cmbHorario.SelectedItem.ToString()
                 };
                 MessageBox.Show(turmaBLL.Adicionar(turma));
                 tabSemanas.Show();
                 ListaTurmas();
+                LimpaCampos();
 
             }
         }
@@ -60,7 +59,22 @@ namespace FittSistema.View
         private void ListaTurmas()
         {
             var turmaSegunda = turmaBLL.LerTurma("Segunda");
-            grpTurmaSeg.DataSource = turmaSegunda.ToList();
+            grpSegunda.DataSource = turmaSegunda;
+
+            var turmaTerca = turmaBLL.LerTurma("Terça");
+            grpTerca.DataSource = turmaTerca.ToList();
+
+
+            var turmaQuarta = turmaBLL.LerTurma("Quarta");
+            grpQuarta.DataSource = turmaQuarta.ToList();
+
+
+            var turmaQuinta = turmaBLL.LerTurma("Quinta");
+            grpQuinta.DataSource = turmaQuinta.ToList();
+
+
+            var turmaSexta = turmaBLL.LerTurma("Sexta");
+            grpSexta.DataSource = turmaSexta.ToList();
         }
 
         private string ValidaCampos()
@@ -81,7 +95,7 @@ namespace FittSistema.View
             return erro;
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
+        private void btnEditar_Click_1(object sender, EventArgs e)
         {
             if (MessageBox.Show("Deseja Alterar esses dados?", "Alterar Turma", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
@@ -91,10 +105,10 @@ namespace FittSistema.View
                 }
                 else
                 {
-                    var cpf = "";
-                    var turma = new Turma
+                      var turma = new Turma
                     {
-                        CPF = cpf,
+                        idTurma = Convert.ToInt32(txtId.Text),
+                        CPF = cmbProfessor.SelectedValue.ToString(),
                         DiaSemana = cmbDiaSemana.SelectedItem.ToString(),
                         Horario = cmbHorario.SelectedItem.ToString()
                     };
@@ -108,13 +122,13 @@ namespace FittSistema.View
             }
         }
 
-        private void btnExcluir_Click(object sender, EventArgs e)
+        private void btnExcluir_Click_1(object sender, EventArgs e)
         {
             if (MessageBox.Show("Deseja Deletar esses dados?", "Deletar Turma", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 var turma = new Turma
                 {
-                    idTurma = Convert.ToInt32(lblID.Text)
+                    idTurma = Convert.ToInt32(txtId.Text),
                 };
                 MessageBox.Show(turmaBLL.Deletar(turma));
                 ListaTurmas();
@@ -127,7 +141,10 @@ namespace FittSistema.View
 
         private void FrmTurma_Load_1(object sender, EventArgs e)
         {
-            cmbProfessor.DataSource = professorBLL.ListarProfessores();
+            cmbProfessor.DataSource = professorBLL.ListarProfessores().ToList();
+            cmbProfessor.ValueMember = "CPF";
+            cmbProfessor.SelectedValue = "CPF";
+            cmbProfessor.DisplayMember = "Nome"; ;
 
             cmbDiaSemana.Items.Add("Segunda");
             cmbDiaSemana.Items.Add("Terça");
@@ -142,6 +159,58 @@ namespace FittSistema.View
             cmbHorario.Items.Add("16h-18h");
 
             ListaTurmas();
+        }
+
+        private void LimpaCampos()
+        {
+            cmbDiaSemana.SelectedIndex = -1;
+            cmbHorario.SelectedIndex = -1;
+            cmbProfessor.SelectedIndex = -1;
+        }
+
+
+        private void cliqueDataGrid(DataGridView dt)
+        {
+            if (dt.Rows.Count > 0)
+            {
+                foreach (DataGridViewRow row in dt.SelectedRows)
+                {
+                    txtId.Text = row.Cells[0].Value.ToString();
+                    cmbProfessor.SelectedItem = row.Cells[1].Value.ToString();
+                    cmbDiaSemana.SelectedItem = row.Cells[2].Value.ToString();
+                    cmbHorario.SelectedItem = row.Cells[3].Value.ToString();
+
+                }
+                tabSemanas.Hide();
+                btnCadastrar.Hide();
+                btnEditar.Show();
+                btnExcluir.Show();
+            }
+        }
+
+        private void grpSegunda_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            cliqueDataGrid(grpSegunda);
+        }
+
+        private void grpTerca_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            cliqueDataGrid(grpTerca);
+        }
+
+        private void grpQuarta_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            cliqueDataGrid(grpQuarta);
+        }
+
+        private void grpQuinta_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            cliqueDataGrid(grpQuinta);
+        }
+
+        private void grpSexta_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            cliqueDataGrid(grpSexta);
         }
     }
 }

@@ -43,9 +43,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.maskValorEstimado = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.maskDesconto = new System.Windows.Forms.MaskedTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.maskValor = new System.Windows.Forms.MaskedTextBox();
+            this.maskMulta = new System.Windows.Forms.MaskedTextBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -202,20 +204,20 @@
             this.label5.TabIndex = 53;
             this.label5.Text = "Desconto Adicional:";
             // 
-            // maskedTextBox1
+            // maskDesconto
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(541, 189);
-            this.maskedTextBox1.Mask = "$000,00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(80, 20);
-            this.maskedTextBox1.TabIndex = 54;
+            this.maskDesconto.Location = new System.Drawing.Point(541, 189);
+            this.maskDesconto.Mask = "$000,00";
+            this.maskDesconto.Name = "maskDesconto";
+            this.maskDesconto.Size = new System.Drawing.Size(80, 20);
+            this.maskDesconto.TabIndex = 54;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(293, 278);
+            this.label6.Location = new System.Drawing.Point(396, 241);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(92, 28);
             this.label6.TabIndex = 55;
@@ -223,11 +225,30 @@
             // 
             // maskValor
             // 
-            this.maskValor.Location = new System.Drawing.Point(402, 285);
+            this.maskValor.Location = new System.Drawing.Point(541, 247);
             this.maskValor.Mask = "$000,00";
             this.maskValor.Name = "maskValor";
-            this.maskValor.Size = new System.Drawing.Size(67, 20);
+            this.maskValor.Size = new System.Drawing.Size(80, 20);
             this.maskValor.TabIndex = 56;
+            // 
+            // maskMulta
+            // 
+            this.maskMulta.Location = new System.Drawing.Point(234, 245);
+            this.maskMulta.Mask = "$000,00";
+            this.maskMulta.Name = "maskMulta";
+            this.maskMulta.Size = new System.Drawing.Size(99, 20);
+            this.maskMulta.TabIndex = 58;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Agency FB", 14.25F);
+            this.label7.Location = new System.Drawing.Point(90, 241);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(43, 24);
+            this.label7.TabIndex = 57;
+            this.label7.Text = "Multa:";
             // 
             // FrmPagamentos
             // 
@@ -236,9 +257,11 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(743, 387);
+            this.Controls.Add(this.maskMulta);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.maskValor);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.maskDesconto);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.maskValorEstimado);
             this.Controls.Add(this.label4);
@@ -280,8 +303,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.MaskedTextBox maskValorEstimado;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox maskDesconto;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.MaskedTextBox maskValor;
+        private System.Windows.Forms.MaskedTextBox maskMulta;
+        private System.Windows.Forms.Label label7;
     }
 }

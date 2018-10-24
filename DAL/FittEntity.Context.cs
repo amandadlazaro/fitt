@@ -13,10 +13,10 @@ namespace DAL
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class FittSistemaEntities : DbContext
+    public partial class FittDataBaseEntities : DbContext
     {
-        public FittSistemaEntities()
-            : base("name=FittSistemaEntities")
+        public FittDataBaseEntities()
+            : base("name=FittDataBaseEntities")
         {
         }
     

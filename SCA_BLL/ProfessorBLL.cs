@@ -106,5 +106,24 @@ namespace SCA_BLL
                 return error.Message;
             }
         }
+
+        public IEnumerable<DadosProfessores> LerProfPorNome(string nome)
+        {
+            var lista = bd.Professor
+                .Where(a => a.Nome.StartsWith(nome))
+                .Select(p => new DadosProfessores
+                {
+                    CPF = p.CPF,
+                    Nome = p.Nome,
+                    Telefone = p.Telefone,
+                    Endereco = p.Endereco,
+                    Sexo = p.Sexo,
+                    DataNasc = p.DataNasc,
+                    Email = p.Email,
+                    senha = p.Senha
+                }).ToList();
+
+            return lista;
+        }
     }
 }

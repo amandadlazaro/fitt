@@ -258,5 +258,12 @@ namespace FittSistema.View
         {
 
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            var alunos = alunoBLL.LerAlunosPorNome(txtBusca.Text);
+            if (!alunos.Any()) MessageBox.Show("Nenhum aluno encontrado");
+            else grpAlunos.DataSource = alunos.ToList();
+        }
     }
 }

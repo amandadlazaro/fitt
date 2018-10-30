@@ -394,6 +394,7 @@
             this.btnBuscar.Size = new System.Drawing.Size(32, 20);
             this.btnBuscar.TabIndex = 72;
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtBusca
             // 

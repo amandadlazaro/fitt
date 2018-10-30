@@ -225,5 +225,12 @@ namespace FittSistema.View
                 }
             }
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            var professor = professorBLL.LerProfPorNome(txtBusca.Text);
+            if (!professor.Any()) MessageBox.Show("Nenhum aluno encontrado");
+            else grpProfessores.DataSource = professor.ToList();
+        }
     }
 }

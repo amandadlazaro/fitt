@@ -55,7 +55,7 @@
             this.cmbSexo = new System.Windows.Forms.ComboBox();
             this.grpProfessores = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.txtProfessor = new System.Windows.Forms.TextBox();
+            this.txtBusca = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpProfessores)).BeginInit();
             this.SuspendLayout();
@@ -348,13 +348,14 @@
             this.btnBuscar.Size = new System.Drawing.Size(32, 20);
             this.btnBuscar.TabIndex = 74;
             this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // txtProfessor
+            // txtBusca
             // 
-            this.txtProfessor.Location = new System.Drawing.Point(4, 69);
-            this.txtProfessor.Name = "txtProfessor";
-            this.txtProfessor.Size = new System.Drawing.Size(482, 20);
-            this.txtProfessor.TabIndex = 73;
+            this.txtBusca.Location = new System.Drawing.Point(4, 69);
+            this.txtBusca.Name = "txtBusca";
+            this.txtBusca.Size = new System.Drawing.Size(482, 20);
+            this.txtBusca.TabIndex = 73;
             // 
             // FrmProfessor
             // 
@@ -364,7 +365,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(743, 387);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.txtProfessor);
+            this.Controls.Add(this.txtBusca);
             this.Controls.Add(this.grpProfessores);
             this.Controls.Add(this.cmbSexo);
             this.Controls.Add(this.pictureBox3);
@@ -428,6 +429,6 @@
         private System.Windows.Forms.ComboBox cmbSexo;
         private System.Windows.Forms.DataGridView grpProfessores;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.TextBox txtProfessor;
+        private System.Windows.Forms.TextBox txtBusca;
     }
 }

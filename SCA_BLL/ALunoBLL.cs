@@ -27,7 +27,7 @@ namespace SCA_BLL
 
 
         //comunicação com o BD
-        public FittSistemaEntities bd = new FittSistemaEntities();
+        public FittDataBaseEntities bd = new FittDataBaseEntities();
 
         public IEnumerable<DadosAlunos> LerAlunos()
         {

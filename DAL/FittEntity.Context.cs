@@ -29,7 +29,6 @@ namespace DAL
         public virtual DbSet<Aluno> Aluno { get; set; }
         public virtual DbSet<Anamnese> Anamnese { get; set; }
         public virtual DbSet<Boleto> Boleto { get; set; }
-        public virtual DbSet<Frequencia> Frequencia { get; set; }
         public virtual DbSet<Matricula> Matricula { get; set; }
         public virtual DbSet<Professor> Professor { get; set; }
         public virtual DbSet<Turma> Turma { get; set; }

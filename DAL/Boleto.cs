@@ -16,12 +16,12 @@ namespace DAL
     {
         public int idBoleto { get; set; }
         public int idMatricula { get; set; }
-        public string FormaDePagamento { get; set; }
         public System.DateTime DtVencimento { get; set; }
         public Nullable<double> Multa { get; set; }
         public Nullable<double> Desconto { get; set; }
         public double ValorTotal { get; set; }
         public System.DateTime DtPagamento { get; set; }
+        public string FormaDePagamento { get; set; }
     
         public virtual Matricula Matricula { get; set; }
     }

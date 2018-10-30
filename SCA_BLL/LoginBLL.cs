@@ -9,7 +9,7 @@ namespace SCA_BLL
 {
     public class LoginBLL
     {
-        public FittSistemaEntities bd = new FittSistemaEntities();
+        public FittDataBaseEntities bd = new FittDataBaseEntities();
 
         public bool checar(String login, String senha)
         {

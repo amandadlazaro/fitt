@@ -77,9 +77,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FittEntity.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Frequencia.cs">
-      <DependentUpon>FittEntity.tt</DependentUpon>
-    </Compile>
     <Compile Include="Matricula.cs">
       <DependentUpon>FittEntity.tt</DependentUpon>
     </Compile>

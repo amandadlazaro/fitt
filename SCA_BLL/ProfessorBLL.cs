@@ -30,7 +30,7 @@ namespace SCA_BLL
         }
         #endregion
         //comunicação com o BD
-        public FittSistemaEntities bd = new FittSistemaEntities();
+        public FittDataBaseEntities bd = new FittDataBaseEntities();
 
         public IEnumerable<DadosProfessores> LerProfessor()
         {

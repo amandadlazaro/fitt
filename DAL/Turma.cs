@@ -17,7 +17,6 @@ namespace DAL
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Turma()
         {
-            this.Frequencia = new HashSet<Frequencia>();
             this.Matricula = new HashSet<Matricula>();
         }
     
@@ -26,8 +25,6 @@ namespace DAL
         public string DiaSemana { get; set; }
         public string Horario { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Frequencia> Frequencia { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Matricula> Matricula { get; set; }
         public virtual Professor Professor { get; set; }

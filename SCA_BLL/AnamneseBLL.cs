@@ -28,7 +28,7 @@ namespace SCA_BLL
         }
         #endregion
 
-        public FittSistemaEntities bd = new FittSistemaEntities();
+        public FittDataBaseEntities bd = new FittDataBaseEntities();
 
     }
 }

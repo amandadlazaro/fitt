@@ -11,7 +11,7 @@ namespace DAL
 {
     using System;
     using System.Collections.Generic;
-
+    
     public partial class Matricula
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,26 +19,23 @@ namespace DAL
         {
             this.Anamnese = new HashSet<Anamnese>();
             this.Boleto = new HashSet<Boleto>();
-            this.Frequencia = new HashSet<Frequencia>();
         }
-
+    
         public int idMatricula { get; set; }
         public string CPF { get; set; }
         public int idTurma { get; set; }
         public string TipoPlano { get; set; }
+        public double ValorMensal { get; set; }
         public System.DateTime DataInicio { get; set; }
         public System.DateTime DataFim { get; set; }
-        public int QtdeAulas{ get; set; }
-        public double ValorMensal { get; set; }
         public bool SituacaoMatricula { get; set; }
-
+        public int QtdeAulas { get; set; }
+    
         public virtual Aluno Aluno { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Anamnese> Anamnese { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Boleto> Boleto { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Frequencia> Frequencia { get; set; }
         public virtual Turma Turma { get; set; }
     }
 }

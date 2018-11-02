@@ -27,12 +27,27 @@ namespace FittSistema.View
 
         private void btnOk_Click(object sender, EventArgs e)
         {
+            if (!ValidarCampos())
+            {
+                return;
+            }
 
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void lblDataNasc_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private bool ValidarCampos()
+        {
+            return false;
         }
     }
 }

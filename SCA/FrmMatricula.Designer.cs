@@ -35,42 +35,49 @@
             this.btnExcluirProfessor = new System.Windows.Forms.Button();
             this.btnEditarProfessor = new System.Windows.Forms.Button();
             this.btnCadastrarProfessor = new System.Windows.Forms.Button();
-            this.lblTipo = new System.Windows.Forms.Label();
-            this.rbMensal = new System.Windows.Forms.RadioButton();
-            this.lblMensal = new System.Windows.Forms.Label();
-            this.rbTrimestral = new System.Windows.Forms.RadioButton();
-            this.label2lblTrimestral = new System.Windows.Forms.Label();
-            this.rbSemestral = new System.Windows.Forms.RadioButton();
-            this.lblSemestral = new System.Windows.Forms.Label();
-            this.rbAnual = new System.Windows.Forms.RadioButton();
-            this.lblAnual = new System.Windows.Forms.Label();
-            this.lblDataInicial = new System.Windows.Forms.Label();
-            this.maskDataInicial = new System.Windows.Forms.MaskedTextBox();
-            this.lblDataFinal = new System.Windows.Forms.Label();
-            this.maskDataFinal = new System.Windows.Forms.MaskedTextBox();
-            this.lblAulas = new System.Windows.Forms.Label();
-            this.rbUmaAula = new System.Windows.Forms.RadioButton();
-            this.lblUmaAula = new System.Windows.Forms.Label();
-            this.rbDuasAulas = new System.Windows.Forms.RadioButton();
-            this.lblDuasAulas = new System.Windows.Forms.Label();
-            this.rbTresAulas = new System.Windows.Forms.RadioButton();
-            this.lblTresAulas = new System.Windows.Forms.Label();
-            this.cmbDiasdaSemana1 = new System.Windows.Forms.ComboBox();
-            this.lblDiasSemana = new System.Windows.Forms.Label();
-            this.cmbDiasdaSemana2 = new System.Windows.Forms.ComboBox();
-            this.cmbDiasdaSemana3 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cmbHorariosTurma3 = new System.Windows.Forms.ComboBox();
-            this.cmbHorariosTurma2 = new System.Windows.Forms.ComboBox();
-            this.cmbHorariosTurma1 = new System.Windows.Forms.ComboBox();
             this.btnOk = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.grpTipo = new System.Windows.Forms.GroupBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.lblSexo = new System.Windows.Forms.Label();
+            this.lblEndereco = new System.Windows.Forms.Label();
+            this.lblDataNasc = new System.Windows.Forms.Label();
+            this.lblCPF = new System.Windows.Forms.Label();
+            this.lblCelular = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.rbMensal = new System.Windows.Forms.RadioButton();
+            this.rbTrimestral = new System.Windows.Forms.RadioButton();
+            this.rbAnual = new System.Windows.Forms.RadioButton();
+            this.rbSemestral = new System.Windows.Forms.RadioButton();
+            this.lblDataFinal = new System.Windows.Forms.Label();
+            this.lblDataInicial = new System.Windows.Forms.Label();
+            this.rbAula3 = new System.Windows.Forms.RadioButton();
+            this.rbAula2 = new System.Windows.Forms.RadioButton();
+            this.rbAula1 = new System.Windows.Forms.RadioButton();
+            this.panelTipo = new System.Windows.Forms.Panel();
+            this.panelAulas = new System.Windows.Forms.Panel();
+            this.maskDataInicial = new System.Windows.Forms.MaskedTextBox();
+            this.maskDataFinal = new System.Windows.Forms.MaskedTextBox();
+            this.cmbSexo = new System.Windows.Forms.ComboBox();
+            this.lblAulas = new System.Windows.Forms.Label();
+            this.lblTipo = new System.Windows.Forms.Label();
+            this.lblValorMensal = new System.Windows.Forms.Label();
+            this.maskValorMensal = new System.Windows.Forms.MaskedTextBox();
+            this.lblDiaSemana = new System.Windows.Forms.Label();
+            this.lblHoraTurma = new System.Windows.Forms.Label();
+            this.cmbTurma1 = new System.Windows.Forms.ComboBox();
+            this.cmbSemana1 = new System.Windows.Forms.ComboBox();
+            this.cmbSemana2 = new System.Windows.Forms.ComboBox();
+            this.cmbTurma2 = new System.Windows.Forms.ComboBox();
+            this.cmbSemana3 = new System.Windows.Forms.ComboBox();
+            this.cmbTurma3 = new System.Windows.Forms.ComboBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.maskDataNasc = new System.Windows.Forms.MaskedTextBox();
+            this.maskCel = new System.Windows.Forms.MaskedTextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.maskCPF = new System.Windows.Forms.MaskedTextBox();
+            this.txtEndereco = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.grpTipo.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.panelTipo.SuspendLayout();
+            this.panelAulas.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnFecharTela
@@ -94,7 +101,7 @@
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.pictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pictureBox3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.InitialImage")));
-            this.pictureBox3.Location = new System.Drawing.Point(12, 301);
+            this.pictureBox3.Location = new System.Drawing.Point(12, 303);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(71, 65);
             this.pictureBox3.TabIndex = 36;
@@ -106,7 +113,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Agency FB", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DeepPink;
-            this.label1.Location = new System.Drawing.Point(-1, 18);
+            this.label1.Location = new System.Drawing.Point(-1, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 40);
             this.label1.TabIndex = 40;
@@ -157,392 +164,466 @@
             this.btnCadastrarProfessor.TabIndex = 52;
             this.btnCadastrarProfessor.UseVisualStyleBackColor = false;
             // 
-            // lblTipo
-            // 
-            this.lblTipo.AutoSize = true;
-            this.lblTipo.BackColor = System.Drawing.Color.Transparent;
-            this.lblTipo.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipo.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.lblTipo.Location = new System.Drawing.Point(75, 80);
-            this.lblTipo.Name = "lblTipo";
-            this.lblTipo.Size = new System.Drawing.Size(46, 28);
-            this.lblTipo.TabIndex = 67;
-            this.lblTipo.Text = "Tipo:";
-            // 
-            // rbMensal
-            // 
-            this.rbMensal.AutoCheck = false;
-            this.rbMensal.AutoSize = true;
-            this.rbMensal.BackColor = System.Drawing.Color.Transparent;
-            this.rbMensal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbMensal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbMensal.ForeColor = System.Drawing.Color.DeepPink;
-            this.rbMensal.Location = new System.Drawing.Point(4, 24);
-            this.rbMensal.Name = "rbMensal";
-            this.rbMensal.Size = new System.Drawing.Size(13, 12);
-            this.rbMensal.TabIndex = 68;
-            this.rbMensal.UseVisualStyleBackColor = false;
-            // 
-            // lblMensal
-            // 
-            this.lblMensal.AutoSize = true;
-            this.lblMensal.BackColor = System.Drawing.Color.Transparent;
-            this.lblMensal.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensal.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.lblMensal.Location = new System.Drawing.Point(23, 16);
-            this.lblMensal.Name = "lblMensal";
-            this.lblMensal.Size = new System.Drawing.Size(53, 25);
-            this.lblMensal.TabIndex = 69;
-            this.lblMensal.Text = "Mensal";
-            // 
-            // rbTrimestral
-            // 
-            this.rbTrimestral.AutoCheck = false;
-            this.rbTrimestral.AutoSize = true;
-            this.rbTrimestral.BackColor = System.Drawing.Color.Transparent;
-            this.rbTrimestral.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbTrimestral.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbTrimestral.ForeColor = System.Drawing.Color.DeepPink;
-            this.rbTrimestral.Location = new System.Drawing.Point(129, 24);
-            this.rbTrimestral.Name = "rbTrimestral";
-            this.rbTrimestral.Size = new System.Drawing.Size(13, 12);
-            this.rbTrimestral.TabIndex = 70;
-            this.rbTrimestral.UseVisualStyleBackColor = false;
-            // 
-            // label2lblTrimestral
-            // 
-            this.label2lblTrimestral.AutoSize = true;
-            this.label2lblTrimestral.BackColor = System.Drawing.Color.Transparent;
-            this.label2lblTrimestral.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2lblTrimestral.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label2lblTrimestral.Location = new System.Drawing.Point(148, 16);
-            this.label2lblTrimestral.Name = "label2lblTrimestral";
-            this.label2lblTrimestral.Size = new System.Drawing.Size(72, 25);
-            this.label2lblTrimestral.TabIndex = 71;
-            this.label2lblTrimestral.Text = "Trimestral";
-            // 
-            // rbSemestral
-            // 
-            this.rbSemestral.AutoCheck = false;
-            this.rbSemestral.AutoSize = true;
-            this.rbSemestral.BackColor = System.Drawing.Color.Transparent;
-            this.rbSemestral.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbSemestral.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbSemestral.ForeColor = System.Drawing.Color.DeepPink;
-            this.rbSemestral.Location = new System.Drawing.Point(274, 25);
-            this.rbSemestral.Name = "rbSemestral";
-            this.rbSemestral.Size = new System.Drawing.Size(13, 12);
-            this.rbSemestral.TabIndex = 72;
-            this.rbSemestral.UseVisualStyleBackColor = false;
-            // 
-            // lblSemestral
-            // 
-            this.lblSemestral.AutoSize = true;
-            this.lblSemestral.BackColor = System.Drawing.Color.Transparent;
-            this.lblSemestral.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSemestral.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.lblSemestral.Location = new System.Drawing.Point(293, 16);
-            this.lblSemestral.Name = "lblSemestral";
-            this.lblSemestral.Size = new System.Drawing.Size(73, 25);
-            this.lblSemestral.TabIndex = 73;
-            this.lblSemestral.Text = "Semestral";
-            // 
-            // rbAnual
-            // 
-            this.rbAnual.AutoCheck = false;
-            this.rbAnual.AutoSize = true;
-            this.rbAnual.BackColor = System.Drawing.Color.Transparent;
-            this.rbAnual.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbAnual.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbAnual.ForeColor = System.Drawing.Color.DeepPink;
-            this.rbAnual.Location = new System.Drawing.Point(437, 26);
-            this.rbAnual.Name = "rbAnual";
-            this.rbAnual.Size = new System.Drawing.Size(13, 12);
-            this.rbAnual.TabIndex = 74;
-            this.rbAnual.UseVisualStyleBackColor = false;
-            // 
-            // lblAnual
-            // 
-            this.lblAnual.AutoSize = true;
-            this.lblAnual.BackColor = System.Drawing.Color.Transparent;
-            this.lblAnual.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAnual.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.lblAnual.Location = new System.Drawing.Point(456, 18);
-            this.lblAnual.Name = "lblAnual";
-            this.lblAnual.Size = new System.Drawing.Size(44, 25);
-            this.lblAnual.TabIndex = 75;
-            this.lblAnual.Text = "Anual";
-            // 
-            // lblDataInicial
-            // 
-            this.lblDataInicial.AutoSize = true;
-            this.lblDataInicial.BackColor = System.Drawing.Color.Transparent;
-            this.lblDataInicial.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDataInicial.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.lblDataInicial.Location = new System.Drawing.Point(75, 123);
-            this.lblDataInicial.Name = "lblDataInicial";
-            this.lblDataInicial.Size = new System.Drawing.Size(97, 28);
-            this.lblDataInicial.TabIndex = 76;
-            this.lblDataInicial.Text = "Data Inicial:";
-            // 
-            // maskDataInicial
-            // 
-            this.maskDataInicial.Location = new System.Drawing.Point(187, 132);
-            this.maskDataInicial.Mask = "00/00/0000";
-            this.maskDataInicial.Name = "maskDataInicial";
-            this.maskDataInicial.Size = new System.Drawing.Size(80, 20);
-            this.maskDataInicial.TabIndex = 77;
-            this.maskDataInicial.ValidatingType = typeof(System.DateTime);
-            // 
-            // lblDataFinal
-            // 
-            this.lblDataFinal.AutoSize = true;
-            this.lblDataFinal.BackColor = System.Drawing.Color.Transparent;
-            this.lblDataFinal.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDataFinal.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.lblDataFinal.Location = new System.Drawing.Point(326, 123);
-            this.lblDataFinal.Name = "lblDataFinal";
-            this.lblDataFinal.Size = new System.Drawing.Size(87, 28);
-            this.lblDataFinal.TabIndex = 78;
-            this.lblDataFinal.Text = "Data Final:";
-            // 
-            // maskDataFinal
-            // 
-            this.maskDataFinal.Location = new System.Drawing.Point(428, 132);
-            this.maskDataFinal.Mask = "00/00/0000";
-            this.maskDataFinal.Name = "maskDataFinal";
-            this.maskDataFinal.Size = new System.Drawing.Size(80, 20);
-            this.maskDataFinal.TabIndex = 79;
-            this.maskDataFinal.ValidatingType = typeof(System.DateTime);
-            // 
-            // lblAulas
-            // 
-            this.lblAulas.AutoSize = true;
-            this.lblAulas.BackColor = System.Drawing.Color.Transparent;
-            this.lblAulas.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAulas.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.lblAulas.Location = new System.Drawing.Point(77, 168);
-            this.lblAulas.Name = "lblAulas";
-            this.lblAulas.Size = new System.Drawing.Size(57, 28);
-            this.lblAulas.TabIndex = 80;
-            this.lblAulas.Text = "Aulas:";
-            // 
-            // rbUmaAula
-            // 
-            this.rbUmaAula.AutoCheck = false;
-            this.rbUmaAula.AutoSize = true;
-            this.rbUmaAula.BackColor = System.Drawing.Color.Transparent;
-            this.rbUmaAula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbUmaAula.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbUmaAula.ForeColor = System.Drawing.Color.DeepPink;
-            this.rbUmaAula.Location = new System.Drawing.Point(4, 21);
-            this.rbUmaAula.Name = "rbUmaAula";
-            this.rbUmaAula.Size = new System.Drawing.Size(13, 12);
-            this.rbUmaAula.TabIndex = 81;
-            this.rbUmaAula.UseVisualStyleBackColor = false;
-            // 
-            // lblUmaAula
-            // 
-            this.lblUmaAula.AutoSize = true;
-            this.lblUmaAula.BackColor = System.Drawing.Color.Transparent;
-            this.lblUmaAula.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUmaAula.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.lblUmaAula.Location = new System.Drawing.Point(27, 13);
-            this.lblUmaAula.Name = "lblUmaAula";
-            this.lblUmaAula.Size = new System.Drawing.Size(15, 25);
-            this.lblUmaAula.TabIndex = 82;
-            this.lblUmaAula.Text = "1";
-            // 
-            // rbDuasAulas
-            // 
-            this.rbDuasAulas.AutoCheck = false;
-            this.rbDuasAulas.AutoSize = true;
-            this.rbDuasAulas.BackColor = System.Drawing.Color.Transparent;
-            this.rbDuasAulas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbDuasAulas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbDuasAulas.ForeColor = System.Drawing.Color.DeepPink;
-            this.rbDuasAulas.Location = new System.Drawing.Point(129, 21);
-            this.rbDuasAulas.Name = "rbDuasAulas";
-            this.rbDuasAulas.Size = new System.Drawing.Size(13, 12);
-            this.rbDuasAulas.TabIndex = 83;
-            this.rbDuasAulas.UseVisualStyleBackColor = false;
-            // 
-            // lblDuasAulas
-            // 
-            this.lblDuasAulas.AutoSize = true;
-            this.lblDuasAulas.BackColor = System.Drawing.Color.Transparent;
-            this.lblDuasAulas.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDuasAulas.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.lblDuasAulas.Location = new System.Drawing.Point(148, 13);
-            this.lblDuasAulas.Name = "lblDuasAulas";
-            this.lblDuasAulas.Size = new System.Drawing.Size(21, 25);
-            this.lblDuasAulas.TabIndex = 84;
-            this.lblDuasAulas.Text = "2";
-            // 
-            // rbTresAulas
-            // 
-            this.rbTresAulas.AutoCheck = false;
-            this.rbTresAulas.AutoSize = true;
-            this.rbTresAulas.BackColor = System.Drawing.Color.Transparent;
-            this.rbTresAulas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbTresAulas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbTresAulas.ForeColor = System.Drawing.Color.DeepPink;
-            this.rbTresAulas.Location = new System.Drawing.Point(274, 21);
-            this.rbTresAulas.Name = "rbTresAulas";
-            this.rbTresAulas.Size = new System.Drawing.Size(13, 12);
-            this.rbTresAulas.TabIndex = 85;
-            this.rbTresAulas.UseVisualStyleBackColor = false;
-            // 
-            // lblTresAulas
-            // 
-            this.lblTresAulas.AutoSize = true;
-            this.lblTresAulas.BackColor = System.Drawing.Color.Transparent;
-            this.lblTresAulas.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTresAulas.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.lblTresAulas.Location = new System.Drawing.Point(293, 12);
-            this.lblTresAulas.Name = "lblTresAulas";
-            this.lblTresAulas.Size = new System.Drawing.Size(21, 25);
-            this.lblTresAulas.TabIndex = 86;
-            this.lblTresAulas.Text = "3";
-            // 
-            // cmbDiasdaSemana1
-            // 
-            this.cmbDiasdaSemana1.FormattingEnabled = true;
-            this.cmbDiasdaSemana1.Location = new System.Drawing.Point(164, 236);
-            this.cmbDiasdaSemana1.Name = "cmbDiasdaSemana1";
-            this.cmbDiasdaSemana1.Size = new System.Drawing.Size(121, 21);
-            this.cmbDiasdaSemana1.TabIndex = 87;
-            // 
-            // lblDiasSemana
-            // 
-            this.lblDiasSemana.AutoSize = true;
-            this.lblDiasSemana.BackColor = System.Drawing.Color.Transparent;
-            this.lblDiasSemana.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiasSemana.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.lblDiasSemana.Location = new System.Drawing.Point(159, 205);
-            this.lblDiasSemana.Name = "lblDiasSemana";
-            this.lblDiasSemana.Size = new System.Drawing.Size(136, 28);
-            this.lblDiasSemana.TabIndex = 88;
-            this.lblDiasSemana.Text = "Dias da Semana:";
-            // 
-            // cmbDiasdaSemana2
-            // 
-            this.cmbDiasdaSemana2.FormattingEnabled = true;
-            this.cmbDiasdaSemana2.Location = new System.Drawing.Point(164, 263);
-            this.cmbDiasdaSemana2.Name = "cmbDiasdaSemana2";
-            this.cmbDiasdaSemana2.Size = new System.Drawing.Size(121, 21);
-            this.cmbDiasdaSemana2.TabIndex = 89;
-            // 
-            // cmbDiasdaSemana3
-            // 
-            this.cmbDiasdaSemana3.FormattingEnabled = true;
-            this.cmbDiasdaSemana3.Location = new System.Drawing.Point(164, 290);
-            this.cmbDiasdaSemana3.Name = "cmbDiasdaSemana3";
-            this.cmbDiasdaSemana3.Size = new System.Drawing.Size(121, 21);
-            this.cmbDiasdaSemana3.TabIndex = 90;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(338, 205);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 28);
-            this.label2.TabIndex = 91;
-            this.label2.Text = "Horários/Turmas:";
-            // 
-            // cmbHorariosTurma3
-            // 
-            this.cmbHorariosTurma3.FormattingEnabled = true;
-            this.cmbHorariosTurma3.Location = new System.Drawing.Point(353, 290);
-            this.cmbHorariosTurma3.Name = "cmbHorariosTurma3";
-            this.cmbHorariosTurma3.Size = new System.Drawing.Size(121, 21);
-            this.cmbHorariosTurma3.TabIndex = 94;
-            // 
-            // cmbHorariosTurma2
-            // 
-            this.cmbHorariosTurma2.FormattingEnabled = true;
-            this.cmbHorariosTurma2.Location = new System.Drawing.Point(353, 263);
-            this.cmbHorariosTurma2.Name = "cmbHorariosTurma2";
-            this.cmbHorariosTurma2.Size = new System.Drawing.Size(121, 21);
-            this.cmbHorariosTurma2.TabIndex = 93;
-            // 
-            // cmbHorariosTurma1
-            // 
-            this.cmbHorariosTurma1.FormattingEnabled = true;
-            this.cmbHorariosTurma1.Location = new System.Drawing.Point(353, 236);
-            this.cmbHorariosTurma1.Name = "cmbHorariosTurma1";
-            this.cmbHorariosTurma1.Size = new System.Drawing.Size(121, 21);
-            this.cmbHorariosTurma1.TabIndex = 92;
-            // 
             // btnOk
             // 
             this.btnOk.BackColor = System.Drawing.Color.DeepPink;
             this.btnOk.Enabled = false;
-            this.btnOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOk.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnOk.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOk.ForeColor = System.Drawing.Color.White;
             this.btnOk.Location = new System.Drawing.Point(651, 339);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(80, 27);
             this.btnOk.TabIndex = 95;
-            this.btnOk.Text = "Ok";
+            this.btnOk.Text = "Salvar";
             this.btnOk.UseVisualStyleBackColor = false;
             this.btnOk.Visible = false;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
-            // label3
+            // lblNome
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(228, 333);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 28);
-            this.label3.TabIndex = 96;
-            this.label3.Text = "Valor Mensal:";
+            this.lblNome.AutoSize = true;
+            this.lblNome.BackColor = System.Drawing.Color.Transparent;
+            this.lblNome.Font = new System.Drawing.Font("Agency FB", 15F);
+            this.lblNome.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.lblNome.Location = new System.Drawing.Point(91, 53);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(43, 24);
+            this.lblNome.TabIndex = 96;
+            this.lblNome.Text = "Nome";
             // 
-            // maskedTextBox2
+            // lblSexo
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(351, 339);
-            this.maskedTextBox2.Mask = "$000,00";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(62, 20);
-            this.maskedTextBox2.TabIndex = 99;
+            this.lblSexo.AutoSize = true;
+            this.lblSexo.BackColor = System.Drawing.Color.Transparent;
+            this.lblSexo.Font = new System.Drawing.Font("Agency FB", 15F);
+            this.lblSexo.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.lblSexo.Location = new System.Drawing.Point(237, 251);
+            this.lblSexo.Name = "lblSexo";
+            this.lblSexo.Size = new System.Drawing.Size(38, 24);
+            this.lblSexo.TabIndex = 98;
+            this.lblSexo.Text = "Sexo";
             // 
-            // grpTipo
+            // lblEndereco
             // 
-            this.grpTipo.Controls.Add(this.lblMensal);
-            this.grpTipo.Controls.Add(this.rbMensal);
-            this.grpTipo.Controls.Add(this.rbTrimestral);
-            this.grpTipo.Controls.Add(this.label2lblTrimestral);
-            this.grpTipo.Controls.Add(this.rbSemestral);
-            this.grpTipo.Controls.Add(this.lblSemestral);
-            this.grpTipo.Controls.Add(this.rbAnual);
-            this.grpTipo.Controls.Add(this.lblAnual);
-            this.grpTipo.Location = new System.Drawing.Point(148, 61);
-            this.grpTipo.Name = "grpTipo";
-            this.grpTipo.Size = new System.Drawing.Size(509, 47);
-            this.grpTipo.TabIndex = 100;
-            this.grpTipo.TabStop = false;
-            this.grpTipo.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.lblEndereco.AutoSize = true;
+            this.lblEndereco.BackColor = System.Drawing.Color.Transparent;
+            this.lblEndereco.Font = new System.Drawing.Font("Agency FB", 15F);
+            this.lblEndereco.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.lblEndereco.Location = new System.Drawing.Point(93, 203);
+            this.lblEndereco.Name = "lblEndereco";
+            this.lblEndereco.Size = new System.Drawing.Size(65, 24);
+            this.lblEndereco.TabIndex = 101;
+            this.lblEndereco.Text = "Endereço";
             // 
-            // groupBox1
+            // lblDataNasc
             // 
-            this.groupBox1.Controls.Add(this.rbUmaAula);
-            this.groupBox1.Controls.Add(this.lblUmaAula);
-            this.groupBox1.Controls.Add(this.rbDuasAulas);
-            this.groupBox1.Controls.Add(this.lblDuasAulas);
-            this.groupBox1.Controls.Add(this.rbTresAulas);
-            this.groupBox1.Controls.Add(this.lblTresAulas);
-            this.groupBox1.Location = new System.Drawing.Point(148, 158);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(346, 44);
-            this.groupBox1.TabIndex = 101;
-            this.groupBox1.TabStop = false;
+            this.lblDataNasc.BackColor = System.Drawing.Color.Transparent;
+            this.lblDataNasc.Font = new System.Drawing.Font("Agency FB", 15F);
+            this.lblDataNasc.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.lblDataNasc.Location = new System.Drawing.Point(91, 103);
+            this.lblDataNasc.Name = "lblDataNasc";
+            this.lblDataNasc.Size = new System.Drawing.Size(138, 25);
+            this.lblDataNasc.TabIndex = 101;
+            this.lblDataNasc.Text = "Data de Nascimento";
+            this.lblDataNasc.Click += new System.EventHandler(this.lblDataNasc_Click);
+            // 
+            // lblCPF
+            // 
+            this.lblCPF.AutoSize = true;
+            this.lblCPF.BackColor = System.Drawing.Color.Transparent;
+            this.lblCPF.Font = new System.Drawing.Font("Agency FB", 15F);
+            this.lblCPF.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.lblCPF.Location = new System.Drawing.Point(93, 252);
+            this.lblCPF.Name = "lblCPF";
+            this.lblCPF.Size = new System.Drawing.Size(32, 24);
+            this.lblCPF.TabIndex = 102;
+            this.lblCPF.Text = "CPF";
+            // 
+            // lblCelular
+            // 
+            this.lblCelular.AutoSize = true;
+            this.lblCelular.BackColor = System.Drawing.Color.Transparent;
+            this.lblCelular.Font = new System.Drawing.Font("Agency FB", 15F);
+            this.lblCelular.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.lblCelular.Location = new System.Drawing.Point(234, 104);
+            this.lblCelular.Name = "lblCelular";
+            this.lblCelular.Size = new System.Drawing.Size(51, 24);
+            this.lblCelular.TabIndex = 102;
+            this.lblCelular.Text = "Celular";
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.BackColor = System.Drawing.Color.Transparent;
+            this.lblEmail.Font = new System.Drawing.Font("Agency FB", 15F);
+            this.lblEmail.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.lblEmail.Location = new System.Drawing.Point(91, 153);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(41, 24);
+            this.lblEmail.TabIndex = 102;
+            this.lblEmail.Text = "Email";
+            // 
+            // rbMensal
+            // 
+            this.rbMensal.AutoSize = true;
+            this.rbMensal.Font = new System.Drawing.Font("Agency FB", 15F);
+            this.rbMensal.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.rbMensal.Location = new System.Drawing.Point(7, 0);
+            this.rbMensal.Name = "rbMensal";
+            this.rbMensal.Size = new System.Drawing.Size(68, 28);
+            this.rbMensal.TabIndex = 141;
+            this.rbMensal.TabStop = true;
+            this.rbMensal.Text = "Mensal";
+            this.rbMensal.UseVisualStyleBackColor = true;
+            // 
+            // rbTrimestral
+            // 
+            this.rbTrimestral.AutoSize = true;
+            this.rbTrimestral.Font = new System.Drawing.Font("Agency FB", 15F);
+            this.rbTrimestral.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.rbTrimestral.Location = new System.Drawing.Point(7, 51);
+            this.rbTrimestral.Name = "rbTrimestral";
+            this.rbTrimestral.Size = new System.Drawing.Size(87, 28);
+            this.rbTrimestral.TabIndex = 143;
+            this.rbTrimestral.TabStop = true;
+            this.rbTrimestral.Text = "Trimestral";
+            this.rbTrimestral.UseVisualStyleBackColor = true;
+            // 
+            // rbAnual
+            // 
+            this.rbAnual.AutoSize = true;
+            this.rbAnual.Font = new System.Drawing.Font("Agency FB", 15F);
+            this.rbAnual.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.rbAnual.Location = new System.Drawing.Point(7, 25);
+            this.rbAnual.Name = "rbAnual";
+            this.rbAnual.Size = new System.Drawing.Size(59, 28);
+            this.rbAnual.TabIndex = 142;
+            this.rbAnual.TabStop = true;
+            this.rbAnual.Text = "Anual";
+            this.rbAnual.UseVisualStyleBackColor = true;
+            // 
+            // rbSemestral
+            // 
+            this.rbSemestral.AutoSize = true;
+            this.rbSemestral.Font = new System.Drawing.Font("Agency FB", 15F);
+            this.rbSemestral.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.rbSemestral.Location = new System.Drawing.Point(7, 76);
+            this.rbSemestral.Name = "rbSemestral";
+            this.rbSemestral.Size = new System.Drawing.Size(82, 28);
+            this.rbSemestral.TabIndex = 144;
+            this.rbSemestral.TabStop = true;
+            this.rbSemestral.Text = "Semestal";
+            this.rbSemestral.UseVisualStyleBackColor = true;
+            // 
+            // lblDataFinal
+            // 
+            this.lblDataFinal.AutoSize = true;
+            this.lblDataFinal.BackColor = System.Drawing.Color.Transparent;
+            this.lblDataFinal.Font = new System.Drawing.Font("Agency FB", 15F);
+            this.lblDataFinal.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.lblDataFinal.Location = new System.Drawing.Point(399, 163);
+            this.lblDataFinal.Name = "lblDataFinal";
+            this.lblDataFinal.Size = new System.Drawing.Size(66, 24);
+            this.lblDataFinal.TabIndex = 107;
+            this.lblDataFinal.Text = "Data Final";
+            // 
+            // lblDataInicial
+            // 
+            this.lblDataInicial.AutoSize = true;
+            this.lblDataInicial.BackColor = System.Drawing.Color.Transparent;
+            this.lblDataInicial.Font = new System.Drawing.Font("Agency FB", 15F);
+            this.lblDataInicial.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.lblDataInicial.Location = new System.Drawing.Point(395, 130);
+            this.lblDataInicial.Name = "lblDataInicial";
+            this.lblDataInicial.Size = new System.Drawing.Size(73, 24);
+            this.lblDataInicial.TabIndex = 108;
+            this.lblDataInicial.Text = "Data Inicial";
+            // 
+            // rbAula3
+            // 
+            this.rbAula3.AutoSize = true;
+            this.rbAula3.Font = new System.Drawing.Font("Agency FB", 15F);
+            this.rbAula3.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.rbAula3.Location = new System.Drawing.Point(119, 3);
+            this.rbAula3.Name = "rbAula3";
+            this.rbAula3.Size = new System.Drawing.Size(36, 28);
+            this.rbAula3.TabIndex = 138;
+            this.rbAula3.TabStop = true;
+            this.rbAula3.Text = "3";
+            this.rbAula3.UseVisualStyleBackColor = true;
+            // 
+            // rbAula2
+            // 
+            this.rbAula2.AutoSize = true;
+            this.rbAula2.Font = new System.Drawing.Font("Agency FB", 15F);
+            this.rbAula2.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.rbAula2.Location = new System.Drawing.Point(65, 3);
+            this.rbAula2.Name = "rbAula2";
+            this.rbAula2.Size = new System.Drawing.Size(36, 28);
+            this.rbAula2.TabIndex = 137;
+            this.rbAula2.TabStop = true;
+            this.rbAula2.Text = "2";
+            this.rbAula2.UseVisualStyleBackColor = true;
+            // 
+            // rbAula1
+            // 
+            this.rbAula1.AutoSize = true;
+            this.rbAula1.Font = new System.Drawing.Font("Agency FB", 15F);
+            this.rbAula1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.rbAula1.Location = new System.Drawing.Point(14, 3);
+            this.rbAula1.Name = "rbAula1";
+            this.rbAula1.Size = new System.Drawing.Size(31, 28);
+            this.rbAula1.TabIndex = 136;
+            this.rbAula1.TabStop = true;
+            this.rbAula1.Text = "1";
+            this.rbAula1.UseVisualStyleBackColor = true;
+            // 
+            // panelTipo
+            // 
+            this.panelTipo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelTipo.Controls.Add(this.rbMensal);
+            this.panelTipo.Controls.Add(this.rbTrimestral);
+            this.panelTipo.Controls.Add(this.rbAnual);
+            this.panelTipo.Controls.Add(this.rbSemestral);
+            this.panelTipo.Location = new System.Drawing.Point(584, 80);
+            this.panelTipo.Name = "panelTipo";
+            this.panelTipo.Size = new System.Drawing.Size(98, 106);
+            this.panelTipo.TabIndex = 112;
+            // 
+            // panelAulas
+            // 
+            this.panelAulas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelAulas.Controls.Add(this.rbAula1);
+            this.panelAulas.Controls.Add(this.rbAula2);
+            this.panelAulas.Controls.Add(this.rbAula3);
+            this.panelAulas.Location = new System.Drawing.Point(403, 80);
+            this.panelAulas.Name = "panelAulas";
+            this.panelAulas.Size = new System.Drawing.Size(171, 31);
+            this.panelAulas.TabIndex = 113;
+            // 
+            // maskDataInicial
+            // 
+            this.maskDataInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.maskDataInicial.Location = new System.Drawing.Point(474, 130);
+            this.maskDataInicial.Mask = "00.00.0000";
+            this.maskDataInicial.Name = "maskDataInicial";
+            this.maskDataInicial.Size = new System.Drawing.Size(100, 21);
+            this.maskDataInicial.TabIndex = 139;
+            // 
+            // maskDataFinal
+            // 
+            this.maskDataFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.maskDataFinal.Location = new System.Drawing.Point(474, 165);
+            this.maskDataFinal.Mask = "00.00.0000";
+            this.maskDataFinal.Name = "maskDataFinal";
+            this.maskDataFinal.Size = new System.Drawing.Size(100, 21);
+            this.maskDataFinal.TabIndex = 140;
+            // 
+            // cmbSexo
+            // 
+            this.cmbSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.cmbSexo.FormattingEnabled = true;
+            this.cmbSexo.Items.AddRange(new object[] {
+            "Feminino",
+            "Masculino"});
+            this.cmbSexo.Location = new System.Drawing.Point(240, 277);
+            this.cmbSexo.Name = "cmbSexo";
+            this.cmbSexo.Size = new System.Drawing.Size(108, 23);
+            this.cmbSexo.TabIndex = 135;
+            // 
+            // lblAulas
+            // 
+            this.lblAulas.AutoSize = true;
+            this.lblAulas.BackColor = System.Drawing.Color.Transparent;
+            this.lblAulas.Font = new System.Drawing.Font("Agency FB", 15F);
+            this.lblAulas.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.lblAulas.Location = new System.Drawing.Point(399, 53);
+            this.lblAulas.Name = "lblAulas";
+            this.lblAulas.Size = new System.Drawing.Size(41, 24);
+            this.lblAulas.TabIndex = 117;
+            this.lblAulas.Text = "Aulas";
+            // 
+            // lblTipo
+            // 
+            this.lblTipo.AutoSize = true;
+            this.lblTipo.BackColor = System.Drawing.Color.Transparent;
+            this.lblTipo.Font = new System.Drawing.Font("Agency FB", 15F);
+            this.lblTipo.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.lblTipo.Location = new System.Drawing.Point(580, 53);
+            this.lblTipo.Name = "lblTipo";
+            this.lblTipo.Size = new System.Drawing.Size(32, 24);
+            this.lblTipo.TabIndex = 118;
+            this.lblTipo.Text = "Tipo";
+            // 
+            // lblValorMensal
+            // 
+            this.lblValorMensal.AutoSize = true;
+            this.lblValorMensal.BackColor = System.Drawing.Color.Transparent;
+            this.lblValorMensal.Font = new System.Drawing.Font("Agency FB", 15F);
+            this.lblValorMensal.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.lblValorMensal.Location = new System.Drawing.Point(262, 326);
+            this.lblValorMensal.Name = "lblValorMensal";
+            this.lblValorMensal.Size = new System.Drawing.Size(84, 24);
+            this.lblValorMensal.TabIndex = 119;
+            this.lblValorMensal.Text = "Valor Mensal";
+            // 
+            // maskValorMensal
+            // 
+            this.maskValorMensal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.maskValorMensal.Location = new System.Drawing.Point(349, 330);
+            this.maskValorMensal.Mask = "R$";
+            this.maskValorMensal.Name = "maskValorMensal";
+            this.maskValorMensal.Size = new System.Drawing.Size(100, 21);
+            this.maskValorMensal.TabIndex = 151;
+            // 
+            // lblDiaSemana
+            // 
+            this.lblDiaSemana.AutoSize = true;
+            this.lblDiaSemana.BackColor = System.Drawing.Color.Transparent;
+            this.lblDiaSemana.Font = new System.Drawing.Font("Agency FB", 15F);
+            this.lblDiaSemana.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.lblDiaSemana.Location = new System.Drawing.Point(398, 203);
+            this.lblDiaSemana.Name = "lblDiaSemana";
+            this.lblDiaSemana.Size = new System.Drawing.Size(104, 24);
+            this.lblDiaSemana.TabIndex = 121;
+            this.lblDiaSemana.Text = "Dias da Semana";
+            // 
+            // lblHoraTurma
+            // 
+            this.lblHoraTurma.AutoSize = true;
+            this.lblHoraTurma.BackColor = System.Drawing.Color.Transparent;
+            this.lblHoraTurma.Font = new System.Drawing.Font("Agency FB", 15F);
+            this.lblHoraTurma.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.lblHoraTurma.Location = new System.Drawing.Point(519, 201);
+            this.lblHoraTurma.Name = "lblHoraTurma";
+            this.lblHoraTurma.Size = new System.Drawing.Size(90, 24);
+            this.lblHoraTurma.TabIndex = 122;
+            this.lblHoraTurma.Text = "Hora/Turmas";
+            // 
+            // cmbTurma1
+            // 
+            this.cmbTurma1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.cmbTurma1.FormattingEnabled = true;
+            this.cmbTurma1.Location = new System.Drawing.Point(512, 228);
+            this.cmbTurma1.Name = "cmbTurma1";
+            this.cmbTurma1.Size = new System.Drawing.Size(100, 23);
+            this.cmbTurma1.TabIndex = 146;
+            // 
+            // cmbSemana1
+            // 
+            this.cmbSemana1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.cmbSemana1.FormattingEnabled = true;
+            this.cmbSemana1.Items.AddRange(new object[] {
+            "Segunda",
+            "Terça",
+            "Quarta",
+            "Quinta",
+            "Sexta"});
+            this.cmbSemana1.Location = new System.Drawing.Point(399, 230);
+            this.cmbSemana1.Name = "cmbSemana1";
+            this.cmbSemana1.Size = new System.Drawing.Size(100, 23);
+            this.cmbSemana1.TabIndex = 145;
+            // 
+            // cmbSemana2
+            // 
+            this.cmbSemana2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.cmbSemana2.FormattingEnabled = true;
+            this.cmbSemana2.Items.AddRange(new object[] {
+            "Segunda",
+            "Terça",
+            "Quarta",
+            "Quinta",
+            "Sexta"});
+            this.cmbSemana2.Location = new System.Drawing.Point(399, 257);
+            this.cmbSemana2.Name = "cmbSemana2";
+            this.cmbSemana2.Size = new System.Drawing.Size(100, 23);
+            this.cmbSemana2.TabIndex = 147;
+            // 
+            // cmbTurma2
+            // 
+            this.cmbTurma2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.cmbTurma2.FormattingEnabled = true;
+            this.cmbTurma2.Location = new System.Drawing.Point(512, 256);
+            this.cmbTurma2.Name = "cmbTurma2";
+            this.cmbTurma2.Size = new System.Drawing.Size(100, 23);
+            this.cmbTurma2.TabIndex = 148;
+            // 
+            // cmbSemana3
+            // 
+            this.cmbSemana3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.cmbSemana3.FormattingEnabled = true;
+            this.cmbSemana3.Items.AddRange(new object[] {
+            "Segunda",
+            "Terça",
+            "Quarta",
+            "Quinta",
+            "Sexta"});
+            this.cmbSemana3.Location = new System.Drawing.Point(399, 284);
+            this.cmbSemana3.Name = "cmbSemana3";
+            this.cmbSemana3.Size = new System.Drawing.Size(100, 23);
+            this.cmbSemana3.TabIndex = 149;
+            // 
+            // cmbTurma3
+            // 
+            this.cmbTurma3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.cmbTurma3.FormattingEnabled = true;
+            this.cmbTurma3.Location = new System.Drawing.Point(512, 284);
+            this.cmbTurma3.Name = "cmbTurma3";
+            this.cmbTurma3.Size = new System.Drawing.Size(100, 23);
+            this.cmbTurma3.TabIndex = 150;
+            // 
+            // txtNome
+            // 
+            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Location = new System.Drawing.Point(95, 80);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(251, 21);
+            this.txtNome.TabIndex = 129;
+            // 
+            // maskDataNasc
+            // 
+            this.maskDataNasc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.maskDataNasc.Location = new System.Drawing.Point(95, 130);
+            this.maskDataNasc.Mask = "00/00/0000";
+            this.maskDataNasc.Name = "maskDataNasc";
+            this.maskDataNasc.Size = new System.Drawing.Size(106, 21);
+            this.maskDataNasc.TabIndex = 130;
+            this.maskDataNasc.ValidatingType = typeof(System.DateTime);
+            // 
+            // maskCel
+            // 
+            this.maskCel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.maskCel.Location = new System.Drawing.Point(238, 131);
+            this.maskCel.Mask = "(00)00000-0000";
+            this.maskCel.Name = "maskCel";
+            this.maskCel.Size = new System.Drawing.Size(108, 21);
+            this.maskCel.TabIndex = 131;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.txtEmail.Location = new System.Drawing.Point(95, 180);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(251, 21);
+            this.txtEmail.TabIndex = 132;
+            // 
+            // maskCPF
+            // 
+            this.maskCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.maskCPF.Location = new System.Drawing.Point(95, 279);
+            this.maskCPF.Mask = "000.000.000-00";
+            this.maskCPF.Name = "maskCPF";
+            this.maskCPF.Size = new System.Drawing.Size(115, 21);
+            this.maskCPF.TabIndex = 134;
+            // 
+            // txtEndereco
+            // 
+            this.txtEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.txtEndereco.Location = new System.Drawing.Point(95, 230);
+            this.txtEndereco.Name = "txtEndereco";
+            this.txtEndereco.Size = new System.Drawing.Size(251, 21);
+            this.txtEndereco.TabIndex = 133;
             // 
             // FrmMatricula
             // 
@@ -551,25 +632,39 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(743, 387);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.grpTipo);
-            this.Controls.Add(this.maskedTextBox2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnOk);
-            this.Controls.Add(this.cmbHorariosTurma3);
-            this.Controls.Add(this.cmbHorariosTurma2);
-            this.Controls.Add(this.cmbHorariosTurma1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.cmbDiasdaSemana3);
-            this.Controls.Add(this.cmbDiasdaSemana2);
-            this.Controls.Add(this.lblDiasSemana);
-            this.Controls.Add(this.cmbDiasdaSemana1);
-            this.Controls.Add(this.lblAulas);
-            this.Controls.Add(this.maskDataFinal);
-            this.Controls.Add(this.lblDataFinal);
-            this.Controls.Add(this.maskDataInicial);
-            this.Controls.Add(this.lblDataInicial);
+            this.Controls.Add(this.txtEndereco);
+            this.Controls.Add(this.maskCPF);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.maskCel);
+            this.Controls.Add(this.maskDataNasc);
+            this.Controls.Add(this.txtNome);
+            this.Controls.Add(this.cmbTurma3);
+            this.Controls.Add(this.cmbSemana3);
+            this.Controls.Add(this.cmbTurma2);
+            this.Controls.Add(this.cmbSemana2);
+            this.Controls.Add(this.cmbSemana1);
+            this.Controls.Add(this.cmbTurma1);
+            this.Controls.Add(this.lblHoraTurma);
+            this.Controls.Add(this.lblDiaSemana);
+            this.Controls.Add(this.maskValorMensal);
+            this.Controls.Add(this.lblValorMensal);
             this.Controls.Add(this.lblTipo);
+            this.Controls.Add(this.lblAulas);
+            this.Controls.Add(this.cmbSexo);
+            this.Controls.Add(this.maskDataFinal);
+            this.Controls.Add(this.maskDataInicial);
+            this.Controls.Add(this.panelAulas);
+            this.Controls.Add(this.panelTipo);
+            this.Controls.Add(this.lblDataInicial);
+            this.Controls.Add(this.lblDataFinal);
+            this.Controls.Add(this.lblEmail);
+            this.Controls.Add(this.lblCelular);
+            this.Controls.Add(this.lblCPF);
+            this.Controls.Add(this.lblDataNasc);
+            this.Controls.Add(this.lblEndereco);
+            this.Controls.Add(this.lblSexo);
+            this.Controls.Add(this.lblNome);
+            this.Controls.Add(this.btnOk);
             this.Controls.Add(this.btnCadastrarProfessor);
             this.Controls.Add(this.btnExcluirProfessor);
             this.Controls.Add(this.btnEditarProfessor);
@@ -582,10 +677,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Matricula";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.grpTipo.ResumeLayout(false);
-            this.grpTipo.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.panelTipo.ResumeLayout(false);
+            this.panelTipo.PerformLayout();
+            this.panelAulas.ResumeLayout(false);
+            this.panelAulas.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -598,38 +693,45 @@
         private System.Windows.Forms.Button btnExcluirProfessor;
         private System.Windows.Forms.Button btnEditarProfessor;
         private System.Windows.Forms.Button btnCadastrarProfessor;
-        private System.Windows.Forms.Label lblTipo;
-        private System.Windows.Forms.RadioButton rbMensal;
-        private System.Windows.Forms.Label lblMensal;
-        private System.Windows.Forms.RadioButton rbTrimestral;
-        private System.Windows.Forms.Label label2lblTrimestral;
-        private System.Windows.Forms.RadioButton rbSemestral;
-        private System.Windows.Forms.Label lblSemestral;
-        private System.Windows.Forms.RadioButton rbAnual;
-        private System.Windows.Forms.Label lblAnual;
-        private System.Windows.Forms.Label lblDataInicial;
-        private System.Windows.Forms.MaskedTextBox maskDataInicial;
-        private System.Windows.Forms.Label lblDataFinal;
-        private System.Windows.Forms.MaskedTextBox maskDataFinal;
-        private System.Windows.Forms.Label lblAulas;
-        private System.Windows.Forms.RadioButton rbUmaAula;
-        private System.Windows.Forms.Label lblUmaAula;
-        private System.Windows.Forms.RadioButton rbDuasAulas;
-        private System.Windows.Forms.Label lblDuasAulas;
-        private System.Windows.Forms.RadioButton rbTresAulas;
-        private System.Windows.Forms.Label lblTresAulas;
-        private System.Windows.Forms.ComboBox cmbDiasdaSemana1;
-        private System.Windows.Forms.Label lblDiasSemana;
-        private System.Windows.Forms.ComboBox cmbDiasdaSemana2;
-        private System.Windows.Forms.ComboBox cmbDiasdaSemana3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cmbHorariosTurma3;
-        private System.Windows.Forms.ComboBox cmbHorariosTurma2;
-        private System.Windows.Forms.ComboBox cmbHorariosTurma1;
         private System.Windows.Forms.Button btnOk;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.GroupBox grpTipo;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.Label lblSexo;
+        private System.Windows.Forms.Label lblEndereco;
+        private System.Windows.Forms.Label lblDataNasc;
+        private System.Windows.Forms.Label lblCPF;
+        private System.Windows.Forms.Label lblCelular;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.RadioButton rbMensal;
+        private System.Windows.Forms.RadioButton rbTrimestral;
+        private System.Windows.Forms.RadioButton rbAnual;
+        private System.Windows.Forms.RadioButton rbSemestral;
+        private System.Windows.Forms.Label lblDataFinal;
+        private System.Windows.Forms.Label lblDataInicial;
+        private System.Windows.Forms.RadioButton rbAula3;
+        private System.Windows.Forms.RadioButton rbAula2;
+        private System.Windows.Forms.RadioButton rbAula1;
+        private System.Windows.Forms.Panel panelTipo;
+        private System.Windows.Forms.Panel panelAulas;
+        private System.Windows.Forms.MaskedTextBox maskDataInicial;
+        private System.Windows.Forms.MaskedTextBox maskDataFinal;
+        private System.Windows.Forms.ComboBox cmbSexo;
+        private System.Windows.Forms.Label lblAulas;
+        private System.Windows.Forms.Label lblTipo;
+        private System.Windows.Forms.Label lblValorMensal;
+        private System.Windows.Forms.MaskedTextBox maskValorMensal;
+        private System.Windows.Forms.Label lblDiaSemana;
+        private System.Windows.Forms.Label lblHoraTurma;
+        private System.Windows.Forms.ComboBox cmbTurma1;
+        private System.Windows.Forms.ComboBox cmbSemana1;
+        private System.Windows.Forms.ComboBox cmbSemana2;
+        private System.Windows.Forms.ComboBox cmbTurma2;
+        private System.Windows.Forms.ComboBox cmbSemana3;
+        private System.Windows.Forms.ComboBox cmbTurma3;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.MaskedTextBox maskDataNasc;
+        private System.Windows.Forms.MaskedTextBox maskCel;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.MaskedTextBox maskCPF;
+        private System.Windows.Forms.TextBox txtEndereco;
     }
 }

@@ -35,9 +35,9 @@
             this.btnBuscarAnamnese = new System.Windows.Forms.Button();
             this.btnFecharForm = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.btnExcluirProfessor = new System.Windows.Forms.Button();
-            this.btnEditarProfessor = new System.Windows.Forms.Button();
-            this.btnCadastrarProfessor = new System.Windows.Forms.Button();
+            this.btnExcluirAnamnese = new System.Windows.Forms.Button();
+            this.btnEditarAnamnese = new System.Windows.Forms.Button();
+            this.btnCadastrarAnamnese = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblQP = new System.Windows.Forms.Label();
             this.txtQP = new System.Windows.Forms.TextBox();
@@ -60,6 +60,7 @@
             this.lblPatologias = new System.Windows.Forms.Label();
             this.txtPatologias = new System.Windows.Forms.TextBox();
             this.btnOk = new System.Windows.Forms.Button();
+            this.btnVoltar = new System.Windows.Forms.Button();
             this.grpAlunos = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpAlunos)).BeginInit();
@@ -124,47 +125,50 @@
             this.pictureBox3.TabIndex = 35;
             this.pictureBox3.TabStop = false;
             // 
-            // btnExcluirProfessor
+            // btnExcluirAnamnese
             // 
-            this.btnExcluirProfessor.BackColor = System.Drawing.Color.Transparent;
-            this.btnExcluirProfessor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluirProfessor.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluirProfessor.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnExcluirProfessor.Location = new System.Drawing.Point(645, 348);
-            this.btnExcluirProfessor.Name = "btnExcluirProfessor";
-            this.btnExcluirProfessor.Size = new System.Drawing.Size(80, 27);
-            this.btnExcluirProfessor.TabIndex = 38;
-            this.btnExcluirProfessor.Text = "Excluir";
-            this.btnExcluirProfessor.UseVisualStyleBackColor = false;
-            this.btnExcluirProfessor.Visible = false;
+            this.btnExcluirAnamnese.BackColor = System.Drawing.Color.Transparent;
+            this.btnExcluirAnamnese.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluirAnamnese.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluirAnamnese.ForeColor = System.Drawing.Color.DeepPink;
+            this.btnExcluirAnamnese.Location = new System.Drawing.Point(645, 348);
+            this.btnExcluirAnamnese.Name = "btnExcluirAnamnese";
+            this.btnExcluirAnamnese.Size = new System.Drawing.Size(80, 27);
+            this.btnExcluirAnamnese.TabIndex = 38;
+            this.btnExcluirAnamnese.Text = "Excluir";
+            this.btnExcluirAnamnese.UseVisualStyleBackColor = false;
+            this.btnExcluirAnamnese.Visible = false;
+            this.btnExcluirAnamnese.Click += new System.EventHandler(this.btnExcluirAnamese_Click);
             // 
-            // btnEditarProfessor
+            // btnEditarAnamnese
             // 
-            this.btnEditarProfessor.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditarProfessor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditarProfessor.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarProfessor.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnEditarProfessor.Location = new System.Drawing.Point(559, 348);
-            this.btnEditarProfessor.Name = "btnEditarProfessor";
-            this.btnEditarProfessor.Size = new System.Drawing.Size(80, 27);
-            this.btnEditarProfessor.TabIndex = 37;
-            this.btnEditarProfessor.Text = "Editar";
-            this.btnEditarProfessor.UseVisualStyleBackColor = false;
-            this.btnEditarProfessor.Visible = false;
+            this.btnEditarAnamnese.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditarAnamnese.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditarAnamnese.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarAnamnese.ForeColor = System.Drawing.Color.DeepPink;
+            this.btnEditarAnamnese.Location = new System.Drawing.Point(559, 348);
+            this.btnEditarAnamnese.Name = "btnEditarAnamnese";
+            this.btnEditarAnamnese.Size = new System.Drawing.Size(80, 27);
+            this.btnEditarAnamnese.TabIndex = 37;
+            this.btnEditarAnamnese.Text = "Editar";
+            this.btnEditarAnamnese.UseVisualStyleBackColor = false;
+            this.btnEditarAnamnese.Visible = false;
+            this.btnEditarAnamnese.Click += new System.EventHandler(this.btnEditarAnamnese_Click);
             // 
-            // btnCadastrarProfessor
+            // btnCadastrarAnamnese
             // 
-            this.btnCadastrarProfessor.BackColor = System.Drawing.Color.Transparent;
-            this.btnCadastrarProfessor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCadastrarProfessor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrarProfessor.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrarProfessor.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnCadastrarProfessor.Location = new System.Drawing.Point(645, 348);
-            this.btnCadastrarProfessor.Name = "btnCadastrarProfessor";
-            this.btnCadastrarProfessor.Size = new System.Drawing.Size(80, 27);
-            this.btnCadastrarProfessor.TabIndex = 36;
-            this.btnCadastrarProfessor.Text = "Cadastrar";
-            this.btnCadastrarProfessor.UseVisualStyleBackColor = false;
+            this.btnCadastrarAnamnese.BackColor = System.Drawing.Color.Transparent;
+            this.btnCadastrarAnamnese.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCadastrarAnamnese.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrarAnamnese.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarAnamnese.ForeColor = System.Drawing.Color.DeepPink;
+            this.btnCadastrarAnamnese.Location = new System.Drawing.Point(645, 348);
+            this.btnCadastrarAnamnese.Name = "btnCadastrarAnamnese";
+            this.btnCadastrarAnamnese.Size = new System.Drawing.Size(80, 27);
+            this.btnCadastrarAnamnese.TabIndex = 36;
+            this.btnCadastrarAnamnese.Text = "Cadastrar";
+            this.btnCadastrarAnamnese.UseVisualStyleBackColor = false;
+            this.btnCadastrarAnamnese.Click += new System.EventHandler(this.btnCadastrarAnamnese_Click);
             // 
             // label1
             // 
@@ -382,12 +386,26 @@
             this.btnOk.UseVisualStyleBackColor = false;
             this.btnOk.Visible = false;
             // 
+            // btnVoltar
+            // 
+            this.btnVoltar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVoltar.BackgroundImage")));
+            this.btnVoltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVoltar.FlatAppearance.BorderSize = 0;
+            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoltar.Location = new System.Drawing.Point(654, -1);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(38, 36);
+            this.btnVoltar.TabIndex = 72;
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Visible = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
             // grpAlunos
             // 
             this.grpAlunos.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.grpAlunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grpAlunos.GridColor = System.Drawing.Color.LightCoral;
-            this.grpAlunos.Location = new System.Drawing.Point(-4, 92);
+            this.grpAlunos.Location = new System.Drawing.Point(8, 92);
             this.grpAlunos.Name = "grpAlunos";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -397,7 +415,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.grpAlunos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.grpAlunos.Size = new System.Drawing.Size(750, 216);
+            this.grpAlunos.Size = new System.Drawing.Size(723, 216);
             this.grpAlunos.TabIndex = 71;
             this.grpAlunos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpAlunos_CellDoubleClick);
             // 
@@ -408,6 +426,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(743, 387);
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.grpAlunos);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.txtPatologias);
@@ -431,9 +450,9 @@
             this.Controls.Add(this.txtQP);
             this.Controls.Add(this.lblQP);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnExcluirProfessor);
-            this.Controls.Add(this.btnEditarProfessor);
-            this.Controls.Add(this.btnCadastrarProfessor);
+            this.Controls.Add(this.btnExcluirAnamnese);
+            this.Controls.Add(this.btnEditarAnamnese);
+            this.Controls.Add(this.btnCadastrarAnamnese);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btnFecharForm);
             this.Controls.Add(this.btnBuscarAnamnese);
@@ -458,9 +477,9 @@
         private System.Windows.Forms.Button btnBuscarAnamnese;
         private System.Windows.Forms.Button btnFecharForm;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button btnExcluirProfessor;
-        private System.Windows.Forms.Button btnEditarProfessor;
-        private System.Windows.Forms.Button btnCadastrarProfessor;
+        private System.Windows.Forms.Button btnExcluirAnamnese;
+        private System.Windows.Forms.Button btnEditarAnamnese;
+        private System.Windows.Forms.Button btnCadastrarAnamnese;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblQP;
         private System.Windows.Forms.TextBox txtQP;
@@ -483,6 +502,7 @@
         private System.Windows.Forms.Label lblPatologias;
         private System.Windows.Forms.TextBox txtPatologias;
         private System.Windows.Forms.Button btnOk;
+        private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.DataGridView grpAlunos;
     }
 }

@@ -40,5 +40,22 @@ namespace FittSistema
         {
 
         }
+
+        private void txtCampoSenha_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCampoUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+                txtCampoSenha.Focus();
+        }
+
+        private void txtCampoSenha_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+                btnLogin.PerformClick();
+        }
     }
 }

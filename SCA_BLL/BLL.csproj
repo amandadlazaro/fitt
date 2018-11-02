@@ -51,6 +51,8 @@
     <Compile Include="AlunoBLL.cs" />
     <Compile Include="AnamneseBLL.cs" />
     <Compile Include="LoginBLL.cs" />
+    <Compile Include="MatriculaBLL.cs" />
+    <Compile Include="PagamentoBLL.cs" />
     <Compile Include="ProfessorBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TurmaBLL.cs" />

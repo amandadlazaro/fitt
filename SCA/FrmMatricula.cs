@@ -95,9 +95,26 @@ namespace FittSistema.View
                 Sexo = cmbSexo.SelectedItem.ToString(),
                 Email = txtEmail.Text
             };
-            MessageBox.Show(aluno.CPF.ToString());
-            MessageBox.Show(aluno.Telefone.ToString());
-            MessageBox.Show(alunoBLL.AdicionarAluno(aluno));
+
+            var mensagem = alunoBLL.AdicionarAluno(aluno);
+            if (mensagem != "Aluno Cadastrado com Sucesso")
+            {
+                MessageBox.Show(mensagem);
+                return;
+            }
+
+            var matricula = new Matricula
+            {
+                CPF = maskCPF.Text,
+                idTurma = Int32.Parse(cmbTurma1.SelectedValue.ToString()),
+                TipoPlano = "Mensal",
+                ValorMensal = 10.10,
+                DataInicio = DateTime.ParseExact(maskDataInicial.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
+                DataFim = DateTime.ParseExact(maskDataFinal.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
+                SituacaoMatricula = true,
+                QtdeAulas = 1
+            };
+            MessageBox.Show(matriculaBLL.Adicionar(matricula));
         }
 
         private void txtNome_KeyPress(object sender, KeyPressEventArgs e)

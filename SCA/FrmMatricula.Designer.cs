@@ -403,7 +403,7 @@
             // 
             this.maskDataInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.maskDataInicial.Location = new System.Drawing.Point(474, 130);
-            this.maskDataInicial.Mask = "00.00.0000";
+            this.maskDataInicial.Mask = "00/00/0000";
             this.maskDataInicial.Name = "maskDataInicial";
             this.maskDataInicial.Size = new System.Drawing.Size(100, 21);
             this.maskDataInicial.TabIndex = 139;
@@ -412,7 +412,7 @@
             // 
             this.maskDataFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.maskDataFinal.Location = new System.Drawing.Point(474, 165);
-            this.maskDataFinal.Mask = "00.00.0000";
+            this.maskDataFinal.Mask = "00/00/0000";
             this.maskDataFinal.Name = "maskDataFinal";
             this.maskDataFinal.Size = new System.Drawing.Size(100, 21);
             this.maskDataFinal.TabIndex = 140;

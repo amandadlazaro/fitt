@@ -16,9 +16,13 @@ namespace FittSistema.View
 {
     public partial class FrmMatricula : Form
     {
-        public FrmMatricula()
+        public FrmMatricula(string cpf = "")
         {
             InitializeComponent();
+            if(cpf != "")
+            {
+                ModoEditar(cpf);
+            }
         }
 
         #region BLLs
@@ -181,7 +185,7 @@ namespace FittSistema.View
             }
         }
 
-        public string DevolveAula()
+        private string DevolveAula()
         {
             if (rbAula1.Checked)
             {
@@ -198,7 +202,7 @@ namespace FittSistema.View
             return "erro";
         }
 
-        public string DevolveTipo()
+        private string DevolveTipo()
         {
             if (rbMensal.Checked)
             {
@@ -217,6 +221,15 @@ namespace FittSistema.View
                 return "a";
             }
             return "erro";
+        }
+
+        private void ModoEditar(string cpf)
+        {
+            btnCadastrar.Visible = false;
+            btnSalvar.Visible = true;
+            btnExcluir.Visible = true;
+            maskCPF.Text = cpf;
+            maskCPF.Enabled = false;
         }
 
         #endregion

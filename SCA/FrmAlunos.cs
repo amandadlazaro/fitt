@@ -67,6 +67,16 @@ namespace FittSistema.View
             listarAlunos();
         }
 
+        private void grpAlunos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            string cpf = grpAlunos.CurrentRow.Cells["CPF"].Value.ToString();
+
+            this.Hide();
+            FrmMatricula frmMatricula = new FrmMatricula(cpf);
+            frmMatricula.ShowDialog();
+            this.Close();
+        }
+
         #endregion
     }
 }

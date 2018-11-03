@@ -33,9 +33,9 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnExcluirProfessor = new System.Windows.Forms.Button();
-            this.btnEditarProfessor = new System.Windows.Forms.Button();
-            this.btnCadastrarProfessor = new System.Windows.Forms.Button();
-            this.btnOk = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
             this.lblNome = new System.Windows.Forms.Label();
             this.lblSexo = new System.Windows.Forms.Label();
             this.lblEndereco = new System.Windows.Forms.Label();
@@ -134,52 +134,52 @@
             this.btnExcluirProfessor.UseVisualStyleBackColor = false;
             this.btnExcluirProfessor.Visible = false;
             // 
-            // btnEditarProfessor
+            // btnExcluir
             // 
-            this.btnEditarProfessor.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditarProfessor.Enabled = false;
-            this.btnEditarProfessor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditarProfessor.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarProfessor.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnEditarProfessor.Location = new System.Drawing.Point(557, 339);
-            this.btnEditarProfessor.Name = "btnEditarProfessor";
-            this.btnEditarProfessor.Size = new System.Drawing.Size(80, 27);
-            this.btnEditarProfessor.TabIndex = 42;
-            this.btnEditarProfessor.Text = "Editar";
-            this.btnEditarProfessor.UseVisualStyleBackColor = false;
-            this.btnEditarProfessor.Visible = false;
+            this.btnExcluir.BackColor = System.Drawing.Color.Transparent;
+            this.btnExcluir.Enabled = false;
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluir.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.ForeColor = System.Drawing.Color.DeepPink;
+            this.btnExcluir.Location = new System.Drawing.Point(557, 339);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(80, 27);
+            this.btnExcluir.TabIndex = 42;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Visible = false;
             // 
-            // btnCadastrarProfessor
+            // btnCadastrar
             // 
-            this.btnCadastrarProfessor.BackColor = System.Drawing.Color.Transparent;
-            this.btnCadastrarProfessor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCadastrarProfessor.BackgroundImage")));
-            this.btnCadastrarProfessor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCadastrarProfessor.FlatAppearance.BorderSize = 0;
-            this.btnCadastrarProfessor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrarProfessor.Font = new System.Drawing.Font("Agency FB", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrarProfessor.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnCadastrarProfessor.Location = new System.Drawing.Point(696, 330);
-            this.btnCadastrarProfessor.Name = "btnCadastrarProfessor";
-            this.btnCadastrarProfessor.Size = new System.Drawing.Size(35, 36);
-            this.btnCadastrarProfessor.TabIndex = 52;
-            this.btnCadastrarProfessor.UseVisualStyleBackColor = false;
-            this.btnCadastrarProfessor.Click += new System.EventHandler(this.btnCadastrarProfessor_Click);
+            this.btnCadastrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCadastrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCadastrar.BackgroundImage")));
+            this.btnCadastrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCadastrar.FlatAppearance.BorderSize = 0;
+            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrar.Font = new System.Drawing.Font("Agency FB", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.ForeColor = System.Drawing.Color.DeepPink;
+            this.btnCadastrar.Location = new System.Drawing.Point(696, 330);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(35, 36);
+            this.btnCadastrar.TabIndex = 52;
+            this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrarProfessor_Click);
             // 
-            // btnOk
+            // btnSalvar
             // 
-            this.btnOk.BackColor = System.Drawing.Color.DeepPink;
-            this.btnOk.Enabled = false;
-            this.btnOk.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnOk.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOk.ForeColor = System.Drawing.Color.White;
-            this.btnOk.Location = new System.Drawing.Point(651, 339);
-            this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(80, 27);
-            this.btnOk.TabIndex = 95;
-            this.btnOk.Text = "Salvar";
-            this.btnOk.UseVisualStyleBackColor = false;
-            this.btnOk.Visible = false;
-            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
+            this.btnSalvar.BackColor = System.Drawing.Color.DeepPink;
+            this.btnSalvar.Enabled = false;
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSalvar.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.ForeColor = System.Drawing.Color.White;
+            this.btnSalvar.Location = new System.Drawing.Point(651, 339);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(80, 27);
+            this.btnSalvar.TabIndex = 95;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Visible = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // lblNome
             // 
@@ -674,10 +674,10 @@
             this.Controls.Add(this.lblEndereco);
             this.Controls.Add(this.lblSexo);
             this.Controls.Add(this.lblNome);
-            this.Controls.Add(this.btnOk);
-            this.Controls.Add(this.btnCadastrarProfessor);
+            this.Controls.Add(this.btnSalvar);
+            this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.btnExcluirProfessor);
-            this.Controls.Add(this.btnEditarProfessor);
+            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btnFecharTela);
@@ -701,9 +701,9 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnExcluirProfessor;
-        private System.Windows.Forms.Button btnEditarProfessor;
-        private System.Windows.Forms.Button btnCadastrarProfessor;
-        private System.Windows.Forms.Button btnOk;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Label lblSexo;
         private System.Windows.Forms.Label lblEndereco;

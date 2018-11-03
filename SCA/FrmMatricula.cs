@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAL;
 using SCA_BLL;
+using System.Diagnostics;
 
 namespace FittSistema.View
 {
@@ -48,7 +49,7 @@ namespace FittSistema.View
 
         private bool ValidarCampos()
         {
-            return false;
+            return true;
         }
 
         private void cmbSemana1_SelectedIndexChanged(object sender, EventArgs e)
@@ -95,6 +96,10 @@ namespace FittSistema.View
                 Sexo = cmbSexo.SelectedItem.ToString(),
                 Email = txtEmail.Text
             };
+            MessageBox.Show(aluno.Telefone.ToString());
+            MessageBox.Show(aluno.DataNasc.ToString());
+            MessageBox.Show(aluno.Sexo.ToString());
+            MessageBox.Show(alunoBLL.AdicionarAluno(aluno));
         }
     }
 }

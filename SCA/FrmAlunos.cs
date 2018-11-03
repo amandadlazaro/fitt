@@ -81,6 +81,11 @@ namespace FittSistema.View
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            FrmMatricula frmMatricula = new FrmMatricula();
+            frmMatricula.ShowDialog();
+            this.Close();
+            /*
             if (grpAlunos.Visible == true)
             {
                 grpAlunos.Hide();
@@ -91,7 +96,7 @@ namespace FittSistema.View
                 txtBusca.Hide();
                 limpaCampos();
             }
-           
+            */
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)

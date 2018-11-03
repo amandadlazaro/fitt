@@ -34,7 +34,6 @@ namespace SCA_BLL
                 Nome = a.Nome,
                 Endereco = a.Endereco,
                 Telefone = a.Telefone,
-                DataNasc = a.DataNasc,
                 Sexo = a.Sexo,
                 Email = a.Email,
             }).ToList();

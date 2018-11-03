@@ -29,6 +29,13 @@ namespace FittSistema.View
 
         #endregion
 
+        #region DALs
+
+        Aluno aluno;
+        Matricula matricula;
+
+        #endregion
+
         #region CheckBoxes
 
         private void rbAula1_CheckedChanged(object sender, EventArgs e)
@@ -247,7 +254,7 @@ namespace FittSistema.View
                 return;
             }
 
-            var aluno = new Aluno
+            aluno = new Aluno
             {
                 CPF = maskCPF.Text,
                 Nome = txtNome.Text,
@@ -258,14 +265,16 @@ namespace FittSistema.View
                 Email = txtEmail.Text
             };
 
-            var mensagem = alunoBLL.AdicionarAluno(aluno);
-            if (mensagem != "Aluno Cadastrado com Sucesso")
+            var mensagemAluno = alunoBLL.AdicionarAluno(aluno);
+            if (mensagemAluno != "Aluno Cadastrado com Sucesso")
             {
-                MessageBox.Show(mensagem);
+                // MessageBox.Show(mensagemAluno);
+                MessageBox.Show("Já existe um aluno com esse CPF");
+                alunoBLL = new AlunoBLL();
                 return;
             }
 
-            var matricula = new Matricula
+            matricula = new Matricula
             {
                 CPF = maskCPF.Text,
                 idTurma = Int32.Parse(cmbTurma1.SelectedValue.ToString()),
@@ -276,7 +285,16 @@ namespace FittSistema.View
                 SituacaoMatricula = true,
                 QtdeAulas = 1
             };
-            MessageBox.Show(matriculaBLL.Adicionar(matricula));
+
+            var mensagemMatricula = matriculaBLL.Adicionar(matricula);
+            if (mensagemMatricula != "Matricula Cadastrada com Sucesso")
+            {
+                alunoBLL.DeletarAluno(aluno);
+                alunoBLL = new AlunoBLL();
+                matriculaBLL = new MatriculaBLL();
+            }
+
+            MessageBox.Show(mensagemMatricula);
         }
     }
 }

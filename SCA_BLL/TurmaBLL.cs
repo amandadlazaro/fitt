@@ -29,10 +29,10 @@ namespace SCA_BLL
         //comunicação com o BD
         public FittDataBaseEntities bd = new FittDataBaseEntities();
 
-        public IEnumerable<DadosTurmasSemana> LerTurma(string diasemana)
+        public IEnumerable<DadosTurmasSemana> LerTurma(string diaSemana)
         {
             var lista = bd.Turma
-                .Where(t=> t.DiaSemana == diasemana)
+                .Where(t=> t.DiaSemana == diaSemana)
                 .Join(bd.Professor, t => t.CPF, prof => prof.CPF, (t, prof) => new DadosTurmasSemana
                 { 
                     idTurma = t.idTurma,

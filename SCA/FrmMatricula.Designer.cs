@@ -163,6 +163,7 @@
             this.btnCadastrarProfessor.Size = new System.Drawing.Size(35, 36);
             this.btnCadastrarProfessor.TabIndex = 52;
             this.btnCadastrarProfessor.UseVisualStyleBackColor = false;
+            this.btnCadastrarProfessor.Click += new System.EventHandler(this.btnCadastrarProfessor_Click);
             // 
             // btnOk
             // 
@@ -226,7 +227,6 @@
             this.lblDataNasc.Size = new System.Drawing.Size(138, 25);
             this.lblDataNasc.TabIndex = 101;
             this.lblDataNasc.Text = "Data de Nascimento";
-            this.lblDataNasc.Click += new System.EventHandler(this.lblDataNasc_Click);
             // 
             // lblCPF
             // 
@@ -472,7 +472,7 @@
             // 
             this.maskValorMensal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.maskValorMensal.Location = new System.Drawing.Point(349, 330);
-            this.maskValorMensal.Mask = "R$";
+            this.maskValorMensal.Mask = "$";
             this.maskValorMensal.Name = "maskValorMensal";
             this.maskValorMensal.Size = new System.Drawing.Size(100, 21);
             this.maskValorMensal.TabIndex = 151;
@@ -524,6 +524,7 @@
             this.cmbSemana1.Name = "cmbSemana1";
             this.cmbSemana1.Size = new System.Drawing.Size(100, 23);
             this.cmbSemana1.TabIndex = 145;
+            this.cmbSemana1.SelectedIndexChanged += new System.EventHandler(this.cmbSemana1_SelectedIndexChanged);
             // 
             // cmbSemana2
             // 
@@ -539,6 +540,7 @@
             this.cmbSemana2.Name = "cmbSemana2";
             this.cmbSemana2.Size = new System.Drawing.Size(100, 23);
             this.cmbSemana2.TabIndex = 147;
+            this.cmbSemana2.SelectedIndexChanged += new System.EventHandler(this.cmbSemana2_SelectedIndexChanged);
             // 
             // cmbTurma2
             // 
@@ -563,6 +565,7 @@
             this.cmbSemana3.Name = "cmbSemana3";
             this.cmbSemana3.Size = new System.Drawing.Size(100, 23);
             this.cmbSemana3.TabIndex = 149;
+            this.cmbSemana3.SelectedIndexChanged += new System.EventHandler(this.cmbSemana3_SelectedIndexChanged);
             // 
             // cmbTurma3
             // 

@@ -16,6 +16,7 @@ namespace FittSistema.View
         }
 
         AlunoBLL alunoBLL = new AlunoBLL();
+        MatriculaBLL matriculaBLL = new MatriculaBLL();
 
         #region Functions
 
@@ -73,14 +74,21 @@ namespace FittSistema.View
             string cpf = grpAlunos.CurrentRow.Cells["CPF"].Value.ToString();
             string nome = grpAlunos.CurrentRow.Cells["Nome"].Value.ToString();
 
+            grpAlunos.DataSource = alunoBLL.ProcurarAluno(cpf);
+            AlunosMatriculadosBLL.CPF = grpAlunos.CurrentRow.Cells["CPF"].Value.ToString();
+            AlunosMatriculadosBLL.Nome = grpAlunos.CurrentRow.Cells["Nome"].Value.ToString();
+            grpAlunos.DataSource = matriculaBLL.ProcurarMatricula(cpf);
+
             DialogResult Confirmacao = MessageBox.Show("Voce quer mesmo editar " + nome, "Confirmar Escolha", MessageBoxButtons.YesNo);
             if (Confirmacao == DialogResult.No)
             {
                 return;
             }
 
+
+
             this.Hide();
-            FrmMatricula frmMatricula = new FrmMatricula(cpf);
+            FrmMatricula frmMatricula = new FrmMatricula(true);
             frmMatricula.ShowDialog();
             this.Close();
         }

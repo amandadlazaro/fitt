@@ -16,12 +16,12 @@ namespace FittSistema.View
 {
     public partial class FrmMatricula : Form
     {
-        public FrmMatricula(string cpf = "")
+        public FrmMatricula(bool editar = false)
         {
             InitializeComponent();
-            if(cpf != "")
+            if(editar)
             {
-                ModoEditar(cpf);
+                ModoEditar();
             }
         }
 
@@ -223,12 +223,12 @@ namespace FittSistema.View
             return "erro";
         }
 
-        private void ModoEditar(string cpf)
+        private void ModoEditar()
         {
             btnCadastrar.Visible = false;
             btnSalvar.Visible = true;
             btnExcluir.Visible = true;
-            maskCPF.Text = cpf;
+            maskCPF.Text = AlunosMatriculadosBLL.CPF;
             maskCPF.Enabled = false;
         }
 

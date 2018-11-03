@@ -100,11 +100,28 @@ namespace SCA_BLL
 
             return lista;
         }
+        
+        public IEnumerable<DadosAlunos> ProcurarAluno(string cpf)
+        {
+            var data = bd.Aluno.Where(a => a.CPF.Equals(cpf))
+                .Select(a => new DadosAlunos
+            {
+                CPF = a.CPF,
+                Nome = a.Nome,
+                Endereco = a.Endereco,
+                Telefone = a.Telefone,
+                Sexo = a.Sexo,
+                Email = a.Email,
+                DataNasc = a.DataNasc
+            }).ToList();
+
+            return data;
+        }
 
         public IEnumerable<DadosAlunos> LerAlunosPorNome(string nome = null)
         {
-            var lista = bd.Aluno.Where(a => a.Nome.StartsWith(nome)).
-            Select(a => new DadosAlunos
+            var lista = bd.Aluno.Where(a => a.Nome.StartsWith(nome))
+                .Select(a => new DadosAlunos
             {
                 CPF = a.CPF,
                 Nome = a.Nome,

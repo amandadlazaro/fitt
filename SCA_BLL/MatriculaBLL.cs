@@ -96,6 +96,25 @@ namespace SCA_BLL
 
             return lista;
         }
+        
+        public IEnumerable<DadosMatricula> ProcurarMatricula(string cpf)
+        {
+            var data = bd.Matricula.Where(a => a.CPF.Equals(cpf))
+                .Select(p => new DadosMatricula
+            {
+                idMatricula = p.idMatricula,
+                CPF = p.CPF,
+                idTurma = p.idTurma,
+                TipoPlano = p.TipoPlano,
+                ValorMensal = p.ValorMensal,
+                DataInicio = p.DataInicio,
+                DataFim = p.DataFim,
+                SituacaoMatricula = p.SituacaoMatricula,
+                QtdeAulas = p.QtdeAulas
+            }).ToList();
+
+            return data;
+        }
 
         #endregion
     }

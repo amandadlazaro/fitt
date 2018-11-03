@@ -1,6 +1,7 @@
 ﻿using DAL;
 using SCA_BLL;
 using System;
+using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
@@ -70,6 +71,13 @@ namespace FittSistema.View
         private void grpAlunos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             string cpf = grpAlunos.CurrentRow.Cells["CPF"].Value.ToString();
+            string nome = grpAlunos.CurrentRow.Cells["Nome"].Value.ToString();
+
+            DialogResult Confirmacao = MessageBox.Show("Voce quer mesmo editar " + nome, "Confirmar Escolha", MessageBoxButtons.YesNo);
+            if (Confirmacao == DialogResult.No)
+            {
+                return;
+            }
 
             this.Hide();
             FrmMatricula frmMatricula = new FrmMatricula(cpf);

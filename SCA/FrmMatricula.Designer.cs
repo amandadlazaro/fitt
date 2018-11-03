@@ -349,6 +349,7 @@
             this.rbAula3.TabIndex = 138;
             this.rbAula3.Text = "3";
             this.rbAula3.UseVisualStyleBackColor = true;
+            this.rbAula3.CheckedChanged += new System.EventHandler(this.rbAula3_CheckedChanged);
             // 
             // rbAula2
             // 
@@ -361,6 +362,7 @@
             this.rbAula2.TabIndex = 137;
             this.rbAula2.Text = "2";
             this.rbAula2.UseVisualStyleBackColor = true;
+            this.rbAula2.CheckedChanged += new System.EventHandler(this.rbAula2_CheckedChanged);
             // 
             // rbAula1
             // 
@@ -375,6 +377,7 @@
             this.rbAula1.TabStop = true;
             this.rbAula1.Text = "1";
             this.rbAula1.UseVisualStyleBackColor = true;
+            this.rbAula1.CheckedChanged += new System.EventHandler(this.rbAula1_CheckedChanged);
             // 
             // panelTipo
             // 

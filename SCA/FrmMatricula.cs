@@ -24,6 +24,38 @@ namespace FittSistema.View
         AlunoBLL alunoBLL = new AlunoBLL();
         MatriculaBLL matriculaBLL = new MatriculaBLL();
 
+        #region CheckBoxes
+        private void rbAula1_CheckedChanged(object sender, EventArgs e)
+        {
+            cmbSemana2.Enabled = false;
+            cmbTurma2.Enabled = false;
+            cmbSemana3.Enabled = false;
+            cmbTurma3.Enabled = false;
+            cmbSemana2.SelectedIndex = -1;
+            cmbTurma2.SelectedIndex = -1;
+            cmbSemana3.SelectedIndex = -1;
+            cmbTurma3.SelectedIndex = -1;
+        }
+
+        private void rbAula2_CheckedChanged(object sender, EventArgs e)
+        {
+            cmbSemana2.Enabled = true;
+            cmbTurma2.Enabled = true;
+            cmbSemana3.Enabled = false;
+            cmbTurma3.Enabled = false;
+            cmbSemana3.SelectedIndex = -1;
+            cmbTurma3.SelectedIndex = -1;
+        }
+
+        private void rbAula3_CheckedChanged(object sender, EventArgs e)
+        {
+            cmbSemana2.Enabled = true;
+            cmbTurma2.Enabled = true;
+            cmbSemana3.Enabled = true;
+            cmbTurma3.Enabled = true;
+        }
+        #endregion
+
         private void btnFecharTela_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -48,6 +80,49 @@ namespace FittSistema.View
 
         private bool ValidarCampos()
         {
+            if (string.IsNullOrEmpty(txtNome.Text) || string.IsNullOrEmpty(maskDataNasc.Text) || string.IsNullOrEmpty(maskCel.Text) ||
+                string.IsNullOrEmpty(txtEmail.Text) || string.IsNullOrEmpty(maskCPF.Text) || string.IsNullOrEmpty(maskDataInicial.Text) ||
+                string.IsNullOrEmpty(maskDataFinal.Text) || string.IsNullOrEmpty(txtEndereco.Text))
+            {
+                MessageBox.Show("Preencha todos os campos!");
+                return false;
+            }
+
+            if (cmbSexo.SelectedIndex.Equals(-1))
+            {
+                MessageBox.Show("Preencha todos os campos!");
+                return false;
+            }
+
+            if (rbAula1.Checked)
+            {
+                if (cmbSemana1.SelectedIndex.Equals(-1) || cmbTurma1.SelectedIndex.Equals(-1))
+                {
+                    MessageBox.Show("Preencha todos os campos!");
+                    return false;
+                }
+            }
+
+            if (rbAula2.Checked)
+            {
+                if (cmbSemana1.SelectedIndex.Equals(-1) || cmbTurma1.SelectedIndex.Equals(-1) ||
+                    cmbSemana2.SelectedIndex.Equals(-1) || cmbTurma2.SelectedIndex.Equals(-1))
+                {
+                    MessageBox.Show("Preencha todos os campos!");
+                    return false;
+                }
+            }
+
+            if (rbAula3.Checked)
+            {
+                if (cmbSemana1.SelectedIndex.Equals(-1) || cmbTurma1.SelectedIndex.Equals(-1) ||
+                    cmbSemana2.SelectedIndex.Equals(-1) || cmbTurma2.SelectedIndex.Equals(-1) ||
+                    cmbSemana3.SelectedIndex.Equals(-1) || cmbTurma3.SelectedIndex.Equals(-1))
+                {
+                    MessageBox.Show("Preencha todos os campos!");
+                    return false;
+                }
+            }
             return true;
         }
 
@@ -120,6 +195,53 @@ namespace FittSistema.View
         private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.KeyChar = Util.FiltrarTeclas.letraMaiuscula(e.KeyChar);
+        }
+
+        private void AtualizarValorMensal()
+        {
+
+            if (rbAula1.Checked)
+            {
+
+            }
+        }
+
+        public string DevolveAula()
+        {
+            if (rbAula1.Checked)
+            {
+                return "1";
+            }
+            if (rbAula2.Checked)
+            {
+                return "2";
+            }
+            if (rbAula3.Checked)
+            {
+                return "3";
+            }
+            return "erro";
+        }
+
+        public string DevolveTipo()
+        {
+            if (rbMensal.Checked)
+            {
+                return "m";
+            }
+            if (rbTrimestral.Checked)
+            {
+                return "t";
+            }
+            if (rbSemestral.Checked)
+            {
+                return "s";
+            }
+            if (rbAnual.Checked)
+            {
+                return "a";
+            }
+            return "erro";
         }
     }
 }

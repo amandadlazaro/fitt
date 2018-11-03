@@ -528,6 +528,7 @@
             // 
             // cmbSemana2
             // 
+            this.cmbSemana2.Enabled = false;
             this.cmbSemana2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.cmbSemana2.FormattingEnabled = true;
             this.cmbSemana2.Items.AddRange(new object[] {
@@ -544,6 +545,7 @@
             // 
             // cmbTurma2
             // 
+            this.cmbTurma2.Enabled = false;
             this.cmbTurma2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.cmbTurma2.FormattingEnabled = true;
             this.cmbTurma2.Location = new System.Drawing.Point(512, 256);
@@ -553,6 +555,7 @@
             // 
             // cmbSemana3
             // 
+            this.cmbSemana3.Enabled = false;
             this.cmbSemana3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.cmbSemana3.FormattingEnabled = true;
             this.cmbSemana3.Items.AddRange(new object[] {
@@ -569,6 +572,7 @@
             // 
             // cmbTurma3
             // 
+            this.cmbTurma3.Enabled = false;
             this.cmbTurma3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.cmbTurma3.FormattingEnabled = true;
             this.cmbTurma3.Location = new System.Drawing.Point(512, 284);
@@ -583,7 +587,7 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(251, 21);
             this.txtNome.TabIndex = 129;
-            this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
+            this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FiltrarLetraMaiuscula);
             // 
             // maskDataNasc
             // 

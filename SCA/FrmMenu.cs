@@ -51,8 +51,8 @@ namespace FittSistema.View
         private void btnMatricula_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmMatricula matricula = new FrmMatricula();
-            matricula.ShowDialog();
+            FrmAdministrador adm = new FrmAdministrador();
+            adm.ShowDialog();
             this.Close();
         }
 

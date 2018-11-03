@@ -96,9 +96,8 @@ namespace FittSistema.View
                 Sexo = cmbSexo.SelectedItem.ToString(),
                 Email = txtEmail.Text
             };
+            MessageBox.Show(aluno.CPF.ToString());
             MessageBox.Show(aluno.Telefone.ToString());
-            MessageBox.Show(aluno.DataNasc.ToString());
-            MessageBox.Show(aluno.Sexo.ToString());
             MessageBox.Show(alunoBLL.AdicionarAluno(aluno));
         }
     }

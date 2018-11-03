@@ -598,10 +598,11 @@
             // 
             this.maskCel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.maskCel.Location = new System.Drawing.Point(238, 131);
-            this.maskCel.Mask = "(00)00000-0000";
+            this.maskCel.Mask = "(99)0000-0000";
             this.maskCel.Name = "maskCel";
             this.maskCel.Size = new System.Drawing.Size(108, 21);
             this.maskCel.TabIndex = 131;
+            this.maskCel.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // txtEmail
             // 
@@ -615,10 +616,11 @@
             // 
             this.maskCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.maskCPF.Location = new System.Drawing.Point(95, 279);
-            this.maskCPF.Mask = "000.000.000-00";
+            this.maskCPF.Mask = "999.999.999-99";
             this.maskCPF.Name = "maskCPF";
             this.maskCPF.Size = new System.Drawing.Size(115, 21);
             this.maskCPF.TabIndex = 134;
+            this.maskCPF.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // txtEndereco
             // 

@@ -94,9 +94,9 @@ namespace SCA_BLL
         {
             try
             {
-                var a = bd.Professor.First(al => al.CPF == aluno.CPF);
+                var a = bd.Aluno.First(al => al.CPF == aluno.CPF);
                 if (a == null) return null;
-                bd.Professor.Remove(a);
+                bd.Aluno.Remove(a);
                 bd.SaveChanges();
                 return "Aluno Deletado com Sucesso";
             }

@@ -26,25 +26,7 @@ namespace SCA_BLL
 
         public FittDataBaseEntities bd = new FittDataBaseEntities();
 
-
-        public IEnumerable<DadosMatricula> LerMatricula()
-        {
-            var lista = bd.Matricula.Select(p => new DadosMatricula
-            {
-                idMatricula = p.idMatricula,
-                CPF = p.CPF,
-                idTurma = p.idTurma,
-                TipoPlano = p.TipoPlano,
-                ValorMensal = p.ValorMensal,
-                DataInicio = p.DataInicio,
-                DataFim = p.DataFim,
-                SituacaoMatricula = p.SituacaoMatricula,
-                QtdeAulas = p.QtdeAulas
-            }).ToList();
-
-            return lista;
-        }
-
+        #region Manter
 
         public string Adicionar(Matricula matricula)
         {
@@ -92,5 +74,29 @@ namespace SCA_BLL
                 return error.Message;
             }
         }
+
+        #endregion
+
+        #region Consultar
+
+        public IEnumerable<DadosMatricula> LerMatricula()
+        {
+            var lista = bd.Matricula.Select(p => new DadosMatricula
+            {
+                idMatricula = p.idMatricula,
+                CPF = p.CPF,
+                idTurma = p.idTurma,
+                TipoPlano = p.TipoPlano,
+                ValorMensal = p.ValorMensal,
+                DataInicio = p.DataInicio,
+                DataFim = p.DataFim,
+                SituacaoMatricula = p.SituacaoMatricula,
+                QtdeAulas = p.QtdeAulas
+            }).ToList();
+
+            return lista;
+        }
+
+        #endregion
     }
 }

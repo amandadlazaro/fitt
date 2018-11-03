@@ -10,6 +10,7 @@ namespace SCA_BLL
     public class AlunoBLL
     {
         #region Propriedades
+
         public class DadosAlunos
         {
             public string CPF { get; set; }
@@ -20,44 +21,18 @@ namespace SCA_BLL
             public string Sexo { get; set; }
             public string Email { get; set; }
         }
+
+        public class DadosAlunosMini
+        {
+            public string CPF { get; set; }
+            public string Nome { get; set; }
+        }
+
         #endregion
 
-
-        //comunicação com o BD
         public FittDataBaseEntities bd = new FittDataBaseEntities();
 
-        public IEnumerable<DadosAlunos> LerAlunos()
-        {
-            var lista = bd.Aluno.Select(a => new DadosAlunos
-            {
-                CPF = a.CPF,
-                Nome = a.Nome,
-                Endereco = a.Endereco,
-                Telefone = a.Telefone,
-                Sexo = a.Sexo,
-                Email = a.Email,
-            }).ToList();
-
-            return lista;
-        }
-
-
-        public IEnumerable<DadosAlunos> LerAlunosPorNome(string nome = null)
-        {
-            var lista = bd.Aluno.Where(a => a.Nome.StartsWith(nome)).
-            Select(a => new DadosAlunos
-            {
-                CPF = a.CPF,
-                Nome = a.Nome,
-                Endereco = a.Endereco,
-                Telefone = a.Telefone,
-                DataNasc = a.DataNasc,
-                Sexo = a.Sexo,
-                Email = a.Email,
-            }).ToList();
-
-            return lista;
-        }
+        #region Manter
 
         public string AdicionarAluno(Aluno aluno)
         {
@@ -105,5 +80,55 @@ namespace SCA_BLL
                 return error.Message;
             }
         }
+
+        #endregion
+
+        #region Consultar
+
+        public IEnumerable<DadosAlunos> LerAlunos()
+        {
+            var lista = bd.Aluno.Select(a => new DadosAlunos
+            {
+                CPF = a.CPF,
+                Nome = a.Nome,
+                Endereco = a.Endereco,
+                Telefone = a.Telefone,
+                Sexo = a.Sexo,
+                Email = a.Email,
+                DataNasc = a.DataNasc
+            }).ToList();
+
+            return lista;
+        }
+
+        public IEnumerable<DadosAlunos> LerAlunosPorNome(string nome = null)
+        {
+            var lista = bd.Aluno.Where(a => a.Nome.StartsWith(nome)).
+            Select(a => new DadosAlunos
+            {
+                CPF = a.CPF,
+                Nome = a.Nome,
+                Endereco = a.Endereco,
+                Telefone = a.Telefone,
+                DataNasc = a.DataNasc,
+                Sexo = a.Sexo,
+                Email = a.Email,
+            }).ToList();
+
+            return lista;
+        }
+
+        public IEnumerable<DadosAlunosMini> LerAlunosMini()
+        {
+            var lista = bd.Aluno.Select(a => new DadosAlunosMini
+            {
+                CPF = a.CPF,
+                Nome = a.Nome
+            }).ToList();
+
+            return lista;
+        }
+
+        #endregion
     }
 }

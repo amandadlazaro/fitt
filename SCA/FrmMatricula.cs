@@ -230,6 +230,8 @@ namespace FittSistema.View
 
         #endregion
 
+        #region Form
+
         private void btnFecharTela_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -247,7 +249,7 @@ namespace FittSistema.View
 
         }
 
-        private void btnCadastrarProfessor_Click(object sender, EventArgs e)
+        private void btnCadastrarProfessor_Click(object sender, EventArgs e) 
         {
             if (!ValidarCampos())
             {
@@ -263,7 +265,7 @@ namespace FittSistema.View
                 DataNasc = DateTime.ParseExact(maskDataNasc.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
                 Sexo = cmbSexo.SelectedItem.ToString(),
                 Email = txtEmail.Text
-            };
+            }; 
 
             var mensagemAluno = alunoBLL.AdicionarAluno(aluno);
             if (mensagemAluno != "Aluno Cadastrado com Sucesso")
@@ -296,5 +298,7 @@ namespace FittSistema.View
 
             MessageBox.Show(mensagemMatricula);
         }
+
+        #endregion
     }
 }

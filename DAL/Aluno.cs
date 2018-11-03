@@ -25,10 +25,7 @@ namespace DAL
         public string Endereco { get; set; }
         public string Telefone { get; set; }
         public System.DateTime DataNasc { get; set; }
-        public string EstCivil { get; set; }
-        public int NumFilhos { get; set; }
         public string Sexo { get; set; }
-        public double Altura { get; set; }
         public string Email { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

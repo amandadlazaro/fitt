@@ -65,10 +65,7 @@ namespace FittSistema.View
                         Endereco = txtEnd.Text,
                         Telefone = txtTel.Text,
                         DataNasc = DateTime.ParseExact(txtDtNasc.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
-                        EstCivil = cmbEstCivil.SelectedItem.ToString(),
-                        NumFilhos = Convert.ToInt32(txtNumFilhos.Value),
                         Sexo = cmbSexo.SelectedItem.ToString(),
-                        Altura = Convert.ToDouble(txtAltura.Text),
                         Email = txtEmail.Text
                     };
                     MessageBox.Show(alunoBLL.AlterarAluno(aluno));
@@ -208,11 +205,8 @@ namespace FittSistema.View
                     txtEnd.Text = row.Cells[2].Value.ToString();
                     txtTel.Text = row.Cells[3].Value.ToString();
                     txtDtNasc.Text = row.Cells[4].Value.ToString();
-                    cmbEstCivil.SelectedItem = row.Cells[5].Value.ToString();
-                    txtNumFilhos.Value = Convert.ToDecimal(row.Cells[6].Value);
-                    cmbSexo.SelectedItem = row.Cells[7].Value.ToString();
-                    txtAltura.Text = row.Cells[8].Value.ToString();
-                    txtEmail.Text = row.Cells[9].Value.ToString();
+                    cmbSexo.SelectedItem = row.Cells[5].Value.ToString();
+                    txtEmail.Text = row.Cells[6].Value.ToString();
                 }
                 grpAlunos.Hide();
                 btnCadastrar.Hide();
@@ -239,10 +233,7 @@ namespace FittSistema.View
                     Endereco = txtEnd.Text,
                     Telefone = txtTel.Text,
                     DataNasc = DateTime.ParseExact(txtDtNasc.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
-                    EstCivil = cmbEstCivil.SelectedItem.ToString(),
-                    NumFilhos = Convert.ToInt32(txtNumFilhos.Value),
                     Sexo = cmbSexo.SelectedItem.ToString(),
-                    Altura = Convert.ToDouble(txtAltura.Text),
                     Email = txtEmail.Text
                 };
                 MessageBox.Show(alunoBLL.AdicionarAluno(aluno));

@@ -17,10 +17,7 @@ namespace SCA_BLL
             public string Endereco { get; set; }
             public string Telefone { get; set; }
             public System.DateTime DataNasc { get; set; }
-            public string EstCivil { get; set; }
-            public int NumFilhos { get; set; }
             public string Sexo { get; set; }
-            public double Altura { get; set; }
             public string Email { get; set; }
         }
         #endregion
@@ -38,10 +35,7 @@ namespace SCA_BLL
                 Endereco = a.Endereco,
                 Telefone = a.Telefone,
                 DataNasc = a.DataNasc,
-                EstCivil = a.EstCivil,
-                NumFilhos = a.NumFilhos,
                 Sexo = a.Sexo,
-                Altura = a.Altura,
                 Email = a.Email,
             }).ToList();
 
@@ -59,10 +53,7 @@ namespace SCA_BLL
                 Endereco = a.Endereco,
                 Telefone = a.Telefone,
                 DataNasc = a.DataNasc,
-                EstCivil = a.EstCivil,
-                NumFilhos = a.NumFilhos,
                 Sexo = a.Sexo,
-                Altura = a.Altura,
                 Email = a.Email,
             }).ToList();
 

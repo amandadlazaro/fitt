@@ -267,6 +267,7 @@
             // rbMensal
             // 
             this.rbMensal.AutoSize = true;
+            this.rbMensal.Checked = true;
             this.rbMensal.Font = new System.Drawing.Font("Agency FB", 15F);
             this.rbMensal.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.rbMensal.Location = new System.Drawing.Point(7, 0);
@@ -286,7 +287,6 @@
             this.rbTrimestral.Name = "rbTrimestral";
             this.rbTrimestral.Size = new System.Drawing.Size(87, 28);
             this.rbTrimestral.TabIndex = 143;
-            this.rbTrimestral.TabStop = true;
             this.rbTrimestral.Text = "Trimestral";
             this.rbTrimestral.UseVisualStyleBackColor = true;
             // 
@@ -299,7 +299,6 @@
             this.rbAnual.Name = "rbAnual";
             this.rbAnual.Size = new System.Drawing.Size(59, 28);
             this.rbAnual.TabIndex = 142;
-            this.rbAnual.TabStop = true;
             this.rbAnual.Text = "Anual";
             this.rbAnual.UseVisualStyleBackColor = true;
             // 
@@ -312,7 +311,6 @@
             this.rbSemestral.Name = "rbSemestral";
             this.rbSemestral.Size = new System.Drawing.Size(82, 28);
             this.rbSemestral.TabIndex = 144;
-            this.rbSemestral.TabStop = true;
             this.rbSemestral.Text = "Semestal";
             this.rbSemestral.UseVisualStyleBackColor = true;
             // 
@@ -349,7 +347,6 @@
             this.rbAula3.Name = "rbAula3";
             this.rbAula3.Size = new System.Drawing.Size(36, 28);
             this.rbAula3.TabIndex = 138;
-            this.rbAula3.TabStop = true;
             this.rbAula3.Text = "3";
             this.rbAula3.UseVisualStyleBackColor = true;
             // 
@@ -362,13 +359,13 @@
             this.rbAula2.Name = "rbAula2";
             this.rbAula2.Size = new System.Drawing.Size(36, 28);
             this.rbAula2.TabIndex = 137;
-            this.rbAula2.TabStop = true;
             this.rbAula2.Text = "2";
             this.rbAula2.UseVisualStyleBackColor = true;
             // 
             // rbAula1
             // 
             this.rbAula1.AutoSize = true;
+            this.rbAula1.Checked = true;
             this.rbAula1.Font = new System.Drawing.Font("Agency FB", 15F);
             this.rbAula1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.rbAula1.Location = new System.Drawing.Point(14, 3);
@@ -440,9 +437,9 @@
             this.lblAulas.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.lblAulas.Location = new System.Drawing.Point(399, 53);
             this.lblAulas.Name = "lblAulas";
-            this.lblAulas.Size = new System.Drawing.Size(41, 24);
+            this.lblAulas.Size = new System.Drawing.Size(116, 24);
             this.lblAulas.TabIndex = 117;
-            this.lblAulas.Text = "Aulas";
+            this.lblAulas.Text = "Aulas por Semana";
             // 
             // lblTipo
             // 
@@ -583,6 +580,7 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(251, 21);
             this.txtNome.TabIndex = 129;
+            this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
             // 
             // maskDataNasc
             // 

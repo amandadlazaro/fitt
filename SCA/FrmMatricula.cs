@@ -20,7 +20,6 @@ namespace FittSistema.View
         {
             InitializeComponent();
         }
-
         TurmaBLL turmaBLL = new TurmaBLL();
         AlunoBLL alunoBLL = new AlunoBLL();
         MatriculaBLL matriculaBLL = new MatriculaBLL();
@@ -99,6 +98,11 @@ namespace FittSistema.View
             MessageBox.Show(aluno.CPF.ToString());
             MessageBox.Show(aluno.Telefone.ToString());
             MessageBox.Show(alunoBLL.AdicionarAluno(aluno));
+        }
+
+        private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.KeyChar = Util.FiltrarTeclas.letraMaiuscula(e.KeyChar);
         }
     }
 }

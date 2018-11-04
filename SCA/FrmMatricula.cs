@@ -365,6 +365,34 @@ namespace FittSistema.View
             }
 
             MessageBox.Show(mensagemMatricula);
+            btnFecharTela.PerformClick();
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            DialogResult Confirmacao = MessageBox.Show("Voce quer mesmo excluir essa Matricula ?", "Excluir Matricula", MessageBoxButtons.YesNo);
+            if (Confirmacao == DialogResult.No)
+            {
+                return;
+            }
+
+            string mensagemDeletarMatricula = matriculaBLL.Deletar(AlunosMatriculadosBLL.idMatricula);
+            if (mensagemDeletarMatricula != "Matricula Deletada com Sucesso")
+            {
+                MessageBox.Show(mensagemDeletarMatricula);
+                return;
+            }
+
+            string mensagemDeletarAluno = alunoBLL.DeletarAlunoCPF(AlunosMatriculadosBLL.CPF);
+            if (mensagemDeletarAluno != "Aluno Deletado com Sucesso")
+            {
+                // Isso nao deve acontecer
+                MessageBox.Show(mensagemDeletarAluno);
+                return;
+            }
+
+            MessageBox.Show(mensagemDeletarAluno);
+            btnFecharTela.PerformClick();
         }
 
         #endregion

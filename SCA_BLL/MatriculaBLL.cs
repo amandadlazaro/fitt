@@ -59,11 +59,11 @@ namespace SCA_BLL
 
         }
 
-        public string Deletar(Matricula matricula)
+        public string Deletar(int matricula)
         {
             try
             {
-                var t = bd.Matricula.First(tm => tm.idMatricula == matricula.idMatricula);
+                var t = bd.Matricula.First(tm => tm.idMatricula == matricula);
                 if (t == null) return null;
                 bd.Matricula.Remove(t);
                 bd.SaveChanges();

@@ -81,6 +81,22 @@ namespace SCA_BLL
             }
         }
 
+        public string DeletarAlunoCPF(string cpf)
+        {
+            try
+            {
+                var a = bd.Aluno.First(al => al.CPF == cpf);
+                if (a == null) return null;
+                bd.Aluno.Remove(a);
+                bd.SaveChanges();
+                return "Aluno Deletado com Sucesso";
+            }
+            catch (Exception error)
+            {
+                return error.Message;
+            }
+        }
+
         #endregion
 
         #region Consultar

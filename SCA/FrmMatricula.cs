@@ -240,6 +240,39 @@ namespace FittSistema.View
 
             maskDataInicial.Text = AlunosMatriculadosBLL.DataInicio;
             maskDataFinal.Text = AlunosMatriculadosBLL.DataFim;
+            switch (AlunosMatriculadosBLL.TipoPlano)
+            {
+                case ("Mensal"):
+                    rbMensal.Checked = true;
+                    break;
+                case ("Semestral"):
+                    rbSemestral.Checked = true;
+                    break;
+                case ("Trimestral"):
+                    rbTrimestral.Checked = true;
+                    break;
+                case ("Anual"):
+                    rbAnual.Checked = true;
+                    break;
+                default:
+                    MessageBox.Show("Erro no Tipo de plano");
+                    break;
+            }
+            switch (AlunosMatriculadosBLL.QtdeAulas)
+            {
+                case ("1"):
+                    rbAula1.Checked = true;
+                    break;
+                case ("2"):
+                    rbAula2.Checked = true;
+                    break;
+                case ("3"):
+                    rbAula3.Checked = true;
+                    break;
+                default:
+                    MessageBox.Show("Erro na Quantidade de Aulas");
+                    break;
+            }
         }
 
         #endregion

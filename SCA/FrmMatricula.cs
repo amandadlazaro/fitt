@@ -315,6 +315,51 @@ namespace FittSistema.View
                 return;
             }
 
+            DialogResult Confirmacao = MessageBox.Show("Voce quer mesmo salvar essas alterações ?", "Alterar Matricula", MessageBoxButtons.YesNo);
+            if (Confirmacao == DialogResult.No)
+            {
+                return;
+            }
+
+            matricula = new Matricula
+            {
+                idMatricula = AlunosMatriculadosBLL.idMatricula,
+                CPF = maskCPF.Text,
+                idTurma = Int32.Parse(cmbTurma1.SelectedValue.ToString()),
+                TipoPlano = DevolveTipo(),
+                ValorMensal = 10.10,
+                DataInicio = DateTime.ParseExact(maskDataInicial.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
+                DataFim = DateTime.ParseExact(maskDataFinal.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
+                SituacaoMatricula = true,
+                QtdeAulas = DevolveAula()
+            };
+            aluno = new Aluno
+            {
+                CPF = maskCPF.Text,
+                Nome = txtNome.Text,
+                Endereco = txtEndereco.Text,
+                Telefone = maskCel.Text,
+                DataNasc = DateTime.ParseExact(maskDataNasc.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
+                Sexo = cmbSexo.SelectedItem.ToString(),
+                Email = txtEmail.Text
+            };
+
+            string mensagemAlterarMatricula = matriculaBLL.Alterar(matricula);
+            if (mensagemAlterarMatricula != "Matricula Alterada com Sucesso")
+            {
+                MessageBox.Show(mensagemAlterarMatricula);
+                return;
+            }
+
+            string mensagemAlterarAluno = alunoBLL.AlterarAluno(aluno);
+            if (mensagemAlterarAluno != "Aluno Alterado com Sucesso")
+            {
+                MessageBox.Show(mensagemAlterarAluno);
+                return;
+            }
+
+            MessageBox.Show(mensagemAlterarAluno);
+            btnFecharTela.PerformClick();
         }
 
         private void btnCadastrarProfessor_Click(object sender, EventArgs e) 
@@ -333,17 +378,7 @@ namespace FittSistema.View
                 DataNasc = DateTime.ParseExact(maskDataNasc.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
                 Sexo = cmbSexo.SelectedItem.ToString(),
                 Email = txtEmail.Text
-            }; 
-
-            var mensagemAluno = alunoBLL.AdicionarAluno(aluno);
-            if (mensagemAluno != "Aluno Cadastrado com Sucesso")
-            {
-                // MessageBox.Show(mensagemAluno);
-                MessageBox.Show("Já existe um aluno com esse CPF");
-                alunoBLL = new AlunoBLL();
-                return;
-            }
-
+            };
             matricula = new Matricula
             {
                 CPF = maskCPF.Text,
@@ -355,6 +390,15 @@ namespace FittSistema.View
                 SituacaoMatricula = true,
                 QtdeAulas = DevolveAula()
             };
+
+            var mensagemAluno = alunoBLL.AdicionarAluno(aluno);
+            if (mensagemAluno != "Aluno Cadastrado com Sucesso")
+            {
+                // MessageBox.Show(mensagemAluno);
+                MessageBox.Show("Já existe um aluno com esse CPF");
+                alunoBLL = new AlunoBLL();
+                return;
+            }
 
             var mensagemMatricula = matriculaBLL.Adicionar(matricula);
             if (mensagemMatricula != "Matricula Cadastrada com Sucesso")

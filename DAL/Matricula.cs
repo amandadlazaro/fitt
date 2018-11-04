@@ -30,6 +30,8 @@ namespace DAL
         public System.DateTime DataFim { get; set; }
         public bool SituacaoMatricula { get; set; }
         public int QtdeAulas { get; set; }
+        public Nullable<int> idTurma2 { get; set; }
+        public Nullable<int> idTurma3 { get; set; }
     
         public virtual Aluno Aluno { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -37,5 +39,7 @@ namespace DAL
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Boleto> Boleto { get; set; }
         public virtual Turma Turma { get; set; }
+        public virtual Turma Turma1 { get; set; }
+        public virtual Turma Turma2 { get; set; }
     }
 }

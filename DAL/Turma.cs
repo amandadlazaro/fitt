@@ -18,6 +18,8 @@ namespace DAL
         public Turma()
         {
             this.Matricula = new HashSet<Matricula>();
+            this.Matricula1 = new HashSet<Matricula>();
+            this.Matricula2 = new HashSet<Matricula>();
         }
     
         public int idTurma { get; set; }
@@ -28,5 +30,9 @@ namespace DAL
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Matricula> Matricula { get; set; }
         public virtual Professor Professor { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Matricula> Matricula1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Matricula> Matricula2 { get; set; }
     }
 }

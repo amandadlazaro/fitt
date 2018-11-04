@@ -69,6 +69,8 @@
           <Property Name="QtdeAulas" Type="int" Nullable="false" />
           <Property Name="ValorMensal" Type="float" Nullable="false" />
           <Property Name="SituacaoMatricula" Type="bit" Nullable="false" />
+          <Property Name="idTurma2" Type="int" />
+          <Property Name="idTurma3" Type="int" />
         </EntityType>
         <EntityType Name="Professor">
           <Key>
@@ -140,6 +142,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__Matricula__idTur__5AEE82B9">
+          <End Role="Turma" Type="Self.Turma" Multiplicity="0..1" />
+          <End Role="Matricula" Type="Self.Matricula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Turma">
+              <PropertyRef Name="idTurma" />
+            </Principal>
+            <Dependent Role="Matricula">
+              <PropertyRef Name="idTurma2" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Matricula__idTur__5BE2A6F2">
+          <End Role="Turma" Type="Self.Turma" Multiplicity="0..1" />
+          <End Role="Matricula" Type="Self.Matricula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Turma">
+              <PropertyRef Name="idTurma" />
+            </Principal>
+            <Dependent Role="Matricula">
+              <PropertyRef Name="idTurma3" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK__Turma__CPF__4D94879B">
           <End Role="Professor" Type="Self.Professor" Multiplicity="1" />
           <End Role="Turma" Type="Self.Turma" Multiplicity="*" />
@@ -173,6 +199,14 @@
             <End Role="Matricula" EntitySet="Matricula" />
           </AssociationSet>
           <AssociationSet Name="FK__Matricula__idTur__5165187F" Association="Self.FK__Matricula__idTur__5165187F">
+            <End Role="Turma" EntitySet="Turma" />
+            <End Role="Matricula" EntitySet="Matricula" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Matricula__idTur__5AEE82B9" Association="Self.FK__Matricula__idTur__5AEE82B9">
+            <End Role="Turma" EntitySet="Turma" />
+            <End Role="Matricula" EntitySet="Matricula" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Matricula__idTur__5BE2A6F2" Association="Self.FK__Matricula__idTur__5BE2A6F2">
             <End Role="Turma" EntitySet="Turma" />
             <End Role="Matricula" EntitySet="Matricula" />
           </AssociationSet>
@@ -256,6 +290,10 @@
           <NavigationProperty Name="Boleto" Relationship="Self.FK__Boleto__idMatric__48CFD27E" FromRole="Matricula" ToRole="Boleto" />
           <NavigationProperty Name="Turma" Relationship="Self.FK__Matricula__idTur__3F466844" FromRole="Matricula" ToRole="Turma" />
           <Property Name="QtdeAulas" Type="Int32" Nullable="false" />
+          <Property Name="idTurma2" Type="Int32" />
+          <Property Name="idTurma3" Type="Int32" />
+          <NavigationProperty Name="Turma1" Relationship="FittDataBaseModel.FK__Matricula__idTur__5AEE82B9" FromRole="Matricula" ToRole="Turma" />
+          <NavigationProperty Name="Turma2" Relationship="FittDataBaseModel.FK__Matricula__idTur__5BE2A6F2" FromRole="Matricula" ToRole="Turma" />
         </EntityType>
         <EntityType Name="Professor">
           <Key>
@@ -281,6 +319,8 @@
           <Property Name="Horario" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Matricula" Relationship="Self.FK__Matricula__idTur__3F466844" FromRole="Turma" ToRole="Matricula" />
           <NavigationProperty Name="Professor" Relationship="Self.FK__Turma__CPF__3B75D760" FromRole="Turma" ToRole="Professor" />
+          <NavigationProperty Name="Matricula1" Relationship="FittDataBaseModel.FK__Matricula__idTur__5AEE82B9" FromRole="Turma" ToRole="Matricula" />
+          <NavigationProperty Name="Matricula2" Relationship="FittDataBaseModel.FK__Matricula__idTur__5BE2A6F2" FromRole="Turma" ToRole="Matricula" />
         </EntityType>
         <Association Name="FK__Matricula__CPF__3E52440B">
           <End Role="Aluno" Type="Self.Aluno" Multiplicity="1" />
@@ -370,7 +410,39 @@
             <End Role="Professor" EntitySet="Professor" />
             <End Role="Turma" EntitySet="Turma" />
           </AssociationSet>
+          <AssociationSet Name="FK__Matricula__idTur__5AEE82B9" Association="FittDataBaseModel.FK__Matricula__idTur__5AEE82B9">
+            <End Role="Turma" EntitySet="Turma" />
+            <End Role="Matricula" EntitySet="Matricula" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Matricula__idTur__5BE2A6F2" Association="FittDataBaseModel.FK__Matricula__idTur__5BE2A6F2">
+            <End Role="Turma" EntitySet="Turma" />
+            <End Role="Matricula" EntitySet="Matricula" />
+          </AssociationSet>
         </EntityContainer>
+        <Association Name="FK__Matricula__idTur__5AEE82B9">
+          <End Type="FittDataBaseModel.Turma" Role="Turma" Multiplicity="0..1" />
+          <End Type="FittDataBaseModel.Matricula" Role="Matricula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Turma">
+              <PropertyRef Name="idTurma" />
+            </Principal>
+            <Dependent Role="Matricula">
+              <PropertyRef Name="idTurma2" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Matricula__idTur__5BE2A6F2">
+          <End Type="FittDataBaseModel.Turma" Role="Turma" Multiplicity="0..1" />
+          <End Type="FittDataBaseModel.Matricula" Role="Matricula" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Turma">
+              <PropertyRef Name="idTurma" />
+            </Principal>
+            <Dependent Role="Matricula">
+              <PropertyRef Name="idTurma3" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -435,6 +507,8 @@
           <EntitySetMapping Name="Matricula">
             <EntityTypeMapping TypeName="FittDataBaseModel.Matricula">
               <MappingFragment StoreEntitySet="Matricula">
+                <ScalarProperty Name="idTurma3" ColumnName="idTurma3" />
+                <ScalarProperty Name="idTurma2" ColumnName="idTurma2" />
                 <ScalarProperty Name="QtdeAulas" ColumnName="QtdeAulas" />
                 <ScalarProperty Name="idMatricula" ColumnName="idMatricula" />
                 <ScalarProperty Name="CPF" ColumnName="CPF" />

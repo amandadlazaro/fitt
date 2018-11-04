@@ -17,6 +17,8 @@
         <AssociationConnector Association="FittDataBaseModel.FK__Boleto__idMatric__48CFD27E" ManuallyRouted="false" />
         <AssociationConnector Association="FittDataBaseModel.FK__Matricula__idTur__3F466844" ManuallyRouted="false" />
         <AssociationConnector Association="FittDataBaseModel.FK__Turma__CPF__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="FittDataBaseModel.FK__Matricula__idTur__5AEE82B9" />
+        <AssociationConnector Association="FittDataBaseModel.FK__Matricula__idTur__5BE2A6F2" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -228,8 +228,18 @@ namespace FittSistema.View
             btnCadastrar.Visible = false;
             btnSalvar.Visible = true;
             btnExcluir.Visible = true;
-            maskCPF.Text = AlunosMatriculadosBLL.CPF;
             maskCPF.Enabled = false;
+
+            maskCPF.Text = AlunosMatriculadosBLL.CPF;
+            txtNome.Text = AlunosMatriculadosBLL.Nome;
+            txtEndereco.Text = AlunosMatriculadosBLL.Endereco;
+            maskCel.Text = AlunosMatriculadosBLL.Telefone;
+            maskDataNasc.Text = AlunosMatriculadosBLL.DataNasc;
+            cmbSexo.Text = AlunosMatriculadosBLL.Sexo;
+            txtEmail.Text = AlunosMatriculadosBLL.Email;
+
+            maskDataInicial.Text = AlunosMatriculadosBLL.DataInicio;
+            maskDataFinal.Text = AlunosMatriculadosBLL.DataFim;
         }
 
         #endregion

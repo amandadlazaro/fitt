@@ -121,6 +121,7 @@ namespace FittSistema.View
             {
                 listarAlunos();
                 MessageBox.Show("Ocorreu um erro no formato do registro do aluno");
+                return;
             }
 
             this.Hide();

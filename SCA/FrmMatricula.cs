@@ -321,28 +321,36 @@ namespace FittSistema.View
                 return;
             }
 
-            matricula = new Matricula
+            try
             {
-                idMatricula = AlunosMatriculadosBLL.idMatricula,
-                CPF = maskCPF.Text,
-                idTurma = Int32.Parse(cmbTurma1.SelectedValue.ToString()),
-                TipoPlano = DevolveTipo(),
-                ValorMensal = 10.10,
-                DataInicio = DateTime.ParseExact(maskDataInicial.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
-                DataFim = DateTime.ParseExact(maskDataFinal.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
-                SituacaoMatricula = true,
-                QtdeAulas = DevolveAula()
-            };
-            aluno = new Aluno
+                matricula = new Matricula
+                {
+                    idMatricula = AlunosMatriculadosBLL.idMatricula,
+                    CPF = maskCPF.Text,
+                    idTurma = Int32.Parse(cmbTurma1.SelectedValue.ToString()),
+                    TipoPlano = DevolveTipo(),
+                    ValorMensal = 10.10,
+                    DataInicio = DateTime.ParseExact(maskDataInicial.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
+                    DataFim = DateTime.ParseExact(maskDataFinal.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
+                    SituacaoMatricula = true,
+                    QtdeAulas = DevolveAula()
+                };
+                aluno = new Aluno
+                {
+                    CPF = maskCPF.Text,
+                    Nome = txtNome.Text,
+                    Endereco = txtEndereco.Text,
+                    Telefone = maskCel.Text,
+                    DataNasc = DateTime.ParseExact(maskDataNasc.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
+                    Sexo = cmbSexo.SelectedItem.ToString(),
+                    Email = txtEmail.Text
+                };
+            }
+            catch (Exception err)
             {
-                CPF = maskCPF.Text,
-                Nome = txtNome.Text,
-                Endereco = txtEndereco.Text,
-                Telefone = maskCel.Text,
-                DataNasc = DateTime.ParseExact(maskDataNasc.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
-                Sexo = cmbSexo.SelectedItem.ToString(),
-                Email = txtEmail.Text
-            };
+                MessageBox.Show(err.ToString());
+                return;
+            }
 
             string mensagemAlterarMatricula = matriculaBLL.Alterar(matricula);
             if (mensagemAlterarMatricula != "Matricula Alterada com Sucesso")
@@ -369,27 +377,35 @@ namespace FittSistema.View
                 return;
             }
 
-            aluno = new Aluno
+            try
             {
-                CPF = maskCPF.Text,
-                Nome = txtNome.Text,
-                Endereco = txtEndereco.Text,
-                Telefone = maskCel.Text,
-                DataNasc = DateTime.ParseExact(maskDataNasc.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
-                Sexo = cmbSexo.SelectedItem.ToString(),
-                Email = txtEmail.Text
-            };
-            matricula = new Matricula
+                aluno = new Aluno
+                {
+                    CPF = maskCPF.Text,
+                    Nome = txtNome.Text,
+                    Endereco = txtEndereco.Text,
+                    Telefone = maskCel.Text,
+                    DataNasc = DateTime.ParseExact(maskDataNasc.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
+                    Sexo = cmbSexo.SelectedItem.ToString(),
+                    Email = txtEmail.Text
+                };
+                matricula = new Matricula
+                {
+                    CPF = maskCPF.Text,
+                    idTurma = Int32.Parse(cmbTurma1.SelectedValue.ToString()),
+                    TipoPlano = DevolveTipo(),
+                    ValorMensal = 10.10,
+                    DataInicio = DateTime.ParseExact(maskDataInicial.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
+                    DataFim = DateTime.ParseExact(maskDataFinal.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
+                    SituacaoMatricula = true,
+                    QtdeAulas = DevolveAula()
+                };
+            }
+            catch(Exception err)
             {
-                CPF = maskCPF.Text,
-                idTurma = Int32.Parse(cmbTurma1.SelectedValue.ToString()),
-                TipoPlano = DevolveTipo(),
-                ValorMensal = 10.10,
-                DataInicio = DateTime.ParseExact(maskDataInicial.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
-                DataFim = DateTime.ParseExact(maskDataFinal.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
-                SituacaoMatricula = true,
-                QtdeAulas = DevolveAula()
-            };
+                MessageBox.Show(err.ToString());
+                return;
+            }
 
             var mensagemAluno = alunoBLL.AdicionarAluno(aluno);
             if (mensagemAluno != "Aluno Cadastrado com Sucesso")

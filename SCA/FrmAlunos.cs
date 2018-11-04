@@ -80,39 +80,47 @@ namespace FittSistema.View
             {
                 return;
             }
-            
-            grpAlunos.DataSource = alunoBLL.ProcurarAluno(cpf);
-            AlunosMatriculadosBLL.CPF = grpAlunos.CurrentRow.Cells["CPF"].Value.ToString();
-            AlunosMatriculadosBLL.Nome = grpAlunos.CurrentRow.Cells["Nome"].Value.ToString();
-            AlunosMatriculadosBLL.Endereco = grpAlunos.CurrentRow.Cells["Endereco"].Value.ToString();
-            AlunosMatriculadosBLL.Telefone = grpAlunos.CurrentRow.Cells["Telefone"].Value.ToString();
-            AlunosMatriculadosBLL.DataNasc = grpAlunos.CurrentRow.Cells["DataNasc"].Value.ToString();
-            AlunosMatriculadosBLL.Sexo = grpAlunos.CurrentRow.Cells["Sexo"].Value.ToString();
-            AlunosMatriculadosBLL.Email = grpAlunos.CurrentRow.Cells["Email"].Value.ToString();
 
-            grpAlunos.DataSource = matriculaBLL.ProcurarMatricula(cpf);
-            AlunosMatriculadosBLL.idMatricula = Int32.Parse(grpAlunos.CurrentRow.Cells["idMatricula"].Value.ToString());
-            AlunosMatriculadosBLL.idTurma = Int32.Parse(grpAlunos.CurrentRow.Cells["idTurma"].Value.ToString());
-            AlunosMatriculadosBLL.TipoPlano = grpAlunos.CurrentRow.Cells["TipoPlano"].Value.ToString();
-            AlunosMatriculadosBLL.ValorMensal = grpAlunos.CurrentRow.Cells["ValorMensal"].Value.ToString();
-            AlunosMatriculadosBLL.DataInicio = grpAlunos.CurrentRow.Cells["DataInicio"].Value.ToString();
-            AlunosMatriculadosBLL.DataFim = grpAlunos.CurrentRow.Cells["DataFim"].Value.ToString();
-            AlunosMatriculadosBLL.SituacaoMatricula = bool.Parse(grpAlunos.CurrentRow.Cells["SituacaoMatricula"].Value.ToString());
-            AlunosMatriculadosBLL.QtdeAulas = grpAlunos.CurrentRow.Cells["QtdeAulas"].Value.ToString();
-            
-            switch (AlunosMatriculadosBLL.QtdeAulas)
+            try
             {
-                case ("1"):
-                    grpAlunos.DataSource = turmaBLL.ProcurarTurma(AlunosMatriculadosBLL.idTurma);
-                    AlunosMatriculadosBLL.diaSemana1 = grpAlunos.CurrentRow.Cells["DiaSemana"].Value.ToString();
-                    AlunosMatriculadosBLL.horario1 = grpAlunos.CurrentRow.Cells["Horario"].Value.ToString();
-                    break;
-                case ("2"):
-                    return;
-                case ("3"):
-                    return;
-                default:
-                    return;
+                grpAlunos.DataSource = alunoBLL.ProcurarAluno(cpf);
+                AlunosMatriculadosBLL.CPF = grpAlunos.CurrentRow.Cells["CPF"].Value.ToString();
+                AlunosMatriculadosBLL.Nome = grpAlunos.CurrentRow.Cells["Nome"].Value.ToString();
+                AlunosMatriculadosBLL.Endereco = grpAlunos.CurrentRow.Cells["Endereco"].Value.ToString();
+                AlunosMatriculadosBLL.Telefone = grpAlunos.CurrentRow.Cells["Telefone"].Value.ToString();
+                AlunosMatriculadosBLL.DataNasc = grpAlunos.CurrentRow.Cells["DataNasc"].Value.ToString();
+                AlunosMatriculadosBLL.Sexo = grpAlunos.CurrentRow.Cells["Sexo"].Value.ToString();
+                AlunosMatriculadosBLL.Email = grpAlunos.CurrentRow.Cells["Email"].Value.ToString();
+
+                grpAlunos.DataSource = matriculaBLL.ProcurarMatricula(cpf);
+                AlunosMatriculadosBLL.idMatricula = Int32.Parse(grpAlunos.CurrentRow.Cells["idMatricula"].Value.ToString());
+                AlunosMatriculadosBLL.idTurma = Int32.Parse(grpAlunos.CurrentRow.Cells["idTurma"].Value.ToString());
+                AlunosMatriculadosBLL.TipoPlano = grpAlunos.CurrentRow.Cells["TipoPlano"].Value.ToString();
+                AlunosMatriculadosBLL.ValorMensal = grpAlunos.CurrentRow.Cells["ValorMensal"].Value.ToString();
+                AlunosMatriculadosBLL.DataInicio = grpAlunos.CurrentRow.Cells["DataInicio"].Value.ToString();
+                AlunosMatriculadosBLL.DataFim = grpAlunos.CurrentRow.Cells["DataFim"].Value.ToString();
+                AlunosMatriculadosBLL.SituacaoMatricula = bool.Parse(grpAlunos.CurrentRow.Cells["SituacaoMatricula"].Value.ToString());
+                AlunosMatriculadosBLL.QtdeAulas = grpAlunos.CurrentRow.Cells["QtdeAulas"].Value.ToString();
+
+                switch (AlunosMatriculadosBLL.QtdeAulas)
+                {
+                    case ("1"):
+                        grpAlunos.DataSource = turmaBLL.ProcurarTurma(AlunosMatriculadosBLL.idTurma);
+                        AlunosMatriculadosBLL.diaSemana1 = grpAlunos.CurrentRow.Cells["DiaSemana"].Value.ToString();
+                        AlunosMatriculadosBLL.horario1 = grpAlunos.CurrentRow.Cells["Horario"].Value.ToString();
+                        break;
+                    case ("2"):
+                        return;
+                    case ("3"):
+                        return;
+                    default:
+                        return;
+                }
+            }
+            catch
+            {
+                listarAlunos();
+                MessageBox.Show("Ocorreu um erro no formato do registro do aluno");
             }
 
             this.Hide();

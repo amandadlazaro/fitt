@@ -31,24 +31,24 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAdministrador));
             this.txtAdministrador = new System.Windows.Forms.TextBox();
             this.lblAdministrador = new System.Windows.Forms.Label();
-            this.btnCadastrarAdministrador = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtSenha = new System.Windows.Forms.TextBox();
-            this.grpAdministrador = new System.Windows.Forms.DataGridView();
             this.btnEditarAdministrador = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBusca = new System.Windows.Forms.Button();
             this.btnFecharTela = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.grpAdministrador)).BeginInit();
+            this.btnCadastrarAdministrador = new System.Windows.Forms.Button();
+            this.grpAdministrador = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpAdministrador)).BeginInit();
             this.SuspendLayout();
             // 
             // txtAdministrador
             // 
-            this.txtAdministrador.Location = new System.Drawing.Point(3, 87);
+            this.txtAdministrador.Location = new System.Drawing.Point(12, 86);
             this.txtAdministrador.Name = "txtAdministrador";
             this.txtAdministrador.Size = new System.Drawing.Size(482, 20);
             this.txtAdministrador.TabIndex = 83;
@@ -59,26 +59,11 @@
             this.lblAdministrador.BackColor = System.Drawing.Color.Transparent;
             this.lblAdministrador.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAdministrador.ForeColor = System.Drawing.Color.DeepPink;
-            this.lblAdministrador.Location = new System.Drawing.Point(-4, 31);
+            this.lblAdministrador.Location = new System.Drawing.Point(12, 31);
             this.lblAdministrador.Name = "lblAdministrador";
             this.lblAdministrador.Size = new System.Drawing.Size(217, 37);
             this.lblAdministrador.TabIndex = 79;
             this.lblAdministrador.Text = "Administrador";
-            // 
-            // btnCadastrarAdministrador
-            // 
-            this.btnCadastrarAdministrador.BackColor = System.Drawing.Color.Transparent;
-            this.btnCadastrarAdministrador.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCadastrarAdministrador.FlatAppearance.BorderSize = 0;
-            this.btnCadastrarAdministrador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrarAdministrador.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrarAdministrador.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnCadastrarAdministrador.Location = new System.Drawing.Point(632, 346);
-            this.btnCadastrarAdministrador.Name = "btnCadastrarAdministrador";
-            this.btnCadastrarAdministrador.Size = new System.Drawing.Size(56, 43);
-            this.btnCadastrarAdministrador.TabIndex = 75;
-            this.btnCadastrarAdministrador.UseVisualStyleBackColor = false;
-            this.btnCadastrarAdministrador.Click += new System.EventHandler(this.btnCadastrarAdministrador_Click);
             // 
             // label6
             // 
@@ -94,7 +79,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(116, 152);
+            this.txtEmail.Location = new System.Drawing.Point(125, 156);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(384, 20);
             this.txtEmail.TabIndex = 85;
@@ -113,21 +98,10 @@
             // 
             // txtSenha
             // 
-            this.txtSenha.Location = new System.Drawing.Point(116, 199);
+            this.txtSenha.Location = new System.Drawing.Point(125, 203);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(384, 20);
             this.txtSenha.TabIndex = 87;
-            // 
-            // grpAdministrador
-            // 
-            this.grpAdministrador.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.grpAdministrador.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grpAdministrador.Location = new System.Drawing.Point(-5, 113);
-            this.grpAdministrador.Name = "grpAdministrador";
-            this.grpAdministrador.Size = new System.Drawing.Size(732, 178);
-            this.grpAdministrador.TabIndex = 89;
-            this.grpAdministrador.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpAdministrador_CellClick);
-            this.grpAdministrador.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpAdministrador_CellDoubleClick);
             // 
             // btnEditarAdministrador
             // 
@@ -135,14 +109,14 @@
             this.btnEditarAdministrador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarAdministrador.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarAdministrador.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnEditarAdministrador.Location = new System.Drawing.Point(608, 354);
+            this.btnEditarAdministrador.Location = new System.Drawing.Point(598, 356);
             this.btnEditarAdministrador.Name = "btnEditarAdministrador";
             this.btnEditarAdministrador.Size = new System.Drawing.Size(119, 27);
             this.btnEditarAdministrador.TabIndex = 90;
             this.btnEditarAdministrador.Text = "Salvar alterações";
             this.btnEditarAdministrador.UseVisualStyleBackColor = false;
             this.btnEditarAdministrador.Visible = false;
-            this.btnEditarAdministrador.Click += new System.EventHandler(this.button1_Click);
+            this.btnEditarAdministrador.Click += new System.EventHandler(this.btnEditarAdministrador_Click);
             // 
             // pictureBox1
             // 
@@ -165,7 +139,7 @@
             this.btnBusca.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBusca.FlatAppearance.BorderSize = 0;
             this.btnBusca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBusca.Location = new System.Drawing.Point(491, 86);
+            this.btnBusca.Location = new System.Drawing.Point(500, 85);
             this.btnBusca.Name = "btnBusca";
             this.btnBusca.Size = new System.Drawing.Size(32, 20);
             this.btnBusca.TabIndex = 94;
@@ -200,12 +174,41 @@
             this.btnVoltar.Visible = false;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click_1);
             // 
+            // btnCadastrarAdministrador
+            // 
+            this.btnCadastrarAdministrador.BackColor = System.Drawing.Color.Transparent;
+            this.btnCadastrarAdministrador.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCadastrarAdministrador.BackgroundImage")));
+            this.btnCadastrarAdministrador.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCadastrarAdministrador.FlatAppearance.BorderSize = 0;
+            this.btnCadastrarAdministrador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrarAdministrador.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarAdministrador.ForeColor = System.Drawing.Color.DeepPink;
+            this.btnCadastrarAdministrador.Location = new System.Drawing.Point(631, 348);
+            this.btnCadastrarAdministrador.Name = "btnCadastrarAdministrador";
+            this.btnCadastrarAdministrador.Size = new System.Drawing.Size(56, 43);
+            this.btnCadastrarAdministrador.TabIndex = 95;
+            this.btnCadastrarAdministrador.UseVisualStyleBackColor = false;
+            this.btnCadastrarAdministrador.Click += new System.EventHandler(this.btnCadastrarAdministrador_Click);
+            // 
+            // grpAdministrador
+            // 
+            this.grpAdministrador.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.grpAdministrador.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grpAdministrador.Location = new System.Drawing.Point(3, 112);
+            this.grpAdministrador.Name = "grpAdministrador";
+            this.grpAdministrador.Size = new System.Drawing.Size(732, 178);
+            this.grpAdministrador.TabIndex = 89;
+            this.grpAdministrador.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpAdministrador_CellClick);
+            this.grpAdministrador.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpAdministrador_CellContentClick);
+            this.grpAdministrador.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpAdministrador_CellDoubleClick);
+            // 
             // FrmAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(739, 450);
+            this.Controls.Add(this.btnCadastrarAdministrador);
             this.Controls.Add(this.btnBusca);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnFecharTela);
@@ -218,13 +221,14 @@
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtAdministrador);
             this.Controls.Add(this.lblAdministrador);
-            this.Controls.Add(this.btnCadastrarAdministrador);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmAdministrador";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAdministrador";
             this.Load += new System.EventHandler(this.FrmAdministrador_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.grpAdministrador)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpAdministrador)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,16 +237,16 @@
         #endregion
         private System.Windows.Forms.TextBox txtAdministrador;
         private System.Windows.Forms.Label lblAdministrador;
-        private System.Windows.Forms.Button btnCadastrarAdministrador;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSenha;
-        private System.Windows.Forms.DataGridView grpAdministrador;
         private System.Windows.Forms.Button btnEditarAdministrador;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnBusca;
         private System.Windows.Forms.Button btnFecharTela;
         private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.Button btnCadastrarAdministrador;
+        private System.Windows.Forms.DataGridView grpAdministrador;
     }
 }

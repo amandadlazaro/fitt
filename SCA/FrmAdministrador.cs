@@ -20,8 +20,13 @@ namespace FittSistema.View
         {
             InitializeComponent();
         }
+        
+        AdministradorBLL administradorBLL = new AdministradorBLL();
 
-        //AdministradorBLL administradorBLL = new AdministradorBLL();
+        private void FrmAdministrador_Load(object sender, EventArgs e)
+        {
+            listarAdministrador();
+        }
 
         private void btnEditarAdministrador_Click(object sender, EventArgs e)
         {
@@ -35,17 +40,16 @@ namespace FittSistema.View
                 {
                     var adm = new Administrador
                     {
-                        email=txtEmail.Text,
-                        senha=txtEmail.Text
+                        email = txtEmail.Text,
+                        senha = txtSenha.Text
 
                     };
-                //    object administradorBLL = administradorBLL;
-                 //   MessageBox.Show(administradorBLL.AlterarAdministrador(adm));
+                    MessageBox.Show(administradorBLL.AlterarAdministrador(adm));
                     listarAdministrador();
                     grpAdministrador.Show();
                     btnCadastrarAdministrador.Show();
-
                     btnVoltar.Hide();
+                    btnEditarAdministrador.Hide();
                 }
             }
 
@@ -53,8 +57,8 @@ namespace FittSistema.View
 
         private void listarAdministrador()
         {
-        //    var administrador = administradorBLL.LerAdministrador();
-           // grpAdministrador.DataSource = administrador.ToList();
+            var administrador = administradorBLL.LerAdministrador();
+            grpAdministrador.DataSource = administrador.ToList();
         }
 
         private string ValidaCampos()
@@ -110,7 +114,7 @@ namespace FittSistema.View
                     senha = txtSenha.Text
 
                 };
-               // MessageBox.Show(administradorBLL. AdicionarAdministrador(adm));
+                MessageBox.Show(administradorBLL. AdicionarAdministrador(adm));
                 listarAdministrador();
                 btnVoltar.Hide();
                 grpAdministrador.Show();
@@ -122,16 +126,6 @@ namespace FittSistema.View
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FrmAdministrador_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void grpAdministrador_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (grpAdministrador.Rows.Count > 0)
@@ -139,8 +133,8 @@ namespace FittSistema.View
                 foreach (DataGridViewRow row in grpAdministrador.SelectedRows)
                 {
 
-                    txtEmail.Text = row.Cells[6].Value.ToString();
-                    txtSenha.Text = row.Cells[7].Value.ToString();
+                    txtEmail.Text = row.Cells[0].Value.ToString();
+                    txtSenha.Text = row.Cells[1].Value.ToString();
                 }
                 grpAdministrador.Hide();
                 btnCadastrarAdministrador.Hide();
@@ -159,6 +153,7 @@ namespace FittSistema.View
             grpAdministrador.Show();
             btnCadastrarAdministrador.Show();
             btnVoltar.Hide();
+            btnEditarAdministrador.Hide();
         }
 
         private void btnFecharTela_Click_1(object sender, EventArgs e)
@@ -167,6 +162,11 @@ namespace FittSistema.View
             FrmMenu menu = new FrmMenu();
             menu.ShowDialog();
             this.Close();
+
+        }
+
+        private void grpAdministrador_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

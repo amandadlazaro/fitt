@@ -13,7 +13,9 @@ namespace FittSistema.View
         {
             InitializeComponent();
         }
+
         ProfessorBLL professorBLL = new ProfessorBLL();
+
         private void btnFecharTela_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -149,7 +151,6 @@ namespace FittSistema.View
             cmbSexo.Items.Add("Masculino");
             listarProfessores();
         }
-
 
         private void listarProfessores()
         {

@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdministradorBLL.cs" />
     <Compile Include="AlunoBLL.cs" />
     <Compile Include="AlunosMatriculadosBLL.cs" />
     <Compile Include="AnamneseBLL.cs" />

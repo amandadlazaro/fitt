@@ -336,6 +336,7 @@
             this.grpProfessores.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grpProfessores.Size = new System.Drawing.Size(745, 188);
             this.grpProfessores.TabIndex = 36;
+            this.grpProfessores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpProfessores_CellClick);
             // 
             // btnBuscar
             // 

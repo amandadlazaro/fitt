@@ -19,6 +19,8 @@ namespace FittSistema.View
         public FrmMatricula(bool editar = false)
         {
             InitializeComponent();
+
+            AtualizarValorMensal();
             if(editar)
             {
                 ModoEditar();
@@ -52,6 +54,7 @@ namespace FittSistema.View
             cmbTurma2.SelectedIndex = -1;
             cmbSemana3.SelectedIndex = -1;
             cmbTurma3.SelectedIndex = -1;
+            AtualizarValorMensal();
         }
 
         private void rbAula2_CheckedChanged(object sender, EventArgs e)
@@ -62,6 +65,7 @@ namespace FittSistema.View
             cmbTurma3.Enabled = false;
             cmbSemana3.SelectedIndex = -1;
             cmbTurma3.SelectedIndex = -1;
+            AtualizarValorMensal();
         }
 
         private void rbAula3_CheckedChanged(object sender, EventArgs e)
@@ -70,6 +74,12 @@ namespace FittSistema.View
             cmbTurma2.Enabled = true;
             cmbSemana3.Enabled = true;
             cmbTurma3.Enabled = true;
+            AtualizarValorMensal();
+        }
+
+        private void Tipos_CheckedChanged(object sender, EventArgs e)
+        {
+            AtualizarValorMensal();
         }
 
         #endregion
@@ -178,10 +188,79 @@ namespace FittSistema.View
 
         private void AtualizarValorMensal()
         {
-
             if (rbAula1.Checked)
             {
+                switch (DevolveTipo())
+                {
+                    case ("Mensal"):
+                        txtValorMensal.Text = "200,00";
+                        break;
 
+                    case ("Trimestral"):
+                        txtValorMensal.Text = "180,00";
+                        break;
+
+                    case ("Semestral"):
+                        txtValorMensal.Text = "160,00";
+                        break;
+
+                    case ("Anual"):
+                        txtValorMensal.Text = "140,00";
+                        break;
+
+                    default:
+                        break;
+                }
+            }
+
+            if (rbAula2.Checked)
+            {
+                switch (DevolveTipo())
+                {
+                    case ("Mensal"):
+                        txtValorMensal.Text = "360,00";
+                        break;
+
+                    case ("Trimestral"):
+                        txtValorMensal.Text = "320,00";
+                        break;
+
+                    case ("Semestral"):
+                        txtValorMensal.Text = "280,00";
+                        break;
+
+                    case ("Anual"):
+                        txtValorMensal.Text = "240,00";
+                        break;
+
+                    default:
+                        break;
+                }
+
+                if (rbAula3.Checked)
+                {
+                    switch (DevolveTipo())
+                    {
+                        case ("Mensal"):
+                            txtValorMensal.Text = "480,00";
+                            break;
+
+                        case ("Trimestral"):
+                            txtValorMensal.Text = "420,00";
+                            break;
+
+                        case ("Semestral"):
+                            txtValorMensal.Text = "360,00";
+                            break;
+
+                        case ("Anual"):
+                            txtValorMensal.Text = "300,00";
+                            break;
+
+                        default:
+                            break;
+                    }
+                }
             }
         }
 
@@ -456,5 +535,6 @@ namespace FittSistema.View
         }
 
         #endregion
+
     }
 }

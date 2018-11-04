@@ -251,6 +251,7 @@
             // 
             // txtDtNasc
             // 
+            this.txtDtNasc.Culture = new System.Globalization.CultureInfo("pt-PT");
             this.txtDtNasc.Location = new System.Drawing.Point(467, 139);
             this.txtDtNasc.Mask = "00/00/0000";
             this.txtDtNasc.Name = "txtDtNasc";
@@ -323,7 +324,7 @@
             this.grpProfessores.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.grpProfessores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grpProfessores.GridColor = System.Drawing.Color.LightCoral;
-            this.grpProfessores.Location = new System.Drawing.Point(-1, 93);
+            this.grpProfessores.Location = new System.Drawing.Point(-2, 93);
             this.grpProfessores.Name = "grpProfessores";
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;

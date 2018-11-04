@@ -60,7 +60,6 @@
             this.lblAulas = new System.Windows.Forms.Label();
             this.lblTipo = new System.Windows.Forms.Label();
             this.lblValorMensal = new System.Windows.Forms.Label();
-            this.maskValorMensal = new System.Windows.Forms.MaskedTextBox();
             this.lblDiaSemana = new System.Windows.Forms.Label();
             this.lblHoraTurma = new System.Windows.Forms.Label();
             this.cmbTurma1 = new System.Windows.Forms.ComboBox();
@@ -75,6 +74,8 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.maskCPF = new System.Windows.Forms.MaskedTextBox();
             this.txtEndereco = new System.Windows.Forms.TextBox();
+            this.txtValorMensal = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panelTipo.SuspendLayout();
             this.panelAulas.SuspendLayout();
@@ -276,6 +277,7 @@
             this.rbMensal.TabStop = true;
             this.rbMensal.Text = "Mensal";
             this.rbMensal.UseVisualStyleBackColor = true;
+            this.rbMensal.CheckedChanged += new System.EventHandler(this.Tipos_CheckedChanged);
             // 
             // rbTrimestral
             // 
@@ -288,6 +290,7 @@
             this.rbTrimestral.TabIndex = 143;
             this.rbTrimestral.Text = "Trimestral";
             this.rbTrimestral.UseVisualStyleBackColor = true;
+            this.rbTrimestral.CheckedChanged += new System.EventHandler(this.Tipos_CheckedChanged);
             // 
             // rbAnual
             // 
@@ -300,6 +303,7 @@
             this.rbAnual.TabIndex = 142;
             this.rbAnual.Text = "Anual";
             this.rbAnual.UseVisualStyleBackColor = true;
+            this.rbAnual.CheckedChanged += new System.EventHandler(this.Tipos_CheckedChanged);
             // 
             // rbSemestral
             // 
@@ -312,6 +316,7 @@
             this.rbSemestral.TabIndex = 144;
             this.rbSemestral.Text = "Semestal";
             this.rbSemestral.UseVisualStyleBackColor = true;
+            this.rbSemestral.CheckedChanged += new System.EventHandler(this.Tipos_CheckedChanged);
             // 
             // lblDataFinal
             // 
@@ -403,6 +408,7 @@
             // 
             // maskDataInicial
             // 
+            this.maskDataInicial.Culture = new System.Globalization.CultureInfo("pt-BR");
             this.maskDataInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.maskDataInicial.Location = new System.Drawing.Point(474, 130);
             this.maskDataInicial.Mask = "00/00/0000";
@@ -412,6 +418,7 @@
             // 
             // maskDataFinal
             // 
+            this.maskDataFinal.Culture = new System.Globalization.CultureInfo("pt-BR");
             this.maskDataFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.maskDataFinal.Location = new System.Drawing.Point(474, 165);
             this.maskDataFinal.Mask = "00/00/0000";
@@ -466,15 +473,6 @@
             this.lblValorMensal.Size = new System.Drawing.Size(84, 24);
             this.lblValorMensal.TabIndex = 119;
             this.lblValorMensal.Text = "Valor Mensal";
-            // 
-            // maskValorMensal
-            // 
-            this.maskValorMensal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.maskValorMensal.Location = new System.Drawing.Point(349, 330);
-            this.maskValorMensal.Mask = "$";
-            this.maskValorMensal.Name = "maskValorMensal";
-            this.maskValorMensal.Size = new System.Drawing.Size(100, 21);
-            this.maskValorMensal.TabIndex = 151;
             // 
             // lblDiaSemana
             // 
@@ -590,6 +588,7 @@
             // 
             // maskDataNasc
             // 
+            this.maskDataNasc.Culture = new System.Globalization.CultureInfo("pt-BR");
             this.maskDataNasc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.maskDataNasc.Location = new System.Drawing.Point(95, 130);
             this.maskDataNasc.Mask = "00/00/0000";
@@ -634,6 +633,28 @@
             this.txtEndereco.Size = new System.Drawing.Size(251, 21);
             this.txtEndereco.TabIndex = 133;
             // 
+            // txtValorMensal
+            // 
+            this.txtValorMensal.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtValorMensal.Font = new System.Drawing.Font("Agency FB", 15F);
+            this.txtValorMensal.Location = new System.Drawing.Point(378, 326);
+            this.txtValorMensal.Name = "txtValorMensal";
+            this.txtValorMensal.Size = new System.Drawing.Size(94, 24);
+            this.txtValorMensal.TabIndex = 151;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Font = new System.Drawing.Font("Agency FB", 15F);
+            this.label2.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(352, 326);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(26, 24);
+            this.label2.TabIndex = 152;
+            this.label2.Text = "R$";
+            // 
             // FrmMatricula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -641,6 +662,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(743, 387);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtValorMensal);
             this.Controls.Add(this.txtEndereco);
             this.Controls.Add(this.maskCPF);
             this.Controls.Add(this.txtEmail);
@@ -655,7 +678,6 @@
             this.Controls.Add(this.cmbTurma1);
             this.Controls.Add(this.lblHoraTurma);
             this.Controls.Add(this.lblDiaSemana);
-            this.Controls.Add(this.maskValorMensal);
             this.Controls.Add(this.lblValorMensal);
             this.Controls.Add(this.lblTipo);
             this.Controls.Add(this.lblAulas);
@@ -727,7 +749,6 @@
         private System.Windows.Forms.Label lblAulas;
         private System.Windows.Forms.Label lblTipo;
         private System.Windows.Forms.Label lblValorMensal;
-        private System.Windows.Forms.MaskedTextBox maskValorMensal;
         private System.Windows.Forms.Label lblDiaSemana;
         private System.Windows.Forms.Label lblHoraTurma;
         private System.Windows.Forms.ComboBox cmbTurma1;
@@ -742,5 +763,7 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.MaskedTextBox maskCPF;
         private System.Windows.Forms.TextBox txtEndereco;
+        private System.Windows.Forms.TextBox txtValorMensal;
+        private System.Windows.Forms.Label label2;
     }
 }

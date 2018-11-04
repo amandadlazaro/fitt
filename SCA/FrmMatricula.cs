@@ -185,40 +185,40 @@ namespace FittSistema.View
             }
         }
 
-        private string DevolveAula()
+        private int DevolveAula()
         {
             if (rbAula1.Checked)
             {
-                return "1";
+                return 1;
             }
             if (rbAula2.Checked)
             {
-                return "2";
+                return 2;
             }
             if (rbAula3.Checked)
             {
-                return "3";
+                return 3;
             }
-            return "erro";
+            return -1;
         }
 
         private string DevolveTipo()
         {
             if (rbMensal.Checked)
             {
-                return "m";
+                return "Mensal";
             }
             if (rbTrimestral.Checked)
             {
-                return "t";
+                return "Trimestral";
             }
             if (rbSemestral.Checked)
             {
-                return "s";
+                return "Semestral";
             }
             if (rbAnual.Checked)
             {
-                return "a";
+                return "Anual";
             }
             return "erro";
         }
@@ -262,12 +262,24 @@ namespace FittSistema.View
             {
                 case ("1"):
                     rbAula1.Checked = true;
+                    cmbSemana1.Text = AlunosMatriculadosBLL.diaSemana1;
+                    cmbTurma1.Text = AlunosMatriculadosBLL.horario1;
                     break;
                 case ("2"):
                     rbAula2.Checked = true;
+                    cmbSemana1.Text = AlunosMatriculadosBLL.diaSemana1;
+                    cmbTurma1.Text = AlunosMatriculadosBLL.horario1;
+                    cmbSemana2.Text = AlunosMatriculadosBLL.diaSemana2;
+                    cmbTurma2.Text = AlunosMatriculadosBLL.horario2;
                     break;
                 case ("3"):
                     rbAula3.Checked = true;
+                    cmbSemana1.Text = AlunosMatriculadosBLL.diaSemana1;
+                    cmbTurma1.Text = AlunosMatriculadosBLL.horario1;
+                    cmbSemana2.Text = AlunosMatriculadosBLL.diaSemana2;
+                    cmbTurma2.Text = AlunosMatriculadosBLL.horario2;
+                    cmbSemana3.Text = AlunosMatriculadosBLL.diaSemana3;
+                    cmbTurma3.Text = AlunosMatriculadosBLL.horario3;
                     break;
                 default:
                     MessageBox.Show("Erro na Quantidade de Aulas");
@@ -336,12 +348,12 @@ namespace FittSistema.View
             {
                 CPF = maskCPF.Text,
                 idTurma = Int32.Parse(cmbTurma1.SelectedValue.ToString()),
-                TipoPlano = "Mensal",
+                TipoPlano = DevolveTipo(),
                 ValorMensal = 10.10,
                 DataInicio = DateTime.ParseExact(maskDataInicial.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
                 DataFim = DateTime.ParseExact(maskDataFinal.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
                 SituacaoMatricula = true,
-                QtdeAulas = 1
+                QtdeAulas = DevolveAula()
             };
 
             var mensagemMatricula = matriculaBLL.Adicionar(matricula);

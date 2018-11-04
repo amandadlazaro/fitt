@@ -23,5 +23,11 @@ namespace SCA_BLL
         public static string DataFim { get; set; }
         public static bool SituacaoMatricula { get; set; }
         public static string QtdeAulas { get; set; }
+        public static string diaSemana1 { get; set; }
+        public static string horario1 { get; set; }
+        public static string diaSemana2 { get; set; }
+        public static string horario2 { get; set; }
+        public static string diaSemana3 { get; set; }
+        public static string horario3 { get; set; }
     }
 }

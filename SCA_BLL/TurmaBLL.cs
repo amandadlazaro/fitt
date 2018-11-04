@@ -24,10 +24,17 @@ namespace SCA_BLL
             public string DiaSemana { get; set; }
             public string Horario { get; set; }
         }
+        public class DadosDiaHorario
+        {
+            public string DiaSemana { get; set; }
+            public string Horario { get; set; }
+        }
         #endregion
 
         //comunicação com o BD
         public FittDataBaseEntities bd = new FittDataBaseEntities();
+
+        #region Consultar
 
         public IEnumerable<DadosTurmasSemana> LerTurma(string diaSemana)
         {
@@ -46,6 +53,22 @@ namespace SCA_BLL
             return lista;
         }
 
+        public IEnumerable<DadosDiaHorario> ProcurarTurma(int idTurma)
+        {
+            var lista = bd.Turma
+                .Where(t => t.idTurma == idTurma)
+                .Select(t => new DadosDiaHorario
+                {
+                    DiaSemana = t.DiaSemana,
+                    Horario = t.Horario
+                }).ToList();
+
+            return lista;
+        }
+
+        #endregion
+
+        #region Manter
 
         public string Adicionar(Turma turma)
         {
@@ -93,5 +116,7 @@ namespace SCA_BLL
                 return error.Message;
             }
         }
+
+        #endregion
     }
 }

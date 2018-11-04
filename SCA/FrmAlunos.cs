@@ -17,6 +17,7 @@ namespace FittSistema.View
 
         AlunoBLL alunoBLL = new AlunoBLL();
         MatriculaBLL matriculaBLL = new MatriculaBLL();
+        TurmaBLL turmaBLL = new TurmaBLL();
 
         #region Functions
 
@@ -98,6 +99,21 @@ namespace FittSistema.View
             AlunosMatriculadosBLL.DataFim = grpAlunos.CurrentRow.Cells["DataFim"].Value.ToString();
             AlunosMatriculadosBLL.SituacaoMatricula = bool.Parse(grpAlunos.CurrentRow.Cells["SituacaoMatricula"].Value.ToString());
             AlunosMatriculadosBLL.QtdeAulas = grpAlunos.CurrentRow.Cells["QtdeAulas"].Value.ToString();
+            
+            switch (AlunosMatriculadosBLL.QtdeAulas)
+            {
+                case ("1"):
+                    grpAlunos.DataSource = turmaBLL.ProcurarTurma(AlunosMatriculadosBLL.idTurma);
+                    AlunosMatriculadosBLL.diaSemana1 = grpAlunos.CurrentRow.Cells["DiaSemana"].Value.ToString();
+                    AlunosMatriculadosBLL.horario1 = grpAlunos.CurrentRow.Cells["Horario"].Value.ToString();
+                    break;
+                case ("2"):
+                    return;
+                case ("3"):
+                    return;
+                default:
+                    return;
+            }
 
             this.Hide();
             FrmMatricula frmMatricula = new FrmMatricula(true);

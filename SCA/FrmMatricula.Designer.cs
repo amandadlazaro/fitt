@@ -34,7 +34,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnExcluirProfessor = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.lblNome = new System.Windows.Forms.Label();
             this.lblSexo = new System.Windows.Forms.Label();
@@ -76,6 +75,7 @@
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.txtValorMensal = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panelTipo.SuspendLayout();
             this.panelAulas.SuspendLayout();
@@ -149,22 +149,6 @@
             this.btnExcluir.UseVisualStyleBackColor = false;
             this.btnExcluir.Visible = false;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
-            // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCadastrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCadastrar.BackgroundImage")));
-            this.btnCadastrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCadastrar.FlatAppearance.BorderSize = 0;
-            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrar.Font = new System.Drawing.Font("Agency FB", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnCadastrar.Location = new System.Drawing.Point(696, 330);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(35, 36);
-            this.btnCadastrar.TabIndex = 52;
-            this.btnCadastrar.UseVisualStyleBackColor = false;
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrarProfessor_Click);
             // 
             // btnSalvar
             // 
@@ -652,6 +636,20 @@
             this.label2.TabIndex = 152;
             this.label2.Text = "R$";
             // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.BackColor = System.Drawing.Color.DeepPink;
+            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCadastrar.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.ForeColor = System.Drawing.Color.White;
+            this.btnCadastrar.Location = new System.Drawing.Point(651, 339);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(80, 27);
+            this.btnCadastrar.TabIndex = 153;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            // 
             // FrmMatricula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -659,6 +657,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(743, 387);
+            this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtValorMensal);
             this.Controls.Add(this.txtEndereco);
@@ -693,7 +692,6 @@
             this.Controls.Add(this.lblSexo);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.btnExcluirProfessor);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.label1);
@@ -720,7 +718,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnExcluirProfessor;
         private System.Windows.Forms.Button btnExcluir;
-        private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Label lblSexo;
@@ -762,5 +759,6 @@
         private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.TextBox txtValorMensal;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnCadastrar;
     }
 }

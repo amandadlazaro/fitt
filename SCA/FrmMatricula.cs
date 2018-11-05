@@ -462,7 +462,7 @@ namespace FittSistema.View
             btnFecharTela.PerformClick();
         }
 
-        private void btnCadastrarProfessor_Click(object sender, EventArgs e)
+        private void btnCadastrar_Click(object sender, EventArgs e)
         {
             if (!ValidarCampos())
             {
@@ -563,6 +563,5 @@ namespace FittSistema.View
         }
 
         #endregion
-
     }
 }

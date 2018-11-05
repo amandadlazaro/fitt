@@ -17,6 +17,8 @@ namespace SCA_BLL
         public static string Email { get; set; }
         public static int idMatricula { get; set; }
         public static int idTurma { get; set; }
+        public static int idTurma2 { get; set; }
+        public static int idTurma3 { get; set; }
         public static string TipoPlano { get; set; }
         public static string ValorMensal { get; set; }
         public static string DataInicio { get; set; }

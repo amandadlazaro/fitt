@@ -110,9 +110,27 @@ namespace FittSistema.View
                         AlunosMatriculadosBLL.horario1 = grpAlunos.CurrentRow.Cells["Horario"].Value.ToString();
                         break;
                     case ("2"):
-                        return;
+                        AlunosMatriculadosBLL.idTurma2 = Int32.Parse(grpAlunos.CurrentRow.Cells["idTurma2"].Value.ToString());
+                        grpAlunos.DataSource = turmaBLL.ProcurarTurma(AlunosMatriculadosBLL.idTurma);
+                        AlunosMatriculadosBLL.diaSemana1 = grpAlunos.CurrentRow.Cells["DiaSemana"].Value.ToString();
+                        AlunosMatriculadosBLL.horario1 = grpAlunos.CurrentRow.Cells["Horario"].Value.ToString();
+                        grpAlunos.DataSource = turmaBLL.ProcurarTurma(AlunosMatriculadosBLL.idTurma2);
+                        AlunosMatriculadosBLL.diaSemana2 = grpAlunos.CurrentRow.Cells["DiaSemana"].Value.ToString();
+                        AlunosMatriculadosBLL.horario2 = grpAlunos.CurrentRow.Cells["Horario"].Value.ToString();
+                        break;
                     case ("3"):
-                        return;
+                        AlunosMatriculadosBLL.idTurma2 = Int32.Parse(grpAlunos.CurrentRow.Cells["idTurma2"].Value.ToString());
+                        AlunosMatriculadosBLL.idTurma3 = Int32.Parse(grpAlunos.CurrentRow.Cells["idTurma3"].Value.ToString());
+                        grpAlunos.DataSource = turmaBLL.ProcurarTurma(AlunosMatriculadosBLL.idTurma);
+                        AlunosMatriculadosBLL.diaSemana1 = grpAlunos.CurrentRow.Cells["DiaSemana"].Value.ToString();
+                        AlunosMatriculadosBLL.horario1 = grpAlunos.CurrentRow.Cells["Horario"].Value.ToString();
+                        grpAlunos.DataSource = turmaBLL.ProcurarTurma(AlunosMatriculadosBLL.idTurma2);
+                        AlunosMatriculadosBLL.diaSemana2 = grpAlunos.CurrentRow.Cells["DiaSemana"].Value.ToString();
+                        AlunosMatriculadosBLL.horario2 = grpAlunos.CurrentRow.Cells["Horario"].Value.ToString();
+                        grpAlunos.DataSource = turmaBLL.ProcurarTurma(AlunosMatriculadosBLL.idTurma3);
+                        AlunosMatriculadosBLL.diaSemana3 = grpAlunos.CurrentRow.Cells["DiaSemana"].Value.ToString();
+                        AlunosMatriculadosBLL.horario3 = grpAlunos.CurrentRow.Cells["Horario"].Value.ToString();
+                        break;
                     default:
                         return;
                 }

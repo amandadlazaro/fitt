@@ -402,6 +402,17 @@ namespace FittSistema.View
 
             try
             {
+                int? turmaDois = null;
+                if (DevolveAula() >= 2)
+                {
+                    turmaDois = Int32.Parse(cmbTurma2.SelectedValue.ToString());
+                }
+                int? turmaTres = null;
+                if (DevolveAula() == 3)
+                {
+                    turmaTres = Int32.Parse(cmbTurma3.SelectedValue.ToString());
+                }
+
                 matricula = new Matricula
                 {
                     idMatricula = AlunosMatriculadosBLL.idMatricula,
@@ -412,7 +423,9 @@ namespace FittSistema.View
                     DataInicio = DateTime.ParseExact(maskDataInicial.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
                     DataFim = DateTime.ParseExact(maskDataFinal.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
                     SituacaoMatricula = true,
-                    QtdeAulas = DevolveAula()
+                    QtdeAulas = DevolveAula(),
+                    idTurma2 = turmaDois,
+                    idTurma3 = turmaTres,
                 };
                 aluno = new Aluno
                 {
@@ -449,15 +462,26 @@ namespace FittSistema.View
             btnFecharTela.PerformClick();
         }
 
-        private void btnCadastrarProfessor_Click(object sender, EventArgs e) 
+        private void btnCadastrarProfessor_Click(object sender, EventArgs e)
         {
             if (!ValidarCampos())
             {
                 return;
             }
-
+            
             try
             {
+                int? turmaDois = null;
+                if (DevolveAula() >= 2)
+                {
+                    turmaDois = Int32.Parse(cmbTurma2.SelectedValue.ToString());
+                }
+                int? turmaTres = null;
+                if (DevolveAula() == 3)
+                {
+                    turmaTres = Int32.Parse(cmbTurma3.SelectedValue.ToString());
+                }
+
                 aluno = new Aluno
                 {
                     CPF = maskCPF.Text,
@@ -472,8 +496,10 @@ namespace FittSistema.View
                 {
                     CPF = maskCPF.Text,
                     idTurma = Int32.Parse(cmbTurma1.SelectedValue.ToString()),
+                    idTurma2 = turmaDois,
+                    idTurma3 = turmaTres,
                     TipoPlano = DevolveTipo(),
-                    ValorMensal = 10.10,
+                    ValorMensal = double.Parse(txtValorMensal.Text),
                     DataInicio = DateTime.ParseExact(maskDataInicial.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
                     DataFim = DateTime.ParseExact(maskDataFinal.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
                     SituacaoMatricula = true,
@@ -501,6 +527,8 @@ namespace FittSistema.View
                 alunoBLL.DeletarAluno(aluno);
                 alunoBLL = new AlunoBLL();
                 matriculaBLL = new MatriculaBLL();
+                MessageBox.Show(mensagemMatricula);
+                return;
             }
 
             MessageBox.Show(mensagemMatricula);

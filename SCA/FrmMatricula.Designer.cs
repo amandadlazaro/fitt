@@ -284,7 +284,7 @@
             this.rbTrimestral.AutoSize = true;
             this.rbTrimestral.Font = new System.Drawing.Font("Agency FB", 15F);
             this.rbTrimestral.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.rbTrimestral.Location = new System.Drawing.Point(7, 51);
+            this.rbTrimestral.Location = new System.Drawing.Point(7, 23);
             this.rbTrimestral.Name = "rbTrimestral";
             this.rbTrimestral.Size = new System.Drawing.Size(87, 28);
             this.rbTrimestral.TabIndex = 143;
@@ -297,7 +297,7 @@
             this.rbAnual.AutoSize = true;
             this.rbAnual.Font = new System.Drawing.Font("Agency FB", 15F);
             this.rbAnual.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.rbAnual.Location = new System.Drawing.Point(7, 25);
+            this.rbAnual.Location = new System.Drawing.Point(7, 73);
             this.rbAnual.Name = "rbAnual";
             this.rbAnual.Size = new System.Drawing.Size(59, 28);
             this.rbAnual.TabIndex = 142;
@@ -310,7 +310,7 @@
             this.rbSemestral.AutoSize = true;
             this.rbSemestral.Font = new System.Drawing.Font("Agency FB", 15F);
             this.rbSemestral.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.rbSemestral.Location = new System.Drawing.Point(7, 76);
+            this.rbSemestral.Location = new System.Drawing.Point(7, 49);
             this.rbSemestral.Name = "rbSemestral";
             this.rbSemestral.Size = new System.Drawing.Size(82, 28);
             this.rbSemestral.TabIndex = 144;
@@ -408,7 +408,6 @@
             // 
             // maskDataInicial
             // 
-            this.maskDataInicial.Culture = new System.Globalization.CultureInfo("pt-BR");
             this.maskDataInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.maskDataInicial.Location = new System.Drawing.Point(474, 130);
             this.maskDataInicial.Mask = "00/00/0000";
@@ -418,7 +417,6 @@
             // 
             // maskDataFinal
             // 
-            this.maskDataFinal.Culture = new System.Globalization.CultureInfo("pt-BR");
             this.maskDataFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.maskDataFinal.Location = new System.Drawing.Point(474, 165);
             this.maskDataFinal.Mask = "00/00/0000";
@@ -588,7 +586,6 @@
             // 
             // maskDataNasc
             // 
-            this.maskDataNasc.Culture = new System.Globalization.CultureInfo("pt-BR");
             this.maskDataNasc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.maskDataNasc.Location = new System.Drawing.Point(95, 130);
             this.maskDataNasc.Mask = "00/00/0000";

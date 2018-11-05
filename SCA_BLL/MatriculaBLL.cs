@@ -21,6 +21,8 @@ namespace SCA_BLL
             public System.DateTime DataFim { get; set; }
             public bool SituacaoMatricula { get; set; }
             public int QtdeAulas { get; set; }
+            public Nullable<int> idTurma2 { get; set; }
+            public Nullable<int> idTurma3 { get; set; }
         }
         #endregion
 
@@ -91,7 +93,9 @@ namespace SCA_BLL
                 DataInicio = p.DataInicio,
                 DataFim = p.DataFim,
                 SituacaoMatricula = p.SituacaoMatricula,
-                QtdeAulas = p.QtdeAulas
+                QtdeAulas = p.QtdeAulas,
+                idTurma2 = p.idTurma2,
+                idTurma3 = p.idTurma3
             }).ToList();
 
             return lista;
@@ -110,8 +114,10 @@ namespace SCA_BLL
                 DataInicio = p.DataInicio,
                 DataFim = p.DataFim,
                 SituacaoMatricula = p.SituacaoMatricula,
-                QtdeAulas = p.QtdeAulas
-            }).ToList();
+                QtdeAulas = p.QtdeAulas,
+                idTurma2 = p.idTurma2,
+                idTurma3 = p.idTurma3
+                }).ToList();
 
             return data;
         }

@@ -19,11 +19,6 @@ namespace FittSistema.View
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            Application.Exit();
-        }
-
-        private void btnLogOut_Click(object sender, EventArgs e)
-        {
             this.Hide();
             Login telaLogin = new Login();
             telaLogin.ShowDialog();

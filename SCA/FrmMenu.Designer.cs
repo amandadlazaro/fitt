@@ -29,31 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu));
-            this.btnAnamneses = new System.Windows.Forms.Button();
             this.btnAlunos = new System.Windows.Forms.Button();
             this.btnTurma = new System.Windows.Forms.Button();
             this.btnProfessor = new System.Windows.Forms.Button();
             this.btnPagamento = new System.Windows.Forms.Button();
             this.btnFecharPgm = new System.Windows.Forms.Button();
-            this.btnLogOut = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnAdmin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnAnamneses
-            // 
-            this.btnAnamneses.BackColor = System.Drawing.Color.White;
-            this.btnAnamneses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAnamneses.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnamneses.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnAnamneses.Location = new System.Drawing.Point(308, 80);
-            this.btnAnamneses.Name = "btnAnamneses";
-            this.btnAnamneses.Size = new System.Drawing.Size(122, 83);
-            this.btnAnamneses.TabIndex = 1;
-            this.btnAnamneses.Text = "Anamneses";
-            this.btnAnamneses.UseVisualStyleBackColor = false;
-            this.btnAnamneses.Click += new System.EventHandler(this.btnAnamneses_Click);
             // 
             // btnAlunos
             // 
@@ -75,7 +59,7 @@
             this.btnTurma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTurma.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTurma.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnTurma.Location = new System.Drawing.Point(141, 208);
+            this.btnTurma.Location = new System.Drawing.Point(307, 80);
             this.btnTurma.Name = "btnTurma";
             this.btnTurma.Size = new System.Drawing.Size(122, 83);
             this.btnTurma.TabIndex = 4;
@@ -88,7 +72,7 @@
             this.btnProfessor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProfessor.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfessor.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnProfessor.Location = new System.Drawing.Point(474, 208);
+            this.btnProfessor.Location = new System.Drawing.Point(402, 208);
             this.btnProfessor.Name = "btnProfessor";
             this.btnProfessor.Size = new System.Drawing.Size(122, 83);
             this.btnProfessor.TabIndex = 5;
@@ -101,7 +85,7 @@
             this.btnPagamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPagamento.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPagamento.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnPagamento.Location = new System.Drawing.Point(308, 208);
+            this.btnPagamento.Location = new System.Drawing.Point(465, 80);
             this.btnPagamento.Name = "btnPagamento";
             this.btnPagamento.Size = new System.Drawing.Size(122, 83);
             this.btnPagamento.TabIndex = 7;
@@ -122,19 +106,6 @@
             this.btnFecharPgm.UseVisualStyleBackColor = true;
             this.btnFecharPgm.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // btnLogOut
-            // 
-            this.btnLogOut.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogOut.BackgroundImage")));
-            this.btnLogOut.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnLogOut.FlatAppearance.BorderSize = 0;
-            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogOut.Location = new System.Drawing.Point(0, 0);
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(38, 36);
-            this.btnLogOut.TabIndex = 11;
-            this.btnLogOut.UseVisualStyleBackColor = true;
-            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
-            // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
@@ -154,7 +125,7 @@
             this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdmin.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdmin.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnAdmin.Location = new System.Drawing.Point(474, 80);
+            this.btnAdmin.Location = new System.Drawing.Point(223, 208);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Size = new System.Drawing.Size(122, 83);
             this.btnAdmin.TabIndex = 6;
@@ -170,14 +141,12 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(743, 387);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnFecharPgm);
             this.Controls.Add(this.btnPagamento);
             this.Controls.Add(this.btnAdmin);
             this.Controls.Add(this.btnProfessor);
             this.Controls.Add(this.btnTurma);
             this.Controls.Add(this.btnAlunos);
-            this.Controls.Add(this.btnAnamneses);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "FrmMenu";
@@ -191,13 +160,11 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnAnamneses;
         private System.Windows.Forms.Button btnAlunos;
         private System.Windows.Forms.Button btnTurma;
         private System.Windows.Forms.Button btnProfessor;
         private System.Windows.Forms.Button btnPagamento;
         private System.Windows.Forms.Button btnFecharPgm;
-        private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button btnAdmin;
     }

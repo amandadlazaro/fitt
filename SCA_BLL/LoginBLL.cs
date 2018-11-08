@@ -17,5 +17,12 @@ namespace SCA_BLL
             if (user == null) return false;
             else return true;
         }
+
+        public bool checaProf(string login, string senha)
+        {
+            var user = bd.Professor.FirstOrDefault(prof => prof.Email == login && prof.Senha == senha);
+            if (user == null) return false;
+            else return true;
+        }
     }
 }

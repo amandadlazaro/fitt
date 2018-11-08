@@ -20,12 +20,22 @@ namespace FittSistema
         private void btnLogin_Click(object sender, EventArgs e)
         {
             LoginBLL control = new LoginBLL();
-            var existenoBD = control.checar(txtCampoUsuario.Text, txtCampoSenha.Text);
-            if (existenoBD)
+            var adm = control.checar(txtCampoUsuario.Text, Util.Util.criptografarSenha(txtCampoSenha.Text));
+            var prof = control.checaProf(txtCampoUsuario.Text, Util.Util.criptografarSenha(txtCampoSenha.Text));
+            if (adm)
             {
                 this.Hide();
                 View.FrmMenu menu = new View.FrmMenu();
                 menu.ShowDialog();
+                this.Close();
+                txtCampoUsuario.Clear();
+                txtCampoSenha.Clear();
+            }
+            else if (prof)
+            {
+                this.Hide();
+                View.FrmMenu2 menu2 = new View.FrmMenu2();
+                menu2.ShowDialog();
                 this.Close();
                 txtCampoUsuario.Clear();
                 txtCampoSenha.Clear();
@@ -37,11 +47,6 @@ namespace FittSistema
         }
 
         private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCampoSenha_TextChanged(object sender, EventArgs e)
         {
 
         }

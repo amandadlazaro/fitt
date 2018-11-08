@@ -41,7 +41,7 @@ namespace FittSistema.View
                     var adm = new Administrador
                     {
                         email = txtEmail.Text,
-                        senha = txtSenha.Text
+                        senha = Util.Util.criptografarSenha(txtSenha.Text)
 
                     };
                     MessageBox.Show(administradorBLL.AlterarAdministrador(adm));
@@ -111,7 +111,7 @@ namespace FittSistema.View
                 var adm = new Administrador
                 {
                     email = txtEmail.Text,
-                    senha = txtSenha.Text
+                    senha = Util.Util.criptografarSenha(txtSenha.Text)
 
                 };
                 MessageBox.Show(administradorBLL. AdicionarAdministrador(adm));
@@ -141,11 +141,6 @@ namespace FittSistema.View
                 btnEditarAdministrador.Show();
                 btnVoltar.Show();
             }
-        }
-
-        private void btnBusca_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnVoltar_Click_1(object sender, EventArgs e)

@@ -52,7 +52,6 @@
             // 
             resources.ApplyResources(this.txtCampoSenha, "txtCampoSenha");
             this.txtCampoSenha.Name = "txtCampoSenha";
-            this.txtCampoSenha.TextChanged += new System.EventHandler(this.txtCampoSenha_TextChanged);
             this.txtCampoSenha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCampoSenha_KeyPress);
             // 
             // btnLogin

@@ -64,6 +64,16 @@ namespace SCA_BLL
         {
             try
             {
+                var existeCPF = bd.Professor.FirstOrDefault(p => p.CPF == prof.CPF);
+                var existeEmail = bd.Professor.FirstOrDefault(p => p.Email == prof.Email);
+                if (existeCPF != null)
+                {
+                    return "CPF já cadastrado";
+                }
+                if (existeEmail != null)
+                {
+                    return "Email já cadastrado";
+                }
                 bd.Professor.Add(prof);
                 bd.SaveChanges();
                 return "Professor Cadastrado com Sucesso";
@@ -78,7 +88,7 @@ namespace SCA_BLL
         {
             try
             {
-                var professor = bd.Professor.First(p => p.CPF == prof.CPF);
+                var professor = bd.Professor.FirstOrDefault(p => p.CPF == prof.CPF);
                 if (professor == null) return null;
                 bd.Entry(professor).CurrentValues.SetValues(prof);
                 bd.SaveChanges();
@@ -95,6 +105,11 @@ namespace SCA_BLL
         {
             try
             {
+                var turmaProf = bd.Turma.FirstOrDefault(t => t.CPF == prof.CPF);
+                if (turmaProf != null)
+                {
+                    return "Professor vinculado à uma Turma"; 
+                }
                 var professor = bd.Professor.First(p => p.CPF == prof.CPF);
                 if (professor == null) return null;
                 bd.Professor.Remove(professor);
@@ -110,7 +125,7 @@ namespace SCA_BLL
         public IEnumerable<DadosProfessores> LerProfPorNome(string nome)
         {
             var lista = bd.Professor
-                .Where(a => a.Nome.StartsWith(nome))
+                .Where(a => a.Nome.Contains(nome))
                 .Select(p => new DadosProfessores
                 {
                     CPF = p.CPF,

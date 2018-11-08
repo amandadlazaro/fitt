@@ -74,6 +74,11 @@ namespace SCA_BLL
         {
             try
             {
+                var existeTurma = bd.Turma.FirstOrDefault(t => t.DiaSemana == turma.DiaSemana && t.Horario == turma.Horario);
+                if (existeTurma != null)
+                {
+                    return "Turma existente";
+                }
                 bd.Turma.Add(turma);
                 bd.SaveChanges();
                 return "Turma Cadastrada com Sucesso";
@@ -88,6 +93,11 @@ namespace SCA_BLL
         {
             try
             {
+                var existeTurma = bd.Turma.Where(tm => tm.DiaSemana == turma.DiaSemana && tm.Horario == turma.Horario && tm.idTurma != turma.idTurma).FirstOrDefault();
+                if (existeTurma != null)
+                {
+                    return "Turma existente";
+                }
                 var t = bd.Turma.First(tm => tm.idTurma == turma.idTurma);
                 if (t == null) return null;
                 bd.Entry(t).CurrentValues.SetValues(turma);
@@ -105,11 +115,16 @@ namespace SCA_BLL
         {
             try
             {
+                var alunoTruma = bd.Matricula.FirstOrDefault(a => a.idTurma == turma.idTurma || a.idTurma2 == turma.idTurma || a.idTurma3 == turma.idTurma);
+                if (alunoTruma != null)
+                {
+                    return "Turma contêm matrículas";
+                }
                 var t = bd.Turma.First(tm => tm.idTurma == turma.idTurma);
                 if (t == null) return null;
                 bd.Turma.Remove(t);
                 bd.SaveChanges();
-                return "Turma Deletadcom Sucesso";
+                return "Turma Deletada com Sucesso";
             }
             catch (Exception error)
             {

@@ -47,15 +47,15 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txtCPF = new System.Windows.Forms.MaskedTextBox();
-            this.txtDtNasc = new System.Windows.Forms.MaskedTextBox();
             this.txtTel = new System.Windows.Forms.MaskedTextBox();
             this.btnExcluirProfessor = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.cmbSexo = new System.Windows.Forms.ComboBox();
-            this.grpProfessores = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBusca = new System.Windows.Forms.TextBox();
+            this.txtDtNasc = new System.Windows.Forms.DateTimePicker();
+            this.grpProfessores = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpProfessores)).BeginInit();
             this.SuspendLayout();
@@ -249,16 +249,6 @@
             this.txtCPF.TabIndex = 1;
             this.txtCPF.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
-            // txtDtNasc
-            // 
-            this.txtDtNasc.Culture = new System.Globalization.CultureInfo("pt-PT");
-            this.txtDtNasc.Location = new System.Drawing.Point(467, 139);
-            this.txtDtNasc.Mask = "00/00/0000";
-            this.txtDtNasc.Name = "txtDtNasc";
-            this.txtDtNasc.Size = new System.Drawing.Size(192, 20);
-            this.txtDtNasc.TabIndex = 6;
-            this.txtDtNasc.ValidatingType = typeof(System.DateTime);
-            // 
             // txtTel
             // 
             this.txtTel.Location = new System.Drawing.Point(140, 181);
@@ -319,25 +309,6 @@
             this.cmbSexo.Size = new System.Drawing.Size(192, 21);
             this.cmbSexo.TabIndex = 5;
             // 
-            // grpProfessores
-            // 
-            this.grpProfessores.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.grpProfessores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grpProfessores.GridColor = System.Drawing.Color.LightCoral;
-            this.grpProfessores.Location = new System.Drawing.Point(-2, 93);
-            this.grpProfessores.Name = "grpProfessores";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grpProfessores.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.grpProfessores.Size = new System.Drawing.Size(745, 188);
-            this.grpProfessores.TabIndex = 36;
-            this.grpProfessores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpProfessores_CellClick);
-            // 
             // btnBuscar
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.Transparent;
@@ -359,6 +330,33 @@
             this.txtBusca.Size = new System.Drawing.Size(482, 20);
             this.txtBusca.TabIndex = 73;
             // 
+            // txtDtNasc
+            // 
+            this.txtDtNasc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtDtNasc.Location = new System.Drawing.Point(467, 138);
+            this.txtDtNasc.Name = "txtDtNasc";
+            this.txtDtNasc.Size = new System.Drawing.Size(192, 20);
+            this.txtDtNasc.TabIndex = 6;
+            // 
+            // grpProfessores
+            // 
+            this.grpProfessores.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.grpProfessores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grpProfessores.GridColor = System.Drawing.Color.LightCoral;
+            this.grpProfessores.Location = new System.Drawing.Point(-1, 96);
+            this.grpProfessores.Name = "grpProfessores";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grpProfessores.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.grpProfessores.Size = new System.Drawing.Size(745, 188);
+            this.grpProfessores.TabIndex = 77;
+            this.grpProfessores.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpProfessores_CellDoubleClick);
+            // 
             // FrmProfessor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -366,15 +364,15 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(743, 387);
+            this.Controls.Add(this.grpProfessores);
+            this.Controls.Add(this.txtDtNasc);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBusca);
-            this.Controls.Add(this.grpProfessores);
             this.Controls.Add(this.cmbSexo);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnExcluirProfessor);
             this.Controls.Add(this.txtTel);
-            this.Controls.Add(this.txtDtNasc);
             this.Controls.Add(this.txtCPF);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -423,14 +421,14 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.MaskedTextBox txtCPF;
-        private System.Windows.Forms.MaskedTextBox txtDtNasc;
         private System.Windows.Forms.MaskedTextBox txtTel;
         private System.Windows.Forms.Button btnExcluirProfessor;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.ComboBox cmbSexo;
-        private System.Windows.Forms.DataGridView grpProfessores;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtBusca;
+        private System.Windows.Forms.DateTimePicker txtDtNasc;
+        private System.Windows.Forms.DataGridView grpProfessores;
     }
 }

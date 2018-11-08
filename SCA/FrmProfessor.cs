@@ -29,6 +29,8 @@ namespace FittSistema.View
             if (grpProfessores.Visible == true)
             {
                 grpProfessores.Hide();
+                txtBusca.Hide();
+                btnBuscar.Hide();
                 btnVoltar.Show();
                 limpaCampos();
             }
@@ -45,14 +47,21 @@ namespace FittSistema.View
                     Telefone = txtTel.Text,
                     Endereco = txtEnd.Text,
                     Sexo = cmbSexo.SelectedItem.ToString(),
-                    DataNasc = DateTime.ParseExact(txtDtNasc.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture), 
+                    DataNasc = DateTime.ParseExact(txtDtNasc.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
                     Email = txtEmail.Text,
-                    Senha = txtSenha.Text
+                    Senha = Util.Util.criptografarSenha(txtSenha.Text)
                 };
-                MessageBox.Show(professorBLL.AdicionarProfessor(prof));
-                listarProfessores();
-                btnVoltar.Hide();
-                grpProfessores.Show();
+                var msg = professorBLL.AdicionarProfessor(prof);
+                MessageBox.Show(msg);
+                if (msg == "Professor Cadastrado com Sucesso")
+                {
+                    listarProfessores();
+                    btnVoltar.Hide();
+                    grpProfessores.Show();
+                    txtBusca.Show();
+                    btnBuscar.Show();
+                }
+
             }
         }
 
@@ -75,11 +84,13 @@ namespace FittSistema.View
                         Sexo = cmbSexo.SelectedItem.ToString(),
                         DataNasc = DateTime.ParseExact(txtDtNasc.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
                         Email = txtEmail.Text,
-                        Senha = txtSenha.Text
+                        Senha = Util.Util.criptografarSenha(txtSenha.Text)
                     };
                     MessageBox.Show(professorBLL.AlterarProfessor(prof));
                     listarProfessores();
                     grpProfessores.Show();
+                    txtBusca.Show();
+                    btnBuscar.Show();
                     btnCadastrarProfessor.Show();
                     btnEditarProfessor.Hide();
                     btnExcluirProfessor.Hide();
@@ -102,43 +113,28 @@ namespace FittSistema.View
                     {
                         CPF = txtCPF.Text
                     };
-                    MessageBox.Show(professorBLL.DeletarProfessor(prof));
-                    listarProfessores();
-                    grpProfessores.Show();
-                    btnCadastrarProfessor.Show();
-                    btnEditarProfessor.Hide();
-                    btnExcluirProfessor.Hide();
-                    btnVoltar.Hide();
+                    var msg = professorBLL.DeletarProfessor(prof);
+                    MessageBox.Show(msg);
+                    if (msg == "Professor Deletado com Sucesso")
+                    {
+                        listarProfessores();
+                        grpProfessores.Show();
+                        txtBusca.Show();
+                        btnBuscar.Show();
+                        btnCadastrarProfessor.Show();
+                        btnEditarProfessor.Hide();
+                        btnExcluirProfessor.Hide();
+                        btnVoltar.Hide();
+                    }
                 }
-            }
-        }
-
-        private void grpProfessores_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (grpProfessores.Rows.Count > 0)
-            {
-                foreach (DataGridViewRow row in grpProfessores.SelectedRows)
-                {
-                    txtCPF.Text = row.Cells[0].Value.ToString();
-                    txtNome.Text = row.Cells[1].Value.ToString();
-                    txtTel.Text = row.Cells[2].Value.ToString();
-                    txtEnd.Text = row.Cells[3].Value.ToString();
-                    cmbSexo.SelectedItem = row.Cells[4].Value.ToString();
-                    txtDtNasc.Text = row.Cells[5].Value.ToString();
-                    txtEmail.Text = row.Cells[6].Value.ToString();
-                    txtSenha.Text = row.Cells[7].Value.ToString();
-                }
-                grpProfessores.Hide();
-                btnCadastrarProfessor.Hide();
-                btnEditarProfessor.Show();
-                btnExcluirProfessor.Show();
-                btnVoltar.Show();
             }
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             grpProfessores.Show();
+            txtBusca.Show();
+            btnBuscar.Show();
             btnCadastrarProfessor.Show();
             btnEditarProfessor.Hide();
             btnExcluirProfessor.Hide();
@@ -209,7 +205,7 @@ namespace FittSistema.View
             {
                 erro = "Preencha o campo Senha";
             }
-            else if ( txtSenha.Text.Length < 8)
+            else if (txtSenha.Text.Length < 8)
             {
                 erro = "Senha inválida";
             }
@@ -233,5 +229,26 @@ namespace FittSistema.View
             if (!professor.Any()) MessageBox.Show("Nenhum aluno encontrado");
             else grpProfessores.DataSource = professor.ToList();
         }
+        
+        private void grpProfessores_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtCPF.Text = grpProfessores.CurrentRow.Cells[0].Value.ToString();
+            txtNome.Text = grpProfessores.CurrentRow.Cells[1].Value.ToString();
+            txtTel.Text = grpProfessores.CurrentRow.Cells[2].Value.ToString();
+            txtEnd.Text = grpProfessores.CurrentRow.Cells[3].Value.ToString();
+            cmbSexo.SelectedItem = grpProfessores.CurrentRow.Cells[4].Value.ToString();
+            txtDtNasc.Text = grpProfessores.CurrentRow.Cells[5].Value.ToString();
+            txtEmail.Text = grpProfessores.CurrentRow.Cells[6].Value.ToString();
+            txtSenha.Text = grpProfessores.CurrentRow.Cells[7].Value.ToString();
+
+            grpProfessores.Hide();
+            txtBusca.Hide();
+            btnBuscar.Hide();
+            btnCadastrarProfessor.Hide();
+            btnEditarProfessor.Show();
+            btnExcluirProfessor.Show();
+            btnVoltar.Show();
+        }
     }
 }
+

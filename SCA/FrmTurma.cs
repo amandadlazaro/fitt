@@ -50,11 +50,15 @@ namespace FittSistema.View
                     DiaSemana = cmbDiaSemana.SelectedItem.ToString(),
                     Horario = cmbHorario.SelectedItem.ToString()
                 };
-                MessageBox.Show(turmaBLL.Adicionar(turma));
-                tabSemanas.Show();
-                btnVoltar.Hide();
-                ListaTurmas();
-                LimpaCampos();
+                var msg = turmaBLL.Adicionar(turma);
+                MessageBox.Show(msg);
+                if (msg == "Turma Cadastrada com Sucesso")
+                {
+                    tabSemanas.Show();
+                    btnVoltar.Hide();
+                    ListaTurmas();
+                    LimpaCampos();
+                }
 
             }
         }
@@ -108,20 +112,24 @@ namespace FittSistema.View
                 }
                 else
                 {
-                      var turma = new Turma
+                    var turma = new Turma
                     {
                         idTurma = Convert.ToInt32(txtId.Text),
                         CPF = cmbProfessor.SelectedValue.ToString(),
                         DiaSemana = cmbDiaSemana.SelectedItem.ToString(),
                         Horario = cmbHorario.SelectedItem.ToString()
                     };
-                    MessageBox.Show(turmaBLL.Alterar(turma));
-                    ListaTurmas();
-                    tabSemanas.Show();
-                    btnCadastrar.Show();
-                    btnEditar.Hide();
-                    btnExcluir.Hide();
-                    btnVoltar.Hide();
+                    var msg = turmaBLL.Alterar(turma);
+                    MessageBox.Show(msg);
+                    if (msg == "Turma Alterada com Sucesso")
+                    {
+                        ListaTurmas();
+                        tabSemanas.Show();
+                        btnCadastrar.Show();
+                        btnEditar.Hide();
+                        btnExcluir.Hide();
+                        btnVoltar.Hide();
+                    }
                 }
             }
         }
@@ -134,13 +142,17 @@ namespace FittSistema.View
                 {
                     idTurma = Convert.ToInt32(txtId.Text),
                 };
-                MessageBox.Show(turmaBLL.Deletar(turma));
-                ListaTurmas();
-                tabSemanas.Show();
-                btnCadastrar.Show();
-                btnEditar.Hide();
-                btnExcluir.Hide();
-                btnVoltar.Hide();
+                var msg = turmaBLL.Deletar(turma);
+                MessageBox.Show(msg);
+                if (msg == "Turma Deletada com Sucesso")
+                {
+                    ListaTurmas();
+                    tabSemanas.Show();
+                    btnCadastrar.Show();
+                    btnEditar.Hide();
+                    btnExcluir.Hide();
+                    btnVoltar.Hide();
+                }
             }
         }
 
@@ -149,7 +161,7 @@ namespace FittSistema.View
             cmbProfessor.DataSource = professorBLL.ListarProfessores().ToList();
             cmbProfessor.ValueMember = "CPF";
             cmbProfessor.SelectedValue = "CPF";
-            cmbProfessor.DisplayMember = "Nome"; 
+            cmbProfessor.DisplayMember = "Nome";
 
             cmbDiaSemana.Items.Add("Segunda");
             cmbDiaSemana.Items.Add("Terça");
@@ -176,22 +188,18 @@ namespace FittSistema.View
 
         private void cliqueDataGrid(DataGridView dt)
         {
-            if (dt.Rows.Count > 0)
-            {
-                foreach (DataGridViewRow row in dt.SelectedRows)
-                {
-                    txtId.Text = row.Cells[0].Value.ToString();
-                    cmbProfessor.Text = row.Cells[1].Value.ToString();
-                    cmbDiaSemana.SelectedItem = row.Cells[2].Value.ToString();
-                    cmbHorario.SelectedItem = row.Cells[3].Value.ToString();
 
-                }
-                tabSemanas.Hide();
-                btnCadastrar.Hide();
-                btnEditar.Show();
-                btnExcluir.Show();
-                btnVoltar.Show();
-            }
+            txtId.Text = dt.CurrentRow.Cells[0].Value.ToString();
+            cmbProfessor.Text = dt.CurrentRow.Cells[1].Value.ToString();
+            cmbDiaSemana.SelectedItem = dt.CurrentRow.Cells[2].Value.ToString();
+            cmbHorario.SelectedItem = dt.CurrentRow.Cells[3].Value.ToString();
+
+            tabSemanas.Hide();
+            btnCadastrar.Hide();
+            btnEditar.Show();
+            btnExcluir.Show();
+            btnVoltar.Show();
+
         }
 
         private void grpSegunda_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)

@@ -15,8 +15,6 @@ namespace SCA_BLL
             public int idBoleto { get; set; }
             public int idMatricula { get; set; }
             public string FormaDePagamento { get; set; }
-            public DateTime DtVencimento { get; set; }
-            public Nullable<double> Multa { get; set; }
             public Nullable<double> Desconto { get; set; }
             public double ValorTotal { get; set; }
             public DateTime DtPagamento { get; set; }
@@ -33,8 +31,6 @@ namespace SCA_BLL
                 idBoleto = p.idBoleto,
                 idMatricula = p.idMatricula,
                 FormaDePagamento = p.FormaDePagamento,
-                DtVencimento = p.DtVencimento,
-                Multa = p.Multa,
                 Desconto = p.Desconto,
                 ValorTotal = p.ValorTotal,
                 DtPagamento = p.DtPagamento

@@ -12,7 +12,7 @@ namespace SCA_BLL
         #region Propriedades
         public class DadosAdministrador
         {
-
+            public int    ID    { get; set; }
             public string Email { get; set; }
             public string Senha { get; set; }
         }
@@ -30,6 +30,7 @@ namespace SCA_BLL
         {
             var lista = bd.Administrador.Select(a => new DadosAdministrador
             {
+                ID = a.idAdm,
                 Email = a.email,
                 Senha = a.senha
             }).ToList();
@@ -65,7 +66,7 @@ namespace SCA_BLL
         {
             try
             {
-                var Administrador = bd.Administrador.First(a => a.email == adm.email);
+                var Administrador = bd.Administrador.First(a => a.idAdm == adm.idAdm);
                 if (Administrador == null) return null;
                 bd.Entry(Administrador).CurrentValues.SetValues(adm);
                 bd.SaveChanges();

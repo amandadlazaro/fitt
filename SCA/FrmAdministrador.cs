@@ -22,6 +22,8 @@ namespace FittSistema.View
         }
         
         AdministradorBLL administradorBLL = new AdministradorBLL();
+        AdministradorBLL.DadosAdministrador admdados = new AdministradorBLL.DadosAdministrador();
+        Administrador adm = new Administrador();
 
         private void FrmAdministrador_Load(object sender, EventArgs e)
         {
@@ -38,8 +40,9 @@ namespace FittSistema.View
                 }
                 else
                 {
-                    var adm = new Administrador
+                    adm = new Administrador
                     {
+                        idAdm = int.Parse(txtID.Text),
                         email = txtEmail.Text,
                         senha = Util.Util.criptografarSenha(txtSenha.Text)
 
@@ -121,21 +124,17 @@ namespace FittSistema.View
             }
         }
 
-        private void grpAdministrador_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
-
         private void grpAdministrador_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (grpAdministrador.Rows.Count > 0)
             {
-                foreach (DataGridViewRow row in grpAdministrador.SelectedRows)
-                {
+                admdados.Email = grpAdministrador.CurrentRow.Cells["Email"].Value.ToString();
+                admdados.Senha = grpAdministrador.CurrentRow.Cells["Senha"].Value.ToString();
+                txtEmail.Text = admdados.Email;
+                txtSenha.Text = admdados.Senha;
 
-                    txtEmail.Text = row.Cells[0].Value.ToString();
-                    txtSenha.Text = row.Cells[1].Value.ToString();
-                }
+                txtID.Text = grpAdministrador.CurrentRow.Cells["ID"].Value.ToString();
+
                 grpAdministrador.Hide();
                 btnCadastrarAdministrador.Hide();
                 btnEditarAdministrador.Show();
@@ -157,11 +156,6 @@ namespace FittSistema.View
             FrmMenu menu = new FrmMenu();
             menu.ShowDialog();
             this.Close();
-
-        }
-
-        private void grpAdministrador_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
         }
     }

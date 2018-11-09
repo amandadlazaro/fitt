@@ -23,8 +23,7 @@ namespace FittSistema.View
 
         private void listarAlunos()
         {
-            var alunos = alunoBLL.LerAlunosMini();
-            grpAlunos.DataSource = alunos.ToList();
+            grpAlunos.DataSource = matriculaBLL.LerAlunosMatriculados();
         }
 
         #endregion

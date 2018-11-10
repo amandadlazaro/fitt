@@ -53,8 +53,6 @@
             this.rbAula1 = new System.Windows.Forms.RadioButton();
             this.panelTipo = new System.Windows.Forms.Panel();
             this.panelAulas = new System.Windows.Forms.Panel();
-            this.maskDataInicial = new System.Windows.Forms.MaskedTextBox();
-            this.maskDataFinal = new System.Windows.Forms.MaskedTextBox();
             this.cmbSexo = new System.Windows.Forms.ComboBox();
             this.lblAulas = new System.Windows.Forms.Label();
             this.lblTipo = new System.Windows.Forms.Label();
@@ -68,7 +66,6 @@
             this.cmbSemana3 = new System.Windows.Forms.ComboBox();
             this.cmbTurma3 = new System.Windows.Forms.ComboBox();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.maskDataNasc = new System.Windows.Forms.MaskedTextBox();
             this.maskCel = new System.Windows.Forms.MaskedTextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.maskCPF = new System.Windows.Forms.MaskedTextBox();
@@ -76,6 +73,9 @@
             this.txtValorMensal = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnCadastrar = new System.Windows.Forms.Button();
+            this.maskDataInicial = new System.Windows.Forms.DateTimePicker();
+            this.maskDataFinal = new System.Windows.Forms.DateTimePicker();
+            this.maskDataNasc = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panelTipo.SuspendLayout();
             this.panelAulas.SuspendLayout();
@@ -390,26 +390,6 @@
             this.panelAulas.Size = new System.Drawing.Size(171, 31);
             this.panelAulas.TabIndex = 113;
             // 
-            // maskDataInicial
-            // 
-            this.maskDataInicial.Culture = new System.Globalization.CultureInfo("pt-BR");
-            this.maskDataInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.maskDataInicial.Location = new System.Drawing.Point(474, 130);
-            this.maskDataInicial.Mask = "00/00/0000";
-            this.maskDataInicial.Name = "maskDataInicial";
-            this.maskDataInicial.Size = new System.Drawing.Size(100, 21);
-            this.maskDataInicial.TabIndex = 139;
-            // 
-            // maskDataFinal
-            // 
-            this.maskDataFinal.Culture = new System.Globalization.CultureInfo("pt-BR");
-            this.maskDataFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.maskDataFinal.Location = new System.Drawing.Point(474, 165);
-            this.maskDataFinal.Mask = "00/00/0000";
-            this.maskDataFinal.Name = "maskDataFinal";
-            this.maskDataFinal.Size = new System.Drawing.Size(100, 21);
-            this.maskDataFinal.TabIndex = 140;
-            // 
             // cmbSexo
             // 
             this.cmbSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
@@ -570,17 +550,6 @@
             this.txtNome.TabIndex = 129;
             this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FiltrarLetraMaiuscula);
             // 
-            // maskDataNasc
-            // 
-            this.maskDataNasc.Culture = new System.Globalization.CultureInfo("pt-BR");
-            this.maskDataNasc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.maskDataNasc.Location = new System.Drawing.Point(95, 130);
-            this.maskDataNasc.Mask = "00/00/0000";
-            this.maskDataNasc.Name = "maskDataNasc";
-            this.maskDataNasc.Size = new System.Drawing.Size(106, 21);
-            this.maskDataNasc.TabIndex = 130;
-            this.maskDataNasc.ValidatingType = typeof(System.DateTime);
-            // 
             // maskCel
             // 
             this.maskCel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
@@ -601,7 +570,6 @@
             // 
             // maskCPF
             // 
-            this.maskCPF.Culture = new System.Globalization.CultureInfo("pt-BR");
             this.maskCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.maskCPF.Location = new System.Drawing.Point(95, 279);
             this.maskCPF.Mask = "999.999.999-99";
@@ -654,6 +622,33 @@
             this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
+            // maskDataInicial
+            // 
+            this.maskDataInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.maskDataInicial.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.maskDataInicial.Location = new System.Drawing.Point(474, 133);
+            this.maskDataInicial.Name = "maskDataInicial";
+            this.maskDataInicial.Size = new System.Drawing.Size(100, 21);
+            this.maskDataInicial.TabIndex = 154;
+            // 
+            // maskDataFinal
+            // 
+            this.maskDataFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.maskDataFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.maskDataFinal.Location = new System.Drawing.Point(474, 166);
+            this.maskDataFinal.Name = "maskDataFinal";
+            this.maskDataFinal.Size = new System.Drawing.Size(100, 21);
+            this.maskDataFinal.TabIndex = 155;
+            // 
+            // maskDataNasc
+            // 
+            this.maskDataNasc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.maskDataNasc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.maskDataNasc.Location = new System.Drawing.Point(95, 130);
+            this.maskDataNasc.Name = "maskDataNasc";
+            this.maskDataNasc.Size = new System.Drawing.Size(100, 21);
+            this.maskDataNasc.TabIndex = 156;
+            // 
             // FrmMatricula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -661,6 +656,9 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(743, 387);
+            this.Controls.Add(this.maskDataNasc);
+            this.Controls.Add(this.maskDataFinal);
+            this.Controls.Add(this.maskDataInicial);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtValorMensal);
@@ -668,7 +666,6 @@
             this.Controls.Add(this.maskCPF);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.maskCel);
-            this.Controls.Add(this.maskDataNasc);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.cmbTurma3);
             this.Controls.Add(this.cmbSemana3);
@@ -682,8 +679,6 @@
             this.Controls.Add(this.lblTipo);
             this.Controls.Add(this.lblAulas);
             this.Controls.Add(this.cmbSexo);
-            this.Controls.Add(this.maskDataFinal);
-            this.Controls.Add(this.maskDataInicial);
             this.Controls.Add(this.panelAulas);
             this.Controls.Add(this.panelTipo);
             this.Controls.Add(this.lblDataInicial);
@@ -741,8 +736,6 @@
         private System.Windows.Forms.RadioButton rbAula1;
         private System.Windows.Forms.Panel panelTipo;
         private System.Windows.Forms.Panel panelAulas;
-        private System.Windows.Forms.MaskedTextBox maskDataInicial;
-        private System.Windows.Forms.MaskedTextBox maskDataFinal;
         private System.Windows.Forms.ComboBox cmbSexo;
         private System.Windows.Forms.Label lblAulas;
         private System.Windows.Forms.Label lblTipo;
@@ -756,7 +749,6 @@
         private System.Windows.Forms.ComboBox cmbSemana3;
         private System.Windows.Forms.ComboBox cmbTurma3;
         private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.MaskedTextBox maskDataNasc;
         private System.Windows.Forms.MaskedTextBox maskCel;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.MaskedTextBox maskCPF;
@@ -764,5 +756,8 @@
         private System.Windows.Forms.TextBox txtValorMensal;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.DateTimePicker maskDataInicial;
+        private System.Windows.Forms.DateTimePicker maskDataFinal;
+        private System.Windows.Forms.DateTimePicker maskDataNasc;
     }
 }

@@ -101,7 +101,7 @@
             this.btnEditarAdministrador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarAdministrador.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarAdministrador.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnEditarAdministrador.Location = new System.Drawing.Point(598, 356);
+            this.btnEditarAdministrador.Location = new System.Drawing.Point(599, 356);
             this.btnEditarAdministrador.Name = "btnEditarAdministrador";
             this.btnEditarAdministrador.Size = new System.Drawing.Size(119, 27);
             this.btnEditarAdministrador.TabIndex = 90;
@@ -172,7 +172,7 @@
             // 
             this.grpAdministrador.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.grpAdministrador.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grpAdministrador.Location = new System.Drawing.Point(3, 112);
+            this.grpAdministrador.Location = new System.Drawing.Point(5, 134);
             this.grpAdministrador.Name = "grpAdministrador";
             this.grpAdministrador.Size = new System.Drawing.Size(732, 178);
             this.grpAdministrador.TabIndex = 89;

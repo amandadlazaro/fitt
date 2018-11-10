@@ -32,6 +32,13 @@ namespace FittSistema.View
             btnCadastrar.Visible = true;
             dgvPagamento.DataSource = pagamentoBLL.LerPagamentoAluno();
             modo = "boletos";
+            dgvPagamento.Columns["idBoleto"].HeaderText = "Numero do Pagamento";
+            dgvPagamento.Columns["FormaDePagamento"].HeaderText = "Forma de Pagamento";
+            dgvPagamento.Columns["TipoPlano"].HeaderText = "Tipo do Plano";
+            dgvPagamento.Columns["ValorMensal"].HeaderText = "Valor Mensal";
+            dgvPagamento.Columns["ValorTotal"].HeaderText = "Valor Total";
+            dgvPagamento.Columns["QtdeAulas"].HeaderText = "Aulas";
+            dgvPagamento.Columns["SituacaoMatricula"].HeaderText = "Matriculado";
         }
 
         private void listarAlunos()

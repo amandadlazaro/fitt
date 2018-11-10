@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPagamentos));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.lblBuscarTurma = new System.Windows.Forms.Label();
             this.txtBusca = new System.Windows.Forms.TextBox();
             this.btnFecharTela = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -42,22 +41,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvPagamento)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblBuscarTurma
-            // 
-            this.lblBuscarTurma.AutoSize = true;
-            this.lblBuscarTurma.BackColor = System.Drawing.Color.Transparent;
-            this.lblBuscarTurma.Font = new System.Drawing.Font("Agency FB", 14.25F);
-            this.lblBuscarTurma.Location = new System.Drawing.Point(195, 47);
-            this.lblBuscarTurma.Name = "lblBuscarTurma";
-            this.lblBuscarTurma.Size = new System.Drawing.Size(114, 24);
-            this.lblBuscarTurma.TabIndex = 4;
-            this.lblBuscarTurma.Text = "Buscar por aluno:";
-            // 
             // txtBusca
             // 
-            this.txtBusca.Location = new System.Drawing.Point(199, 74);
+            this.txtBusca.Location = new System.Drawing.Point(12, 74);
             this.txtBusca.Name = "txtBusca";
-            this.txtBusca.Size = new System.Drawing.Size(382, 20);
+            this.txtBusca.Size = new System.Drawing.Size(569, 20);
             this.txtBusca.TabIndex = 5;
             // 
             // btnFecharTela
@@ -162,7 +150,6 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btnFecharTela);
             this.Controls.Add(this.txtBusca);
-            this.Controls.Add(this.lblBuscarTurma);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmPagamentos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -176,8 +163,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblBuscarTurma;
         private System.Windows.Forms.TextBox txtBusca;
         private System.Windows.Forms.Button btnFecharTela;
         private System.Windows.Forms.PictureBox pictureBox3;

@@ -392,6 +392,7 @@
             // 
             // maskDataInicial
             // 
+            this.maskDataInicial.Culture = new System.Globalization.CultureInfo("pt-BR");
             this.maskDataInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.maskDataInicial.Location = new System.Drawing.Point(474, 130);
             this.maskDataInicial.Mask = "00/00/0000";
@@ -401,6 +402,7 @@
             // 
             // maskDataFinal
             // 
+            this.maskDataFinal.Culture = new System.Globalization.CultureInfo("pt-BR");
             this.maskDataFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.maskDataFinal.Location = new System.Drawing.Point(474, 165);
             this.maskDataFinal.Mask = "00/00/0000";
@@ -570,6 +572,7 @@
             // 
             // maskDataNasc
             // 
+            this.maskDataNasc.Culture = new System.Globalization.CultureInfo("pt-BR");
             this.maskDataNasc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.maskDataNasc.Location = new System.Drawing.Point(95, 130);
             this.maskDataNasc.Mask = "00/00/0000";
@@ -598,6 +601,7 @@
             // 
             // maskCPF
             // 
+            this.maskCPF.Culture = new System.Globalization.CultureInfo("pt-BR");
             this.maskCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.maskCPF.Location = new System.Drawing.Point(95, 279);
             this.maskCPF.Mask = "999.999.999-99";

@@ -32,7 +32,6 @@
             this.btnFecharTela = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnExcluirProfessor = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.lblNome = new System.Windows.Forms.Label();
@@ -119,21 +118,6 @@
             this.label1.Size = new System.Drawing.Size(110, 40);
             this.label1.TabIndex = 40;
             this.label1.Text = "Matrícula";
-            // 
-            // btnExcluirProfessor
-            // 
-            this.btnExcluirProfessor.BackColor = System.Drawing.Color.Transparent;
-            this.btnExcluirProfessor.Enabled = false;
-            this.btnExcluirProfessor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluirProfessor.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluirProfessor.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnExcluirProfessor.Location = new System.Drawing.Point(651, 339);
-            this.btnExcluirProfessor.Name = "btnExcluirProfessor";
-            this.btnExcluirProfessor.Size = new System.Drawing.Size(80, 27);
-            this.btnExcluirProfessor.TabIndex = 43;
-            this.btnExcluirProfessor.Text = "Excluir";
-            this.btnExcluirProfessor.UseVisualStyleBackColor = false;
-            this.btnExcluirProfessor.Visible = false;
             // 
             // btnExcluir
             // 
@@ -691,7 +675,6 @@
             this.Controls.Add(this.lblSexo);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.btnExcluirProfessor);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
@@ -715,7 +698,6 @@
         private System.Windows.Forms.Button btnFecharTela;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnExcluirProfessor;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Label lblNome;

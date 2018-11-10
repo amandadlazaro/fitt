@@ -34,7 +34,9 @@ namespace FittSistema.View
 
         private void ModoEditar()
         {
-
+            btnRegistrar.Visible = false;
+            btnExcluir.Visible = true;
+            btnSalvar.Visible = true;
         }
 
         private bool ValidarCampos()
@@ -81,6 +83,61 @@ namespace FittSistema.View
             {
                 MessageBox.Show(mensagem);
                 pagamentoBLL = new PagamentoBLL();
+                return;
+            }
+
+            MessageBox.Show(mensagem);
+            btnFecharTela.PerformClick();
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            if (!ValidarCampos())
+            {
+                return;
+            }
+
+            DialogResult Confirmacao = MessageBox.Show("Voce quer mesmo salvar essas alterações ?", "Alterar Matricula", MessageBoxButtons.YesNo);
+            if (Confirmacao == DialogResult.No)
+            {
+                return;
+            }
+
+            try
+            {
+                boleto = new Boleto
+                {
+                };
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.ToString());
+                return;
+            }
+
+            string mensagem = pagamentoBLL.Alterar(boleto);
+            if (mensagem != "Pagamento Alterado com Sucesso")
+            {
+                MessageBox.Show(mensagem);
+                return;
+            }
+            
+            MessageBox.Show(mensagem);
+            btnFecharTela.PerformClick();
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            DialogResult Confirmacao = MessageBox.Show("Voce quer mesmo excluir essa Pagamento ?", "Excluir Pagamento", MessageBoxButtons.YesNo);
+            if (Confirmacao == DialogResult.No)
+            {
+                return;
+            }
+
+            string mensagem = pagamentoBLL.Deletar(AlunosMatriculadosBLL.idMatricula);
+            if (mensagem != "Pagamento Deletado com Sucesso")
+            {
+                MessageBox.Show(mensagem);
                 return;
             }
 

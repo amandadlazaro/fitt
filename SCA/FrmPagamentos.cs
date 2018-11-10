@@ -73,7 +73,6 @@ namespace FittSistema.View
 
         private void EditarPagamento()
         {
-
         }
 
         #endregion

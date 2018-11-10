@@ -71,11 +71,11 @@ namespace SCA_BLL
 
         }
 
-        public string Deletar(Boleto boleto)
+        public string Deletar(int boleto)
         {
             try
             {
-                var t = bd.Boleto.First(tm => tm.idBoleto == boleto.idBoleto);
+                var t = bd.Boleto.First(tm => tm.idBoleto == boleto);
                 if (t == null) return null;
                 bd.Boleto.Remove(t);
                 bd.SaveChanges();

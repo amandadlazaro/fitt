@@ -52,6 +52,7 @@
     <Compile Include="AlunoBLL.cs" />
     <Compile Include="AlunosMatriculadosBLL.cs" />
     <Compile Include="AnamneseBLL.cs" />
+    <Compile Include="GerarPagamentoBLL.cs" />
     <Compile Include="LoginBLL.cs" />
     <Compile Include="MatriculaBLL.cs" />
     <Compile Include="PagamentoBLL.cs" />

@@ -27,7 +27,7 @@ namespace FittSistema.View
         }
 
 
-        private void btnTurma_Click(object sender, EventArgs e)
+        private void btnAnamnese_Click(object sender, EventArgs e)
         {
             this.Hide();
             FrmAnamneses anamnese = new FrmAnamneses();

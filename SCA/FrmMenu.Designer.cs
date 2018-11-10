@@ -36,6 +36,7 @@
             this.btnFecharPgm = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnAdmin = new System.Windows.Forms.Button();
+            this.btnAnamnese = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,7 +73,7 @@
             this.btnProfessor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProfessor.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfessor.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnProfessor.Location = new System.Drawing.Point(402, 208);
+            this.btnProfessor.Location = new System.Drawing.Point(307, 208);
             this.btnProfessor.Name = "btnProfessor";
             this.btnProfessor.Size = new System.Drawing.Size(122, 83);
             this.btnProfessor.TabIndex = 5;
@@ -125,13 +126,26 @@
             this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdmin.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdmin.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnAdmin.Location = new System.Drawing.Point(223, 208);
+            this.btnAdmin.Location = new System.Drawing.Point(141, 208);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Size = new System.Drawing.Size(122, 83);
             this.btnAdmin.TabIndex = 6;
             this.btnAdmin.Text = "Administrador";
             this.btnAdmin.UseVisualStyleBackColor = true;
             this.btnAdmin.Click += new System.EventHandler(this.btnMatricula_Click);
+            // 
+            // btnAnamnese
+            // 
+            this.btnAnamnese.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAnamnese.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnamnese.ForeColor = System.Drawing.Color.DeepPink;
+            this.btnAnamnese.Location = new System.Drawing.Point(465, 208);
+            this.btnAnamnese.Name = "btnAnamnese";
+            this.btnAnamnese.Size = new System.Drawing.Size(122, 83);
+            this.btnAnamnese.TabIndex = 36;
+            this.btnAnamnese.Text = "Anamnese";
+            this.btnAnamnese.UseVisualStyleBackColor = true;
+            this.btnAnamnese.Click += new System.EventHandler(this.btnAnamnese_Click);
             // 
             // FrmMenu
             // 
@@ -140,6 +154,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(743, 387);
+            this.Controls.Add(this.btnAnamnese);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btnFecharPgm);
             this.Controls.Add(this.btnPagamento);
@@ -167,5 +182,6 @@
         private System.Windows.Forms.Button btnFecharPgm;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button btnAdmin;
+        private System.Windows.Forms.Button btnAnamnese;
     }
 }

@@ -46,7 +46,7 @@
             this.btnAnamnese.TabIndex = 4;
             this.btnAnamnese.Text = "Anamnese";
             this.btnAnamnese.UseVisualStyleBackColor = true;
-            this.btnAnamnese.Click += new System.EventHandler(this.btnTurma_Click);
+            this.btnAnamnese.Click += new System.EventHandler(this.btnAnamnese_Click);
             // 
             // btnFecharPgm
             // 

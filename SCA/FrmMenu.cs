@@ -79,5 +79,13 @@ namespace FittSistema.View
         {
 
         }
+
+        private void btnAnamnese_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmAnamneses anamnese = new FrmAnamneses();
+            anamnese.ShowDialog();
+            this.Close();
+        }
     }
 }

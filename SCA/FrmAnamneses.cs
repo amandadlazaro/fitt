@@ -32,10 +32,20 @@ namespace FittSistema.View
 
         private void btnFecharForm_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FrmMenu2 menu = new FrmMenu2();
-            menu.ShowDialog();
-            this.Close();
+            if (LoginBLL.sessao == 1)
+            {
+                this.Hide();
+                FrmMenu menu = new FrmMenu();
+                menu.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                this.Hide();
+                FrmMenu2 menu = new FrmMenu2();
+                menu.ShowDialog();
+                this.Close();
+            }
         }
 
         private void btnBuscarAnamnese_Click(object sender, EventArgs e)

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FittSistema.View
+namespace SCA
 {
     public partial class FrmGerarPagamento : Form
     {

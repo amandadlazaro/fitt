@@ -1,4 +1,4 @@
-﻿namespace SCA
+﻿namespace FittSistema.View
 {
     partial class FrmGerarPagamento
     {

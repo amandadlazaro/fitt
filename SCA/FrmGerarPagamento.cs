@@ -30,6 +30,7 @@ namespace FittSistema.View
         private void ModoCadastrar()
         {
             txtNome.Text = GerarPagamentoBLL.Nome;
+            txtValorTotal.Text = GerarPagamentoBLL.ValorMensal.ToString();
         }
 
         private void ModoEditar()
@@ -37,6 +38,12 @@ namespace FittSistema.View
             btnRegistrar.Visible = false;
             btnExcluir.Visible = true;
             btnSalvar.Visible = true;
+            txtNome.Text = GerarPagamentoBLL.Nome;
+            txtValorTotal.Text = GerarPagamentoBLL.ValorMensal.ToString();
+            dtpDtPag.Value = GerarPagamentoBLL.DtPagamento;
+            cmbForma.Text = GerarPagamentoBLL.FormaDePagamento;
+            txtDesconto.Text = GerarPagamentoBLL.Desconto.ToString();
+            txtValorTotal.Text = GerarPagamentoBLL.ValorTotal.ToString();
         }
 
         private bool ValidarCampos()
@@ -107,6 +114,12 @@ namespace FittSistema.View
             {
                 boleto = new Boleto
                 {
+                    idBoleto = GerarPagamentoBLL.idBoleto,
+                    idMatricula = GerarPagamentoBLL.idMatricula,
+                    Desconto = double.Parse(txtDesconto.Text),
+                    DtPagamento = dtpDtPag.Value,
+                    ValorTotal = double.Parse(txtValorTotal.Text),
+                    FormaDePagamento = cmbForma.Text,
                 };
             }
             catch (Exception err)

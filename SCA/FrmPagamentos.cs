@@ -29,12 +29,14 @@ namespace FittSistema.View
 
         private void listarBoletos()
         {
+            btnCadastrar.Visible = true;
             dgvPagamento.DataSource = pagamentoBLL.LerPagamentoAluno();
             modo = "boletos";
         }
 
         private void listarAlunos()
         {
+            btnCadastrar.Visible = false;
             dgvPagamento.DataSource = matriculaBLL.LerAlunosMatriculados();
             modo = "alunos";
         }
@@ -54,6 +56,7 @@ namespace FittSistema.View
             {
                 dgvPagamento.DataSource = matriculaBLL.ProcurarMatricula(cpf);
                 GerarPagamentoBLL.idMatricula = Int32.Parse(dgvPagamento.CurrentRow.Cells["idMatricula"].Value.ToString());
+                GerarPagamentoBLL.ValorMensal = double.Parse(dgvPagamento.CurrentRow.Cells["ValorMensal"].Value.ToString());
 
                 dgvPagamento.DataSource = alunoBLL.ProcurarAluno(cpf);
                 GerarPagamentoBLL.Nome = dgvPagamento.CurrentRow.Cells["Nome"].Value.ToString();
@@ -96,6 +99,13 @@ namespace FittSistema.View
 
                 dgvPagamento.DataSource = matriculaBLL.ProcurarMatricula(cpf);
                 GerarPagamentoBLL.idMatricula = Int32.Parse(dgvPagamento.CurrentRow.Cells["idMatricula"].Value.ToString());
+                GerarPagamentoBLL.ValorMensal = double.Parse(dgvPagamento.CurrentRow.Cells["ValorMensal"].Value.ToString());
+
+                dgvPagamento.DataSource = pagamentoBLL.ProcurarBoleto(GerarPagamentoBLL.idBoleto);
+                GerarPagamentoBLL.DtPagamento = System.DateTime.Parse(dgvPagamento.CurrentRow.Cells["DtPagamento"].Value.ToString());
+                GerarPagamentoBLL.FormaDePagamento = dgvPagamento.CurrentRow.Cells["FormaDePagamento"].Value.ToString();
+                GerarPagamentoBLL.Desconto = double.Parse(dgvPagamento.CurrentRow.Cells["Desconto"].Value.ToString());
+                GerarPagamentoBLL.ValorTotal = double.Parse(dgvPagamento.CurrentRow.Cells["ValorTotal"].Value.ToString());
             }
             catch (Exception error)
             {
@@ -105,7 +115,7 @@ namespace FittSistema.View
             }
 
             this.Hide();
-            FrmGerarPagamento frmGerarPagamento = new FrmGerarPagamento();
+            FrmGerarPagamento frmGerarPagamento = new FrmGerarPagamento(true);
             frmGerarPagamento.ShowDialog();
             this.Close();
         }
@@ -127,7 +137,7 @@ namespace FittSistema.View
             listarBoletos();
         }
 
-        private void btnCadastrarProfessor_Click(object sender, EventArgs e)
+        private void btnCadastrar_Click(object sender, EventArgs e)
         {
             listarAlunos();
         }

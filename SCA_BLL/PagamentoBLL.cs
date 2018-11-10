@@ -39,7 +39,7 @@ namespace SCA_BLL
 
         public IEnumerable<DadosBoleto> LerBoleto()
         {
-            var lista = bd.Boleto.Select(p => new DadosBoleto
+            return bd.Boleto.Select(p => new DadosBoleto
             {
                 idBoleto = p.idBoleto,
                 idMatricula = p.idMatricula,
@@ -48,8 +48,20 @@ namespace SCA_BLL
                 ValorTotal = p.ValorTotal,
                 DtPagamento = p.DtPagamento
             }).ToList();
+        }
 
-            return lista;
+        public IEnumerable<DadosBoleto> ProcurarBoleto(int boleto)
+        {
+            return bd.Boleto.Where(b => b.idBoleto.Equals(boleto))
+                .Select(p => new DadosBoleto
+                {
+                    idBoleto = p.idBoleto,
+                    idMatricula = p.idMatricula,
+                    FormaDePagamento = p.FormaDePagamento,
+                    Desconto = p.Desconto,
+                    ValorTotal = p.ValorTotal,
+                    DtPagamento = p.DtPagamento
+                }).ToList();
         }
 
         public IEnumerable<PagamentoAluno> LerPagamentoAluno()

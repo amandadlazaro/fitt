@@ -17,5 +17,6 @@ namespace SCA_BLL
         public static double ValorTotal { get; set; }
         public static System.DateTime DtPagamento { get; set; }
         public static string FormaDePagamento { get; set; }
+        public static double ValorMensal { get; set; }
     }
 }

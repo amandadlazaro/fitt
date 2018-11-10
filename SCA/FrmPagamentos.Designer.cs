@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPagamentos));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblBuscarTurma = new System.Windows.Forms.Label();
             this.txtFrequencia = new System.Windows.Forms.TextBox();
             this.btnFecharTela = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnBuscarAluno = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnCadastrarProfessor = new System.Windows.Forms.Button();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbForma = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -124,20 +124,20 @@
             this.label2.TabIndex = 41;
             this.label2.Text = "Pagamentos";
             // 
-            // btnCadastrarProfessor
+            // btnCadastrar
             // 
-            this.btnCadastrarProfessor.BackColor = System.Drawing.Color.Transparent;
-            this.btnCadastrarProfessor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCadastrarProfessor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrarProfessor.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrarProfessor.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnCadastrarProfessor.Location = new System.Drawing.Point(627, 331);
-            this.btnCadastrarProfessor.Name = "btnCadastrarProfessor";
-            this.btnCadastrarProfessor.Size = new System.Drawing.Size(80, 27);
-            this.btnCadastrarProfessor.TabIndex = 44;
-            this.btnCadastrarProfessor.Text = "Cadastrar";
-            this.btnCadastrarProfessor.UseVisualStyleBackColor = false;
-            this.btnCadastrarProfessor.Click += new System.EventHandler(this.btnCadastrarProfessor_Click);
+            this.btnCadastrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCadastrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrar.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.ForeColor = System.Drawing.Color.DeepPink;
+            this.btnCadastrar.Location = new System.Drawing.Point(627, 331);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(80, 27);
+            this.btnCadastrar.TabIndex = 44;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // label1
             // 
@@ -262,14 +262,14 @@
             this.dgvPagamento.Location = new System.Drawing.Point(-4, 92);
             this.dgvPagamento.Name = "dgvPagamento";
             this.dgvPagamento.ReadOnly = true;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPagamento.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPagamento.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPagamento.Size = new System.Drawing.Size(749, 203);
             this.dgvPagamento.TabIndex = 71;
             this.dgvPagamento.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPagamento_CellDoubleClick);
@@ -294,7 +294,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cmbForma);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnCadastrarProfessor);
+            this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnBuscarAluno);
             this.Controls.Add(this.pictureBox3);
@@ -321,7 +321,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button btnBuscarAluno;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnCadastrarProfessor;
+        private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbForma;
         private System.Windows.Forms.Label label3;

@@ -85,7 +85,7 @@ namespace SCA_BLL
                 if (anamnese == null) return null;
                 bd.Entry(anamnese).CurrentValues.SetValues(anam);
                 bd.SaveChanges();
-                return "Anamnese Alterada com Sucesso";
+                return "Anamnese Salva com Sucesso";
             }
             catch (Exception error)
             {
@@ -132,6 +132,29 @@ namespace SCA_BLL
                 }).ToList();
 
             return lista;
+        }
+
+        public IEnumerable<DadosAnamnese> ProcurarAnamnese(int idMat)
+        {
+            var data = bd.Anamnese.Where(a => a.idMatricula.Equals(idMat))
+                .Select(p => new DadosAnamnese
+                {
+                    idAnamnese = p.idAnamnese,
+                    idMatricula = p.idMatricula,
+                    DtAnamnese = p.DtAnamnese,
+                    QP = p.QP,
+                    HM = p.HM,
+                    Esporte = p.Esporte,
+                    PosicaoQueDorme = p.PosicaoQueDorme,
+                    Humor = p.Humor,
+                    Dor = p.Dor,
+                    DescricaoDor = p.DescricaoDor,
+                    DiagnosticoMedico = p.DiagnosticoMedico,
+                    Medicacao = p.Medicacao,
+                    Patologias = p.Patologias
+                }).ToList();
+
+            return data;
         }
     }
 }

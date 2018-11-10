@@ -132,9 +132,9 @@
             // 
             // txtBusca
             // 
-            this.txtBusca.Location = new System.Drawing.Point(0, 66);
+            this.txtBusca.Location = new System.Drawing.Point(12, 66);
             this.txtBusca.Name = "txtBusca";
-            this.txtBusca.Size = new System.Drawing.Size(482, 20);
+            this.txtBusca.Size = new System.Drawing.Size(470, 20);
             this.txtBusca.TabIndex = 71;
             // 
             // btnCadastrar

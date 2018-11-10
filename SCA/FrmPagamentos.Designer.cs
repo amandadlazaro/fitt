@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPagamentos));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblBuscarTurma = new System.Windows.Forms.Label();
-            this.txtFrequencia = new System.Windows.Forms.TextBox();
+            this.txtBusca = new System.Windows.Forms.TextBox();
             this.btnFecharTela = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.btnBuscarAluno = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -65,12 +65,12 @@
             this.lblBuscarTurma.TabIndex = 4;
             this.lblBuscarTurma.Text = "Buscar Aluno:";
             // 
-            // txtFrequencia
+            // txtBusca
             // 
-            this.txtFrequencia.Location = new System.Drawing.Point(287, 38);
-            this.txtFrequencia.Name = "txtFrequencia";
-            this.txtFrequencia.Size = new System.Drawing.Size(195, 20);
-            this.txtFrequencia.TabIndex = 5;
+            this.txtBusca.Location = new System.Drawing.Point(287, 38);
+            this.txtBusca.Name = "txtBusca";
+            this.txtBusca.Size = new System.Drawing.Size(195, 20);
+            this.txtBusca.TabIndex = 5;
             // 
             // btnFecharTela
             // 
@@ -99,18 +99,19 @@
             this.pictureBox3.TabIndex = 37;
             this.pictureBox3.TabStop = false;
             // 
-            // btnBuscarAluno
+            // btnBuscar
             // 
-            this.btnBuscarAluno.BackColor = System.Drawing.Color.Transparent;
-            this.btnBuscarAluno.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBuscarAluno.BackgroundImage")));
-            this.btnBuscarAluno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBuscarAluno.FlatAppearance.BorderSize = 0;
-            this.btnBuscarAluno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarAluno.Location = new System.Drawing.Point(485, 38);
-            this.btnBuscarAluno.Name = "btnBuscarAluno";
-            this.btnBuscarAluno.Size = new System.Drawing.Size(32, 20);
-            this.btnBuscarAluno.TabIndex = 38;
-            this.btnBuscarAluno.UseVisualStyleBackColor = false;
+            this.btnBuscar.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBuscar.BackgroundImage")));
+            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Location = new System.Drawing.Point(485, 38);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(32, 20);
+            this.btnBuscar.TabIndex = 38;
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // label2
             // 
@@ -262,14 +263,14 @@
             this.dgvPagamento.Location = new System.Drawing.Point(-4, 92);
             this.dgvPagamento.Name = "dgvPagamento";
             this.dgvPagamento.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPagamento.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPagamento.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPagamento.Size = new System.Drawing.Size(749, 203);
             this.dgvPagamento.TabIndex = 71;
             this.dgvPagamento.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPagamento_CellDoubleClick);
@@ -296,10 +297,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnBuscarAluno);
+            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btnFecharTela);
-            this.Controls.Add(this.txtFrequencia);
+            this.Controls.Add(this.txtBusca);
             this.Controls.Add(this.lblBuscarTurma);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmPagamentos";
@@ -316,10 +317,10 @@
         #endregion
 
         private System.Windows.Forms.Label lblBuscarTurma;
-        private System.Windows.Forms.TextBox txtFrequencia;
+        private System.Windows.Forms.TextBox txtBusca;
         private System.Windows.Forms.Button btnFecharTela;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button btnBuscarAluno;
+        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Label label1;

@@ -83,6 +83,27 @@ namespace SCA_BLL
                 }).ToList();
         }
 
+        public IEnumerable<PagamentoAluno> ProcurarPagamentoAluno(string nomeAluno)
+        {
+            return bd.Boleto
+                .Join(bd.Matricula, b => b.idMatricula, m => m.idMatricula, (b, m) => new { b, m })
+                .Join(bd.Aluno, bm => bm.m.CPF, a => a.CPF, (bm, a) => new {bm, a})
+                .Where(bma => bma.a.Nome.Contains(nomeAluno))
+                .Select(bma => new PagamentoAluno
+                {
+                    idBoleto = bma.bm.b.idBoleto,
+                    Nome = bma.a.Nome,
+                    CPF = bma.a.CPF,
+                    FormaDePagamento = bma.bm.b.FormaDePagamento,
+                    TipoPlano = bma.bm.m.TipoPlano,
+                    ValorMensal = bma.bm.m.ValorMensal,
+                    Desconto = bma.bm.b.Desconto,
+                    ValorTotal = bma.bm.b.ValorTotal,
+                    QtdeAulas = bma.bm.m.QtdeAulas,
+                    SituacaoMatricula = bma.bm.m.SituacaoMatricula,
+                }).ToList();
+        }
+
         public string Adicionar(Boleto boleto)
         {
             try

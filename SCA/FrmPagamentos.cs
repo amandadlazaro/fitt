@@ -157,6 +157,13 @@ namespace FittSistema.View
             }
         }
 
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            var pagamentos = pagamentoBLL.ProcurarPagamentoAluno(txtBusca.Text);
+            if (!pagamentos.Any()) MessageBox.Show("Nenhum pagamento encontrado");
+            else dgvPagamento.DataSource = pagamentos;
+        }
+
         #endregion
     }
 }

@@ -25,7 +25,7 @@ namespace FittSistema.View
         Boleto boleto = new Boleto();
         PagamentoBLL pagamentoBLL = new PagamentoBLL();
 
-        #region functions
+        #region Functions
 
         private void ModoCadastrar()
         {
@@ -52,6 +52,8 @@ namespace FittSistema.View
         }
 
         #endregion
+
+        #region Form
 
         private void btnFecharTela_Click(object sender, EventArgs e)
         {
@@ -157,5 +159,7 @@ namespace FittSistema.View
             MessageBox.Show(mensagem);
             btnFecharTela.PerformClick();
         }
+
+        #endregion
     }
 }

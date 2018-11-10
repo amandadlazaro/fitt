@@ -45,7 +45,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnRegistrar = new System.Windows.Forms.Button();
             this.dtpDtPag = new System.Windows.Forms.DateTimePicker();
             this.dtpDtVencimento = new System.Windows.Forms.DateTimePicker();
             this.btnFecharTela = new System.Windows.Forms.Button();
@@ -213,18 +213,19 @@
             this.btnExcluir.UseVisualStyleBackColor = false;
             this.btnExcluir.Visible = false;
             // 
-            // button1
+            // btnRegistrar
             // 
-            this.button1.BackColor = System.Drawing.Color.DeepPink;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(651, 339);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(80, 27);
-            this.button1.TabIndex = 156;
-            this.button1.Text = "Registrar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnRegistrar.BackColor = System.Drawing.Color.DeepPink;
+            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRegistrar.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.ForeColor = System.Drawing.Color.White;
+            this.btnRegistrar.Location = new System.Drawing.Point(651, 339);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(80, 27);
+            this.btnRegistrar.TabIndex = 156;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // dtpDtPag
             // 
@@ -266,7 +267,7 @@
             this.Controls.Add(this.btnFecharTela);
             this.Controls.Add(this.dtpDtVencimento);
             this.Controls.Add(this.dtpDtPag);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.textBox2);
@@ -311,7 +312,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnExcluir;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.DateTimePicker dtpDtPag;
         private System.Windows.Forms.DateTimePicker dtpDtVencimento;
         private System.Windows.Forms.Button btnFecharTela;

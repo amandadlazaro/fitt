@@ -412,7 +412,6 @@ namespace FittSistema.View
                 {
                     turmaTres = Int32.Parse(cmbTurma3.SelectedValue.ToString());
                 }
-
                 matricula = new Matricula
                 {
                     idMatricula = AlunosMatriculadosBLL.idMatricula,
@@ -420,8 +419,8 @@ namespace FittSistema.View
                     idTurma = Int32.Parse(cmbTurma1.SelectedValue.ToString()),
                     TipoPlano = DevolveTipo(),
                     ValorMensal = 10.10,
-                    DataInicio = DateTime.ParseExact(maskDataInicial.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
-                    DataFim = DateTime.ParseExact(maskDataFinal.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
+                    DataInicio = maskDataInicial.Value,
+                    DataFim = maskDataFinal.Value,
                     SituacaoMatricula = true,
                     QtdeAulas = DevolveAula(),
                     idTurma2 = turmaDois,
@@ -433,7 +432,7 @@ namespace FittSistema.View
                     Nome = txtNome.Text,
                     Endereco = txtEndereco.Text,
                     Telefone = maskCel.Text,
-                    DataNasc = DateTime.ParseExact(maskDataNasc.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
+                    DataNasc = maskDataNasc.Value,
                     Sexo = cmbSexo.SelectedItem.ToString(),
                     Email = txtEmail.Text
                 };
@@ -488,7 +487,7 @@ namespace FittSistema.View
                     Nome = txtNome.Text,
                     Endereco = txtEndereco.Text,
                     Telefone = maskCel.Text,
-                    DataNasc = DateTime.ParseExact(maskDataNasc.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
+                    DataNasc = maskDataNasc.Value,
                     Sexo = cmbSexo.SelectedItem.ToString(),
                     Email = txtEmail.Text
                 };
@@ -500,8 +499,8 @@ namespace FittSistema.View
                     idTurma3 = turmaTres,
                     TipoPlano = DevolveTipo(),
                     ValorMensal = double.Parse(txtValorMensal.Text),
-                    DataInicio = DateTime.ParseExact(maskDataInicial.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
-                    DataFim = DateTime.ParseExact(maskDataFinal.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
+                    DataInicio = maskDataInicial.Value,
+                    DataFim = maskDataFinal.Value,
                     SituacaoMatricula = true,
                     QtdeAulas = DevolveAula()
                 };

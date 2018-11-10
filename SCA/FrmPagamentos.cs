@@ -73,6 +73,41 @@ namespace FittSistema.View
 
         private void EditarPagamento()
         {
+            if (dgvPagamento.Rows.Count <= 0)
+            {
+                return;
+            }
+
+            string cpf = dgvPagamento.CurrentRow.Cells["CPF"].Value.ToString();
+            string nome = dgvPagamento.CurrentRow.Cells["Nome"].Value.ToString();
+            string idBoleto = dgvPagamento.CurrentRow.Cells["idBoleto"].Value.ToString();
+
+            DialogResult Confirmacao = MessageBox.Show("Voce quer mesmo editar o pagamento de " + nome, "Confirmar Escolha", MessageBoxButtons.YesNo);
+            if (Confirmacao == DialogResult.No)
+            {
+                return;
+            }
+
+            try
+            {
+                GerarPagamentoBLL.Nome = nome;
+                GerarPagamentoBLL.CPF = cpf;
+                GerarPagamentoBLL.idBoleto = Int32.Parse(idBoleto);
+
+                dgvPagamento.DataSource = matriculaBLL.ProcurarMatricula(cpf);
+                GerarPagamentoBLL.idMatricula = Int32.Parse(dgvPagamento.CurrentRow.Cells["idMatricula"].Value.ToString());
+            }
+            catch (Exception error)
+            {
+                listarAlunos();
+                MessageBox.Show(error.ToString());
+                return;
+            }
+
+            this.Hide();
+            FrmGerarPagamento frmGerarPagamento = new FrmGerarPagamento();
+            frmGerarPagamento.ShowDialog();
+            this.Close();
         }
 
         #endregion

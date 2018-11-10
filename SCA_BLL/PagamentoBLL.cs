@@ -21,6 +21,7 @@ namespace SCA_BLL
         }
         public class PagamentoAluno
         {
+            public int idBoleto { get; set; }
             public string Nome { get; set; }
             public string CPF { get; set; }
             public string FormaDePagamento { get; set; }
@@ -57,6 +58,7 @@ namespace SCA_BLL
                 .Join(bd.Matricula, b => b.idMatricula, m => m.idMatricula, (b, m) => new { b, m })
                 .Join(bd.Aluno, bm => bm.m.CPF, a => a.CPF, (bm, a) => new PagamentoAluno
                 {
+                    idBoleto = bm.b.idBoleto,
                     Nome = a.Nome,
                     CPF = a.CPF,
                     FormaDePagamento = bm.b.FormaDePagamento,

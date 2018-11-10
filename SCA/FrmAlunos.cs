@@ -71,6 +71,11 @@ namespace FittSistema.View
 
         private void grpAlunos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (grpAlunos.Rows.Count <= 0)
+            {
+                return;
+            }
+
             string cpf = grpAlunos.CurrentRow.Cells["CPF"].Value.ToString();
             string nome = grpAlunos.CurrentRow.Cells["Nome"].Value.ToString();
 

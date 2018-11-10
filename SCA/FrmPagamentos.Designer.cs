@@ -137,6 +137,7 @@
             this.btnCadastrarProfessor.TabIndex = 44;
             this.btnCadastrarProfessor.Text = "Cadastrar";
             this.btnCadastrarProfessor.UseVisualStyleBackColor = false;
+            this.btnCadastrarProfessor.Click += new System.EventHandler(this.btnCadastrarProfessor_Click);
             // 
             // label1
             // 
@@ -271,6 +272,7 @@
             this.dgvPagamento.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPagamento.Size = new System.Drawing.Size(749, 203);
             this.dgvPagamento.TabIndex = 71;
+            this.dgvPagamento.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPagamento_CellDoubleClick);
             // 
             // FrmPagamentos
             // 

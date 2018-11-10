@@ -39,10 +39,8 @@
             this.cmbForma = new System.Windows.Forms.ComboBox();
             this.txtDesconto = new System.Windows.Forms.TextBox();
             this.txtValorTotal = new System.Windows.Forms.TextBox();
-            this.txtBusca = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
@@ -152,26 +150,6 @@
             this.txtValorTotal.Size = new System.Drawing.Size(100, 20);
             this.txtValorTotal.TabIndex = 47;
             // 
-            // txtBusca
-            // 
-            this.txtBusca.Location = new System.Drawing.Point(0, 66);
-            this.txtBusca.Name = "txtBusca";
-            this.txtBusca.Size = new System.Drawing.Size(482, 20);
-            this.txtBusca.TabIndex = 72;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.Transparent;
-            this.btnBuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBuscar.BackgroundImage")));
-            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Location = new System.Drawing.Point(484, 66);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(32, 20);
-            this.btnBuscar.TabIndex = 73;
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -182,12 +160,13 @@
             this.label7.TabIndex = 74;
             this.label7.Text = "Nome";
             // 
-            // textBox1
+            // txtNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(95, 120);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(387, 20);
-            this.textBox1.TabIndex = 75;
+            this.txtNome.Enabled = false;
+            this.txtNome.Location = new System.Drawing.Point(95, 120);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(387, 20);
+            this.txtNome.TabIndex = 75;
             // 
             // textBox2
             // 
@@ -292,10 +271,8 @@
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.txtBusca);
             this.Controls.Add(this.txtValorTotal);
             this.Controls.Add(this.txtDesconto);
             this.Controls.Add(this.cmbForma);
@@ -328,10 +305,8 @@
         private System.Windows.Forms.ComboBox cmbForma;
         private System.Windows.Forms.TextBox txtDesconto;
         private System.Windows.Forms.TextBox txtValorTotal;
-        private System.Windows.Forms.TextBox txtBusca;
-        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnSalvar;

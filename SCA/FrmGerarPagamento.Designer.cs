@@ -38,8 +38,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.cmbForma = new System.Windows.Forms.ComboBox();
             this.txtDesconto = new System.Windows.Forms.TextBox();
-            this.maskPagamento = new System.Windows.Forms.MaskedTextBox();
-            this.maskVencimento = new System.Windows.Forms.MaskedTextBox();
             this.txtValorTotal = new System.Windows.Forms.TextBox();
             this.txtBusca = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -50,6 +48,8 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.dtpDtPag = new System.Windows.Forms.DateTimePicker();
+            this.dtpDtVencimento = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -143,26 +143,6 @@
             this.txtDesconto.Name = "txtDesconto";
             this.txtDesconto.Size = new System.Drawing.Size(69, 20);
             this.txtDesconto.TabIndex = 44;
-            // 
-            // maskPagamento
-            // 
-            this.maskPagamento.Culture = new System.Globalization.CultureInfo("pt-BR");
-            this.maskPagamento.Location = new System.Drawing.Point(176, 165);
-            this.maskPagamento.Mask = "00/00/0000";
-            this.maskPagamento.Name = "maskPagamento";
-            this.maskPagamento.Size = new System.Drawing.Size(100, 20);
-            this.maskPagamento.TabIndex = 45;
-            this.maskPagamento.ValidatingType = typeof(System.DateTime);
-            // 
-            // maskVencimento
-            // 
-            this.maskVencimento.Culture = new System.Globalization.CultureInfo("pt-BR");
-            this.maskVencimento.Location = new System.Drawing.Point(458, 168);
-            this.maskVencimento.Mask = "00/00/0000";
-            this.maskVencimento.Name = "maskVencimento";
-            this.maskVencimento.Size = new System.Drawing.Size(100, 20);
-            this.maskVencimento.TabIndex = 46;
-            this.maskVencimento.ValidatingType = typeof(System.DateTime);
             // 
             // txtValorTotal
             // 
@@ -266,6 +246,22 @@
             this.button1.Text = "Registrar";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // dtpDtPag
+            // 
+            this.dtpDtPag.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDtPag.Location = new System.Drawing.Point(175, 168);
+            this.dtpDtPag.Name = "dtpDtPag";
+            this.dtpDtPag.Size = new System.Drawing.Size(146, 20);
+            this.dtpDtPag.TabIndex = 157;
+            // 
+            // dtpDtVencimento
+            // 
+            this.dtpDtVencimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDtVencimento.Location = new System.Drawing.Point(458, 169);
+            this.dtpDtVencimento.Name = "dtpDtVencimento";
+            this.dtpDtVencimento.Size = new System.Drawing.Size(146, 20);
+            this.dtpDtVencimento.TabIndex = 158;
+            // 
             // FrmGerarPagamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -273,6 +269,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(743, 387);
+            this.Controls.Add(this.dtpDtVencimento);
+            this.Controls.Add(this.dtpDtPag);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnExcluir);
@@ -283,8 +281,6 @@
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBusca);
             this.Controls.Add(this.txtValorTotal);
-            this.Controls.Add(this.maskVencimento);
-            this.Controls.Add(this.maskPagamento);
             this.Controls.Add(this.txtDesconto);
             this.Controls.Add(this.cmbForma);
             this.Controls.Add(this.label6);
@@ -315,8 +311,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmbForma;
         private System.Windows.Forms.TextBox txtDesconto;
-        private System.Windows.Forms.MaskedTextBox maskPagamento;
-        private System.Windows.Forms.MaskedTextBox maskVencimento;
         private System.Windows.Forms.TextBox txtValorTotal;
         private System.Windows.Forms.TextBox txtBusca;
         private System.Windows.Forms.Button btnBuscar;
@@ -327,5 +321,7 @@
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DateTimePicker dtpDtPag;
+        private System.Windows.Forms.DateTimePicker dtpDtVencimento;
     }
 }

@@ -59,9 +59,9 @@ namespace FittSistema.View
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            var alunos = alunoBLL.LerAlunosPorNome(txtBusca.Text);
+            var alunos = matriculaBLL.ProcurarAlunosMatriculados(txtBusca.Text);
             if (!alunos.Any()) MessageBox.Show("Nenhum aluno encontrado");
-            else grpAlunos.DataSource = alunos.ToList();
+            else grpAlunos.DataSource = alunos;
         }
 
         private void FrmAlunos_Load(object sender, EventArgs e)

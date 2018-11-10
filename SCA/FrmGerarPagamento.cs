@@ -30,7 +30,7 @@ namespace FittSistema.View
         private void ModoCadastrar()
         {
             txtNome.Text = GerarPagamentoBLL.Nome;
-            txtValorTotal.Text = GerarPagamentoBLL.ValorMensal.ToString();
+            txtValorInicial.Text = GerarPagamentoBLL.ValorMensal.ToString();
         }
 
         private void ModoEditar()
@@ -39,7 +39,7 @@ namespace FittSistema.View
             btnExcluir.Visible = true;
             btnSalvar.Visible = true;
             txtNome.Text = GerarPagamentoBLL.Nome;
-            txtValorTotal.Text = GerarPagamentoBLL.ValorMensal.ToString();
+            txtValorInicial.Text = GerarPagamentoBLL.ValorMensal.ToString();
             dtpDtPag.Value = GerarPagamentoBLL.DtPagamento;
             cmbForma.Text = GerarPagamentoBLL.FormaDePagamento;
             txtDesconto.Text = GerarPagamentoBLL.Desconto.ToString();

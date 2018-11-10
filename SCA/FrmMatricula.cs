@@ -418,7 +418,7 @@ namespace FittSistema.View
                     CPF = maskCPF.Text,
                     idTurma = Int32.Parse(cmbTurma1.SelectedValue.ToString()),
                     TipoPlano = DevolveTipo(),
-                    ValorMensal = 10.10,
+                    ValorMensal = double.Parse(txtValorMensal.Text),
                     DataInicio = maskDataInicial.Value,
                     DataFim = maskDataFinal.Value,
                     SituacaoMatricula = true,

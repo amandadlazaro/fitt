@@ -41,7 +41,7 @@
             this.txtValorTotal = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtValorInicial = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
@@ -168,13 +168,13 @@
             this.txtNome.Size = new System.Drawing.Size(387, 20);
             this.txtNome.TabIndex = 75;
             // 
-            // textBox2
+            // txtValorInicial
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(123, 262);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 77;
+            this.txtValorInicial.Enabled = false;
+            this.txtValorInicial.Location = new System.Drawing.Point(123, 262);
+            this.txtValorInicial.Name = "txtValorInicial";
+            this.txtValorInicial.Size = new System.Drawing.Size(100, 20);
+            this.txtValorInicial.TabIndex = 77;
             // 
             // label8
             // 
@@ -273,7 +273,7 @@
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnExcluir);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtValorInicial);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label7);
@@ -311,7 +311,7 @@
         private System.Windows.Forms.TextBox txtValorTotal;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtValorInicial;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnExcluir;

@@ -29,7 +29,7 @@ namespace FittSistema.View
 
         private void listarBoletos()
         {
-            dgvPagamento.DataSource = pagamentoBLL.LerBoleto();
+            dgvPagamento.DataSource = pagamentoBLL.LerPagamentoAluno();
             modo = "boletos";
         }
 

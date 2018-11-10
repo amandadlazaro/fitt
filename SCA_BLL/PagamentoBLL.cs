@@ -19,6 +19,18 @@ namespace SCA_BLL
             public double ValorTotal { get; set; }
             public DateTime DtPagamento { get; set; }
         }
+        public class PagamentoAluno
+        {
+            public string Nome { get; set; }
+            public string CPF { get; set; }
+            public string FormaDePagamento { get; set; }
+            public string TipoPlano { get; set; }
+            public double ValorMensal { get; set; }
+            public Nullable<double> Desconto { get; set; }
+            public double ValorTotal { get; set; }
+            public int QtdeAulas { get; set; }
+            public bool SituacaoMatricula { get; set; }
+        }
         #endregion
 
         public FittDataBaseEntities bd = new FittDataBaseEntities();
@@ -39,6 +51,23 @@ namespace SCA_BLL
             return lista;
         }
 
+        public IEnumerable<PagamentoAluno> LerPagamentoAluno()
+        {
+            return bd.Boleto
+                .Join(bd.Matricula, b => b.idMatricula, m => m.idMatricula, (b, m) => new { b, m })
+                .Join(bd.Aluno, bm => bm.m.CPF, a => a.CPF, (bm, a) => new PagamentoAluno
+                {
+                    Nome = a.Nome,
+                    CPF = a.CPF,
+                    FormaDePagamento = bm.b.FormaDePagamento,
+                    TipoPlano = bm.m.TipoPlano,
+                    ValorMensal = bm.m.ValorMensal,
+                    Desconto = bm.b.Desconto,
+                    ValorTotal = bm.b.ValorTotal,
+                    QtdeAulas = bm.m.QtdeAulas,
+                    SituacaoMatricula = bm.m.SituacaoMatricula,
+                }).ToList();
+        }
 
         public string Adicionar(Boleto boleto)
         {

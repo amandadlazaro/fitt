@@ -142,6 +142,7 @@
             this.txtDesconto.Name = "txtDesconto";
             this.txtDesconto.Size = new System.Drawing.Size(69, 20);
             this.txtDesconto.TabIndex = 44;
+            this.txtDesconto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDesconto_KeyPress);
             // 
             // txtValorTotal
             // 
@@ -167,6 +168,7 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(387, 20);
             this.txtNome.TabIndex = 75;
+            this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
             // 
             // txtValorInicial
             // 

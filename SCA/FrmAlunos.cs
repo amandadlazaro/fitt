@@ -24,6 +24,10 @@ namespace FittSistema.View
         private void listarAlunos()
         {
             grpAlunos.DataSource = matriculaBLL.LerAlunosMatriculados();
+            grpAlunos.Columns["TipoPlano"].HeaderText = "Plano";
+            grpAlunos.Columns["ValorMensal"].HeaderText = "Valor Mensal";
+            grpAlunos.Columns["QtdeAulas"].HeaderText = "Aulas";
+            grpAlunos.Columns["SituacaoMatricula"].HeaderText = "Matriculado";
         }
 
         #endregion

@@ -161,5 +161,19 @@ namespace FittSistema.View
         }
 
         #endregion
+
+        #region Filtrar Teclas
+
+        private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Util.FiltrarTeclas.letraMaiuscula(e.KeyChar);
+        }
+
+        private void txtDesconto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Util.FiltrarTeclas.numero(e.KeyChar, txtDesconto.Text);
+        }
+
+        #endregion
     }
 }

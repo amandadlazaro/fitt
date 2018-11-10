@@ -19,13 +19,21 @@ namespace FittSistema.View
             InitializeComponent();
         }
 
+        #region Globais
+
         AlunoBLL alunoBLL = new AlunoBLL();
         AnamneseBLL anamneseBLL = new AnamneseBLL();
+        Anamnese anamnese = new Anamnese();
+        MatriculaBLL matriculaBLL = new MatriculaBLL();
+        MatriculaBLL.DadosMatricula matricula = new MatriculaBLL.DadosMatricula();
+        String IDs;
+
+        #endregion
 
         private void btnFecharForm_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FrmMenu menu = new FrmMenu();
+            FrmMenu2 menu = new FrmMenu2();
             menu.ShowDialog();
             this.Close();
         }
@@ -35,7 +43,6 @@ namespace FittSistema.View
             var alunos = alunoBLL.LerAlunosPorNome(txtBusca.Text);
             if (!alunos.Any()) MessageBox.Show("Nenhum aluno encontrado");
             grpAlunos.DataSource = alunos.ToList();
-
         }
 
         private void FrmAnamneses_Load(object sender, EventArgs e)
@@ -46,95 +53,97 @@ namespace FittSistema.View
 
         private void grpAlunos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            string cpf;
-            foreach (DataGridViewRow row in grpAlunos.SelectedRows)
-            {
-                cpf = row.Cells[0].Value.ToString();
-            }
-
+            IDs = grpAlunos.CurrentRow.Cells["CPF"].Value.ToString();
 
             grpAlunos.Hide();
-            btnCadastrarAnamnese.Hide();
-            btnEditarAnamnese.Show();
+            btnSalvar.Show();
             btnExcluirAnamnese.Show();
-        }
+            btnVoltar.Show();
+            limpaCampos();
+            
+            grpAlunos.DataSource = matriculaBLL.ProcurarMatricula(IDs);
+            AlunosMatriculadosBLL.idMatricula = Int32.Parse(grpAlunos.CurrentRow.Cells["idMatricula"].Value.ToString());
+            txtMatricula.Text = AlunosMatriculadosBLL.idMatricula.ToString();
+                
+            IDs = txtMatricula.Text;
 
-        private void btnCadastrarAnamnese_Click(object sender, EventArgs e)
-        {
-            if (grpAlunos.Visible == true)
+            Procurar:
+            grpAlunos.DataSource = anamneseBLL.ProcurarAnamnese(int.Parse(IDs));
+            if (grpAlunos.Rows.Count > 0)
             {
-                grpAlunos.Hide();
-                btnVoltar.Show();
-                limpaCampos();
+                txtAnamnese.Text        =   grpAlunos.CurrentRow.Cells["idAnamnese"].Value.ToString();
+                dtpDataAnamnese.Text    =   grpAlunos.CurrentRow.Cells["DtAnamnese"].Value.ToString();
+                txtMatricula.Text       =   grpAlunos.CurrentRow.Cells["idMatricula"].Value.ToString();
+                txtQP.Text              =   grpAlunos.CurrentRow.Cells["QP"].Value.ToString();
+                txtHM.Text              =   grpAlunos.CurrentRow.Cells["HM"].Value.ToString();
+                txtEsporte.Text         =   grpAlunos.CurrentRow.Cells["Esporte"].Value.ToString();
+                txtPosicao.Text         =   grpAlunos.CurrentRow.Cells["PosicaoQueDorme"].Value.ToString();
+                txtHumor.Text           =   grpAlunos.CurrentRow.Cells["Humor"].Value.ToString();
+                txtDor.Text             =   grpAlunos.CurrentRow.Cells["Dor"].Value.ToString();
+                txtDescricao.Text       =   grpAlunos.CurrentRow.Cells["DescricaoDor"].Value.ToString();
+                txtDiagnostico.Text     =   grpAlunos.CurrentRow.Cells["DiagnosticoMedico"].Value.ToString();
+                txtMedicacao.Text       =   grpAlunos.CurrentRow.Cells["Medicacao"].Value.ToString();
+                txtPatologias.Text      =   grpAlunos.CurrentRow.Cells["Patologias"].Value.ToString();
             }
             else
             {
-                var anamnese = new Anamnese
+                anamnese = new Anamnese
                 {
-                    QP = txtQP.Text,
-                    HM = txtHM.Text,
-                    Esporte =txtEsporte.Text,
-                    PosicaoQueDorme = txtPosicao.Text,
-                    Humor = txtHumor.Text,
-                    Dor = txtDor.Text,
-                    DescricaoDor = txtDescricao.Text,
-                    DiagnosticoMedico = txtDiagnostico.Text,
-                    Medicacao = txtMedicacao.Text,
-                    Patologias = txtPatologias.Text
+                    idMatricula         =   int.Parse(txtMatricula.Text),
+                    DtAnamnese          =   DateTime.Parse(dtpDataAnamnese.Text),
+                    QP                  =   txtQP.Text,
+                    HM                  =   txtHM.Text,
+                    Esporte             =   txtEsporte.Text,
+                    PosicaoQueDorme     =   txtPosicao.Text,
+                    Humor               =   txtHumor.Text,
+                    Dor                 =   txtDor.Text,
+                    DescricaoDor        =   txtDescricao.Text,
+                    DiagnosticoMedico   =   txtDiagnostico.Text,
+                    Medicacao           =   txtMedicacao.Text,
+                    Patologias          =   txtPatologias.Text
                 };
-                MessageBox.Show(anamneseBLL.AdicionarAnamnese(anamnese));
-                listarAlunos();
-                btnVoltar.Hide();
-                grpAlunos.Show();
-            }
-        }
 
-        private void btnEditarAnamnese_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Deseja Alterar esses dados?", "Alterar Anamnese", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                var anamnese = new Anamnese
-                {
-                    QP = txtQP.Text,
-                    HM = txtHM.Text,
-                    Esporte = txtEsporte.Text,
-                    PosicaoQueDorme = txtPosicao.Text,
-                    Humor = txtHumor.Text,
-                    Dor = txtDor.Text,
-                    DescricaoDor = txtDescricao.Text,
-                    DiagnosticoMedico = txtDiagnostico.Text,
-                    Medicacao = txtMedicacao.Text,
-                    Patologias = txtPatologias.Text
-                };
-                MessageBox.Show(anamneseBLL.AlterarAnamnese(anamnese));
-                listarAlunos();
-                grpAlunos.Show();
-                btnCadastrarAnamnese.Show();
-                btnEditarAnamnese.Hide();
-                btnExcluirAnamnese.Hide();
-                btnVoltar.Hide();
+                anamneseBLL.AdicionarAnamnese(anamnese);
+
+                goto Procurar;
             }
+
+            
         }
 
         private void btnExcluirAnamese_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Deseja Deletar esses dados?", "Deletar Anamnese", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                //MessageBox.Show(anamneseBLL.DeletarAnamnese(prof));
+                anamnese = new Anamnese
+                {
+                    idAnamnese          =   int.Parse(txtAnamnese.Text),
+                    idMatricula         =   int.Parse(txtMatricula.Text),
+                    DtAnamnese          =   DateTime.Parse(dtpDataAnamnese.Text),
+                    QP                  =   txtQP.Text,
+                    HM                  =   txtHM.Text,
+                    Esporte             =   txtEsporte.Text,
+                    PosicaoQueDorme     =   txtPosicao.Text,
+                    Humor               =   txtHumor.Text,
+                    Dor                 =   txtDor.Text,
+                    DescricaoDor        =   txtDescricao.Text,
+                    DiagnosticoMedico   =   txtDiagnostico.Text,
+                    Medicacao           =   txtMedicacao.Text,
+                    Patologias          =   txtPatologias.Text
+                };
+
+                MessageBox.Show(anamneseBLL.DeletarAnamnese(anamnese));
                 listarAlunos();
-                grpAlunos.Show();
-                btnCadastrarAnamnese.Show();
-                btnEditarAnamnese.Hide();
-                btnExcluirAnamnese.Hide();
                 btnVoltar.Hide();
+                grpAlunos.Show();
+                btnSalvar.Hide();
+                btnExcluirAnamnese.Hide();
             }
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             grpAlunos.Show();
-            btnCadastrarAnamnese.Show();
-            btnEditarAnamnese.Hide();
             btnExcluirAnamnese.Hide();
             btnVoltar.Hide();
         }
@@ -153,6 +162,36 @@ namespace FittSistema.View
                 {
                     c.Text = "";
                 }
+            }
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Deseja Salvar esses dados?", "Salvar Anamnese", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                anamnese = new Anamnese
+                {
+                    idAnamnese          =   int.Parse(txtAnamnese.Text),
+                    idMatricula         =   int.Parse(txtMatricula.Text),
+                    DtAnamnese          =   DateTime.Parse(dtpDataAnamnese.Text),
+                    QP                  =   txtQP.Text,
+                    HM                  =   txtHM.Text,
+                    Esporte             =   txtEsporte.Text,
+                    PosicaoQueDorme     =   txtPosicao.Text,
+                    Humor               =   txtHumor.Text,
+                    Dor                 =   txtDor.Text,
+                    DescricaoDor        =   txtDescricao.Text,
+                    DiagnosticoMedico   =   txtDiagnostico.Text,
+                    Medicacao           =   txtMedicacao.Text,
+                    Patologias          =   txtPatologias.Text
+                };
+
+                MessageBox.Show(anamneseBLL.AlterarAnamnese(anamnese));
+                listarAlunos();
+                btnVoltar.Hide();
+                grpAlunos.Show();
+                btnSalvar.Hide();
+                btnExcluirAnamnese.Hide();
             }
         }
     }

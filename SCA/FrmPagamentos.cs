@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DAL;
+using SCA_BLL;
 
 namespace FittSistema.View
 {
@@ -16,6 +18,19 @@ namespace FittSistema.View
         {
             InitializeComponent();
         }
+
+        PagamentoBLL pagamentoBLL = new PagamentoBLL();
+
+        #region Functions
+
+        private void listarAlunos()
+        {
+            dgvPagamento.DataSource = pagamentoBLL.LerBoleto();
+        }
+
+        #endregion
+
+        #region Form
 
         private void btnFecharTela_Click(object sender, EventArgs e)
         {
@@ -27,7 +42,9 @@ namespace FittSistema.View
 
         private void FrmPagamentos_Load(object sender, EventArgs e)
         {
-
+            listarAlunos();
         }
+
+        #endregion
     }
 }

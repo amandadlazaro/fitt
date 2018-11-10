@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPagamentos));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblBuscarTurma = new System.Windows.Forms.Label();
             this.txtFrequencia = new System.Windows.Forms.TextBox();
             this.btnFecharTela = new System.Windows.Forms.Button();
@@ -48,7 +49,9 @@
             this.maskValor = new System.Windows.Forms.MaskedTextBox();
             this.maskMulta = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.dgvPagamento = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPagamento)).BeginInit();
             this.SuspendLayout();
             // 
             // lblBuscarTurma
@@ -250,6 +253,25 @@
             this.label7.TabIndex = 57;
             this.label7.Text = "Multa:";
             // 
+            // dgvPagamento
+            // 
+            this.dgvPagamento.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgvPagamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPagamento.GridColor = System.Drawing.Color.LightCoral;
+            this.dgvPagamento.Location = new System.Drawing.Point(-4, 92);
+            this.dgvPagamento.Name = "dgvPagamento";
+            this.dgvPagamento.ReadOnly = true;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPagamento.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvPagamento.Size = new System.Drawing.Size(749, 203);
+            this.dgvPagamento.TabIndex = 71;
+            // 
             // FrmPagamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -257,6 +279,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(743, 387);
+            this.Controls.Add(this.dgvPagamento);
             this.Controls.Add(this.maskMulta);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.maskValor);
@@ -282,6 +305,7 @@
             this.Text = "Pagamentos";
             this.Load += new System.EventHandler(this.FrmPagamentos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPagamento)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -308,5 +332,6 @@
         private System.Windows.Forms.MaskedTextBox maskValor;
         private System.Windows.Forms.MaskedTextBox maskMulta;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DataGridView dgvPagamento;
     }
 }

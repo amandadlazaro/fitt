@@ -50,6 +50,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.dtpDtPag = new System.Windows.Forms.DateTimePicker();
             this.dtpDtVencimento = new System.Windows.Forms.DateTimePicker();
+            this.btnFecharTela = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -262,6 +263,20 @@
             this.dtpDtVencimento.Size = new System.Drawing.Size(146, 20);
             this.dtpDtVencimento.TabIndex = 158;
             // 
+            // btnFecharTela
+            // 
+            this.btnFecharTela.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFecharTela.BackgroundImage")));
+            this.btnFecharTela.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFecharTela.FlatAppearance.BorderSize = 0;
+            this.btnFecharTela.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFecharTela.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnFecharTela.Location = new System.Drawing.Point(696, -2);
+            this.btnFecharTela.Name = "btnFecharTela";
+            this.btnFecharTela.Size = new System.Drawing.Size(45, 36);
+            this.btnFecharTela.TabIndex = 159;
+            this.btnFecharTela.UseVisualStyleBackColor = true;
+            this.btnFecharTela.Click += new System.EventHandler(this.btnFecharTela_Click);
+            // 
             // FrmGerarPagamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -269,6 +284,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(743, 387);
+            this.Controls.Add(this.btnFecharTela);
             this.Controls.Add(this.dtpDtVencimento);
             this.Controls.Add(this.dtpDtPag);
             this.Controls.Add(this.button1);
@@ -323,5 +339,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DateTimePicker dtpDtPag;
         private System.Windows.Forms.DateTimePicker dtpDtVencimento;
+        private System.Windows.Forms.Button btnFecharTela;
     }
 }

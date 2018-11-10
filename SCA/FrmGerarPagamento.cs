@@ -16,5 +16,13 @@ namespace FittSistema.View
         {
             InitializeComponent();
         }
+
+        private void btnFecharTela_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmMenu menu = new FrmMenu();
+            menu.ShowDialog();
+            this.Close();
+        }
     }
 }

@@ -242,30 +242,30 @@ namespace FittSistema.View
                     default:
                         break;
                 }
+            }
 
-                if (rbAula3.Checked)
+            if (rbAula3.Checked)
+            {
+                switch (DevolveTipo())
                 {
-                    switch (DevolveTipo())
-                    {
-                        case ("Mensal"):
-                            txtValorMensal.Text = "480,00";
-                            break;
+                    case ("Mensal"):
+                        txtValorMensal.Text = "480,00";
+                        break;
 
-                        case ("Trimestral"):
-                            txtValorMensal.Text = "420,00";
-                            break;
+                    case ("Trimestral"):
+                        txtValorMensal.Text = "420,00";
+                        break;
 
-                        case ("Semestral"):
-                            txtValorMensal.Text = "360,00";
-                            break;
+                    case ("Semestral"):
+                        txtValorMensal.Text = "360,00";
+                        break;
 
-                        case ("Anual"):
-                            txtValorMensal.Text = "300,00";
-                            break;
+                    case ("Anual"):
+                        txtValorMensal.Text = "300,00";
+                        break;
 
-                        default:
-                            break;
-                    }
+                    default:
+                        break;
                 }
             }
         }
@@ -322,6 +322,7 @@ namespace FittSistema.View
             maskDataNasc.Text = AlunosMatriculadosBLL.DataNasc;
             cmbSexo.Text = AlunosMatriculadosBLL.Sexo;
             txtEmail.Text = AlunosMatriculadosBLL.Email;
+            cbStatus.Checked = AlunosMatriculadosBLL.SituacaoMatricula;
 
             maskDataInicial.Text = AlunosMatriculadosBLL.DataInicio;
             maskDataFinal.Text = AlunosMatriculadosBLL.DataFim;
@@ -427,7 +428,7 @@ namespace FittSistema.View
                     ValorMensal = double.Parse(txtValorMensal.Text),
                     DataInicio = maskDataInicial.Value,
                     DataFim = maskDataFinal.Value,
-                    SituacaoMatricula = true,
+                    SituacaoMatricula = cbStatus.Checked,
                     QtdeAulas = DevolveAula(),
                     idTurma2 = turmaDois,
                     idTurma3 = turmaTres,
@@ -507,7 +508,7 @@ namespace FittSistema.View
                     ValorMensal = double.Parse(txtValorMensal.Text),
                     DataInicio = maskDataInicial.Value,
                     DataFim = maskDataFinal.Value,
-                    SituacaoMatricula = true,
+                    SituacaoMatricula = cbStatus.Checked,
                     QtdeAulas = DevolveAula()
                 };
             }

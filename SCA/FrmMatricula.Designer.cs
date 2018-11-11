@@ -75,7 +75,7 @@
             this.maskDataInicial = new System.Windows.Forms.DateTimePicker();
             this.maskDataFinal = new System.Windows.Forms.DateTimePicker();
             this.maskDataNasc = new System.Windows.Forms.DateTimePicker();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.cbStatus = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panelTipo.SuspendLayout();
             this.panelAulas.SuspendLayout();
@@ -634,19 +634,19 @@
             this.maskDataNasc.Size = new System.Drawing.Size(100, 21);
             this.maskDataNasc.TabIndex = 156;
             // 
-            // checkBox1
+            // cbStatus
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox1.Font = new System.Drawing.Font("Agency FB", 15F);
-            this.checkBox1.ForeColor = System.Drawing.Color.Black;
-            this.checkBox1.Location = new System.Drawing.Point(250, 49);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(96, 28);
-            this.checkBox1.TabIndex = 157;
-            this.checkBox1.Text = "Matriculado";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cbStatus.AutoSize = true;
+            this.cbStatus.Checked = true;
+            this.cbStatus.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbStatus.Font = new System.Drawing.Font("Agency FB", 15F);
+            this.cbStatus.ForeColor = System.Drawing.Color.Black;
+            this.cbStatus.Location = new System.Drawing.Point(250, 49);
+            this.cbStatus.Name = "cbStatus";
+            this.cbStatus.Size = new System.Drawing.Size(96, 28);
+            this.cbStatus.TabIndex = 157;
+            this.cbStatus.Text = "Matriculado";
+            this.cbStatus.UseVisualStyleBackColor = true;
             // 
             // FrmMatricula
             // 
@@ -655,7 +655,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(743, 387);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.cbStatus);
             this.Controls.Add(this.maskDataNasc);
             this.Controls.Add(this.maskDataFinal);
             this.Controls.Add(this.maskDataInicial);
@@ -757,6 +757,6 @@
         private System.Windows.Forms.DateTimePicker maskDataInicial;
         private System.Windows.Forms.DateTimePicker maskDataFinal;
         private System.Windows.Forms.DateTimePicker maskDataNasc;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox cbStatus;
     }
 }

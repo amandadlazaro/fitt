@@ -154,6 +154,12 @@ namespace FittSistema.View
                 return false;
             }
 
+            if (!Util.Util.validarEmail(txtEmail.Text))
+            {
+                MessageBox.Show("Email Inválido");
+                return false;
+            }
+
             if (rbAula1.Checked)
             {
                 if (cmbSemana1.SelectedIndex.Equals(-1) || cmbTurma1.SelectedIndex.Equals(-1))
@@ -394,7 +400,7 @@ namespace FittSistema.View
                 return;
             }
 
-            DialogResult Confirmacao = MessageBox.Show("Voce quer mesmo salvar essas alterações ?", "Alterar Matricula", MessageBoxButtons.YesNo);
+            DialogResult Confirmacao = MessageBox.Show("Você quer mesmo salvar essas alterações ?", "Alterar Matricula", MessageBoxButtons.YesNo);
             if (Confirmacao == DialogResult.No)
             {
                 return;
@@ -562,5 +568,6 @@ namespace FittSistema.View
         }
 
         #endregion
+
     }
 }

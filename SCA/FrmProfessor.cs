@@ -249,6 +249,11 @@ namespace FittSistema.View
             btnExcluirProfessor.Show();
             btnVoltar.Show();
         }
+
+        private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.KeyChar = Util.FiltrarTeclas.letraMaiuscula(e.KeyChar);
+        }
     }
 }
 

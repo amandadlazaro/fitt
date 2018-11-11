@@ -164,7 +164,7 @@ namespace FittSistema.View
                 return;
             }
 
-            string mensagem = pagamentoBLL.Deletar(AlunosMatriculadosBLL.idMatricula);
+            string mensagem = pagamentoBLL.Deletar(GerarPagamentoBLL.idBoleto);
             if (mensagem != "Pagamento Deletado com Sucesso")
             {
                 MessageBox.Show(mensagem);

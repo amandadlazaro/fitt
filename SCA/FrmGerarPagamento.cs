@@ -30,7 +30,7 @@ namespace FittSistema.View
         private void ModoCadastrar()
         {
             txtNome.Text = GerarPagamentoBLL.Nome;
-            txtValorInicial.Text = GerarPagamentoBLL.ValorMensal.ToString();
+            txtValorInicial.Text = GerarPagamentoBLL.ValorMensal.ToString("F");
         }
 
         private void ModoEditar()
@@ -39,11 +39,11 @@ namespace FittSistema.View
             btnExcluir.Visible = true;
             btnSalvar.Visible = true;
             txtNome.Text = GerarPagamentoBLL.Nome;
-            txtValorInicial.Text = GerarPagamentoBLL.ValorMensal.ToString();
+            txtValorInicial.Text = GerarPagamentoBLL.ValorMensal.ToString("F");
             dtpDtPag.Value = GerarPagamentoBLL.DtPagamento;
             cmbForma.Text = GerarPagamentoBLL.FormaDePagamento;
             txtDesconto.Text = GerarPagamentoBLL.Desconto.ToString();
-            txtValorTotal.Text = GerarPagamentoBLL.ValorTotal.ToString();
+            txtValorTotal.Text = GerarPagamentoBLL.ValorTotal.ToString("F");
         }
 
         private double CalcularTotal(double desconto, double inicial)
@@ -53,9 +53,19 @@ namespace FittSistema.View
 
         private bool ValidarCampos()
         {
+            if (string.IsNullOrEmpty(txtNome.Text) || string.IsNullOrEmpty(txtDesconto.Text))
+            {
+                MessageBox.Show("Preencha todos os campos!");
+                return false;
+            }
+
+            if (cmbForma.SelectedIndex.Equals(-1) || cmbStatus.SelectedIndex.Equals(-1))
+            {
+                MessageBox.Show("Preencha todos os campos!");
+                return false;
+            }
             return true;
         }
-
         #endregion
 
         #region Form
@@ -177,7 +187,7 @@ namespace FittSistema.View
                     return;
                 }
                 double inicial = double.Parse(txtValorInicial.Text);
-                txtValorTotal.Text = CalcularTotal(desconto, inicial).ToString();
+                txtValorTotal.Text = CalcularTotal(desconto, inicial).ToString("F");
             }
             catch
             {

@@ -75,6 +75,7 @@
             this.maskDataInicial = new System.Windows.Forms.DateTimePicker();
             this.maskDataFinal = new System.Windows.Forms.DateTimePicker();
             this.maskDataNasc = new System.Windows.Forms.DateTimePicker();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panelTipo.SuspendLayout();
             this.panelAulas.SuspendLayout();
@@ -101,7 +102,7 @@
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.pictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pictureBox3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.InitialImage")));
-            this.pictureBox3.Location = new System.Drawing.Point(12, 303);
+            this.pictureBox3.Location = new System.Drawing.Point(8, 314);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(71, 65);
             this.pictureBox3.TabIndex = 36;
@@ -416,7 +417,7 @@
             this.lblValorMensal.BackColor = System.Drawing.Color.Transparent;
             this.lblValorMensal.Font = new System.Drawing.Font("Agency FB", 15F);
             this.lblValorMensal.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.lblValorMensal.Location = new System.Drawing.Point(262, 326);
+            this.lblValorMensal.Location = new System.Drawing.Point(305, 339);
             this.lblValorMensal.Name = "lblValorMensal";
             this.lblValorMensal.Size = new System.Drawing.Size(84, 24);
             this.lblValorMensal.TabIndex = 119;
@@ -574,7 +575,7 @@
             // 
             this.txtValorMensal.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtValorMensal.Font = new System.Drawing.Font("Agency FB", 15F);
-            this.txtValorMensal.Location = new System.Drawing.Point(378, 326);
+            this.txtValorMensal.Location = new System.Drawing.Point(421, 339);
             this.txtValorMensal.Name = "txtValorMensal";
             this.txtValorMensal.Size = new System.Drawing.Size(94, 24);
             this.txtValorMensal.TabIndex = 151;
@@ -586,7 +587,7 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Agency FB", 15F);
             this.label2.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(352, 326);
+            this.label2.Location = new System.Drawing.Point(395, 339);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(26, 24);
             this.label2.TabIndex = 152;
@@ -633,6 +634,20 @@
             this.maskDataNasc.Size = new System.Drawing.Size(100, 21);
             this.maskDataNasc.TabIndex = 156;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Font = new System.Drawing.Font("Agency FB", 15F);
+            this.checkBox1.ForeColor = System.Drawing.Color.Black;
+            this.checkBox1.Location = new System.Drawing.Point(250, 49);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(96, 28);
+            this.checkBox1.TabIndex = 157;
+            this.checkBox1.Text = "Matriculado";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // FrmMatricula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -640,6 +655,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(743, 387);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.maskDataNasc);
             this.Controls.Add(this.maskDataFinal);
             this.Controls.Add(this.maskDataInicial);
@@ -741,5 +757,6 @@
         private System.Windows.Forms.DateTimePicker maskDataInicial;
         private System.Windows.Forms.DateTimePicker maskDataFinal;
         private System.Windows.Forms.DateTimePicker maskDataNasc;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

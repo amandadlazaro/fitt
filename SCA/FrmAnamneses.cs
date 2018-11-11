@@ -204,6 +204,24 @@ namespace FittSistema.View
                 btnExcluirAnamnese.Hide();
             }
         }
+
+        private void txtBusca_Enter(object sender, EventArgs e)
+        {
+            if (txtBusca.Text == "Buscar por Aluno")
+            {
+                txtBusca.Text = "";
+                txtBusca.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtBusca_Leave(object sender, EventArgs e)
+        {
+            if (txtBusca.Text == "")
+            {
+                txtBusca.Text = "Buscar por Aluno";
+                txtBusca.ForeColor = Color.Silver;
+            }
+        }
     }
 }
 

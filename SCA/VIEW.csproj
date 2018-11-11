@@ -105,12 +105,6 @@
     <Compile Include="FrmMenu.Designer.cs">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmMenuPagamento.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmMenuPagamento.Designer.cs">
-      <DependentUpon>FrmMenuPagamento.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmPagamentos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,12 +116,6 @@
     </Compile>
     <Compile Include="FrmProfessor.Designer.cs">
       <DependentUpon>FrmProfessor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmRecibo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmRecibo.Designer.cs">
-      <DependentUpon>FrmRecibo.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmTurma.cs">
       <SubType>Form</SubType>
@@ -172,17 +160,11 @@
     <EmbeddedResource Include="FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmMenuPagamento.resx">
-      <DependentUpon>FrmMenuPagamento.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmPagamentos.resx">
       <DependentUpon>FrmPagamentos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmProfessor.resx">
       <DependentUpon>FrmProfessor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmRecibo.resx">
-      <DependentUpon>FrmRecibo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTurma.resx">
       <DependentUpon>FrmTurma.cs</DependentUpon>

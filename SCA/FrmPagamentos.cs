@@ -147,6 +147,7 @@ namespace FittSistema.View
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             listarAlunos();
+            MessageBox.Show("Selecione o aluno que deseja realizar o pagamento");
         }
 
         private void dgvPagamento_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -182,5 +183,28 @@ namespace FittSistema.View
         }
 
         #endregion
+
+        private void txtBusca_Enter(object sender, EventArgs e)
+        {
+            if (txtBusca.Text == "Buscar por Aluno")
+            {
+                txtBusca.Text = "";
+                txtBusca.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtBusca_Leave(object sender, EventArgs e)
+        {
+            if (txtBusca.Text == "")
+            {
+                txtBusca.Text = "Buscar por Aluno";
+                txtBusca.ForeColor = Color.Silver;
+            }
+        }
+
+        private void txtBusca_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.KeyChar = Util.FiltrarTeclas.letraMaiuscula(e.KeyChar);
+        }
     }
 }

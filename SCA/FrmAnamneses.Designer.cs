@@ -68,15 +68,16 @@
             // 
             // txtBusca
             // 
-            this.txtBusca.Font = new System.Drawing.Font("Agency FB", 12F);
+            this.txtBusca.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBusca.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtBusca.Location = new System.Drawing.Point(164, 48);
             this.txtBusca.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtBusca.Name = "txtBusca";
-            this.txtBusca.Size = new System.Drawing.Size(401, 26);
+            this.txtBusca.Size = new System.Drawing.Size(401, 27);
             this.txtBusca.TabIndex = 1;
-            this.txtBusca.Text = "B u s c a r   p o r   A l u n o";
+            this.txtBusca.Text = "Buscar por Aluno";
             this.txtBusca.Enter += new System.EventHandler(this.txtBusca_Enter);
+            this.txtBusca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBusca_KeyPress);
             this.txtBusca.Leave += new System.EventHandler(this.txtBusca_Leave);
             // 
             // btnBuscarAnamnese

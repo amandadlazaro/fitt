@@ -222,6 +222,11 @@ namespace FittSistema.View
                 txtBusca.ForeColor = Color.Silver;
             }
         }
+
+        private void txtBusca_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.KeyChar = Util.FiltrarTeclas.letraMaiuscula(e.KeyChar);
+        }
     }
 }
 

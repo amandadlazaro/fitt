@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace FittSistema.View
 {
@@ -157,5 +158,28 @@ namespace FittSistema.View
         }
 
         #endregion
+
+        private void txtBusca_Enter(object sender, EventArgs e)
+        {
+            if (txtBusca.Text == "Buscar por Aluno")
+            {
+                txtBusca.Text = "";
+                txtBusca.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtBusca_Leave(object sender, EventArgs e)
+        {
+            if (txtBusca.Text == "")
+            {
+                txtBusca.Text = "Buscar por Aluno";
+                txtBusca.ForeColor = Color.Silver;
+            }
+        }
+
+        private void txtBusca_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.KeyChar = Util.FiltrarTeclas.letraMaiuscula(e.KeyChar);
+        }
     }
 }

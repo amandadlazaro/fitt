@@ -46,6 +46,11 @@ namespace FittSistema.View
             txtValorTotal.Text = GerarPagamentoBLL.ValorTotal.ToString();
         }
 
+        private double CalcularTotal(double desconto, double inicial)
+        {
+            return inicial - (inicial * (desconto / 100));
+        }
+
         private bool ValidarCampos()
         {
             return true;
@@ -160,18 +165,42 @@ namespace FittSistema.View
             btnFecharTela.PerformClick();
         }
 
+        private void txtDesconto_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                double desconto = double.Parse(txtDesconto.Text);
+                if (desconto > 100)
+                {
+                    txtDesconto.Text = "0";
+                    MessageBox.Show("Desconto não pode ser maior que 100%");
+                    return;
+                }
+                double inicial = double.Parse(txtValorInicial.Text);
+                txtValorTotal.Text = CalcularTotal(desconto, inicial).ToString();
+            }
+            catch
+            {
+            }
+        }
+
+        private void FrmGerarPagamento_Load(object sender, EventArgs e)
+        {
+            txtDesconto_TextChanged(sender, e);
+        }
+
         #endregion
 
         #region Filtrar Teclas
 
         private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Util.FiltrarTeclas.letraMaiuscula(e.KeyChar);
+            e.KeyChar = Util.FiltrarTeclas.letraMaiuscula(e.KeyChar);
         }
 
         private void txtDesconto_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Util.FiltrarTeclas.numero(e.KeyChar, txtDesconto.Text);
+            e.KeyChar = Util.FiltrarTeclas.numero(e.KeyChar, txtDesconto.Text);
         }
 
         #endregion

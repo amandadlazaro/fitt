@@ -166,9 +166,19 @@ namespace FittSistema.View
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            var pagamentos = pagamentoBLL.ProcurarPagamentoAluno(txtBusca.Text);
-            if (!pagamentos.Any()) MessageBox.Show("Nenhum pagamento encontrado");
-            else dgvPagamento.DataSource = pagamentos;
+            if (modo == "boletos")
+            {
+                var pagamentos = pagamentoBLL.ProcurarPagamentoAluno(txtBusca.Text);
+                if (!pagamentos.Any()) MessageBox.Show("Nenhum pagamento encontrado");
+                else dgvPagamento.DataSource = pagamentos;
+                return;
+            }
+            if (modo == "alunos")
+            {
+                var alunos = matriculaBLL.ProcurarAlunosMatriculados(txtBusca.Text);
+                if (!alunos.Any()) MessageBox.Show("Nenhum aluno encontrado");
+                else dgvPagamento.DataSource = alunos;
+            }
         }
 
         #endregion

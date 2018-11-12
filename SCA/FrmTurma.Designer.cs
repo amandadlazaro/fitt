@@ -105,7 +105,7 @@
             this.btnCadastrar.BackColor = System.Drawing.Color.Transparent;
             this.btnCadastrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrar.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.ForeColor = System.Drawing.Color.DeepPink;
             this.btnCadastrar.Location = new System.Drawing.Point(651, 338);
             this.btnCadastrar.Name = "btnCadastrar";
@@ -119,11 +119,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Agency FB", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DeepPink;
             this.label2.Location = new System.Drawing.Point(-1, 18);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 40);
+            this.label2.Size = new System.Drawing.Size(127, 37);
             this.label2.TabIndex = 50;
             this.label2.Text = "Turmas";
             // 
@@ -131,11 +131,11 @@
             // 
             this.lblProfessor.AutoSize = true;
             this.lblProfessor.BackColor = System.Drawing.Color.Transparent;
-            this.lblProfessor.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProfessor.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProfessor.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.lblProfessor.Location = new System.Drawing.Point(114, 105);
             this.lblProfessor.Name = "lblProfessor";
-            this.lblProfessor.Size = new System.Drawing.Size(74, 25);
+            this.lblProfessor.Size = new System.Drawing.Size(110, 25);
             this.lblProfessor.TabIndex = 52;
             this.lblProfessor.Text = "Professor:";
             // 
@@ -151,11 +151,11 @@
             // 
             this.lblDiaSemana.AutoSize = true;
             this.lblDiaSemana.BackColor = System.Drawing.Color.Transparent;
-            this.lblDiaSemana.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiaSemana.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDiaSemana.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.lblDiaSemana.Location = new System.Drawing.Point(119, 149);
             this.lblDiaSemana.Name = "lblDiaSemana";
-            this.lblDiaSemana.Size = new System.Drawing.Size(63, 50);
+            this.lblDiaSemana.Size = new System.Drawing.Size(97, 50);
             this.lblDiaSemana.TabIndex = 54;
             this.lblDiaSemana.Text = "Dia da\r\nSemana:";
             // 
@@ -163,11 +163,11 @@
             // 
             this.lblHorario.AutoSize = true;
             this.lblHorario.BackColor = System.Drawing.Color.Transparent;
-            this.lblHorario.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHorario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHorario.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.lblHorario.Location = new System.Drawing.Point(119, 226);
             this.lblHorario.Name = "lblHorario";
-            this.lblHorario.Size = new System.Drawing.Size(60, 25);
+            this.lblHorario.Size = new System.Drawing.Size(88, 25);
             this.lblHorario.TabIndex = 56;
             this.lblHorario.Text = "Horário:";
             // 
@@ -218,6 +218,7 @@
             this.grpSegunda.GridColor = System.Drawing.Color.LightCoral;
             this.grpSegunda.Location = new System.Drawing.Point(58, 24);
             this.grpSegunda.Name = "grpSegunda";
+            this.grpSegunda.ReadOnly = true;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -248,6 +249,7 @@
             this.grpTerca.GridColor = System.Drawing.Color.LightCoral;
             this.grpTerca.Location = new System.Drawing.Point(58, 24);
             this.grpTerca.Name = "grpTerca";
+            this.grpTerca.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -278,6 +280,7 @@
             this.grpQuarta.GridColor = System.Drawing.Color.LightCoral;
             this.grpQuarta.Location = new System.Drawing.Point(58, 24);
             this.grpQuarta.Name = "grpQuarta";
+            this.grpQuarta.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -308,6 +311,7 @@
             this.grpQuinta.GridColor = System.Drawing.Color.LightCoral;
             this.grpQuinta.Location = new System.Drawing.Point(58, 24);
             this.grpQuinta.Name = "grpQuinta";
+            this.grpQuinta.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -338,6 +342,7 @@
             this.grpSexta.GridColor = System.Drawing.Color.LightCoral;
             this.grpSexta.Location = new System.Drawing.Point(58, 24);
             this.grpSexta.Name = "grpSexta";
+            this.grpSexta.ReadOnly = true;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -355,7 +360,7 @@
             this.btnExcluir.BackColor = System.Drawing.Color.Transparent;
             this.btnExcluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluir.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.ForeColor = System.Drawing.Color.DeepPink;
             this.btnExcluir.Location = new System.Drawing.Point(651, 338);
             this.btnExcluir.Name = "btnExcluir";
@@ -371,7 +376,7 @@
             this.btnEditar.BackColor = System.Drawing.Color.Transparent;
             this.btnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.DeepPink;
             this.btnEditar.Location = new System.Drawing.Point(556, 338);
             this.btnEditar.Name = "btnEditar";

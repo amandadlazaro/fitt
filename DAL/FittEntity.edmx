@@ -20,7 +20,7 @@
           <Property Name="CPF" Type="varchar" MaxLength="11" Nullable="false" />
           <Property Name="Nome" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Endereco" Type="varchar" MaxLength="150" Nullable="false" />
-          <Property Name="Telefone" Type="varchar" MaxLength="13" Nullable="false" />
+          <Property Name="Telefone" Type="varchar" MaxLength="12" Nullable="false" />
           <Property Name="DataNasc" Type="datetime" Nullable="false" />
           <Property Name="Sexo" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="Email" Type="varchar" MaxLength="150" Nullable="false" />
@@ -53,6 +53,7 @@
           <Property Name="Desconto" Type="float" />
           <Property Name="ValorTotal" Type="float" Nullable="false" />
           <Property Name="DtPagamento" Type="date" Nullable="false" />
+          <Property Name="status" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="Matricula">
           <Key>
@@ -61,14 +62,14 @@
           <Property Name="idMatricula" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CPF" Type="varchar" MaxLength="11" Nullable="false" />
           <Property Name="idTurma" Type="int" Nullable="false" />
-          <Property Name="idTurma2" Type="int" />
-          <Property Name="idTurma3" Type="int" />
           <Property Name="TipoPlano" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="DataInicio" Type="datetime" Nullable="false" />
           <Property Name="DataFim" Type="datetime" Nullable="false" />
           <Property Name="QtdeAulas" Type="int" Nullable="false" />
           <Property Name="ValorMensal" Type="float" Nullable="false" />
           <Property Name="SituacaoMatricula" Type="bit" Nullable="false" />
+          <Property Name="idTurma2" Type="int" />
+          <Property Name="idTurma3" Type="int" />
         </EntityType>
         <EntityType Name="Professor">
           <Key>
@@ -92,7 +93,7 @@
           <Property Name="DiaSemana" Type="varchar" MaxLength="50" />
           <Property Name="Horario" Type="varchar" MaxLength="50" />
         </EntityType>
-        <Association Name="FK__Anamnese__idMatr__440B1D61">
+        <Association Name="FK__Anamnese__idMatr__5441852A">
           <End Role="Matricula" Type="Self.Matricula" Multiplicity="1" />
           <End Role="Anamnese" Type="Self.Anamnese" Multiplicity="*" />
           <ReferentialConstraint>
@@ -104,7 +105,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Boleto__idMatric__46E78A0C">
+        <Association Name="FK__Boleto__idMatric__571DF1D5">
           <End Role="Matricula" Type="Self.Matricula" Multiplicity="1" />
           <End Role="Boleto" Type="Self.Boleto" Multiplicity="*" />
           <ReferentialConstraint>
@@ -116,7 +117,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Matricula__CPF__3E52440B">
+        <Association Name="FK__Matricula__CPF__5070F446">
           <End Role="Aluno" Type="Self.Aluno" Multiplicity="1" />
           <End Role="Matricula" Type="Self.Matricula" Multiplicity="*" />
           <ReferentialConstraint>
@@ -128,7 +129,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Matricula__idTur__3F466844">
+        <Association Name="FK__Matricula__idTur__5165187F">
           <End Role="Turma" Type="Self.Turma" Multiplicity="1" />
           <End Role="Matricula" Type="Self.Matricula" Multiplicity="*" />
           <ReferentialConstraint>
@@ -140,7 +141,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Matricula__idTur__403A8C7D">
+        <Association Name="FK__Matricula__idTur__5AEE82B9">
           <End Role="Turma" Type="Self.Turma" Multiplicity="0..1" />
           <End Role="Matricula" Type="Self.Matricula" Multiplicity="*" />
           <ReferentialConstraint>
@@ -152,7 +153,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Matricula__idTur__412EB0B6">
+        <Association Name="FK__Matricula__idTur__5BE2A6F2">
           <End Role="Turma" Type="Self.Turma" Multiplicity="0..1" />
           <End Role="Matricula" Type="Self.Matricula" Multiplicity="*" />
           <ReferentialConstraint>
@@ -164,7 +165,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Turma__CPF__3B75D760">
+        <Association Name="FK__Turma__CPF__4D94879B">
           <End Role="Professor" Type="Self.Professor" Multiplicity="1" />
           <End Role="Turma" Type="Self.Turma" Multiplicity="*" />
           <ReferentialConstraint>
@@ -184,31 +185,31 @@
           <EntitySet Name="Matricula" EntityType="Self.Matricula" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Professor" EntityType="Self.Professor" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Turma" EntityType="Self.Turma" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Anamnese__idMatr__440B1D61" Association="Self.FK__Anamnese__idMatr__440B1D61">
+          <AssociationSet Name="FK__Anamnese__idMatr__5441852A" Association="Self.FK__Anamnese__idMatr__5441852A">
             <End Role="Matricula" EntitySet="Matricula" />
             <End Role="Anamnese" EntitySet="Anamnese" />
           </AssociationSet>
-          <AssociationSet Name="FK__Boleto__idMatric__46E78A0C" Association="Self.FK__Boleto__idMatric__46E78A0C">
+          <AssociationSet Name="FK__Boleto__idMatric__571DF1D5" Association="Self.FK__Boleto__idMatric__571DF1D5">
             <End Role="Matricula" EntitySet="Matricula" />
             <End Role="Boleto" EntitySet="Boleto" />
           </AssociationSet>
-          <AssociationSet Name="FK__Matricula__CPF__3E52440B" Association="Self.FK__Matricula__CPF__3E52440B">
+          <AssociationSet Name="FK__Matricula__CPF__5070F446" Association="Self.FK__Matricula__CPF__5070F446">
             <End Role="Aluno" EntitySet="Aluno" />
             <End Role="Matricula" EntitySet="Matricula" />
           </AssociationSet>
-          <AssociationSet Name="FK__Matricula__idTur__3F466844" Association="Self.FK__Matricula__idTur__3F466844">
+          <AssociationSet Name="FK__Matricula__idTur__5165187F" Association="Self.FK__Matricula__idTur__5165187F">
             <End Role="Turma" EntitySet="Turma" />
             <End Role="Matricula" EntitySet="Matricula" />
           </AssociationSet>
-          <AssociationSet Name="FK__Matricula__idTur__403A8C7D" Association="Self.FK__Matricula__idTur__403A8C7D">
+          <AssociationSet Name="FK__Matricula__idTur__5AEE82B9" Association="Self.FK__Matricula__idTur__5AEE82B9">
             <End Role="Turma" EntitySet="Turma" />
             <End Role="Matricula" EntitySet="Matricula" />
           </AssociationSet>
-          <AssociationSet Name="FK__Matricula__idTur__412EB0B6" Association="Self.FK__Matricula__idTur__412EB0B6">
+          <AssociationSet Name="FK__Matricula__idTur__5BE2A6F2" Association="Self.FK__Matricula__idTur__5BE2A6F2">
             <End Role="Turma" EntitySet="Turma" />
             <End Role="Matricula" EntitySet="Matricula" />
           </AssociationSet>
-          <AssociationSet Name="FK__Turma__CPF__3B75D760" Association="Self.FK__Turma__CPF__3B75D760">
+          <AssociationSet Name="FK__Turma__CPF__4D94879B" Association="Self.FK__Turma__CPF__4D94879B">
             <End Role="Professor" EntitySet="Professor" />
             <End Role="Turma" EntitySet="Turma" />
           </AssociationSet>
@@ -232,7 +233,7 @@
           <Property Name="CPF" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Endereco" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Telefone" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Telefone" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="DataNasc" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Sexo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Email" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
@@ -268,6 +269,7 @@
           <Property Name="DtPagamento" Type="DateTime" Nullable="false" Precision="0" />
           <NavigationProperty Name="Matricula" Relationship="Self.FK__Boleto__idMatric__48CFD27E" FromRole="Boleto" ToRole="Matricula" />
           <Property Name="FormaDePagamento" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="status" Type="Boolean" Nullable="false" />
         </EntityType>
         <EntityType Name="Matricula">
           <Key>
@@ -489,6 +491,7 @@
           <EntitySetMapping Name="Boleto">
             <EntityTypeMapping TypeName="FittDataBaseModel.Boleto">
               <MappingFragment StoreEntitySet="Boleto">
+                <ScalarProperty Name="status" ColumnName="status" />
                 <ScalarProperty Name="FormaDePagamento" ColumnName="FormaDePagamento" />
                 <ScalarProperty Name="idBoleto" ColumnName="idBoleto" />
                 <ScalarProperty Name="idMatricula" ColumnName="idMatricula" />

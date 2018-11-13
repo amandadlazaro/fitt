@@ -95,6 +95,7 @@ namespace FittSistema.View
                     DtPagamento = dtpDtPag.Value,
                     ValorTotal = double.Parse(txtValorTotal.Text),
                     FormaDePagamento = cmbForma.Text,
+                    status = cmbStatus.Text == "Pago" ? true : false
                 };
             }
             catch (Exception err)

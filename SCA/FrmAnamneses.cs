@@ -28,7 +28,7 @@ namespace FittSistema.View
         MatriculaBLL.DadosMatricula matricula = new MatriculaBLL.DadosMatricula();
         String IDs;
         Boolean entrou = false;
-         
+
         #endregion
 
         private void btnFecharForm_Click(object sender, EventArgs e)
@@ -84,27 +84,41 @@ namespace FittSistema.View
             btnVoltar.Show();
             limpaCampos();
             btnCadastrar.Hide();
-            
+
             txtMatricula.Text = grpAnamnese.CurrentRow.Cells["idMatricula"].Value.ToString();
 
             IDs = txtMatricula.Text;
-            
+
+            #region Propriedades GRID
+            var qp = grpAnamnese.CurrentRow.Cells["QP"].Value;
+            var hm = grpAnamnese.CurrentRow.Cells["HM"].Value;
+            var esp = grpAnamnese.CurrentRow.Cells["Esporte"].Value;
+            var pos = grpAnamnese.CurrentRow.Cells["PosicaoQueDorme"].Value;
+            var humor = grpAnamnese.CurrentRow.Cells["Humor"].Value;
+            var dor = grpAnamnese.CurrentRow.Cells["Dor"].Value;
+            var desc = grpAnamnese.CurrentRow.Cells["DescricaoDor"].Value;
+            var diag = grpAnamnese.CurrentRow.Cells["DiagnosticoMedico"].Value;
+            var med = grpAnamnese.CurrentRow.Cells["Medicacao"].Value;
+            var pat = grpAnamnese.CurrentRow.Cells["Patologias"].Value;
+            #endregion
+
+
             grpAnamnese.DataSource = anamneseBLL.ProcurarAnamnese(int.Parse(IDs));
             if (grpAnamnese.Rows.Count > 0)
             {
-                txtAnamnese.Text        =   grpAnamnese.CurrentRow.Cells["idAnamnese"].Value.ToString();
-                dtpDataAnamnese.Text    =   grpAnamnese.CurrentRow.Cells["DtAnamnese"].Value.ToString();
-                txtMatricula.Text       =   grpAnamnese.CurrentRow.Cells["idMatricula"].Value.ToString();
-                txtQP.Text              =   grpAnamnese.CurrentRow.Cells["QP"].Value.ToString();
-                txtHM.Text              =   grpAnamnese.CurrentRow.Cells["HM"].Value.ToString();
-                txtEsporte.Text         =   grpAnamnese.CurrentRow.Cells["Esporte"].Value.ToString();
-                txtPosicao.Text         =   grpAnamnese.CurrentRow.Cells["PosicaoQueDorme"].Value.ToString();
-                txtHumor.Text           =   grpAnamnese.CurrentRow.Cells["Humor"].Value.ToString();
-                txtDor.Text             =   grpAnamnese.CurrentRow.Cells["Dor"].Value.ToString();
-                txtDescricao.Text       =   grpAnamnese.CurrentRow.Cells["DescricaoDor"].Value.ToString();
-                txtDiagnostico.Text     =   grpAnamnese.CurrentRow.Cells["DiagnosticoMedico"].Value.ToString();
-                txtMedicacao.Text       =   grpAnamnese.CurrentRow.Cells["Medicacao"].Value.ToString();
-                txtPatologias.Text      =   grpAnamnese.CurrentRow.Cells["Patologias"].Value.ToString();
+                txtAnamnese.Text = grpAnamnese.CurrentRow.Cells["idAnamnese"].Value.ToString();
+                dtpDataAnamnese.Text = grpAnamnese.CurrentRow.Cells["DtAnamnese"].Value.ToString();
+                txtMatricula.Text = grpAnamnese.CurrentRow.Cells["idMatricula"].Value.ToString();
+                txtQP.Text = qp == null ? "" : qp.ToString();
+                txtHM.Text = hm == null ? "" : hm.ToString();
+                txtEsporte.Text = esp == null ? "" : esp.ToString();
+                txtPosicao.Text = pos == null ? "" :  pos.ToString();
+                txtHumor.Text = humor == null ? "" : humor.ToString();
+                txtDor.Text = dor == null ? "" : dor.ToString();
+                txtDescricao.Text = desc == null ?  "" : desc.ToString();
+                txtDiagnostico.Text = diag == null ? "" : diag.ToString();
+                txtMedicacao.Text = med == null ? "" : med.ToString();
+                txtPatologias.Text = pat == null ? "" : pat.ToString();
             }
             else
             {
@@ -118,8 +132,10 @@ namespace FittSistema.View
                 }
 
             }
-            
+
         }
+
+
 
         private void btnExcluirAnamese_Click(object sender, EventArgs e)
         {
@@ -127,19 +143,19 @@ namespace FittSistema.View
             {
                 anamnese = new Anamnese
                 {
-                    idAnamnese          =   int.Parse(txtAnamnese.Text),
-                    idMatricula         =   int.Parse(txtMatricula.Text),
-                    DtAnamnese          =   DateTime.Parse(dtpDataAnamnese.Text),
-                    QP                  =   txtQP.Text,
-                    HM                  =   txtHM.Text,
-                    Esporte             =   txtEsporte.Text,
-                    PosicaoQueDorme     =   txtPosicao.Text,
-                    Humor               =   txtHumor.Text,
-                    Dor                 =   txtDor.Text,
-                    DescricaoDor        =   txtDescricao.Text,
-                    DiagnosticoMedico   =   txtDiagnostico.Text,
-                    Medicacao           =   txtMedicacao.Text,
-                    Patologias          =   txtPatologias.Text
+                    idAnamnese = int.Parse(txtAnamnese.Text),
+                    idMatricula = int.Parse(txtMatricula.Text),
+                    DtAnamnese = DateTime.Parse(dtpDataAnamnese.Text),
+                    QP = txtQP.Text,
+                    HM = txtHM.Text,
+                    Esporte = txtEsporte.Text,
+                    PosicaoQueDorme = txtPosicao.Text,
+                    Humor = txtHumor.Text,
+                    Dor = txtDor.Text,
+                    DescricaoDor = txtDescricao.Text,
+                    DiagnosticoMedico = txtDiagnostico.Text,
+                    Medicacao = txtMedicacao.Text,
+                    Patologias = txtPatologias.Text
                 };
 
                 MessageBox.Show(anamneseBLL.DeletarAnamnese(anamnese));
@@ -173,9 +189,9 @@ namespace FittSistema.View
                 grpAluno.Show();
             }
 
-            
+
         }
-        
+
         private void listarAlunos()
         {
             var aluno = anamneseBLL.LerAnamneseComNome();
@@ -223,7 +239,7 @@ namespace FittSistema.View
                     btnSalvar.Hide();
                     btnExcluirAnamnese.Hide();
                     btnCadastrar.Show();
-                
+
                 }
                 catch (Exception ex)
                 {
@@ -257,19 +273,19 @@ namespace FittSistema.View
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            if(grpAluno.Visible == false && entrou == false)
+            if (grpAluno.Visible == false && entrou == false)
             {
                 if (MessageBox.Show("Deseja Cadastrar uma Nova Anamnese?", "Cadastrar Anamnese", MessageBoxButtons.YesNo) == DialogResult.No)
                 {
                     return;
                 }
-                
+
                 grpAluno.Show();
                 var aluno = alunoBLL.LerAlunos();
                 grpAluno.DataSource = aluno.ToList();
                 btnVoltar.Show();
                 btnCadastrar.Hide();
-                
+
             }
             else
             {

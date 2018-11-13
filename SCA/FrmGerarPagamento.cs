@@ -95,6 +95,7 @@ namespace FittSistema.View
                     DtPagamento = dtpDtPag.Value,
                     ValorTotal = double.Parse(txtValorTotal.Text),
                     FormaDePagamento = cmbForma.Text,
+                    status = cmbStatus.Text == "Pago" ? true : false
                 };
             }
             catch (Exception err)
@@ -112,7 +113,7 @@ namespace FittSistema.View
             }
 
             MessageBox.Show(mensagem);
-            btnFecharTela.PerformClick();
+            btnVoltar.PerformClick();
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -155,7 +156,7 @@ namespace FittSistema.View
             }
             
             MessageBox.Show(mensagem);
-            btnFecharTela.PerformClick();
+            btnVoltar.PerformClick();
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
@@ -216,5 +217,13 @@ namespace FittSistema.View
         }
 
         #endregion
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmPagamentos menu = new FrmPagamentos();
+            menu.ShowDialog();
+            this.Close();
+        }
     }
 }

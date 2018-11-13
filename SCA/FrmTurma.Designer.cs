@@ -216,7 +216,7 @@
             this.grpSegunda.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.grpSegunda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grpSegunda.GridColor = System.Drawing.Color.LightCoral;
-            this.grpSegunda.Location = new System.Drawing.Point(58, 24);
+            this.grpSegunda.Location = new System.Drawing.Point(5, 6);
             this.grpSegunda.Name = "grpSegunda";
             this.grpSegunda.ReadOnly = true;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -227,7 +227,7 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.grpSegunda.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.grpSegunda.Size = new System.Drawing.Size(486, 139);
+            this.grpSegunda.Size = new System.Drawing.Size(570, 160);
             this.grpSegunda.TabIndex = 72;
             this.grpSegunda.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpSegunda_CellDoubleClick_1);
             // 

@@ -667,6 +667,7 @@
             this.btnVoltar.TabIndex = 160;
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Visible = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // FrmMatricula
             // 

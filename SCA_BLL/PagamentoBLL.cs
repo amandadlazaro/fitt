@@ -18,19 +18,19 @@ namespace SCA_BLL
             public Nullable<double> Desconto { get; set; }
             public double ValorTotal { get; set; }
             public DateTime DtPagamento { get; set; }
+            public bool status { get; set; }
         }
         public class PagamentoAluno
         {
             public int idBoleto { get; set; }
             public string Nome { get; set; }
             public string CPF { get; set; }
+            public DateTime DtPagamento { get; set; }
             public string FormaDePagamento { get; set; }
-            public string TipoPlano { get; set; }
             public double ValorMensal { get; set; }
             public Nullable<double> Desconto { get; set; }
             public double ValorTotal { get; set; }
-            public int QtdeAulas { get; set; }
-            public bool SituacaoMatricula { get; set; }
+            public bool Pago { get; set; }
         }
         #endregion
 
@@ -46,7 +46,8 @@ namespace SCA_BLL
                 FormaDePagamento = p.FormaDePagamento,
                 Desconto = p.Desconto,
                 ValorTotal = p.ValorTotal,
-                DtPagamento = p.DtPagamento
+                DtPagamento = p.DtPagamento,
+                status = p.status
             }).ToList();
         }
 
@@ -60,7 +61,8 @@ namespace SCA_BLL
                     FormaDePagamento = p.FormaDePagamento,
                     Desconto = p.Desconto,
                     ValorTotal = p.ValorTotal,
-                    DtPagamento = p.DtPagamento
+                    DtPagamento = p.DtPagamento,
+                    status = p.status
                 }).ToList();
         }
 
@@ -73,13 +75,12 @@ namespace SCA_BLL
                     idBoleto = bm.b.idBoleto,
                     Nome = a.Nome,
                     CPF = a.CPF,
+                    DtPagamento = bm.b.DtPagamento,
                     FormaDePagamento = bm.b.FormaDePagamento,
-                    TipoPlano = bm.m.TipoPlano,
                     ValorMensal = bm.m.ValorMensal,
                     Desconto = bm.b.Desconto,
                     ValorTotal = bm.b.ValorTotal,
-                    QtdeAulas = bm.m.QtdeAulas,
-                    SituacaoMatricula = bm.m.SituacaoMatricula,
+                    Pago = bm.b.status
                 }).ToList();
         }
 
@@ -94,13 +95,12 @@ namespace SCA_BLL
                     idBoleto = bma.bm.b.idBoleto,
                     Nome = bma.a.Nome,
                     CPF = bma.a.CPF,
+                    DtPagamento = bma.bm.b.DtPagamento,
                     FormaDePagamento = bma.bm.b.FormaDePagamento,
-                    TipoPlano = bma.bm.m.TipoPlano,
                     ValorMensal = bma.bm.m.ValorMensal,
                     Desconto = bma.bm.b.Desconto,
                     ValorTotal = bma.bm.b.ValorTotal,
-                    QtdeAulas = bma.bm.m.QtdeAulas,
-                    SituacaoMatricula = bma.bm.m.SituacaoMatricula,
+                    Pago = bma.bm.b.status 
                 }).ToList();
         }
 

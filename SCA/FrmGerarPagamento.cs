@@ -44,6 +44,7 @@ namespace FittSistema.View
             cmbForma.Text = GerarPagamentoBLL.FormaDePagamento;
             txtDesconto.Text = GerarPagamentoBLL.Desconto.ToString();
             txtValorTotal.Text = GerarPagamentoBLL.ValorTotal.ToString("F");
+            cmbStatus.Text = GerarPagamentoBLL.pago ? "Pago" : "Não Pago";
         }
 
         private double CalcularTotal(double desconto, double inicial)
@@ -137,6 +138,7 @@ namespace FittSistema.View
                     DtPagamento = dtpDtPag.Value,
                     ValorTotal = double.Parse(txtValorTotal.Text),
                     FormaDePagamento = cmbForma.Text,
+                    status = cmbStatus.Text == "Pago" ? true : false
                 };
             }
             catch (Exception err)

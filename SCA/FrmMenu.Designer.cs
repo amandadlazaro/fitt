@@ -37,6 +37,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnAdmin = new System.Windows.Forms.Button();
             this.btnAnamnese = new System.Windows.Forms.Button();
+            this.btnFecharTela = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,17 +98,17 @@
             // btnFecharPgm
             // 
             this.btnFecharPgm.AutoSize = true;
+            this.btnFecharPgm.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFecharPgm.BackgroundImage")));
             this.btnFecharPgm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnFecharPgm.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFecharPgm.FlatAppearance.BorderSize = 0;
             this.btnFecharPgm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFecharPgm.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFecharPgm.ForeColor = System.Drawing.Color.DarkRed;
-            this.btnFecharPgm.Location = new System.Drawing.Point(645, 344);
+            this.btnFecharPgm.Location = new System.Drawing.Point(624, 344);
             this.btnFecharPgm.Name = "btnFecharPgm";
-            this.btnFecharPgm.Size = new System.Drawing.Size(86, 31);
+            this.btnFecharPgm.Size = new System.Drawing.Size(107, 31);
             this.btnFecharPgm.TabIndex = 10;
-            this.btnFecharPgm.Text = "LOG OUT";
             this.btnFecharPgm.UseVisualStyleBackColor = true;
             this.btnFecharPgm.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
@@ -151,6 +152,20 @@
             this.btnAnamnese.UseVisualStyleBackColor = true;
             this.btnAnamnese.Click += new System.EventHandler(this.btnAnamnese_Click);
             // 
+            // btnFecharTela
+            // 
+            this.btnFecharTela.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFecharTela.BackgroundImage")));
+            this.btnFecharTela.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFecharTela.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFecharTela.FlatAppearance.BorderSize = 0;
+            this.btnFecharTela.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFecharTela.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnFecharTela.Location = new System.Drawing.Point(713, 4);
+            this.btnFecharTela.Name = "btnFecharTela";
+            this.btnFecharTela.Size = new System.Drawing.Size(25, 25);
+            this.btnFecharTela.TabIndex = 37;
+            this.btnFecharTela.UseVisualStyleBackColor = true;
+            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -158,6 +173,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(743, 387);
+            this.Controls.Add(this.btnFecharTela);
             this.Controls.Add(this.btnAnamnese);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btnFecharPgm);
@@ -188,5 +204,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button btnAdmin;
         private System.Windows.Forms.Button btnAnamnese;
+        private System.Windows.Forms.Button btnFecharTela;
     }
 }

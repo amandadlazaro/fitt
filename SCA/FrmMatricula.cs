@@ -150,7 +150,7 @@ namespace FittSistema.View
 
             if (cmbSexo.SelectedIndex.Equals(-1))
             {
-                MessageBox.Show("Preencha todos os campos!");
+                MessageBox.Show("Selecione o sexo!");
                 return false;
             }
 
@@ -164,7 +164,7 @@ namespace FittSistema.View
             {
                 if (cmbSemana1.SelectedIndex.Equals(-1) || cmbTurma1.SelectedIndex.Equals(-1))
                 {
-                    MessageBox.Show("Preencha todos os campos!");
+                    MessageBox.Show("Seleciona o horario das aulas!");
                     return false;
                 }
             }
@@ -174,7 +174,12 @@ namespace FittSistema.View
                 if (cmbSemana1.SelectedIndex.Equals(-1) || cmbTurma1.SelectedIndex.Equals(-1) ||
                     cmbSemana2.SelectedIndex.Equals(-1) || cmbTurma2.SelectedIndex.Equals(-1))
                 {
-                    MessageBox.Show("Preencha todos os campos!");
+                    MessageBox.Show("Selecione o horario das aulas!");
+                    return false;
+                }
+                if (cmbTurma1.SelectedValue.ToString() == cmbTurma2.SelectedValue.ToString())
+                {
+                    MessageBox.Show("Não pode selecionar a mesma aula mais de uma vez!");
                     return false;
                 }
             }
@@ -185,10 +190,18 @@ namespace FittSistema.View
                     cmbSemana2.SelectedIndex.Equals(-1) || cmbTurma2.SelectedIndex.Equals(-1) ||
                     cmbSemana3.SelectedIndex.Equals(-1) || cmbTurma3.SelectedIndex.Equals(-1))
                 {
-                    MessageBox.Show("Preencha todos os campos!");
+                    MessageBox.Show("Selecione o horario das aulas!");
+                    return false;
+                }
+                if (cmbTurma1.SelectedValue.ToString() == cmbTurma2.SelectedValue.ToString() ||
+                    cmbTurma1.SelectedValue.ToString() == cmbTurma3.SelectedValue.ToString() ||
+                    cmbTurma2.SelectedValue.ToString() == cmbTurma3.SelectedValue.ToString())
+                {
+                    MessageBox.Show("Não pode selecionar a mesma aula mais de uma vez!");
                     return false;
                 }
             }
+
             return true;
         }
 

@@ -48,6 +48,7 @@ namespace FittSistema.View
         private void FrmAdministrador_Load(object sender, EventArgs e)
         {
             listarAdministrador();
+            grpAdministrador.Columns.RemoveAt(0);
         }
 
         private void btnEditarAdministrador_Click(object sender, EventArgs e)
@@ -60,6 +61,13 @@ namespace FittSistema.View
                 }
                 else
                 {
+                    grpAdministrador.DataSource = administradorBLL.ProcurarEmail(txtEmail.Text.ToString());
+                    if (grpAdministrador.Rows.Count > 0)
+                    {
+                        MessageBox.Show("Email já Cadastrado");
+                        return;
+                    }
+
                     adm = new Administrador
                     {
                         idAdm = int.Parse(txtID.Text),
@@ -83,7 +91,6 @@ namespace FittSistema.View
             var administrador = administradorBLL.LerAdministradorSemSenha();
             grpAdministrador.DataSource = administrador.ToList();
             grpAdministrador.Columns.RemoveAt(2);
-            grpAdministrador.Columns.RemoveAt(0);
         }
 
         private string ValidaCampos()
@@ -148,6 +155,7 @@ namespace FittSistema.View
                 };
                 MessageBox.Show(administradorBLL. AdicionarAdministrador(adm));
                 listarAdministrador();
+                grpAdministrador.Columns.RemoveAt(0);
                 btnVoltar.Hide();
                 grpAdministrador.Show();
             }
@@ -164,6 +172,7 @@ namespace FittSistema.View
             if (!testaSenha(senha))
             {
                 listarAdministrador();
+                grpAdministrador.Columns.RemoveAt(0);
                 MessageBox.Show("Senha incorreta");
                 return;
             }
@@ -174,7 +183,9 @@ namespace FittSistema.View
                 admdados.Email = grpAdministrador.CurrentRow.Cells["Email"].Value.ToString();
                 txtEmail.Text = admdados.Email;
 
+                listarAdministrador();
                 txtID.Text = grpAdministrador.CurrentRow.Cells["ID"].Value.ToString();
+                grpAdministrador.Columns.RemoveAt(0);
 
                 grpAdministrador.Hide();
                 btnCadastrarAdministrador.Hide();
@@ -186,6 +197,7 @@ namespace FittSistema.View
         private void btnVoltar_Click_1(object sender, EventArgs e)
         {
             listarAdministrador();
+            grpAdministrador.Columns.RemoveAt(0);
             grpAdministrador.Show();
             btnCadastrarAdministrador.Show();
             btnVoltar.Hide();

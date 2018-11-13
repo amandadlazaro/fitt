@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAL;
 using SCA_BLL;
+using SCA;
 using System.Globalization;
 
 
@@ -25,9 +26,29 @@ namespace FittSistema.View
         AdministradorBLL.DadosAdministrador admdados = new AdministradorBLL.DadosAdministrador();
         Administrador adm = new Administrador();
 
+        public bool testaSenha(string senha)
+        {
+            FrmSenha frmSenha = new FrmSenha();
+            DialogResult dialogResult = frmSenha.ShowDialog(this);
+
+            if (dialogResult == DialogResult.OK)
+            {
+                string pass = frmSenha.Password;
+                pass = Util.Util.criptografarSenha(pass);
+
+                if (pass == senha)
+                    return true;
+                else
+                    return false;
+            }
+            else
+                return false;
+        }
+
         private void FrmAdministrador_Load(object sender, EventArgs e)
         {
             listarAdministrador();
+            grpAdministrador.Columns.RemoveAt(0);
         }
 
         private void btnEditarAdministrador_Click(object sender, EventArgs e)
@@ -40,6 +61,13 @@ namespace FittSistema.View
                 }
                 else
                 {
+                    grpAdministrador.DataSource = administradorBLL.ProcurarEmail(txtEmail.Text.ToString());
+                    if (grpAdministrador.Rows.Count > 0)
+                    {
+                        MessageBox.Show("Email já Cadastrado");
+                        return;
+                    }
+
                     adm = new Administrador
                     {
                         idAdm = int.Parse(txtID.Text),
@@ -127,6 +155,7 @@ namespace FittSistema.View
                 };
                 MessageBox.Show(administradorBLL. AdicionarAdministrador(adm));
                 listarAdministrador();
+                grpAdministrador.Columns.RemoveAt(0);
                 btnVoltar.Hide();
                 grpAdministrador.Show();
             }
@@ -134,13 +163,29 @@ namespace FittSistema.View
 
         private void grpAdministrador_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            grpAdministrador.DataSource = administradorBLL.ProcurarEmailComSenha(grpAdministrador.CurrentRow.Cells["Email"].Value.ToString());
+
+            string senha = grpAdministrador.CurrentRow.Cells["Senha"].Value.ToString();
+            grpAdministrador.Columns.RemoveAt(2);
+            grpAdministrador.Columns.RemoveAt(0);
+
+            if (!testaSenha(senha))
+            {
+                listarAdministrador();
+                grpAdministrador.Columns.RemoveAt(0);
+                MessageBox.Show("Senha incorreta");
+                return;
+            }
+
             if (grpAdministrador.Rows.Count > 0)
             {
                 limpaCampos();
                 admdados.Email = grpAdministrador.CurrentRow.Cells["Email"].Value.ToString();
                 txtEmail.Text = admdados.Email;
 
+                listarAdministrador();
                 txtID.Text = grpAdministrador.CurrentRow.Cells["ID"].Value.ToString();
+                grpAdministrador.Columns.RemoveAt(0);
 
                 grpAdministrador.Hide();
                 btnCadastrarAdministrador.Hide();
@@ -152,6 +197,7 @@ namespace FittSistema.View
         private void btnVoltar_Click_1(object sender, EventArgs e)
         {
             listarAdministrador();
+            grpAdministrador.Columns.RemoveAt(0);
             grpAdministrador.Show();
             btnCadastrarAdministrador.Show();
             btnVoltar.Hide();

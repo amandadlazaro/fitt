@@ -70,6 +70,18 @@ namespace SCA_BLL
             return data;
         }
 
+        public IEnumerable<DadosAdministrador> ProcurarEmailComSenha(string email)
+        {
+            var data = bd.Administrador.Where(a => a.email.Equals(email))
+                .Select(a => new DadosAdministrador
+                {
+                    Email = a.email,
+                    Senha = a.senha
+                }).ToList();
+
+            return data;
+        }
+
         public string AdicionarAdministrador(Administrador adm)
         {
             try

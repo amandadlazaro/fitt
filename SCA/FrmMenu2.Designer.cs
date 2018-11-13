@@ -54,9 +54,9 @@
             this.btnFecharPgm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnFecharPgm.FlatAppearance.BorderSize = 0;
             this.btnFecharPgm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFecharPgm.Location = new System.Drawing.Point(700, 0);
+            this.btnFecharPgm.Location = new System.Drawing.Point(713, 4);
             this.btnFecharPgm.Name = "btnFecharPgm";
-            this.btnFecharPgm.Size = new System.Drawing.Size(45, 36);
+            this.btnFecharPgm.Size = new System.Drawing.Size(25, 25);
             this.btnFecharPgm.TabIndex = 10;
             this.btnFecharPgm.UseVisualStyleBackColor = true;
             this.btnFecharPgm.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -69,9 +69,9 @@
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.pictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pictureBox3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.InitialImage")));
-            this.pictureBox3.Location = new System.Drawing.Point(10, 301);
+            this.pictureBox3.Location = new System.Drawing.Point(0, 308);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(86, 74);
+            this.pictureBox3.Size = new System.Drawing.Size(78, 73);
             this.pictureBox3.TabIndex = 35;
             this.pictureBox3.TabStop = false;
             // 

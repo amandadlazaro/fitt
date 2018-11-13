@@ -53,6 +53,7 @@
           <Property Name="Desconto" Type="float" />
           <Property Name="ValorTotal" Type="float" Nullable="false" />
           <Property Name="DtPagamento" Type="date" Nullable="false" />
+          <Property Name="status" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="Matricula">
           <Key>
@@ -268,6 +269,7 @@
           <Property Name="DtPagamento" Type="DateTime" Nullable="false" Precision="0" />
           <NavigationProperty Name="Matricula" Relationship="Self.FK__Boleto__idMatric__48CFD27E" FromRole="Boleto" ToRole="Matricula" />
           <Property Name="FormaDePagamento" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="status" Type="Boolean" Nullable="false" />
         </EntityType>
         <EntityType Name="Matricula">
           <Key>
@@ -489,6 +491,7 @@
           <EntitySetMapping Name="Boleto">
             <EntityTypeMapping TypeName="FittDataBaseModel.Boleto">
               <MappingFragment StoreEntitySet="Boleto">
+                <ScalarProperty Name="status" ColumnName="status" />
                 <ScalarProperty Name="FormaDePagamento" ColumnName="FormaDePagamento" />
                 <ScalarProperty Name="idBoleto" ColumnName="idBoleto" />
                 <ScalarProperty Name="idMatricula" ColumnName="idMatricula" />

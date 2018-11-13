@@ -36,6 +36,8 @@
             this.btnFecharPgm = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnAdmin = new System.Windows.Forms.Button();
+            this.btnAnamnese = new System.Windows.Forms.Button();
+            this.btnFecharTela = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,7 +74,7 @@
             this.btnProfessor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProfessor.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfessor.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnProfessor.Location = new System.Drawing.Point(402, 208);
+            this.btnProfessor.Location = new System.Drawing.Point(307, 208);
             this.btnProfessor.Name = "btnProfessor";
             this.btnProfessor.Size = new System.Drawing.Size(122, 83);
             this.btnProfessor.TabIndex = 5;
@@ -95,13 +97,17 @@
             // 
             // btnFecharPgm
             // 
+            this.btnFecharPgm.AutoSize = true;
             this.btnFecharPgm.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFecharPgm.BackgroundImage")));
             this.btnFecharPgm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFecharPgm.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFecharPgm.FlatAppearance.BorderSize = 0;
             this.btnFecharPgm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFecharPgm.Location = new System.Drawing.Point(700, 0);
+            this.btnFecharPgm.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFecharPgm.ForeColor = System.Drawing.Color.DarkRed;
+            this.btnFecharPgm.Location = new System.Drawing.Point(624, 344);
             this.btnFecharPgm.Name = "btnFecharPgm";
-            this.btnFecharPgm.Size = new System.Drawing.Size(45, 36);
+            this.btnFecharPgm.Size = new System.Drawing.Size(107, 31);
             this.btnFecharPgm.TabIndex = 10;
             this.btnFecharPgm.UseVisualStyleBackColor = true;
             this.btnFecharPgm.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -114,9 +120,9 @@
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.pictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pictureBox3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.InitialImage")));
-            this.pictureBox3.Location = new System.Drawing.Point(10, 301);
+            this.pictureBox3.Location = new System.Drawing.Point(0, 308);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(86, 74);
+            this.pictureBox3.Size = new System.Drawing.Size(78, 73);
             this.pictureBox3.TabIndex = 35;
             this.pictureBox3.TabStop = false;
             // 
@@ -125,13 +131,40 @@
             this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdmin.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdmin.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnAdmin.Location = new System.Drawing.Point(223, 208);
+            this.btnAdmin.Location = new System.Drawing.Point(141, 208);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Size = new System.Drawing.Size(122, 83);
             this.btnAdmin.TabIndex = 6;
             this.btnAdmin.Text = "Administrador";
             this.btnAdmin.UseVisualStyleBackColor = true;
             this.btnAdmin.Click += new System.EventHandler(this.btnMatricula_Click);
+            // 
+            // btnAnamnese
+            // 
+            this.btnAnamnese.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAnamnese.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnamnese.ForeColor = System.Drawing.Color.DeepPink;
+            this.btnAnamnese.Location = new System.Drawing.Point(465, 208);
+            this.btnAnamnese.Name = "btnAnamnese";
+            this.btnAnamnese.Size = new System.Drawing.Size(122, 83);
+            this.btnAnamnese.TabIndex = 36;
+            this.btnAnamnese.Text = "Anamnese";
+            this.btnAnamnese.UseVisualStyleBackColor = true;
+            this.btnAnamnese.Click += new System.EventHandler(this.btnAnamnese_Click);
+            // 
+            // btnFecharTela
+            // 
+            this.btnFecharTela.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFecharTela.BackgroundImage")));
+            this.btnFecharTela.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFecharTela.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFecharTela.FlatAppearance.BorderSize = 0;
+            this.btnFecharTela.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFecharTela.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnFecharTela.Location = new System.Drawing.Point(713, 4);
+            this.btnFecharTela.Name = "btnFecharTela";
+            this.btnFecharTela.Size = new System.Drawing.Size(25, 25);
+            this.btnFecharTela.TabIndex = 37;
+            this.btnFecharTela.UseVisualStyleBackColor = true;
             // 
             // FrmMenu
             // 
@@ -140,6 +173,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(743, 387);
+            this.Controls.Add(this.btnFecharTela);
+            this.Controls.Add(this.btnAnamnese);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btnFecharPgm);
             this.Controls.Add(this.btnPagamento);
@@ -156,6 +191,7 @@
             this.Load += new System.EventHandler(this.FrmMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -167,5 +203,7 @@
         private System.Windows.Forms.Button btnFecharPgm;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button btnAdmin;
+        private System.Windows.Forms.Button btnAnamnese;
+        private System.Windows.Forms.Button btnFecharTela;
     }
 }

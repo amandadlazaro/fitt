@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace FittSistema.View
 {
@@ -23,8 +24,11 @@ namespace FittSistema.View
 
         private void listarAlunos()
         {
-            var alunos = alunoBLL.LerAlunosMini();
-            grpAlunos.DataSource = alunos.ToList();
+            grpAlunos.DataSource = matriculaBLL.LerAlunosMatriculados();
+            grpAlunos.Columns["TipoPlano"].HeaderText = "Plano";
+            grpAlunos.Columns["ValorMensal"].HeaderText = "Valor Mensal";
+            grpAlunos.Columns["QtdeAulas"].HeaderText = "Aulas";
+            grpAlunos.Columns["SituacaoMatricula"].HeaderText = "Matriculado";
         }
 
         #endregion
@@ -60,9 +64,9 @@ namespace FittSistema.View
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            var alunos = alunoBLL.LerAlunosPorNome(txtBusca.Text);
+            var alunos = matriculaBLL.ProcurarAlunosMatriculados(txtBusca.Text);
             if (!alunos.Any()) MessageBox.Show("Nenhum aluno encontrado");
-            else grpAlunos.DataSource = alunos.ToList();
+            else grpAlunos.DataSource = alunos;
         }
 
         private void FrmAlunos_Load(object sender, EventArgs e)
@@ -72,6 +76,11 @@ namespace FittSistema.View
 
         private void grpAlunos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (grpAlunos.Rows.Count <= 0)
+            {
+                return;
+            }
+
             string cpf = grpAlunos.CurrentRow.Cells["CPF"].Value.ToString();
             string nome = grpAlunos.CurrentRow.Cells["Nome"].Value.ToString();
 
@@ -149,5 +158,28 @@ namespace FittSistema.View
         }
 
         #endregion
+
+        private void txtBusca_Enter(object sender, EventArgs e)
+        {
+            if (txtBusca.Text == "Buscar por Aluno")
+            {
+                txtBusca.Text = "";
+                txtBusca.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtBusca_Leave(object sender, EventArgs e)
+        {
+            if (txtBusca.Text == "")
+            {
+                txtBusca.Text = "Buscar por Aluno";
+                txtBusca.ForeColor = Color.Silver;
+            }
+        }
+
+        private void txtBusca_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.KeyChar = Util.FiltrarTeclas.letraMaiuscula(e.KeyChar);
+        }
     }
 }

@@ -59,6 +59,12 @@
     <Compile Include="FrmAdministrador.Designer.cs">
       <DependentUpon>FrmAdministrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmGerarPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGerarPagamento.Designer.cs">
+      <DependentUpon>FrmGerarPagamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMenu2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,12 +105,6 @@
     <Compile Include="FrmMenu.Designer.cs">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmMenuPagamento.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmMenuPagamento.Designer.cs">
-      <DependentUpon>FrmMenuPagamento.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmPagamentos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,12 +117,6 @@
     <Compile Include="FrmProfessor.Designer.cs">
       <DependentUpon>FrmProfessor.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmRecibo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmRecibo.Designer.cs">
-      <DependentUpon>FrmRecibo.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmTurma.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +125,9 @@
     </Compile>
     <EmbeddedResource Include="FrmAdministrador.resx">
       <DependentUpon>FrmAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGerarPagamento.resx">
+      <DependentUpon>FrmGerarPagamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenu2.resx">
       <DependentUpon>FrmMenu2.cs</DependentUpon>
@@ -163,17 +160,11 @@
     <EmbeddedResource Include="FrmMenu.resx">
       <DependentUpon>FrmMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmMenuPagamento.resx">
-      <DependentUpon>FrmMenuPagamento.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmPagamentos.resx">
       <DependentUpon>FrmPagamentos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmProfessor.resx">
       <DependentUpon>FrmProfessor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmRecibo.resx">
-      <DependentUpon>FrmRecibo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTurma.resx">
       <DependentUpon>FrmTurma.cs</DependentUpon>
@@ -203,10 +194,14 @@
     <Content Include="Resources\cancel.jpg" />
     <Content Include="Resources\cifrão.jpg" />
     <Content Include="Resources\cifrão3.jpg" />
+    <Content Include="Resources\circled-left-2as.png" />
+    <Content Include="Resources\dasdasda.png" />
     <Content Include="Resources\errado2.jpg" />
+    <Content Include="Resources\fitt fundoOoo.png" />
     <Content Include="Resources\kisspng-check-mark-computer-icons-clip-art-green-tick-5abe6e2dae5689.4635117015224294857141.jpg" />
     <Content Include="Resources\logo.JPG" />
     <Content Include="Resources\lupa.jpg" />
+    <Content Include="Resources\round_keyboard_backspace_black_18dp.png" />
     <Content Include="Resources\suica-fitness-bola-D_NQ_NP_884311-MLB20526204570_122015-F.jpg" />
     <Content Include="Resources\user-2493635_960_720.png" />
     <Content Include="Resources\voltar.jpg" />

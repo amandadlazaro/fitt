@@ -40,6 +40,7 @@
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnCadastrarAdministrador = new System.Windows.Forms.Button();
             this.grpAdministrador = new System.Windows.Forms.DataGridView();
+            this.txtID = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpAdministrador)).BeginInit();
             this.SuspendLayout();
@@ -48,11 +49,11 @@
             // 
             this.lblAdministrador.AutoSize = true;
             this.lblAdministrador.BackColor = System.Drawing.Color.Transparent;
-            this.lblAdministrador.Font = new System.Drawing.Font("Agency FB", 24F);
+            this.lblAdministrador.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAdministrador.ForeColor = System.Drawing.Color.DeepPink;
             this.lblAdministrador.Location = new System.Drawing.Point(12, 31);
             this.lblAdministrador.Name = "lblAdministrador";
-            this.lblAdministrador.Size = new System.Drawing.Size(158, 40);
+            this.lblAdministrador.Size = new System.Drawing.Size(217, 37);
             this.lblAdministrador.TabIndex = 79;
             this.lblAdministrador.Text = "Administrador";
             // 
@@ -60,17 +61,17 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(136, 164);
+            this.label6.Location = new System.Drawing.Point(47, 150);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 28);
+            this.label6.Size = new System.Drawing.Size(72, 25);
             this.label6.TabIndex = 86;
             this.label6.Text = "E-mail";
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(214, 170);
+            this.txtEmail.Location = new System.Drawing.Point(125, 156);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(384, 20);
             this.txtEmail.TabIndex = 85;
@@ -79,18 +80,19 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Agency FB", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(136, 211);
+            this.label1.Location = new System.Drawing.Point(47, 197);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 28);
+            this.label1.Size = new System.Drawing.Size(74, 25);
             this.label1.TabIndex = 88;
             this.label1.Text = "Senha";
             // 
             // txtSenha
             // 
-            this.txtSenha.Location = new System.Drawing.Point(214, 217);
+            this.txtSenha.Location = new System.Drawing.Point(125, 203);
             this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(384, 20);
             this.txtSenha.TabIndex = 87;
             // 
@@ -100,7 +102,7 @@
             this.btnEditarAdministrador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarAdministrador.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarAdministrador.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnEditarAdministrador.Location = new System.Drawing.Point(598, 356);
+            this.btnEditarAdministrador.Location = new System.Drawing.Point(599, 356);
             this.btnEditarAdministrador.Name = "btnEditarAdministrador";
             this.btnEditarAdministrador.Size = new System.Drawing.Size(119, 27);
             this.btnEditarAdministrador.TabIndex = 90;
@@ -171,10 +173,20 @@
             // 
             this.grpAdministrador.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.grpAdministrador.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grpAdministrador.Location = new System.Drawing.Point(0, 101);
+            this.grpAdministrador.Location = new System.Drawing.Point(5, 134);
             this.grpAdministrador.Name = "grpAdministrador";
             this.grpAdministrador.Size = new System.Drawing.Size(732, 178);
-            this.grpAdministrador.TabIndex = 96;
+            this.grpAdministrador.TabIndex = 89;
+            this.grpAdministrador.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpAdministrador_CellDoubleClick);
+            // 
+            // txtID
+            // 
+            this.txtID.Enabled = false;
+            this.txtID.Location = new System.Drawing.Point(304, 16);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(100, 20);
+            this.txtID.TabIndex = 96;
+            this.txtID.Visible = false;
             // 
             // FrmAdministrador
             // 
@@ -182,12 +194,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(739, 450);
-            this.Controls.Add(this.grpAdministrador);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.btnCadastrarAdministrador);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnFecharTela);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnEditarAdministrador);
+            this.Controls.Add(this.grpAdministrador);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.label6);
@@ -218,5 +231,6 @@
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnCadastrarAdministrador;
         private System.Windows.Forms.DataGridView grpAdministrador;
+        private System.Windows.Forms.TextBox txtID;
     }
 }

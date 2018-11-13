@@ -32,9 +32,7 @@
             this.btnFecharTela = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnExcluirProfessor = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnSalvar = new System.Windows.Forms.Button();
             this.lblNome = new System.Windows.Forms.Label();
             this.lblSexo = new System.Windows.Forms.Label();
             this.lblEndereco = new System.Windows.Forms.Label();
@@ -53,8 +51,6 @@
             this.rbAula1 = new System.Windows.Forms.RadioButton();
             this.panelTipo = new System.Windows.Forms.Panel();
             this.panelAulas = new System.Windows.Forms.Panel();
-            this.maskDataInicial = new System.Windows.Forms.MaskedTextBox();
-            this.maskDataFinal = new System.Windows.Forms.MaskedTextBox();
             this.cmbSexo = new System.Windows.Forms.ComboBox();
             this.lblAulas = new System.Windows.Forms.Label();
             this.lblTipo = new System.Windows.Forms.Label();
@@ -68,14 +64,19 @@
             this.cmbSemana3 = new System.Windows.Forms.ComboBox();
             this.cmbTurma3 = new System.Windows.Forms.ComboBox();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.maskDataNasc = new System.Windows.Forms.MaskedTextBox();
             this.maskCel = new System.Windows.Forms.MaskedTextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.maskCPF = new System.Windows.Forms.MaskedTextBox();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.txtValorMensal = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.maskDataInicial = new System.Windows.Forms.DateTimePicker();
+            this.maskDataFinal = new System.Windows.Forms.DateTimePicker();
+            this.maskDataNasc = new System.Windows.Forms.DateTimePicker();
+            this.cbStatus = new System.Windows.Forms.CheckBox();
             this.btnCadastrar = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnVoltar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panelTipo.SuspendLayout();
             this.panelAulas.SuspendLayout();
@@ -85,11 +86,12 @@
             // 
             this.btnFecharTela.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFecharTela.BackgroundImage")));
             this.btnFecharTela.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFecharTela.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFecharTela.FlatAppearance.BorderSize = 0;
             this.btnFecharTela.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFecharTela.Location = new System.Drawing.Point(698, 0);
+            this.btnFecharTela.Location = new System.Drawing.Point(713, 4);
             this.btnFecharTela.Name = "btnFecharTela";
-            this.btnFecharTela.Size = new System.Drawing.Size(45, 36);
+            this.btnFecharTela.Size = new System.Drawing.Size(25, 25);
             this.btnFecharTela.TabIndex = 25;
             this.btnFecharTela.UseVisualStyleBackColor = true;
             this.btnFecharTela.Click += new System.EventHandler(this.btnFecharTela_Click);
@@ -102,9 +104,9 @@
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.pictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pictureBox3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.InitialImage")));
-            this.pictureBox3.Location = new System.Drawing.Point(12, 303);
+            this.pictureBox3.Location = new System.Drawing.Point(0, 308);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(71, 65);
+            this.pictureBox3.Size = new System.Drawing.Size(78, 73);
             this.pictureBox3.TabIndex = 36;
             this.pictureBox3.TabStop = false;
             // 
@@ -112,58 +114,28 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Agency FB", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Agency FB", 18F);
             this.label1.ForeColor = System.Drawing.Color.DeepPink;
-            this.label1.Location = new System.Drawing.Point(-1, 10);
+            this.label1.Location = new System.Drawing.Point(34, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 40);
+            this.label1.Size = new System.Drawing.Size(94, 28);
             this.label1.TabIndex = 40;
-            this.label1.Text = "Matrícula";
-            // 
-            // btnExcluirProfessor
-            // 
-            this.btnExcluirProfessor.BackColor = System.Drawing.Color.Transparent;
-            this.btnExcluirProfessor.Enabled = false;
-            this.btnExcluirProfessor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluirProfessor.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluirProfessor.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnExcluirProfessor.Location = new System.Drawing.Point(651, 339);
-            this.btnExcluirProfessor.Name = "btnExcluirProfessor";
-            this.btnExcluirProfessor.Size = new System.Drawing.Size(80, 27);
-            this.btnExcluirProfessor.TabIndex = 43;
-            this.btnExcluirProfessor.Text = "Excluir";
-            this.btnExcluirProfessor.UseVisualStyleBackColor = false;
-            this.btnExcluirProfessor.Visible = false;
+            this.label1.Text = "MATRÍCULA";
             // 
             // btnExcluir
             // 
-            this.btnExcluir.BackColor = System.Drawing.Color.Transparent;
+            this.btnExcluir.BackColor = System.Drawing.Color.DeepPink;
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluir.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnExcluir.Location = new System.Drawing.Point(557, 339);
+            this.btnExcluir.Font = new System.Drawing.Font("Agency FB", 14F);
+            this.btnExcluir.ForeColor = System.Drawing.Color.White;
+            this.btnExcluir.Location = new System.Drawing.Point(652, 350);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(80, 27);
+            this.btnExcluir.Size = new System.Drawing.Size(80, 31);
             this.btnExcluir.TabIndex = 42;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
             this.btnExcluir.Visible = false;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.BackColor = System.Drawing.Color.DeepPink;
-            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSalvar.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.ForeColor = System.Drawing.Color.White;
-            this.btnSalvar.Location = new System.Drawing.Point(651, 339);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(80, 27);
-            this.btnSalvar.TabIndex = 95;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = false;
-            this.btnSalvar.Visible = false;
-            this.btnSalvar.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // lblNome
             // 
@@ -390,34 +362,16 @@
             this.panelAulas.Size = new System.Drawing.Size(171, 31);
             this.panelAulas.TabIndex = 113;
             // 
-            // maskDataInicial
-            // 
-            this.maskDataInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.maskDataInicial.Location = new System.Drawing.Point(474, 130);
-            this.maskDataInicial.Mask = "00/00/0000";
-            this.maskDataInicial.Name = "maskDataInicial";
-            this.maskDataInicial.Size = new System.Drawing.Size(100, 21);
-            this.maskDataInicial.TabIndex = 139;
-            // 
-            // maskDataFinal
-            // 
-            this.maskDataFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.maskDataFinal.Location = new System.Drawing.Point(474, 165);
-            this.maskDataFinal.Mask = "00/00/0000";
-            this.maskDataFinal.Name = "maskDataFinal";
-            this.maskDataFinal.Size = new System.Drawing.Size(100, 21);
-            this.maskDataFinal.TabIndex = 140;
-            // 
             // cmbSexo
             // 
-            this.cmbSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.cmbSexo.Font = new System.Drawing.Font("Bahnschrift Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSexo.FormattingEnabled = true;
             this.cmbSexo.Items.AddRange(new object[] {
             "Feminino",
             "Masculino"});
             this.cmbSexo.Location = new System.Drawing.Point(240, 277);
             this.cmbSexo.Name = "cmbSexo";
-            this.cmbSexo.Size = new System.Drawing.Size(108, 23);
+            this.cmbSexo.Size = new System.Drawing.Size(108, 22);
             this.cmbSexo.TabIndex = 135;
             // 
             // lblAulas
@@ -450,7 +404,7 @@
             this.lblValorMensal.BackColor = System.Drawing.Color.Transparent;
             this.lblValorMensal.Font = new System.Drawing.Font("Agency FB", 15F);
             this.lblValorMensal.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.lblValorMensal.Location = new System.Drawing.Point(262, 326);
+            this.lblValorMensal.Location = new System.Drawing.Point(305, 339);
             this.lblValorMensal.Name = "lblValorMensal";
             this.lblValorMensal.Size = new System.Drawing.Size(84, 24);
             this.lblValorMensal.TabIndex = 119;
@@ -482,16 +436,16 @@
             // 
             // cmbTurma1
             // 
-            this.cmbTurma1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.cmbTurma1.Font = new System.Drawing.Font("Bahnschrift Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTurma1.FormattingEnabled = true;
             this.cmbTurma1.Location = new System.Drawing.Point(512, 228);
             this.cmbTurma1.Name = "cmbTurma1";
-            this.cmbTurma1.Size = new System.Drawing.Size(100, 23);
+            this.cmbTurma1.Size = new System.Drawing.Size(100, 22);
             this.cmbTurma1.TabIndex = 146;
             // 
             // cmbSemana1
             // 
-            this.cmbSemana1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.cmbSemana1.Font = new System.Drawing.Font("Bahnschrift Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSemana1.FormattingEnabled = true;
             this.cmbSemana1.Items.AddRange(new object[] {
             "Segunda",
@@ -501,14 +455,14 @@
             "Sexta"});
             this.cmbSemana1.Location = new System.Drawing.Point(399, 230);
             this.cmbSemana1.Name = "cmbSemana1";
-            this.cmbSemana1.Size = new System.Drawing.Size(100, 23);
+            this.cmbSemana1.Size = new System.Drawing.Size(100, 22);
             this.cmbSemana1.TabIndex = 145;
             this.cmbSemana1.SelectedIndexChanged += new System.EventHandler(this.cmbSemana1_SelectedIndexChanged);
             // 
             // cmbSemana2
             // 
             this.cmbSemana2.Enabled = false;
-            this.cmbSemana2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.cmbSemana2.Font = new System.Drawing.Font("Bahnschrift Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSemana2.FormattingEnabled = true;
             this.cmbSemana2.Items.AddRange(new object[] {
             "Segunda",
@@ -518,24 +472,24 @@
             "Sexta"});
             this.cmbSemana2.Location = new System.Drawing.Point(399, 257);
             this.cmbSemana2.Name = "cmbSemana2";
-            this.cmbSemana2.Size = new System.Drawing.Size(100, 23);
+            this.cmbSemana2.Size = new System.Drawing.Size(100, 22);
             this.cmbSemana2.TabIndex = 147;
             this.cmbSemana2.SelectedIndexChanged += new System.EventHandler(this.cmbSemana2_SelectedIndexChanged);
             // 
             // cmbTurma2
             // 
             this.cmbTurma2.Enabled = false;
-            this.cmbTurma2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.cmbTurma2.Font = new System.Drawing.Font("Bahnschrift Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTurma2.FormattingEnabled = true;
             this.cmbTurma2.Location = new System.Drawing.Point(512, 256);
             this.cmbTurma2.Name = "cmbTurma2";
-            this.cmbTurma2.Size = new System.Drawing.Size(100, 23);
+            this.cmbTurma2.Size = new System.Drawing.Size(100, 22);
             this.cmbTurma2.TabIndex = 148;
             // 
             // cmbSemana3
             // 
             this.cmbSemana3.Enabled = false;
-            this.cmbSemana3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.cmbSemana3.Font = new System.Drawing.Font("Bahnschrift Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSemana3.FormattingEnabled = true;
             this.cmbSemana3.Items.AddRange(new object[] {
             "Segunda",
@@ -545,80 +499,70 @@
             "Sexta"});
             this.cmbSemana3.Location = new System.Drawing.Point(399, 284);
             this.cmbSemana3.Name = "cmbSemana3";
-            this.cmbSemana3.Size = new System.Drawing.Size(100, 23);
+            this.cmbSemana3.Size = new System.Drawing.Size(100, 22);
             this.cmbSemana3.TabIndex = 149;
             this.cmbSemana3.SelectedIndexChanged += new System.EventHandler(this.cmbSemana3_SelectedIndexChanged);
             // 
             // cmbTurma3
             // 
             this.cmbTurma3.Enabled = false;
-            this.cmbTurma3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.cmbTurma3.Font = new System.Drawing.Font("Bahnschrift Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTurma3.FormattingEnabled = true;
             this.cmbTurma3.Location = new System.Drawing.Point(512, 284);
             this.cmbTurma3.Name = "cmbTurma3";
-            this.cmbTurma3.Size = new System.Drawing.Size(100, 23);
+            this.cmbTurma3.Size = new System.Drawing.Size(100, 22);
             this.cmbTurma3.TabIndex = 150;
             // 
             // txtNome
             // 
-            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Font = new System.Drawing.Font("Bahnschrift Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(95, 80);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(251, 21);
+            this.txtNome.Size = new System.Drawing.Size(251, 22);
             this.txtNome.TabIndex = 129;
             this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FiltrarLetraMaiuscula);
             // 
-            // maskDataNasc
-            // 
-            this.maskDataNasc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.maskDataNasc.Location = new System.Drawing.Point(95, 130);
-            this.maskDataNasc.Mask = "00/00/0000";
-            this.maskDataNasc.Name = "maskDataNasc";
-            this.maskDataNasc.Size = new System.Drawing.Size(106, 21);
-            this.maskDataNasc.TabIndex = 130;
-            this.maskDataNasc.ValidatingType = typeof(System.DateTime);
-            // 
             // maskCel
             // 
-            this.maskCel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.maskCel.Font = new System.Drawing.Font("Bahnschrift Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maskCel.Location = new System.Drawing.Point(238, 131);
             this.maskCel.Mask = "(99)0000-0000";
             this.maskCel.Name = "maskCel";
-            this.maskCel.Size = new System.Drawing.Size(108, 21);
+            this.maskCel.Size = new System.Drawing.Size(108, 22);
             this.maskCel.TabIndex = 131;
             this.maskCel.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // txtEmail
             // 
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.txtEmail.Font = new System.Drawing.Font("Bahnschrift Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(95, 180);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(251, 21);
+            this.txtEmail.Size = new System.Drawing.Size(251, 22);
             this.txtEmail.TabIndex = 132;
             // 
             // maskCPF
             // 
-            this.maskCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.maskCPF.Font = new System.Drawing.Font("Bahnschrift Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maskCPF.Location = new System.Drawing.Point(95, 279);
             this.maskCPF.Mask = "999.999.999-99";
             this.maskCPF.Name = "maskCPF";
-            this.maskCPF.Size = new System.Drawing.Size(115, 21);
+            this.maskCPF.Size = new System.Drawing.Size(115, 22);
             this.maskCPF.TabIndex = 134;
             this.maskCPF.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // txtEndereco
             // 
-            this.txtEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.txtEndereco.Font = new System.Drawing.Font("Bahnschrift Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEndereco.Location = new System.Drawing.Point(95, 230);
             this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(251, 21);
+            this.txtEndereco.Size = new System.Drawing.Size(251, 22);
             this.txtEndereco.TabIndex = 133;
             // 
             // txtValorMensal
             // 
             this.txtValorMensal.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtValorMensal.Font = new System.Drawing.Font("Agency FB", 15F);
-            this.txtValorMensal.Location = new System.Drawing.Point(378, 326);
+            this.txtValorMensal.Location = new System.Drawing.Point(421, 339);
             this.txtValorMensal.Name = "txtValorMensal";
             this.txtValorMensal.Size = new System.Drawing.Size(94, 24);
             this.txtValorMensal.TabIndex = 151;
@@ -630,25 +574,99 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Agency FB", 15F);
             this.label2.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(352, 326);
+            this.label2.Location = new System.Drawing.Point(395, 339);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(26, 24);
             this.label2.TabIndex = 152;
             this.label2.Text = "R$";
             // 
+            // maskDataInicial
+            // 
+            this.maskDataInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.maskDataInicial.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.maskDataInicial.Location = new System.Drawing.Point(474, 133);
+            this.maskDataInicial.Name = "maskDataInicial";
+            this.maskDataInicial.Size = new System.Drawing.Size(100, 21);
+            this.maskDataInicial.TabIndex = 154;
+            // 
+            // maskDataFinal
+            // 
+            this.maskDataFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.maskDataFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.maskDataFinal.Location = new System.Drawing.Point(474, 166);
+            this.maskDataFinal.Name = "maskDataFinal";
+            this.maskDataFinal.Size = new System.Drawing.Size(100, 21);
+            this.maskDataFinal.TabIndex = 155;
+            // 
+            // maskDataNasc
+            // 
+            this.maskDataNasc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.maskDataNasc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.maskDataNasc.Location = new System.Drawing.Point(95, 130);
+            this.maskDataNasc.Name = "maskDataNasc";
+            this.maskDataNasc.Size = new System.Drawing.Size(100, 21);
+            this.maskDataNasc.TabIndex = 156;
+            // 
+            // cbStatus
+            // 
+            this.cbStatus.AutoSize = true;
+            this.cbStatus.Checked = true;
+            this.cbStatus.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbStatus.Font = new System.Drawing.Font("Agency FB", 15F);
+            this.cbStatus.ForeColor = System.Drawing.Color.Black;
+            this.cbStatus.Location = new System.Drawing.Point(250, 49);
+            this.cbStatus.Name = "cbStatus";
+            this.cbStatus.Size = new System.Drawing.Size(96, 28);
+            this.cbStatus.TabIndex = 157;
+            this.cbStatus.Text = "Matriculado";
+            this.cbStatus.UseVisualStyleBackColor = true;
+            // 
             // btnCadastrar
             // 
-            this.btnCadastrar.BackColor = System.Drawing.Color.DeepPink;
-            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCadastrar.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrar.Location = new System.Drawing.Point(651, 339);
+            this.btnCadastrar.BackColor = System.Drawing.Color.White;
+            this.btnCadastrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrar.Font = new System.Drawing.Font("Agency FB", 14F);
+            this.btnCadastrar.ForeColor = System.Drawing.Color.DeepPink;
+            this.btnCadastrar.Location = new System.Drawing.Point(652, 350);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(80, 27);
-            this.btnCadastrar.TabIndex = 153;
+            this.btnCadastrar.Size = new System.Drawing.Size(80, 31);
+            this.btnCadastrar.TabIndex = 158;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalvar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvar.Font = new System.Drawing.Font("Agency FB", 14F);
+            this.btnSalvar.ForeColor = System.Drawing.Color.DeepPink;
+            this.btnSalvar.Location = new System.Drawing.Point(566, 350);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(80, 31);
+            this.btnSalvar.TabIndex = 159;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Visible = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnOk_Click);
+            // 
+            // btnVoltar
+            // 
+            this.btnVoltar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVoltar.BackgroundImage")));
+            this.btnVoltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVoltar.FlatAppearance.BorderSize = 0;
+            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoltar.Location = new System.Drawing.Point(0, -2);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(40, 38);
+            this.btnVoltar.TabIndex = 160;
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Visible = false;
             // 
             // FrmMatricula
             // 
@@ -657,14 +675,19 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(743, 387);
+            this.Controls.Add(this.btnVoltar);
+            this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnCadastrar);
+            this.Controls.Add(this.cbStatus);
+            this.Controls.Add(this.maskDataNasc);
+            this.Controls.Add(this.maskDataFinal);
+            this.Controls.Add(this.maskDataInicial);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtValorMensal);
             this.Controls.Add(this.txtEndereco);
             this.Controls.Add(this.maskCPF);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.maskCel);
-            this.Controls.Add(this.maskDataNasc);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.cmbTurma3);
             this.Controls.Add(this.cmbSemana3);
@@ -678,8 +701,6 @@
             this.Controls.Add(this.lblTipo);
             this.Controls.Add(this.lblAulas);
             this.Controls.Add(this.cmbSexo);
-            this.Controls.Add(this.maskDataFinal);
-            this.Controls.Add(this.maskDataInicial);
             this.Controls.Add(this.panelAulas);
             this.Controls.Add(this.panelTipo);
             this.Controls.Add(this.lblDataInicial);
@@ -691,8 +712,6 @@
             this.Controls.Add(this.lblEndereco);
             this.Controls.Add(this.lblSexo);
             this.Controls.Add(this.lblNome);
-            this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.btnExcluirProfessor);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
@@ -716,9 +735,7 @@
         private System.Windows.Forms.Button btnFecharTela;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnExcluirProfessor;
         private System.Windows.Forms.Button btnExcluir;
-        private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Label lblSexo;
         private System.Windows.Forms.Label lblEndereco;
@@ -737,8 +754,6 @@
         private System.Windows.Forms.RadioButton rbAula1;
         private System.Windows.Forms.Panel panelTipo;
         private System.Windows.Forms.Panel panelAulas;
-        private System.Windows.Forms.MaskedTextBox maskDataInicial;
-        private System.Windows.Forms.MaskedTextBox maskDataFinal;
         private System.Windows.Forms.ComboBox cmbSexo;
         private System.Windows.Forms.Label lblAulas;
         private System.Windows.Forms.Label lblTipo;
@@ -752,13 +767,18 @@
         private System.Windows.Forms.ComboBox cmbSemana3;
         private System.Windows.Forms.ComboBox cmbTurma3;
         private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.MaskedTextBox maskDataNasc;
         private System.Windows.Forms.MaskedTextBox maskCel;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.MaskedTextBox maskCPF;
         private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.TextBox txtValorMensal;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker maskDataInicial;
+        private System.Windows.Forms.DateTimePicker maskDataFinal;
+        private System.Windows.Forms.DateTimePicker maskDataNasc;
+        private System.Windows.Forms.CheckBox cbStatus;
         private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Button btnVoltar;
     }
 }

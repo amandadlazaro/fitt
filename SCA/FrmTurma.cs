@@ -67,21 +67,26 @@ namespace FittSistema.View
         {
             var turmaSegunda = turmaBLL.LerTurma("Segunda");
             grpSegunda.DataSource = turmaSegunda;
+            grpSegunda.Columns[2].HeaderText = "Dia da Semana"; 
 
             var turmaTerca = turmaBLL.LerTurma("Terça");
             grpTerca.DataSource = turmaTerca.ToList();
+            grpTerca.Columns[2].HeaderText = "Dia da Semana";
 
 
             var turmaQuarta = turmaBLL.LerTurma("Quarta");
             grpQuarta.DataSource = turmaQuarta.ToList();
+            grpQuarta.Columns[2].HeaderText = "Dia da Semana";
 
 
             var turmaQuinta = turmaBLL.LerTurma("Quinta");
             grpQuinta.DataSource = turmaQuinta.ToList();
+            grpQuinta.Columns[2].HeaderText = "Dia da Semana";
 
 
             var turmaSexta = turmaBLL.LerTurma("Sexta");
             grpSexta.DataSource = turmaSexta.ToList();
+            grpSexta.Columns[2].HeaderText = "Dia da Semana"; 
         }
 
         private string ValidaCampos()

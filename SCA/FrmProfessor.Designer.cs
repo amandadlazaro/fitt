@@ -67,7 +67,7 @@
             this.btnCadastrarProfessor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnCadastrarProfessor.FlatAppearance.BorderSize = 0;
             this.btnCadastrarProfessor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrarProfessor.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarProfessor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrarProfessor.ForeColor = System.Drawing.Color.DeepPink;
             this.btnCadastrarProfessor.Location = new System.Drawing.Point(675, 332);
             this.btnCadastrarProfessor.Name = "btnCadastrarProfessor";
@@ -80,7 +80,7 @@
             // 
             this.btnEditarProfessor.BackColor = System.Drawing.Color.Transparent;
             this.btnEditarProfessor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditarProfessor.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarProfessor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditarProfessor.ForeColor = System.Drawing.Color.DeepPink;
             this.btnEditarProfessor.Location = new System.Drawing.Point(565, 348);
             this.btnEditarProfessor.Name = "btnEditarProfessor";
@@ -110,6 +110,7 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(193, 20);
             this.txtNome.TabIndex = 2;
+            this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
             // 
             // txtEnd
             // 
@@ -125,6 +126,7 @@
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(192, 20);
             this.txtSenha.TabIndex = 8;
+            this.txtSenha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSenha_KeyDown);
             // 
             // txtEmail
             // 
@@ -137,11 +139,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Agency FB", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DeepPink;
             this.label1.Location = new System.Drawing.Point(-1, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 40);
+            this.label1.Size = new System.Drawing.Size(187, 37);
             this.label1.TabIndex = 23;
             this.label1.Text = "Professores";
             // 
@@ -149,11 +151,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.label2.Location = new System.Drawing.Point(71, 98);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 25);
+            this.label2.Size = new System.Drawing.Size(54, 25);
             this.label2.TabIndex = 24;
             this.label2.Text = "CPF";
             // 
@@ -161,11 +163,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.label3.Location = new System.Drawing.Point(370, 175);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 25);
+            this.label3.Size = new System.Drawing.Size(72, 25);
             this.label3.TabIndex = 25;
             this.label3.Text = "E-mail";
             // 
@@ -173,11 +175,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.label4.Location = new System.Drawing.Point(71, 220);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 25);
+            this.label4.Size = new System.Drawing.Size(104, 25);
             this.label4.TabIndex = 26;
             this.label4.Text = "Endereço";
             // 
@@ -185,11 +187,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.label5.Location = new System.Drawing.Point(71, 179);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 25);
+            this.label5.Size = new System.Drawing.Size(96, 25);
             this.label5.TabIndex = 27;
             this.label5.Text = "Telefone";
             // 
@@ -197,18 +199,18 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.label6.Location = new System.Drawing.Point(71, 135);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 25);
+            this.label6.Size = new System.Drawing.Size(68, 25);
             this.label6.TabIndex = 28;
             this.label6.Text = "Nome";
             // 
             // label7
             // 
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Agency FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.label7.Location = new System.Drawing.Point(371, 121);
             this.label7.Name = "label7";
@@ -220,11 +222,11 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.label8.Location = new System.Drawing.Point(370, 93);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(41, 25);
+            this.label8.Size = new System.Drawing.Size(61, 25);
             this.label8.TabIndex = 30;
             this.label8.Text = "Sexo";
             // 
@@ -232,11 +234,11 @@
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.label9.Location = new System.Drawing.Point(370, 218);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(49, 25);
+            this.label9.Size = new System.Drawing.Size(74, 25);
             this.label9.TabIndex = 31;
             this.label9.Text = "Senha";
             // 
@@ -262,7 +264,7 @@
             // 
             this.btnExcluirProfessor.BackColor = System.Drawing.Color.Transparent;
             this.btnExcluirProfessor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluirProfessor.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluirProfessor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluirProfessor.ForeColor = System.Drawing.Color.DeepPink;
             this.btnExcluirProfessor.Location = new System.Drawing.Point(651, 348);
             this.btnExcluirProfessor.Name = "btnExcluirProfessor";
@@ -329,6 +331,7 @@
             this.txtBusca.Name = "txtBusca";
             this.txtBusca.Size = new System.Drawing.Size(482, 20);
             this.txtBusca.TabIndex = 73;
+            this.txtBusca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
             // 
             // txtDtNasc
             // 
@@ -343,8 +346,9 @@
             this.grpProfessores.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.grpProfessores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grpProfessores.GridColor = System.Drawing.Color.LightCoral;
-            this.grpProfessores.Location = new System.Drawing.Point(-1, 96);
+            this.grpProfessores.Location = new System.Drawing.Point(-2, 96);
             this.grpProfessores.Name = "grpProfessores";
+            this.grpProfessores.ReadOnly = true;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

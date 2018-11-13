@@ -15,11 +15,22 @@ namespace SCA_BLL
             public int idBoleto { get; set; }
             public int idMatricula { get; set; }
             public string FormaDePagamento { get; set; }
-            public DateTime DtVencimento { get; set; }
-            public Nullable<double> Multa { get; set; }
             public Nullable<double> Desconto { get; set; }
             public double ValorTotal { get; set; }
             public DateTime DtPagamento { get; set; }
+            public bool status { get; set; }
+        }
+        public class PagamentoAluno
+        {
+            public int idBoleto { get; set; }
+            public string Nome { get; set; }
+            public string CPF { get; set; }
+            public DateTime DtPagamento { get; set; }
+            public string FormaDePagamento { get; set; }
+            public double ValorMensal { get; set; }
+            public Nullable<double> Desconto { get; set; }
+            public double ValorTotal { get; set; }
+            public bool Pago { get; set; }
         }
         #endregion
 
@@ -28,21 +39,70 @@ namespace SCA_BLL
 
         public IEnumerable<DadosBoleto> LerBoleto()
         {
-            var lista = bd.Boleto.Select(p => new DadosBoleto
+            return bd.Boleto.Select(p => new DadosBoleto
             {
                 idBoleto = p.idBoleto,
                 idMatricula = p.idMatricula,
                 FormaDePagamento = p.FormaDePagamento,
-                DtVencimento = p.DtVencimento,
-                Multa = p.Multa,
                 Desconto = p.Desconto,
                 ValorTotal = p.ValorTotal,
-                DtPagamento = p.DtPagamento
+                DtPagamento = p.DtPagamento,
+                status = p.status
             }).ToList();
-
-            return lista;
         }
 
+        public IEnumerable<DadosBoleto> ProcurarBoleto(int boleto)
+        {
+            return bd.Boleto.Where(b => b.idBoleto.Equals(boleto))
+                .Select(p => new DadosBoleto
+                {
+                    idBoleto = p.idBoleto,
+                    idMatricula = p.idMatricula,
+                    FormaDePagamento = p.FormaDePagamento,
+                    Desconto = p.Desconto,
+                    ValorTotal = p.ValorTotal,
+                    DtPagamento = p.DtPagamento,
+                    status = p.status
+                }).ToList();
+        }
+
+        public IEnumerable<PagamentoAluno> LerPagamentoAluno()
+        {
+            return bd.Boleto
+                .Join(bd.Matricula, b => b.idMatricula, m => m.idMatricula, (b, m) => new { b, m })
+                .Join(bd.Aluno, bm => bm.m.CPF, a => a.CPF, (bm, a) => new PagamentoAluno
+                {
+                    idBoleto = bm.b.idBoleto,
+                    Nome = a.Nome,
+                    CPF = a.CPF,
+                    DtPagamento = bm.b.DtPagamento,
+                    FormaDePagamento = bm.b.FormaDePagamento,
+                    ValorMensal = bm.m.ValorMensal,
+                    Desconto = bm.b.Desconto,
+                    ValorTotal = bm.b.ValorTotal,
+                    Pago = bm.b.status
+                }).ToList();
+        }
+
+        public IEnumerable<PagamentoAluno> ProcurarPagamentoAluno(string nomeAluno)
+        {
+            return bd.Boleto
+                .Join(bd.Matricula, b => b.idMatricula, m => m.idMatricula, (b, m) => new { b, m })
+                .Join(bd.Aluno, bm => bm.m.CPF, a => a.CPF, (bm, a) => new {bm, a})
+                .Where(bma => bma.a.Nome.Contains(nomeAluno))
+                .Select(bma => new PagamentoAluno
+                {
+                    idBoleto = bma.bm.b.idBoleto,
+                    Nome = bma.a.Nome,
+                    CPF = bma.a.CPF,
+                    DtPagamento = bma.bm.b.DtPagamento,
+                    FormaDePagamento = bma.bm.b.FormaDePagamento,
+                    ValorMensal = bma.bm.m.ValorMensal,
+                    Desconto = bma.bm.b.Desconto,
+                    ValorTotal = bma.bm.b.ValorTotal,
+                    Pago = bma.bm.b.status 
+                }).ToList();
+        }
 
         public string Adicionar(Boleto boleto)
         {
@@ -75,11 +135,11 @@ namespace SCA_BLL
 
         }
 
-        public string Deletar(Boleto boleto)
+        public string Deletar(int boleto)
         {
             try
             {
-                var t = bd.Boleto.First(tm => tm.idBoleto == boleto.idBoleto);
+                var t = bd.Boleto.First(tm => tm.idBoleto == boleto);
                 if (t == null) return null;
                 bd.Boleto.Remove(t);
                 bd.SaveChanges();

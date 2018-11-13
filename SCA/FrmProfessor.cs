@@ -75,6 +75,7 @@ namespace FittSistema.View
                 }
                 else
                 {
+                    
                     var prof = new Professor
                     {
                         CPF = txtCPF.Text,
@@ -84,7 +85,7 @@ namespace FittSistema.View
                         Sexo = cmbSexo.SelectedItem.ToString(),
                         DataNasc = DateTime.ParseExact(txtDtNasc.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
                         Email = txtEmail.Text,
-                        Senha = Util.Util.criptografarSenha(txtSenha.Text)
+                        Senha = txtSenha.Text,
                     };
                     MessageBox.Show(professorBLL.AlterarProfessor(prof));
                     listarProfessores();
@@ -152,6 +153,8 @@ namespace FittSistema.View
         {
             var professores = professorBLL.LerProfessor();
             grpProfessores.DataSource = professores.ToList();
+            grpProfessores.Columns[7].Visible = false;
+            grpProfessores.Columns[5].HeaderText = "Data de Nascimento";
         }
 
         private string ValidaCampos()
@@ -248,6 +251,17 @@ namespace FittSistema.View
             btnEditarProfessor.Show();
             btnExcluirProfessor.Show();
             btnVoltar.Show();
+        }
+
+        private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.KeyChar = Util.FiltrarTeclas.letraMaiuscula(e.KeyChar);
+        }
+
+        private void txtSenha_KeyDown(object sender, KeyEventArgs e)
+        {
+            txtSenha.Text = Util.Util.criptografarSenha(txtSenha.Text);
+
         }
     }
 }

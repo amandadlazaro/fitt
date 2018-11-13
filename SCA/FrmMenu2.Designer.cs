@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMenu2));
             this.btnAnamnese = new System.Windows.Forms.Button();
-            this.btnFecharPgm = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -46,20 +46,20 @@
             this.btnAnamnese.TabIndex = 4;
             this.btnAnamnese.Text = "Anamnese";
             this.btnAnamnese.UseVisualStyleBackColor = true;
-            this.btnAnamnese.Click += new System.EventHandler(this.btnTurma_Click);
+            this.btnAnamnese.Click += new System.EventHandler(this.btnAnamnese_Click);
             // 
-            // btnFecharPgm
+            // btnCancelar
             // 
-            this.btnFecharPgm.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFecharPgm.BackgroundImage")));
-            this.btnFecharPgm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnFecharPgm.FlatAppearance.BorderSize = 0;
-            this.btnFecharPgm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFecharPgm.Location = new System.Drawing.Point(700, 0);
-            this.btnFecharPgm.Name = "btnFecharPgm";
-            this.btnFecharPgm.Size = new System.Drawing.Size(45, 36);
-            this.btnFecharPgm.TabIndex = 10;
-            this.btnFecharPgm.UseVisualStyleBackColor = true;
-            this.btnFecharPgm.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.btnCancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancelar.BackgroundImage")));
+            this.btnCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Location = new System.Drawing.Point(713, 4);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(25, 25);
+            this.btnCancelar.TabIndex = 10;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // pictureBox3
             // 
@@ -69,9 +69,9 @@
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.pictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pictureBox3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.InitialImage")));
-            this.pictureBox3.Location = new System.Drawing.Point(10, 301);
+            this.pictureBox3.Location = new System.Drawing.Point(0, 308);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(86, 74);
+            this.pictureBox3.Size = new System.Drawing.Size(78, 73);
             this.pictureBox3.TabIndex = 35;
             this.pictureBox3.TabStop = false;
             // 
@@ -83,7 +83,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(743, 387);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.btnFecharPgm);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAnamnese);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -99,7 +99,7 @@
 
         #endregion
         private System.Windows.Forms.Button btnAnamnese;
-        private System.Windows.Forms.Button btnFecharPgm;
+        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

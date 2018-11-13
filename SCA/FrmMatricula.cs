@@ -150,7 +150,13 @@ namespace FittSistema.View
 
             if (cmbSexo.SelectedIndex.Equals(-1))
             {
-                MessageBox.Show("Preencha todos os campos!");
+                MessageBox.Show("Selecione o sexo!");
+                return false;
+            }
+
+            if (!Util.Util.validarEmail(txtEmail.Text))
+            {
+                MessageBox.Show("Email Inválido");
                 return false;
             }
 
@@ -158,7 +164,7 @@ namespace FittSistema.View
             {
                 if (cmbSemana1.SelectedIndex.Equals(-1) || cmbTurma1.SelectedIndex.Equals(-1))
                 {
-                    MessageBox.Show("Preencha todos os campos!");
+                    MessageBox.Show("Seleciona o horario das aulas!");
                     return false;
                 }
             }
@@ -168,7 +174,12 @@ namespace FittSistema.View
                 if (cmbSemana1.SelectedIndex.Equals(-1) || cmbTurma1.SelectedIndex.Equals(-1) ||
                     cmbSemana2.SelectedIndex.Equals(-1) || cmbTurma2.SelectedIndex.Equals(-1))
                 {
-                    MessageBox.Show("Preencha todos os campos!");
+                    MessageBox.Show("Selecione o horario das aulas!");
+                    return false;
+                }
+                if (cmbTurma1.SelectedValue.ToString() == cmbTurma2.SelectedValue.ToString())
+                {
+                    MessageBox.Show("Não pode selecionar a mesma aula mais de uma vez!");
                     return false;
                 }
             }
@@ -179,10 +190,18 @@ namespace FittSistema.View
                     cmbSemana2.SelectedIndex.Equals(-1) || cmbTurma2.SelectedIndex.Equals(-1) ||
                     cmbSemana3.SelectedIndex.Equals(-1) || cmbTurma3.SelectedIndex.Equals(-1))
                 {
-                    MessageBox.Show("Preencha todos os campos!");
+                    MessageBox.Show("Selecione o horario das aulas!");
+                    return false;
+                }
+                if (cmbTurma1.SelectedValue.ToString() == cmbTurma2.SelectedValue.ToString() ||
+                    cmbTurma1.SelectedValue.ToString() == cmbTurma3.SelectedValue.ToString() ||
+                    cmbTurma2.SelectedValue.ToString() == cmbTurma3.SelectedValue.ToString())
+                {
+                    MessageBox.Show("Não pode selecionar a mesma aula mais de uma vez!");
                     return false;
                 }
             }
+
             return true;
         }
 
@@ -236,30 +255,30 @@ namespace FittSistema.View
                     default:
                         break;
                 }
+            }
 
-                if (rbAula3.Checked)
+            if (rbAula3.Checked)
+            {
+                switch (DevolveTipo())
                 {
-                    switch (DevolveTipo())
-                    {
-                        case ("Mensal"):
-                            txtValorMensal.Text = "480,00";
-                            break;
+                    case ("Mensal"):
+                        txtValorMensal.Text = "480,00";
+                        break;
 
-                        case ("Trimestral"):
-                            txtValorMensal.Text = "420,00";
-                            break;
+                    case ("Trimestral"):
+                        txtValorMensal.Text = "420,00";
+                        break;
 
-                        case ("Semestral"):
-                            txtValorMensal.Text = "360,00";
-                            break;
+                    case ("Semestral"):
+                        txtValorMensal.Text = "360,00";
+                        break;
 
-                        case ("Anual"):
-                            txtValorMensal.Text = "300,00";
-                            break;
+                    case ("Anual"):
+                        txtValorMensal.Text = "300,00";
+                        break;
 
-                        default:
-                            break;
-                    }
+                    default:
+                        break;
                 }
             }
         }
@@ -316,6 +335,7 @@ namespace FittSistema.View
             maskDataNasc.Text = AlunosMatriculadosBLL.DataNasc;
             cmbSexo.Text = AlunosMatriculadosBLL.Sexo;
             txtEmail.Text = AlunosMatriculadosBLL.Email;
+            cbStatus.Checked = AlunosMatriculadosBLL.SituacaoMatricula;
 
             maskDataInicial.Text = AlunosMatriculadosBLL.DataInicio;
             maskDataFinal.Text = AlunosMatriculadosBLL.DataFim;
@@ -389,77 +409,7 @@ namespace FittSistema.View
 
         private void btnOk_Click(object sender, EventArgs e)
         {
-            if (!ValidarCampos())
-            {
-                return;
-            }
 
-            DialogResult Confirmacao = MessageBox.Show("Voce quer mesmo salvar essas alterações ?", "Alterar Matricula", MessageBoxButtons.YesNo);
-            if (Confirmacao == DialogResult.No)
-            {
-                return;
-            }
-
-            try
-            {
-                int? turmaDois = null;
-                if (DevolveAula() >= 2)
-                {
-                    turmaDois = Int32.Parse(cmbTurma2.SelectedValue.ToString());
-                }
-                int? turmaTres = null;
-                if (DevolveAula() == 3)
-                {
-                    turmaTres = Int32.Parse(cmbTurma3.SelectedValue.ToString());
-                }
-
-                matricula = new Matricula
-                {
-                    idMatricula = AlunosMatriculadosBLL.idMatricula,
-                    CPF = maskCPF.Text,
-                    idTurma = Int32.Parse(cmbTurma1.SelectedValue.ToString()),
-                    TipoPlano = DevolveTipo(),
-                    ValorMensal = 10.10,
-                    DataInicio = DateTime.ParseExact(maskDataInicial.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
-                    DataFim = DateTime.ParseExact(maskDataFinal.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
-                    SituacaoMatricula = true,
-                    QtdeAulas = DevolveAula(),
-                    idTurma2 = turmaDois,
-                    idTurma3 = turmaTres,
-                };
-                aluno = new Aluno
-                {
-                    CPF = maskCPF.Text,
-                    Nome = txtNome.Text,
-                    Endereco = txtEndereco.Text,
-                    Telefone = maskCel.Text,
-                    DataNasc = DateTime.ParseExact(maskDataNasc.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
-                    Sexo = cmbSexo.SelectedItem.ToString(),
-                    Email = txtEmail.Text
-                };
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show(err.ToString());
-                return;
-            }
-
-            string mensagemAlterarMatricula = matriculaBLL.Alterar(matricula);
-            if (mensagemAlterarMatricula != "Matricula Alterada com Sucesso")
-            {
-                MessageBox.Show(mensagemAlterarMatricula);
-                return;
-            }
-
-            string mensagemAlterarAluno = alunoBLL.AlterarAluno(aluno);
-            if (mensagemAlterarAluno != "Aluno Alterado com Sucesso")
-            {
-                MessageBox.Show(mensagemAlterarAluno);
-                return;
-            }
-
-            MessageBox.Show(mensagemAlterarAluno);
-            btnFecharTela.PerformClick();
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
@@ -488,7 +438,7 @@ namespace FittSistema.View
                     Nome = txtNome.Text,
                     Endereco = txtEndereco.Text,
                     Telefone = maskCel.Text,
-                    DataNasc = DateTime.ParseExact(maskDataNasc.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
+                    DataNasc = maskDataNasc.Value,
                     Sexo = cmbSexo.SelectedItem.ToString(),
                     Email = txtEmail.Text
                 };
@@ -500,9 +450,9 @@ namespace FittSistema.View
                     idTurma3 = turmaTres,
                     TipoPlano = DevolveTipo(),
                     ValorMensal = double.Parse(txtValorMensal.Text),
-                    DataInicio = DateTime.ParseExact(maskDataInicial.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
-                    DataFim = DateTime.ParseExact(maskDataFinal.Text, "dd/MM/yyyy", CultureInfo.InvariantCulture),
-                    SituacaoMatricula = true,
+                    DataInicio = maskDataInicial.Value,
+                    DataFim = maskDataFinal.Value,
+                    SituacaoMatricula = cbStatus.Checked,
                     QtdeAulas = DevolveAula()
                 };
             }
@@ -563,5 +513,6 @@ namespace FittSistema.View
         }
 
         #endregion
+
     }
 }

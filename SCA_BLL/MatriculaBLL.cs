@@ -24,6 +24,16 @@ namespace SCA_BLL
             public Nullable<int> idTurma2 { get; set; }
             public Nullable<int> idTurma3 { get; set; }
         }
+
+        public class AlunosMatriculados
+        {
+            public string Nome { get; set; }
+            public string CPF { get; set; }
+            public string TipoPlano { get; set; }
+            public double ValorMensal { get; set; }
+            public int QtdeAulas { get; set; }
+            public bool SituacaoMatricula { get; set; }
+        }
         #endregion
 
         public FittDataBaseEntities bd = new FittDataBaseEntities();
@@ -120,6 +130,36 @@ namespace SCA_BLL
                 }).ToList();
 
             return data;
+        }
+
+        public IEnumerable<AlunosMatriculados> ProcurarAlunosMatriculados(string nome)
+        {
+            return bd.Matricula
+                .Join(bd.Aluno, m => m.CPF, a => a.CPF, (m, a) => new { m, a })
+                .Where(ma => ma.a.Nome.Contains(nome))
+                .Select( ma => new AlunosMatriculados
+                {
+                    Nome = ma.a.Nome,
+                    CPF = ma.a.CPF,
+                    TipoPlano = ma.m.TipoPlano,
+                    ValorMensal = ma.m.ValorMensal,
+                    QtdeAulas = ma.m.QtdeAulas,
+                    SituacaoMatricula = ma.m.SituacaoMatricula,
+                }).ToList();
+        }
+
+        public IEnumerable<AlunosMatriculados> LerAlunosMatriculados()
+        {
+            return bd.Matricula
+                .Join(bd.Aluno, m => m.CPF, a => a.CPF, (m, a) => new AlunosMatriculados
+                {
+                    Nome = a.Nome,
+                    CPF = a.CPF,
+                    TipoPlano = m.TipoPlano,
+                    ValorMensal = m.ValorMensal,
+                    QtdeAulas = m.QtdeAulas,
+                    SituacaoMatricula = m.SituacaoMatricula,
+                }).ToList();
         }
 
         #endregion

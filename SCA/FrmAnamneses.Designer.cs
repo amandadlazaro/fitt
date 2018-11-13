@@ -72,12 +72,12 @@
             // 
             // txtBusca
             // 
-            this.txtBusca.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBusca.Font = new System.Drawing.Font("맑은 고딕", 12F);
             this.txtBusca.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.txtBusca.Location = new System.Drawing.Point(164, 48);
+            this.txtBusca.Location = new System.Drawing.Point(196, 42);
             this.txtBusca.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtBusca.Name = "txtBusca";
-            this.txtBusca.Size = new System.Drawing.Size(401, 27);
+            this.txtBusca.Size = new System.Drawing.Size(401, 29);
             this.txtBusca.TabIndex = 1;
             this.txtBusca.Text = "Buscar por Aluno";
             this.txtBusca.Enter += new System.EventHandler(this.txtBusca_Enter);
@@ -89,12 +89,13 @@
             this.btnBuscarAnamnese.BackColor = System.Drawing.Color.Transparent;
             this.btnBuscarAnamnese.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBuscarAnamnese.BackgroundImage")));
             this.btnBuscarAnamnese.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBuscarAnamnese.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscarAnamnese.FlatAppearance.BorderSize = 0;
             this.btnBuscarAnamnese.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarAnamnese.Location = new System.Drawing.Point(571, 51);
+            this.btnBuscarAnamnese.Location = new System.Drawing.Point(602, 42);
             this.btnBuscarAnamnese.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnBuscarAnamnese.Name = "btnBuscarAnamnese";
-            this.btnBuscarAnamnese.Size = new System.Drawing.Size(32, 20);
+            this.btnBuscarAnamnese.Size = new System.Drawing.Size(30, 30);
             this.btnBuscarAnamnese.TabIndex = 2;
             this.btnBuscarAnamnese.UseVisualStyleBackColor = false;
             this.btnBuscarAnamnese.Click += new System.EventHandler(this.btnBuscarAnamnese_Click);
@@ -103,12 +104,13 @@
             // 
             this.btnFecharForm.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFecharForm.BackgroundImage")));
             this.btnFecharForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFecharForm.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFecharForm.FlatAppearance.BorderSize = 0;
             this.btnFecharForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFecharForm.Location = new System.Drawing.Point(698, -1);
+            this.btnFecharForm.Location = new System.Drawing.Point(713, 4);
             this.btnFecharForm.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnFecharForm.Name = "btnFecharForm";
-            this.btnFecharForm.Size = new System.Drawing.Size(44, 36);
+            this.btnFecharForm.Size = new System.Drawing.Size(25, 25);
             this.btnFecharForm.TabIndex = 11;
             this.btnFecharForm.UseVisualStyleBackColor = true;
             this.btnFecharForm.Click += new System.EventHandler(this.btnFecharForm_Click);
@@ -121,23 +123,23 @@
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.pictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pictureBox3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.InitialImage")));
-            this.pictureBox3.Location = new System.Drawing.Point(0, 317);
+            this.pictureBox3.Location = new System.Drawing.Point(0, 308);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(71, 65);
+            this.pictureBox3.Size = new System.Drawing.Size(78, 73);
             this.pictureBox3.TabIndex = 35;
             this.pictureBox3.TabStop = false;
             // 
             // btnExcluirAnamnese
             // 
-            this.btnExcluirAnamnese.BackColor = System.Drawing.Color.Transparent;
+            this.btnExcluirAnamnese.BackColor = System.Drawing.Color.DeepPink;
             this.btnExcluirAnamnese.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluirAnamnese.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluirAnamnese.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnExcluirAnamnese.Location = new System.Drawing.Point(559, 348);
+            this.btnExcluirAnamnese.Font = new System.Drawing.Font("Agency FB", 14F);
+            this.btnExcluirAnamnese.ForeColor = System.Drawing.Color.White;
+            this.btnExcluirAnamnese.Location = new System.Drawing.Point(652, 350);
             this.btnExcluirAnamnese.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnExcluirAnamnese.Name = "btnExcluirAnamnese";
-            this.btnExcluirAnamnese.Size = new System.Drawing.Size(80, 27);
+            this.btnExcluirAnamnese.Size = new System.Drawing.Size(80, 31);
             this.btnExcluirAnamnese.TabIndex = 38;
             this.btnExcluirAnamnese.Text = "Excluir";
             this.btnExcluirAnamnese.UseVisualStyleBackColor = false;
@@ -149,12 +151,12 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Agency FB", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DeepPink;
-            this.label1.Location = new System.Drawing.Point(29, 38);
+            this.label1.Location = new System.Drawing.Point(47, 33);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(132, 37);
             this.label1.TabIndex = 39;
-            this.label1.Text = "Anamneses";
+            this.label1.Text = "ANAMNESES";
             // 
             // lblQP
             // 
@@ -364,14 +366,14 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.BackColor = System.Drawing.Color.DeepPink;
+            this.btnSalvar.BackColor = System.Drawing.Color.White;
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.ForeColor = System.Drawing.Color.White;
-            this.btnSalvar.Location = new System.Drawing.Point(644, 348);
+            this.btnSalvar.Font = new System.Drawing.Font("Agency FB", 14F);
+            this.btnSalvar.ForeColor = System.Drawing.Color.DeepPink;
+            this.btnSalvar.Location = new System.Drawing.Point(568, 350);
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(80, 27);
+            this.btnSalvar.Size = new System.Drawing.Size(80, 31);
             this.btnSalvar.TabIndex = 60;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
@@ -382,12 +384,13 @@
             // 
             this.btnVoltar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVoltar.BackgroundImage")));
             this.btnVoltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVoltar.FlatAppearance.BorderSize = 0;
             this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoltar.Location = new System.Drawing.Point(0, -1);
+            this.btnVoltar.Location = new System.Drawing.Point(0, -2);
             this.btnVoltar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(38, 36);
+            this.btnVoltar.Size = new System.Drawing.Size(40, 38);
             this.btnVoltar.TabIndex = 72;
             this.btnVoltar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVoltar.UseVisualStyleBackColor = true;
@@ -445,14 +448,14 @@
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.BackColor = System.Drawing.Color.DeepPink;
+            this.btnCadastrar.BackColor = System.Drawing.Color.White;
             this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrar.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrar.Location = new System.Drawing.Point(644, 348);
+            this.btnCadastrar.Font = new System.Drawing.Font("Agency FB", 14F);
+            this.btnCadastrar.ForeColor = System.Drawing.Color.DeepPink;
+            this.btnCadastrar.Location = new System.Drawing.Point(652, 350);
             this.btnCadastrar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(80, 27);
+            this.btnCadastrar.Size = new System.Drawing.Size(80, 31);
             this.btnCadastrar.TabIndex = 77;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;

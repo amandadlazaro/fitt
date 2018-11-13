@@ -96,14 +96,18 @@
             // 
             // btnFecharPgm
             // 
-            this.btnFecharPgm.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFecharPgm.BackgroundImage")));
+            this.btnFecharPgm.AutoSize = true;
             this.btnFecharPgm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFecharPgm.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFecharPgm.FlatAppearance.BorderSize = 0;
             this.btnFecharPgm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFecharPgm.Location = new System.Drawing.Point(700, 0);
+            this.btnFecharPgm.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFecharPgm.ForeColor = System.Drawing.Color.DarkRed;
+            this.btnFecharPgm.Location = new System.Drawing.Point(645, 344);
             this.btnFecharPgm.Name = "btnFecharPgm";
-            this.btnFecharPgm.Size = new System.Drawing.Size(45, 36);
+            this.btnFecharPgm.Size = new System.Drawing.Size(86, 31);
             this.btnFecharPgm.TabIndex = 10;
+            this.btnFecharPgm.Text = "LOG OUT";
             this.btnFecharPgm.UseVisualStyleBackColor = true;
             this.btnFecharPgm.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
@@ -115,9 +119,9 @@
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.pictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.pictureBox3.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.InitialImage")));
-            this.pictureBox3.Location = new System.Drawing.Point(10, 301);
+            this.pictureBox3.Location = new System.Drawing.Point(0, 308);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(86, 74);
+            this.pictureBox3.Size = new System.Drawing.Size(78, 73);
             this.pictureBox3.TabIndex = 35;
             this.pictureBox3.TabStop = false;
             // 
@@ -171,6 +175,7 @@
             this.Load += new System.EventHandler(this.FrmMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

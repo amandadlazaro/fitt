@@ -126,7 +126,7 @@
     <value>Century Gothic, 12pt</value>
   </data>
   <data name="btnLogin.Location" type="System.Drawing.Point, System.Drawing">
-    <value>453, 251</value>
+    <value>427, 251</value>
   </data>
   <data name="btnLogin.Size" type="System.Drawing.Size, System.Drawing">
     <value>84, 30</value>
@@ -160,16 +160,16 @@
     <value>Century Gothic, 12pt</value>
   </data>
   <data name="btnCancelar.Location" type="System.Drawing.Point, System.Drawing">
-    <value>543, 251</value>
+    <value>517, 251</value>
   </data>
   <data name="btnCancelar.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 30</value>
+    <value>86, 30</value>
   </data>
   <data name="btnCancelar.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
   <data name="btnCancelar.Text" xml:space="preserve">
-    <value>SAIR</value>
+    <value>FECHAR</value>
   </data>
   <data name="&gt;&gt;btnCancelar.Name" xml:space="preserve">
     <value>btnCancelar</value>

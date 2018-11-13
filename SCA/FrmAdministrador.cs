@@ -60,8 +60,9 @@ namespace FittSistema.View
 
         private void listarAdministrador()
         {
-            var administrador = administradorBLL.LerAdministrador();
+            var administrador = administradorBLL.LerAdministradorSemSenha();
             grpAdministrador.DataSource = administrador.ToList();
+            grpAdministrador.Columns.RemoveAt(2);
         }
 
         private string ValidaCampos()
@@ -111,6 +112,13 @@ namespace FittSistema.View
             }
             else
             {
+                grpAdministrador.DataSource = administradorBLL.ProcurarEmail(txtEmail.Text.ToString());
+                if (grpAdministrador.Rows.Count > 0)
+                {
+                    MessageBox.Show("Email já Cadastrado");
+                    return;
+                }
+
                 var adm = new Administrador
                 {
                     email = txtEmail.Text,
@@ -128,10 +136,9 @@ namespace FittSistema.View
         {
             if (grpAdministrador.Rows.Count > 0)
             {
+                limpaCampos();
                 admdados.Email = grpAdministrador.CurrentRow.Cells["Email"].Value.ToString();
-                admdados.Senha = grpAdministrador.CurrentRow.Cells["Senha"].Value.ToString();
                 txtEmail.Text = admdados.Email;
-                txtSenha.Text = admdados.Senha;
 
                 txtID.Text = grpAdministrador.CurrentRow.Cells["ID"].Value.ToString();
 
@@ -144,6 +151,7 @@ namespace FittSistema.View
 
         private void btnVoltar_Click_1(object sender, EventArgs e)
         {
+            listarAdministrador();
             grpAdministrador.Show();
             btnCadastrarAdministrador.Show();
             btnVoltar.Hide();

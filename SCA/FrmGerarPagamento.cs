@@ -113,7 +113,7 @@ namespace FittSistema.View
             }
 
             MessageBox.Show(mensagem);
-            btnFecharTela.PerformClick();
+            btnVoltar.PerformClick();
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -156,7 +156,7 @@ namespace FittSistema.View
             }
             
             MessageBox.Show(mensagem);
-            btnFecharTela.PerformClick();
+            btnVoltar.PerformClick();
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
@@ -217,5 +217,13 @@ namespace FittSistema.View
         }
 
         #endregion
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmPagamentos menu = new FrmPagamentos();
+            menu.ShowDialog();
+            this.Close();
+        }
     }
 }

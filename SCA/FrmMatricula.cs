@@ -409,76 +409,7 @@ namespace FittSistema.View
 
         private void btnOk_Click(object sender, EventArgs e)
         {
-            if (!ValidarCampos())
-            {
-                return;
-            }
 
-            DialogResult Confirmacao = MessageBox.Show("Você quer mesmo salvar essas alterações ?", "Alterar Matricula", MessageBoxButtons.YesNo);
-            if (Confirmacao == DialogResult.No)
-            {
-                return;
-            }
-
-            try
-            {
-                int? turmaDois = null;
-                if (DevolveAula() >= 2)
-                {
-                    turmaDois = Int32.Parse(cmbTurma2.SelectedValue.ToString());
-                }
-                int? turmaTres = null;
-                if (DevolveAula() == 3)
-                {
-                    turmaTres = Int32.Parse(cmbTurma3.SelectedValue.ToString());
-                }
-                matricula = new Matricula
-                {
-                    idMatricula = AlunosMatriculadosBLL.idMatricula,
-                    CPF = maskCPF.Text,
-                    idTurma = Int32.Parse(cmbTurma1.SelectedValue.ToString()),
-                    TipoPlano = DevolveTipo(),
-                    ValorMensal = double.Parse(txtValorMensal.Text),
-                    DataInicio = maskDataInicial.Value,
-                    DataFim = maskDataFinal.Value,
-                    SituacaoMatricula = cbStatus.Checked,
-                    QtdeAulas = DevolveAula(),
-                    idTurma2 = turmaDois,
-                    idTurma3 = turmaTres,
-                };
-                aluno = new Aluno
-                {
-                    CPF = maskCPF.Text,
-                    Nome = txtNome.Text,
-                    Endereco = txtEndereco.Text,
-                    Telefone = maskCel.Text,
-                    DataNasc = maskDataNasc.Value,
-                    Sexo = cmbSexo.SelectedItem.ToString(),
-                    Email = txtEmail.Text
-                };
-            }
-            catch (Exception err)
-            {
-                MessageBox.Show(err.ToString());
-                return;
-            }
-
-            string mensagemAlterarMatricula = matriculaBLL.Alterar(matricula);
-            if (mensagemAlterarMatricula != "Matricula Alterada com Sucesso")
-            {
-                MessageBox.Show(mensagemAlterarMatricula);
-                return;
-            }
-
-            string mensagemAlterarAluno = alunoBLL.AlterarAluno(aluno);
-            if (mensagemAlterarAluno != "Aluno Alterado com Sucesso")
-            {
-                MessageBox.Show(mensagemAlterarAluno);
-                return;
-            }
-
-            MessageBox.Show(mensagemAlterarAluno);
-            btnFecharTela.PerformClick();
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)

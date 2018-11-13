@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTurma));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnFecharTela = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,6 +45,7 @@
             this.cmbHorario = new System.Windows.Forms.ComboBox();
             this.tabSemanas = new System.Windows.Forms.TabControl();
             this.Segunda = new System.Windows.Forms.TabPage();
+            this.grpSegunda = new System.Windows.Forms.DataGridView();
             this.tabTerca = new System.Windows.Forms.TabPage();
             this.grpTerca = new System.Windows.Forms.DataGridView();
             this.tabQuarta = new System.Windows.Forms.TabPage();
@@ -58,9 +59,9 @@
             this.txtId = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.grpSegunda = new System.Windows.Forms.DataGridView();
             this.tabSemanas.SuspendLayout();
             this.Segunda.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grpSegunda)).BeginInit();
             this.tabTerca.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpTerca)).BeginInit();
             this.tabQuarta.SuspendLayout();
@@ -70,7 +71,6 @@
             this.tabSexta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpSexta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grpSegunda)).BeginInit();
             this.SuspendLayout();
             // 
             // btnFecharTela
@@ -202,13 +202,33 @@
             this.Segunda.Text = "Segunda";
             this.Segunda.UseVisualStyleBackColor = true;
             // 
+            // grpSegunda
+            // 
+            this.grpSegunda.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.grpSegunda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grpSegunda.GridColor = System.Drawing.Color.LightCoral;
+            this.grpSegunda.Location = new System.Drawing.Point(3, 6);
+            this.grpSegunda.Name = "grpSegunda";
+            this.grpSegunda.ReadOnly = true;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grpSegunda.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.grpSegunda.Size = new System.Drawing.Size(612, 172);
+            this.grpSegunda.TabIndex = 72;
+            this.grpSegunda.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpSegunda_CellDoubleClick_1);
+            // 
             // tabTerca
             // 
             this.tabTerca.Controls.Add(this.grpTerca);
-            this.tabTerca.Location = new System.Drawing.Point(4, 26);
+            this.tabTerca.Location = new System.Drawing.Point(4, 29);
             this.tabTerca.Name = "tabTerca";
             this.tabTerca.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTerca.Size = new System.Drawing.Size(621, 184);
+            this.tabTerca.Size = new System.Drawing.Size(621, 181);
             this.tabTerca.TabIndex = 1;
             this.tabTerca.Text = "Terça";
             this.tabTerca.UseVisualStyleBackColor = true;
@@ -221,14 +241,14 @@
             this.grpTerca.Location = new System.Drawing.Point(3, 6);
             this.grpTerca.Name = "grpTerca";
             this.grpTerca.ReadOnly = true;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 11F);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grpTerca.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 11F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grpTerca.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.grpTerca.Size = new System.Drawing.Size(612, 172);
             this.grpTerca.TabIndex = 71;
             this.grpTerca.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpTerca_CellDoubleClick);
@@ -236,10 +256,10 @@
             // tabQuarta
             // 
             this.tabQuarta.Controls.Add(this.grpQuarta);
-            this.tabQuarta.Location = new System.Drawing.Point(4, 26);
+            this.tabQuarta.Location = new System.Drawing.Point(4, 29);
             this.tabQuarta.Name = "tabQuarta";
             this.tabQuarta.Padding = new System.Windows.Forms.Padding(3);
-            this.tabQuarta.Size = new System.Drawing.Size(621, 184);
+            this.tabQuarta.Size = new System.Drawing.Size(621, 181);
             this.tabQuarta.TabIndex = 2;
             this.tabQuarta.Text = "Quarta";
             this.tabQuarta.UseVisualStyleBackColor = true;
@@ -252,14 +272,14 @@
             this.grpQuarta.Location = new System.Drawing.Point(3, 6);
             this.grpQuarta.Name = "grpQuarta";
             this.grpQuarta.ReadOnly = true;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 11F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grpQuarta.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 11F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grpQuarta.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.grpQuarta.Size = new System.Drawing.Size(612, 172);
             this.grpQuarta.TabIndex = 71;
             this.grpQuarta.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpQuarta_CellDoubleClick);
@@ -267,10 +287,10 @@
             // tabQuinta
             // 
             this.tabQuinta.Controls.Add(this.grpQuinta);
-            this.tabQuinta.Location = new System.Drawing.Point(4, 26);
+            this.tabQuinta.Location = new System.Drawing.Point(4, 29);
             this.tabQuinta.Name = "tabQuinta";
             this.tabQuinta.Padding = new System.Windows.Forms.Padding(3);
-            this.tabQuinta.Size = new System.Drawing.Size(621, 184);
+            this.tabQuinta.Size = new System.Drawing.Size(621, 181);
             this.tabQuinta.TabIndex = 3;
             this.tabQuinta.Text = "Quinta";
             this.tabQuinta.UseVisualStyleBackColor = true;
@@ -283,14 +303,14 @@
             this.grpQuinta.Location = new System.Drawing.Point(3, 6);
             this.grpQuinta.Name = "grpQuinta";
             this.grpQuinta.ReadOnly = true;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Century Gothic", 11F);
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grpQuinta.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 11F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grpQuinta.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.grpQuinta.Size = new System.Drawing.Size(612, 172);
             this.grpQuinta.TabIndex = 71;
             this.grpQuinta.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpQuinta_CellDoubleClick);
@@ -298,10 +318,10 @@
             // tabSexta
             // 
             this.tabSexta.Controls.Add(this.grpSexta);
-            this.tabSexta.Location = new System.Drawing.Point(4, 26);
+            this.tabSexta.Location = new System.Drawing.Point(4, 29);
             this.tabSexta.Name = "tabSexta";
             this.tabSexta.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSexta.Size = new System.Drawing.Size(621, 184);
+            this.tabSexta.Size = new System.Drawing.Size(621, 181);
             this.tabSexta.TabIndex = 4;
             this.tabSexta.Text = "Sexta";
             this.tabSexta.UseVisualStyleBackColor = true;
@@ -314,14 +334,14 @@
             this.grpSexta.Location = new System.Drawing.Point(3, 6);
             this.grpSexta.Name = "grpSexta";
             this.grpSexta.ReadOnly = true;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Century Gothic", 11F);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grpSexta.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 11F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grpSexta.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.grpSexta.Size = new System.Drawing.Size(612, 172);
             this.grpSexta.TabIndex = 71;
             this.grpSexta.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpSexta_CellDoubleClick);
@@ -399,26 +419,6 @@
             this.pictureBox3.TabIndex = 38;
             this.pictureBox3.TabStop = false;
             // 
-            // grpSegunda
-            // 
-            this.grpSegunda.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.grpSegunda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grpSegunda.GridColor = System.Drawing.Color.LightCoral;
-            this.grpSegunda.Location = new System.Drawing.Point(3, 6);
-            this.grpSegunda.Name = "grpSegunda";
-            this.grpSegunda.ReadOnly = true;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Century Gothic", 11F);
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grpSegunda.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
-            this.grpSegunda.Size = new System.Drawing.Size(612, 172);
-            this.grpSegunda.TabIndex = 72;
-            this.grpSegunda.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpSegunda_CellDoubleClick_1);
-            // 
             // FrmTurma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -448,6 +448,7 @@
             this.Load += new System.EventHandler(this.FrmTurma_Load_1);
             this.tabSemanas.ResumeLayout(false);
             this.Segunda.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grpSegunda)).EndInit();
             this.tabTerca.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grpTerca)).EndInit();
             this.tabQuarta.ResumeLayout(false);
@@ -457,7 +458,6 @@
             this.tabSexta.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grpSexta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grpSegunda)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

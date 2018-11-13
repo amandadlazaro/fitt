@@ -184,7 +184,7 @@
     <value>0</value>
   </data>
   <data name="txtCampoSenha.Font" type="System.Drawing.Font, System.Drawing">
-    <value>맑은 고딕, 12pt</value>
+    <value>Bahnschrift Condensed, 14.25pt</value>
   </data>
   <data name="txtCampoSenha.Location" type="System.Drawing.Point, System.Drawing">
     <value>357, 208</value>
@@ -193,7 +193,7 @@
     <value>*</value>
   </data>
   <data name="txtCampoSenha.Size" type="System.Drawing.Size, System.Drawing">
-    <value>246, 29</value>
+    <value>246, 30</value>
   </data>
   <data name="txtCampoSenha.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -211,13 +211,13 @@
     <value>2</value>
   </data>
   <data name="txtCampoUsuario.Font" type="System.Drawing.Font, System.Drawing">
-    <value>맑은 고딕, 12pt</value>
+    <value>Bahnschrift Condensed, 14.25pt</value>
   </data>
   <data name="txtCampoUsuario.Location" type="System.Drawing.Point, System.Drawing">
     <value>357, 152</value>
   </data>
   <data name="txtCampoUsuario.Size" type="System.Drawing.Size, System.Drawing">
-    <value>246, 29</value>
+    <value>246, 30</value>
   </data>
   <data name="txtCampoUsuario.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>

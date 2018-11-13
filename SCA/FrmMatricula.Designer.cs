@@ -364,14 +364,14 @@
             // 
             // cmbSexo
             // 
-            this.cmbSexo.Font = new System.Drawing.Font("맑은 고딕", 8F);
+            this.cmbSexo.Font = new System.Drawing.Font("Bahnschrift Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSexo.FormattingEnabled = true;
             this.cmbSexo.Items.AddRange(new object[] {
             "Feminino",
             "Masculino"});
             this.cmbSexo.Location = new System.Drawing.Point(240, 277);
             this.cmbSexo.Name = "cmbSexo";
-            this.cmbSexo.Size = new System.Drawing.Size(108, 21);
+            this.cmbSexo.Size = new System.Drawing.Size(108, 22);
             this.cmbSexo.TabIndex = 135;
             // 
             // lblAulas
@@ -436,16 +436,16 @@
             // 
             // cmbTurma1
             // 
-            this.cmbTurma1.Font = new System.Drawing.Font("맑은 고딕", 8F);
+            this.cmbTurma1.Font = new System.Drawing.Font("Bahnschrift Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTurma1.FormattingEnabled = true;
             this.cmbTurma1.Location = new System.Drawing.Point(512, 228);
             this.cmbTurma1.Name = "cmbTurma1";
-            this.cmbTurma1.Size = new System.Drawing.Size(100, 21);
+            this.cmbTurma1.Size = new System.Drawing.Size(100, 22);
             this.cmbTurma1.TabIndex = 146;
             // 
             // cmbSemana1
             // 
-            this.cmbSemana1.Font = new System.Drawing.Font("맑은 고딕", 8F);
+            this.cmbSemana1.Font = new System.Drawing.Font("Bahnschrift Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSemana1.FormattingEnabled = true;
             this.cmbSemana1.Items.AddRange(new object[] {
             "Segunda",
@@ -455,14 +455,14 @@
             "Sexta"});
             this.cmbSemana1.Location = new System.Drawing.Point(399, 230);
             this.cmbSemana1.Name = "cmbSemana1";
-            this.cmbSemana1.Size = new System.Drawing.Size(100, 21);
+            this.cmbSemana1.Size = new System.Drawing.Size(100, 22);
             this.cmbSemana1.TabIndex = 145;
             this.cmbSemana1.SelectedIndexChanged += new System.EventHandler(this.cmbSemana1_SelectedIndexChanged);
             // 
             // cmbSemana2
             // 
             this.cmbSemana2.Enabled = false;
-            this.cmbSemana2.Font = new System.Drawing.Font("맑은 고딕", 8F);
+            this.cmbSemana2.Font = new System.Drawing.Font("Bahnschrift Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSemana2.FormattingEnabled = true;
             this.cmbSemana2.Items.AddRange(new object[] {
             "Segunda",
@@ -472,24 +472,24 @@
             "Sexta"});
             this.cmbSemana2.Location = new System.Drawing.Point(399, 257);
             this.cmbSemana2.Name = "cmbSemana2";
-            this.cmbSemana2.Size = new System.Drawing.Size(100, 21);
+            this.cmbSemana2.Size = new System.Drawing.Size(100, 22);
             this.cmbSemana2.TabIndex = 147;
             this.cmbSemana2.SelectedIndexChanged += new System.EventHandler(this.cmbSemana2_SelectedIndexChanged);
             // 
             // cmbTurma2
             // 
             this.cmbTurma2.Enabled = false;
-            this.cmbTurma2.Font = new System.Drawing.Font("맑은 고딕", 8F);
+            this.cmbTurma2.Font = new System.Drawing.Font("Bahnschrift Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTurma2.FormattingEnabled = true;
             this.cmbTurma2.Location = new System.Drawing.Point(512, 256);
             this.cmbTurma2.Name = "cmbTurma2";
-            this.cmbTurma2.Size = new System.Drawing.Size(100, 21);
+            this.cmbTurma2.Size = new System.Drawing.Size(100, 22);
             this.cmbTurma2.TabIndex = 148;
             // 
             // cmbSemana3
             // 
             this.cmbSemana3.Enabled = false;
-            this.cmbSemana3.Font = new System.Drawing.Font("맑은 고딕", 8F);
+            this.cmbSemana3.Font = new System.Drawing.Font("Bahnschrift Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSemana3.FormattingEnabled = true;
             this.cmbSemana3.Items.AddRange(new object[] {
             "Segunda",
@@ -499,23 +499,23 @@
             "Sexta"});
             this.cmbSemana3.Location = new System.Drawing.Point(399, 284);
             this.cmbSemana3.Name = "cmbSemana3";
-            this.cmbSemana3.Size = new System.Drawing.Size(100, 21);
+            this.cmbSemana3.Size = new System.Drawing.Size(100, 22);
             this.cmbSemana3.TabIndex = 149;
             this.cmbSemana3.SelectedIndexChanged += new System.EventHandler(this.cmbSemana3_SelectedIndexChanged);
             // 
             // cmbTurma3
             // 
             this.cmbTurma3.Enabled = false;
-            this.cmbTurma3.Font = new System.Drawing.Font("맑은 고딕", 8F);
+            this.cmbTurma3.Font = new System.Drawing.Font("Bahnschrift Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTurma3.FormattingEnabled = true;
             this.cmbTurma3.Location = new System.Drawing.Point(512, 284);
             this.cmbTurma3.Name = "cmbTurma3";
-            this.cmbTurma3.Size = new System.Drawing.Size(100, 21);
+            this.cmbTurma3.Size = new System.Drawing.Size(100, 22);
             this.cmbTurma3.TabIndex = 150;
             // 
             // txtNome
             // 
-            this.txtNome.Font = new System.Drawing.Font("맑은 고딕", 8F);
+            this.txtNome.Font = new System.Drawing.Font("Bahnschrift Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(95, 80);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(251, 22);
@@ -524,7 +524,7 @@
             // 
             // maskCel
             // 
-            this.maskCel.Font = new System.Drawing.Font("맑은 고딕", 8F);
+            this.maskCel.Font = new System.Drawing.Font("Bahnschrift Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maskCel.Location = new System.Drawing.Point(238, 131);
             this.maskCel.Mask = "(99)0000-0000";
             this.maskCel.Name = "maskCel";
@@ -534,7 +534,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Font = new System.Drawing.Font("맑은 고딕", 8F);
+            this.txtEmail.Font = new System.Drawing.Font("Bahnschrift Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(95, 180);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(251, 22);
@@ -542,7 +542,7 @@
             // 
             // maskCPF
             // 
-            this.maskCPF.Font = new System.Drawing.Font("맑은 고딕", 8F);
+            this.maskCPF.Font = new System.Drawing.Font("Bahnschrift Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maskCPF.Location = new System.Drawing.Point(95, 279);
             this.maskCPF.Mask = "999.999.999-99";
             this.maskCPF.Name = "maskCPF";
@@ -552,7 +552,7 @@
             // 
             // txtEndereco
             // 
-            this.txtEndereco.Font = new System.Drawing.Font("맑은 고딕", 8F);
+            this.txtEndereco.Font = new System.Drawing.Font("Bahnschrift Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEndereco.Location = new System.Drawing.Point(95, 230);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(251, 22);
@@ -635,6 +635,7 @@
             this.btnCadastrar.TabIndex = 158;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnSalvar
             // 
@@ -651,6 +652,7 @@
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Visible = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // btnVoltar
             // 

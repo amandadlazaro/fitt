@@ -124,7 +124,7 @@
             // 
             // cmbForma
             // 
-            this.cmbForma.Font = new System.Drawing.Font("맑은 고딕", 10F);
+            this.cmbForma.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbForma.FormattingEnabled = true;
             this.cmbForma.Items.AddRange(new object[] {
             "Dinheiro",
@@ -132,15 +132,15 @@
             "Cartão de Crédito"});
             this.cmbForma.Location = new System.Drawing.Point(479, 162);
             this.cmbForma.Name = "cmbForma";
-            this.cmbForma.Size = new System.Drawing.Size(121, 25);
+            this.cmbForma.Size = new System.Drawing.Size(121, 27);
             this.cmbForma.TabIndex = 43;
             // 
             // txtDesconto
             // 
-            this.txtDesconto.Font = new System.Drawing.Font("맑은 고딕", 10F);
+            this.txtDesconto.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDesconto.Location = new System.Drawing.Point(119, 226);
             this.txtDesconto.Name = "txtDesconto";
-            this.txtDesconto.Size = new System.Drawing.Size(62, 25);
+            this.txtDesconto.Size = new System.Drawing.Size(62, 27);
             this.txtDesconto.TabIndex = 44;
             this.txtDesconto.Text = "0";
             this.txtDesconto.TextChanged += new System.EventHandler(this.txtDesconto_TextChanged);
@@ -170,10 +170,10 @@
             // txtNome
             // 
             this.txtNome.Enabled = false;
-            this.txtNome.Font = new System.Drawing.Font("맑은 고딕", 10F);
+            this.txtNome.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(98, 107);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(387, 25);
+            this.txtNome.Size = new System.Drawing.Size(387, 27);
             this.txtNome.TabIndex = 75;
             this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
             // 
@@ -224,14 +224,14 @@
             // 
             // cmbStatus
             // 
-            this.cmbStatus.Font = new System.Drawing.Font("맑은 고딕", 10F);
+            this.cmbStatus.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbStatus.FormattingEnabled = true;
             this.cmbStatus.Items.AddRange(new object[] {
             "Pago",
             "Não Pago"});
             this.cmbStatus.Location = new System.Drawing.Point(557, 107);
             this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(121, 25);
+            this.cmbStatus.Size = new System.Drawing.Size(121, 27);
             this.cmbStatus.TabIndex = 163;
             // 
             // label5
@@ -288,6 +288,7 @@
             this.btnRegistrar.TabIndex = 168;
             this.btnRegistrar.Text = "Cadastrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // btnExcluir
             // 
@@ -302,6 +303,7 @@
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
             this.btnExcluir.Visible = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnSalvar
             // 
@@ -318,6 +320,7 @@
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Visible = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnVoltar
             // 
@@ -331,6 +334,7 @@
             this.btnVoltar.Size = new System.Drawing.Size(40, 38);
             this.btnVoltar.TabIndex = 171;
             this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Visible = false;
             // 
             // FrmGerarPagamento
             // 

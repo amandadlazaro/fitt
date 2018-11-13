@@ -113,12 +113,12 @@
             // 
             // txtBusca
             // 
-            this.txtBusca.Font = new System.Drawing.Font("맑은 고딕", 12F);
+            this.txtBusca.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBusca.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtBusca.Location = new System.Drawing.Point(196, 42);
             this.txtBusca.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtBusca.Name = "txtBusca";
-            this.txtBusca.Size = new System.Drawing.Size(401, 29);
+            this.txtBusca.Size = new System.Drawing.Size(401, 30);
             this.txtBusca.TabIndex = 72;
             this.txtBusca.Text = "Buscar por Aluno";
             this.txtBusca.Enter += new System.EventHandler(this.txtBusca_Enter);
@@ -168,6 +168,7 @@
             this.btnVoltar.Size = new System.Drawing.Size(40, 38);
             this.btnVoltar.TabIndex = 74;
             this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Visible = false;
             // 
             // FrmPagamentos
             // 

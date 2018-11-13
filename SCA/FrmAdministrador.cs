@@ -112,6 +112,13 @@ namespace FittSistema.View
             }
             else
             {
+                grpAdministrador.DataSource = administradorBLL.ProcurarEmail(txtEmail.Text.ToString());
+                if (grpAdministrador.Rows.Count > 0)
+                {
+                    MessageBox.Show("Email já Cadastrado");
+                    return;
+                }
+
                 var adm = new Administrador
                 {
                     email = txtEmail.Text,
@@ -129,6 +136,7 @@ namespace FittSistema.View
         {
             if (grpAdministrador.Rows.Count > 0)
             {
+                limpaCampos();
                 admdados.Email = grpAdministrador.CurrentRow.Cells["Email"].Value.ToString();
                 txtEmail.Text = admdados.Email;
 

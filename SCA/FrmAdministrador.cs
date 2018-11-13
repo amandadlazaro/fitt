@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAL;
 using SCA_BLL;
+using SCA;
 using System.Globalization;
 
 
@@ -24,6 +25,25 @@ namespace FittSistema.View
         AdministradorBLL administradorBLL = new AdministradorBLL();
         AdministradorBLL.DadosAdministrador admdados = new AdministradorBLL.DadosAdministrador();
         Administrador adm = new Administrador();
+
+        public bool testaSenha(string senha)
+        {
+            FrmSenha frmSenha = new FrmSenha();
+            DialogResult dialogResult = frmSenha.ShowDialog(this);
+
+            if (dialogResult == DialogResult.OK)
+            {
+                string pass = frmSenha.Password;
+                pass = Util.Util.criptografarSenha(pass);
+
+                if (pass == senha)
+                    return true;
+                else
+                    return false;
+            }
+            else
+                return false;
+        }
 
         private void FrmAdministrador_Load(object sender, EventArgs e)
         {
@@ -63,6 +83,7 @@ namespace FittSistema.View
             var administrador = administradorBLL.LerAdministradorSemSenha();
             grpAdministrador.DataSource = administrador.ToList();
             grpAdministrador.Columns.RemoveAt(2);
+            grpAdministrador.Columns.RemoveAt(0);
         }
 
         private string ValidaCampos()
@@ -134,6 +155,19 @@ namespace FittSistema.View
 
         private void grpAdministrador_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            grpAdministrador.DataSource = administradorBLL.ProcurarEmailComSenha(grpAdministrador.CurrentRow.Cells["Email"].Value.ToString());
+
+            string senha = grpAdministrador.CurrentRow.Cells["Senha"].Value.ToString();
+            grpAdministrador.Columns.RemoveAt(2);
+            grpAdministrador.Columns.RemoveAt(0);
+
+            if (!testaSenha(senha))
+            {
+                listarAdministrador();
+                MessageBox.Show("Senha incorreta");
+                return;
+            }
+
             if (grpAdministrador.Rows.Count > 0)
             {
                 limpaCampos();

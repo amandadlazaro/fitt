@@ -194,6 +194,16 @@ namespace FittSistema.View
         private void cliqueDataGrid(DataGridView dt)
         {
 
+            if (dt.Rows.Count <= 0)
+            {
+                return;
+            }
+
+            DialogResult Confirmacao = MessageBox.Show("Voce quer mesmo editar essa turma?", "Confirmar Escolha", MessageBoxButtons.YesNo);
+            if (Confirmacao == DialogResult.No)
+            {
+                return;
+            }
             txtId.Text = dt.CurrentRow.Cells[0].Value.ToString();
             cmbProfessor.Text = dt.CurrentRow.Cells[1].Value.ToString();
             cmbDiaSemana.SelectedItem = dt.CurrentRow.Cells[2].Value.ToString();

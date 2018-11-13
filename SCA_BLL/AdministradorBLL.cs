@@ -38,6 +38,17 @@ namespace SCA_BLL
             return lista;
         }
 
+        public IEnumerable<DadosAdministrador> LerAdministradorSemSenha()
+        {
+            var lista = bd.Administrador.Select(a => new DadosAdministrador
+            {
+                ID = a.idAdm,
+                Email = a.email
+            }).ToList();
+
+            return lista;
+        }
+
         public List<DadosAdministrador> ListarAdministrador()
         {
             var lista = bd.Administrador.Select(a => new DadosAdministrador

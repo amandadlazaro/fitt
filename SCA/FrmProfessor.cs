@@ -15,6 +15,7 @@ namespace FittSistema.View
         }
 
         ProfessorBLL professorBLL = new ProfessorBLL();
+        bool mudouSenha = false;
 
         private void btnFecharTela_Click(object sender, EventArgs e)
         {
@@ -75,7 +76,8 @@ namespace FittSistema.View
                 }
                 else
                 {
-                    
+                    if (mudouSenha) txtSenha.Text = Util.Util.criptografarSenha(txtSenha.Text);
+
                     var prof = new Professor
                     {
                         CPF = txtCPF.Text,
@@ -235,6 +237,18 @@ namespace FittSistema.View
         
         private void grpProfessores_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+
+            if (grpProfessores.Rows.Count <= 0)
+            {
+                return;
+            }
+
+            DialogResult Confirmacao = MessageBox.Show($"Voce deseja editar esse professor?", "Confirmar Escolha", MessageBoxButtons.YesNo);
+            if (Confirmacao == DialogResult.No)
+            {
+                return;
+            }
+
             txtCPF.Text = grpProfessores.CurrentRow.Cells[0].Value.ToString();
             txtNome.Text = grpProfessores.CurrentRow.Cells[1].Value.ToString();
             txtTel.Text = grpProfessores.CurrentRow.Cells[2].Value.ToString();
@@ -258,9 +272,18 @@ namespace FittSistema.View
             e.KeyChar = Util.FiltrarTeclas.letraMaiuscula(e.KeyChar);
         }
 
-        private void txtSenha_KeyDown(object sender, KeyEventArgs e)
+        
+        private void txtSenha_Enter(object sender, EventArgs e)
         {
-            txtSenha.Text = Util.Util.criptografarSenha(txtSenha.Text);
+            if (MessageBox.Show("Deseja alterar a senha?", "Alterar senha", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                txtSenha.Text = "";
+                mudouSenha = true;
+            }
+            else
+            {
+                txtCPF.Focus();
+            }
 
         }
     }

@@ -126,7 +126,7 @@
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(192, 20);
             this.txtSenha.TabIndex = 8;
-            this.txtSenha.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSenha_KeyDown);
+            this.txtSenha.Enter += new System.EventHandler(this.txtSenha_Enter);
             // 
             // txtEmail
             // 
@@ -346,7 +346,7 @@
             this.grpProfessores.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.grpProfessores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grpProfessores.GridColor = System.Drawing.Color.LightCoral;
-            this.grpProfessores.Location = new System.Drawing.Point(-2, 96);
+            this.grpProfessores.Location = new System.Drawing.Point(-2, 68);
             this.grpProfessores.Name = "grpProfessores";
             this.grpProfessores.ReadOnly = true;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;

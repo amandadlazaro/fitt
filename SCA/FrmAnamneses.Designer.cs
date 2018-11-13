@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAnamneses));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtBusca = new System.Windows.Forms.TextBox();
             this.btnBuscarAnamnese = new System.Windows.Forms.Button();
             this.btnFecharForm = new System.Windows.Forms.Button();
@@ -58,12 +59,15 @@
             this.txtPatologias = new System.Windows.Forms.TextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
-            this.grpAlunos = new System.Windows.Forms.DataGridView();
+            this.grpAnamnese = new System.Windows.Forms.DataGridView();
             this.txtMatricula = new System.Windows.Forms.TextBox();
             this.txtAnamnese = new System.Windows.Forms.TextBox();
             this.dtpDataAnamnese = new System.Windows.Forms.DateTimePicker();
+            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.grpAluno = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grpAlunos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpAnamnese)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpAluno)).BeginInit();
             this.SuspendLayout();
             // 
             // txtBusca
@@ -390,25 +394,25 @@
             this.btnVoltar.Visible = false;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
-            // grpAlunos
+            // grpAnamnese
             // 
-            this.grpAlunos.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.grpAlunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grpAlunos.GridColor = System.Drawing.Color.LightCoral;
-            this.grpAlunos.Location = new System.Drawing.Point(0, 92);
-            this.grpAlunos.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.grpAlunos.Name = "grpAlunos";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grpAlunos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.grpAlunos.Size = new System.Drawing.Size(750, 203);
-            this.grpAlunos.TabIndex = 71;
-            this.grpAlunos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpAlunos_CellDoubleClick);
+            this.grpAnamnese.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.grpAnamnese.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grpAnamnese.GridColor = System.Drawing.Color.LightCoral;
+            this.grpAnamnese.Location = new System.Drawing.Point(0, 92);
+            this.grpAnamnese.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.grpAnamnese.Name = "grpAnamnese";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grpAnamnese.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.grpAnamnese.Size = new System.Drawing.Size(750, 203);
+            this.grpAnamnese.TabIndex = 71;
+            this.grpAnamnese.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpAnamnese_CellDoubleClick);
             // 
             // txtMatricula
             // 
@@ -430,13 +434,50 @@
             // 
             // dtpDataAnamnese
             // 
-            this.dtpDataAnamnese.Location = new System.Drawing.Point(326, 317);
+            this.dtpDataAnamnese.CustomFormat = "";
+            this.dtpDataAnamnese.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDataAnamnese.Location = new System.Drawing.Point(754, 314);
             this.dtpDataAnamnese.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dtpDataAnamnese.Name = "dtpDataAnamnese";
-            this.dtpDataAnamnese.Size = new System.Drawing.Size(200, 20);
+            this.dtpDataAnamnese.Size = new System.Drawing.Size(117, 20);
             this.dtpDataAnamnese.TabIndex = 76;
-            this.dtpDataAnamnese.Value = new System.DateTime(2018, 11, 10, 1, 28, 22, 0);
-            this.dtpDataAnamnese.Visible = false;
+            this.dtpDataAnamnese.Value = new System.DateTime(2018, 11, 12, 21, 23, 37, 0);
+            // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.BackColor = System.Drawing.Color.DeepPink;
+            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrar.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.ForeColor = System.Drawing.Color.White;
+            this.btnCadastrar.Location = new System.Drawing.Point(644, 348);
+            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(80, 27);
+            this.btnCadastrar.TabIndex = 77;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            // 
+            // grpAluno
+            // 
+            this.grpAluno.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.grpAluno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grpAluno.GridColor = System.Drawing.Color.LightCoral;
+            this.grpAluno.Location = new System.Drawing.Point(0, 92);
+            this.grpAluno.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.grpAluno.Name = "grpAluno";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grpAluno.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.grpAluno.Size = new System.Drawing.Size(750, 203);
+            this.grpAluno.TabIndex = 78;
+            this.grpAluno.Visible = false;
+            this.grpAluno.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpAluno_CellDoubleClick);
             // 
             // FrmAnamneses
             // 
@@ -445,11 +486,13 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(743, 387);
+            this.Controls.Add(this.grpAluno);
+            this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.dtpDataAnamnese);
             this.Controls.Add(this.txtAnamnese);
             this.Controls.Add(this.txtMatricula);
             this.Controls.Add(this.btnVoltar);
-            this.Controls.Add(this.grpAlunos);
+            this.Controls.Add(this.grpAnamnese);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.txtPatologias);
             this.Controls.Add(this.lblPatologias);
@@ -485,7 +528,8 @@
             this.Text = "Anamneses";
             this.Load += new System.EventHandler(this.FrmAnamneses_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grpAlunos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpAnamnese)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grpAluno)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -520,9 +564,11 @@
         private System.Windows.Forms.TextBox txtPatologias;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnVoltar;
-        private System.Windows.Forms.DataGridView grpAlunos;
+        private System.Windows.Forms.DataGridView grpAnamnese;
         private System.Windows.Forms.TextBox txtMatricula;
         private System.Windows.Forms.TextBox txtAnamnese;
         private System.Windows.Forms.DateTimePicker dtpDataAnamnese;
+        private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.DataGridView grpAluno;
     }
 }

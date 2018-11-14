@@ -143,12 +143,12 @@
             // 
             // txtBusca
             // 
-            this.txtBusca.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBusca.Font = new System.Drawing.Font("Gadugi", 13F);
             this.txtBusca.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtBusca.Location = new System.Drawing.Point(196, 42);
             this.txtBusca.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtBusca.Name = "txtBusca";
-            this.txtBusca.Size = new System.Drawing.Size(401, 30);
+            this.txtBusca.Size = new System.Drawing.Size(401, 31);
             this.txtBusca.TabIndex = 74;
             this.txtBusca.Text = "Buscar por Aluno";
             this.txtBusca.Enter += new System.EventHandler(this.txtBusca_Enter);

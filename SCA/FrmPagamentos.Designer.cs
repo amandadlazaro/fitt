@@ -38,7 +38,6 @@
             this.txtBusca = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.btnVoltar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPagamento)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +52,7 @@
             this.btnFecharTela.Location = new System.Drawing.Point(713, 4);
             this.btnFecharTela.Name = "btnFecharTela";
             this.btnFecharTela.Size = new System.Drawing.Size(25, 25);
-            this.btnFecharTela.TabIndex = 14;
+            this.btnFecharTela.TabIndex = 142;
             this.btnFecharTela.UseVisualStyleBackColor = true;
             this.btnFecharTela.Click += new System.EventHandler(this.btnFecharTela_Click);
             // 
@@ -119,7 +118,7 @@
             this.txtBusca.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtBusca.Name = "txtBusca";
             this.txtBusca.Size = new System.Drawing.Size(401, 31);
-            this.txtBusca.TabIndex = 72;
+            this.txtBusca.TabIndex = 1;
             this.txtBusca.Text = "Buscar por Aluno";
             this.txtBusca.Enter += new System.EventHandler(this.txtBusca_Enter);
             this.txtBusca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBusca_KeyPress);
@@ -150,25 +149,11 @@
             this.btnCadastrar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(80, 31);
-            this.btnCadastrar.TabIndex = 73;
+            this.btnCadastrar.TabIndex = 732;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Visible = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
-            // 
-            // btnVoltar
-            // 
-            this.btnVoltar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVoltar.BackgroundImage")));
-            this.btnVoltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVoltar.FlatAppearance.BorderSize = 0;
-            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoltar.Location = new System.Drawing.Point(0, -2);
-            this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(40, 38);
-            this.btnVoltar.TabIndex = 74;
-            this.btnVoltar.UseVisualStyleBackColor = true;
-            this.btnVoltar.Visible = false;
             // 
             // FrmPagamentos
             // 
@@ -177,7 +162,6 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(743, 387);
-            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.txtBusca);
             this.Controls.Add(this.dgvPagamento);
@@ -205,6 +189,5 @@
         private System.Windows.Forms.TextBox txtBusca;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.Button btnVoltar;
     }
 }

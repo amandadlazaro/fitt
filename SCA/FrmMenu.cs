@@ -87,5 +87,15 @@ namespace FittSistema.View
             anamnese.ShowDialog();
             this.Close();
         }
+
+        private void btnFecharTela_Click(object sender, EventArgs e)
+        {
+            DialogResult Confirmacao = MessageBox.Show ("Deseja sair do sistema?", "ATENÇÃO", MessageBoxButtons.YesNo);
+            if (Confirmacao == DialogResult.No)
+            {
+                return;
+            }
+            this.Close();
+        }
     }
 }

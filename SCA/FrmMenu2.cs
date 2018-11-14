@@ -40,5 +40,15 @@ namespace FittSistema.View
         {
 
         }
+
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
+            DialogResult Confirmacao = MessageBox.Show("Deseja sair do sistema?", "ATENÇÃO", MessageBoxButtons.YesNo);
+            if (Confirmacao == DialogResult.No)
+            {
+                return;
+            }
+            this.Close();
+        }
     }
 }

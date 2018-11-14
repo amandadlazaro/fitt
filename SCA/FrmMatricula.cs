@@ -589,5 +589,53 @@ namespace FittSistema.View
             menu.ShowDialog();
             this.Close();
         }
+
+        private void cmbTurma1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                if (btnCadastrar.Visible == true)
+                {
+                    btnCadastrar.PerformClick();
+                }
+
+                else if (btnSalvar.Visible == true)
+                {
+                    btnSalvar.PerformClick();
+                }
+            }
+        }
+
+        private void cmbTurma2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                if (btnCadastrar.Visible == true)
+                {
+                    btnCadastrar.PerformClick();
+                }
+
+                else if (btnSalvar.Visible == true)
+                {
+                    btnSalvar.PerformClick();
+                }
+            }
+        }
+
+        private void cmbTurma3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                if (btnCadastrar.Visible == true)
+                {
+                    btnCadastrar.PerformClick();
+                }
+
+                else if (btnSalvar.Visible == true)
+                {
+                    btnSalvar.PerformClick();
+                }
+            }
+        }
     }
 }

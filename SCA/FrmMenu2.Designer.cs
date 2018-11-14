@@ -32,6 +32,7 @@
             this.btnAnamnese = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnFecharPgm = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,7 +44,7 @@
             this.btnAnamnese.Location = new System.Drawing.Point(300, 141);
             this.btnAnamnese.Name = "btnAnamnese";
             this.btnAnamnese.Size = new System.Drawing.Size(122, 83);
-            this.btnAnamnese.TabIndex = 4;
+            this.btnAnamnese.TabIndex = 1;
             this.btnAnamnese.Text = "Anamnese";
             this.btnAnamnese.UseVisualStyleBackColor = true;
             this.btnAnamnese.Click += new System.EventHandler(this.btnAnamnese_Click);
@@ -59,7 +60,7 @@
             this.btnCancelar.Size = new System.Drawing.Size(25, 25);
             this.btnCancelar.TabIndex = 10;
             this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
             // 
             // pictureBox3
             // 
@@ -75,6 +76,23 @@
             this.pictureBox3.TabIndex = 35;
             this.pictureBox3.TabStop = false;
             // 
+            // btnFecharPgm
+            // 
+            this.btnFecharPgm.AutoSize = true;
+            this.btnFecharPgm.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFecharPgm.BackgroundImage")));
+            this.btnFecharPgm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFecharPgm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFecharPgm.FlatAppearance.BorderSize = 0;
+            this.btnFecharPgm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFecharPgm.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFecharPgm.ForeColor = System.Drawing.Color.DarkRed;
+            this.btnFecharPgm.Location = new System.Drawing.Point(624, 344);
+            this.btnFecharPgm.Name = "btnFecharPgm";
+            this.btnFecharPgm.Size = new System.Drawing.Size(107, 31);
+            this.btnFecharPgm.TabIndex = 36;
+            this.btnFecharPgm.UseVisualStyleBackColor = true;
+            this.btnFecharPgm.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // FrmMenu2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -82,6 +100,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(743, 387);
+            this.Controls.Add(this.btnFecharPgm);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAnamnese);
@@ -94,6 +113,7 @@
             this.Load += new System.EventHandler(this.FrmMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -101,5 +121,6 @@
         private System.Windows.Forms.Button btnAnamnese;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button btnFecharPgm;
     }
 }

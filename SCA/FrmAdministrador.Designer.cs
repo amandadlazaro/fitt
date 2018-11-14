@@ -34,13 +34,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.btnEditarAdministrador = new System.Windows.Forms.Button();
-            this.btnFecharTela = new System.Windows.Forms.Button();
-            this.btnVoltar = new System.Windows.Forms.Button();
             this.btnCadastrarAdministrador = new System.Windows.Forms.Button();
             this.grpAdministrador = new System.Windows.Forms.DataGridView();
-            this.txtID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnFecharForm = new System.Windows.Forms.Button();
+            this.btnVoltar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grpAdministrador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -63,6 +62,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(384, 20);
             this.txtEmail.TabIndex = 85;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // label1
             // 
@@ -99,34 +99,6 @@
             this.btnEditarAdministrador.Visible = false;
             this.btnEditarAdministrador.Click += new System.EventHandler(this.btnEditarAdministrador_Click);
             // 
-            // btnFecharTela
-            // 
-            this.btnFecharTela.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFecharTela.BackgroundImage")));
-            this.btnFecharTela.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnFecharTela.FlatAppearance.BorderSize = 0;
-            this.btnFecharTela.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFecharTela.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.btnFecharTela.Location = new System.Drawing.Point(692, 0);
-            this.btnFecharTela.Name = "btnFecharTela";
-            this.btnFecharTela.Size = new System.Drawing.Size(45, 36);
-            this.btnFecharTela.TabIndex = 92;
-            this.btnFecharTela.UseVisualStyleBackColor = true;
-            this.btnFecharTela.Click += new System.EventHandler(this.btnFecharTela_Click_1);
-            // 
-            // btnVoltar
-            // 
-            this.btnVoltar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVoltar.BackgroundImage")));
-            this.btnVoltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnVoltar.FlatAppearance.BorderSize = 0;
-            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoltar.Location = new System.Drawing.Point(649, 0);
-            this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(38, 36);
-            this.btnVoltar.TabIndex = 93;
-            this.btnVoltar.UseVisualStyleBackColor = true;
-            this.btnVoltar.Visible = false;
-            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click_1);
-            // 
             // btnCadastrarAdministrador
             // 
             this.btnCadastrarAdministrador.BackColor = System.Drawing.Color.Transparent;
@@ -145,29 +117,23 @@
             // 
             // grpAdministrador
             // 
+            this.grpAdministrador.AllowUserToAddRows = false;
+            this.grpAdministrador.AllowUserToDeleteRows = false;
             this.grpAdministrador.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.grpAdministrador.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grpAdministrador.Location = new System.Drawing.Point(0, 92);
             this.grpAdministrador.Name = "grpAdministrador";
+            this.grpAdministrador.ReadOnly = true;
             this.grpAdministrador.Size = new System.Drawing.Size(750, 203);
             this.grpAdministrador.TabIndex = 89;
             this.grpAdministrador.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpAdministrador_CellDoubleClick);
-            // 
-            // txtID
-            // 
-            this.txtID.Enabled = false;
-            this.txtID.Location = new System.Drawing.Point(304, 16);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(100, 20);
-            this.txtID.TabIndex = 96;
-            this.txtID.Visible = false;
             // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Agency FB", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DeepPink;
-            this.label2.Location = new System.Drawing.Point(20, 26);
+            this.label2.Location = new System.Drawing.Point(35, 30);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(174, 42);
@@ -189,18 +155,48 @@
             this.pictureBox3.TabIndex = 98;
             this.pictureBox3.TabStop = false;
             // 
+            // btnFecharForm
+            // 
+            this.btnFecharForm.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFecharForm.BackgroundImage")));
+            this.btnFecharForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFecharForm.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFecharForm.FlatAppearance.BorderSize = 0;
+            this.btnFecharForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFecharForm.Location = new System.Drawing.Point(713, 4);
+            this.btnFecharForm.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnFecharForm.Name = "btnFecharForm";
+            this.btnFecharForm.Size = new System.Drawing.Size(25, 25);
+            this.btnFecharForm.TabIndex = 99;
+            this.btnFecharForm.UseVisualStyleBackColor = true;
+            this.btnFecharForm.Click += new System.EventHandler(this.btnFecharTela_Click_1);
+            // 
+            // btnVoltar
+            // 
+            this.btnVoltar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVoltar.BackgroundImage")));
+            this.btnVoltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVoltar.FlatAppearance.BorderSize = 0;
+            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoltar.Location = new System.Drawing.Point(0, -2);
+            this.btnVoltar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(40, 38);
+            this.btnVoltar.TabIndex = 100;
+            this.btnVoltar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Visible = false;
+            // 
             // FrmAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(743, 387);
+            this.Controls.Add(this.btnVoltar);
+            this.Controls.Add(this.btnFecharForm);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtID);
             this.Controls.Add(this.btnCadastrarAdministrador);
-            this.Controls.Add(this.btnVoltar);
-            this.Controls.Add(this.btnFecharTela);
             this.Controls.Add(this.btnEditarAdministrador);
             this.Controls.Add(this.grpAdministrador);
             this.Controls.Add(this.label1);
@@ -226,12 +222,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Button btnEditarAdministrador;
-        private System.Windows.Forms.Button btnFecharTela;
-        private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnCadastrarAdministrador;
         private System.Windows.Forms.DataGridView grpAdministrador;
-        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button btnFecharForm;
+        private System.Windows.Forms.Button btnVoltar;
     }
 }

@@ -73,6 +73,9 @@ namespace FittSistema.View
 
         private void grpAnamnese_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (grpAnamnese.Rows.Count <= 0)
+                return;
+
             if (MessageBox.Show("Deseja Alterar esses dados?", "Alterar Anamnese", MessageBoxButtons.YesNo) == DialogResult.No)
             {
                 return;
@@ -85,11 +88,8 @@ namespace FittSistema.View
             limpaCampos();
             btnCadastrar.Hide();
 
-            txtMatricula.Text = grpAnamnese.CurrentRow.Cells["idMatricula"].Value.ToString();
-
-            IDs = txtMatricula.Text;
-
             #region Propriedades GRID
+            var mat = grpAnamnese.CurrentRow.Cells["idMatricula"].Value.ToString();
             var qp = grpAnamnese.CurrentRow.Cells["QP"].Value;
             var hm = grpAnamnese.CurrentRow.Cells["HM"].Value;
             var esp = grpAnamnese.CurrentRow.Cells["Esporte"].Value;
@@ -102,6 +102,9 @@ namespace FittSistema.View
             var pat = grpAnamnese.CurrentRow.Cells["Patologias"].Value;
             #endregion
 
+            txtMatricula.Text = mat == null ? "" : mat.ToString();
+            
+            IDs = txtMatricula.Text;
 
             grpAnamnese.DataSource = anamneseBLL.ProcurarAnamnese(int.Parse(IDs));
             if (grpAnamnese.Rows.Count > 0)
@@ -134,9 +137,7 @@ namespace FittSistema.View
             }
 
         }
-
-
-
+        
         private void btnExcluirAnamese_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Deseja Deletar esses dados?", "Deletar Anamnese", MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -175,6 +176,8 @@ namespace FittSistema.View
                 listarAlunos();
                 grpAluno.Hide();
                 btnCadastrar.Show();
+                label1.Text = "Anamneses";
+                btnVoltar.Hide();
             }
             else if (btnSalvar.Visible == true)
             {
@@ -182,10 +185,12 @@ namespace FittSistema.View
                 btnExcluirAnamnese.Hide();
                 grpAnamnese.Show();
                 btnCadastrar.Show();
+                btnVoltar.Hide();
             }
-            else if (btnCadastrar.Visible == true && grpAluno.Visible == false)
+            else if (btnCadastrar.Visible == true && grpAluno.Visible == false && grpAnamnese.Visible == false)
             {
                 btnCadastrar.Hide();
+                grpAluno.DataSource = alunoBLL.LerAlunos();
                 grpAluno.Show();
             }
 
@@ -285,7 +290,8 @@ namespace FittSistema.View
                 grpAluno.DataSource = aluno.ToList();
                 btnVoltar.Show();
                 btnCadastrar.Hide();
-
+                label1.Text = "Alunos";
+                MessageBox.Show("Selecione o Aluno em que deseja criar a Anamnese");
             }
             else
             {
@@ -316,6 +322,8 @@ namespace FittSistema.View
                     listarAlunos();
                     grpAnamnese.Show();
                     entrou = false;
+                    label1.Text = "Anamneses";
+                    btnVoltar.Hide();
                 }
                 catch (Exception ex)
                 {
@@ -353,7 +361,9 @@ namespace FittSistema.View
             btnVoltar.Show();
             btnCadastrar.Show();
             entrou = true;
-
+            txtBusca.Hide();
+            btnBuscarAnamnese.Hide();
+            label1.Text = "Dados da Anamnese";
         }
     }
 }

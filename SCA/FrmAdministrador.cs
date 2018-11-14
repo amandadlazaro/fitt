@@ -25,6 +25,8 @@ namespace FittSistema.View
         AdministradorBLL administradorBLL = new AdministradorBLL();
         AdministradorBLL.DadosAdministrador admdados = new AdministradorBLL.DadosAdministrador();
         Administrador adm = new Administrador();
+        int ID;
+        bool emailMudou = false;
 
         public bool testaSenha(string senha)
         {
@@ -34,6 +36,7 @@ namespace FittSistema.View
             if (dialogResult == DialogResult.OK)
             {
                 string pass = frmSenha.Password;
+                admdados.Senha = pass;
                 pass = Util.Util.criptografarSenha(pass);
 
                 if (pass == senha)
@@ -61,22 +64,30 @@ namespace FittSistema.View
                 }
                 else
                 {
-                    grpAdministrador.DataSource = administradorBLL.ProcurarEmail(txtEmail.Text.ToString());
-                    if (grpAdministrador.Rows.Count > 0)
+                    if (emailMudou)
                     {
-                        MessageBox.Show("Email já Cadastrado");
-                        return;
+                        grpAdministrador.DataSource = administradorBLL.ProcurarEmail(txtEmail.Text.ToString());
+                        if (grpAdministrador.Rows.Count > 0)
+                        {
+                            grpAdministrador.DataSource = administradorBLL.ProcurarEmailcomID(txtEmail.Text.ToString(), ID);
+                            if (!(grpAdministrador.Rows.Count > 0))
+                            {
+                                MessageBox.Show("Email já Cadastrado");
+                                return;
+                            }
+                        }
                     }
 
                     adm = new Administrador
                     {
-                        idAdm = int.Parse(txtID.Text),
+                        idAdm = ID,
                         email = txtEmail.Text,
                         senha = Util.Util.criptografarSenha(txtSenha.Text)
 
                     };
                     MessageBox.Show(administradorBLL.AlterarAdministrador(adm));
                     listarAdministrador();
+                    grpAdministrador.Columns.RemoveAt(0);
                     grpAdministrador.Show();
                     btnCadastrarAdministrador.Show();
                     btnVoltar.Hide();
@@ -153,7 +164,7 @@ namespace FittSistema.View
                     senha = Util.Util.criptografarSenha(txtSenha.Text)
 
                 };
-                MessageBox.Show(administradorBLL. AdicionarAdministrador(adm));
+                MessageBox.Show(administradorBLL.AdicionarAdministrador(adm));
                 listarAdministrador();
                 grpAdministrador.Columns.RemoveAt(0);
                 btnVoltar.Hide();
@@ -163,7 +174,14 @@ namespace FittSistema.View
 
         private void grpAdministrador_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (grpAdministrador.Rows.Count <= 0)
+                return;
+
             grpAdministrador.DataSource = administradorBLL.ProcurarEmailComSenha(grpAdministrador.CurrentRow.Cells["Email"].Value.ToString());
+
+
+            ID = int.Parse(grpAdministrador.CurrentRow.Cells["ID"].Value.ToString());
+            
 
             string senha = grpAdministrador.CurrentRow.Cells["Senha"].Value.ToString();
             grpAdministrador.Columns.RemoveAt(2);
@@ -182,10 +200,7 @@ namespace FittSistema.View
                 limpaCampos();
                 admdados.Email = grpAdministrador.CurrentRow.Cells["Email"].Value.ToString();
                 txtEmail.Text = admdados.Email;
-
-                listarAdministrador();
-                txtID.Text = grpAdministrador.CurrentRow.Cells["ID"].Value.ToString();
-                grpAdministrador.Columns.RemoveAt(0);
+                txtSenha.Text = admdados.Senha;
 
                 grpAdministrador.Hide();
                 btnCadastrarAdministrador.Hide();
@@ -211,6 +226,11 @@ namespace FittSistema.View
             menu.ShowDialog();
             this.Close();
 
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+            emailMudou = true;
         }
     }
 }

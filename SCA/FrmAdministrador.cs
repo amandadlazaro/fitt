@@ -195,7 +195,11 @@ namespace FittSistema.View
                 return;
             }
             else if (result == 3)
+            {
+                listarAdministrador();
+                grpAdministrador.Columns.RemoveAt(0);
                 return;
+            }
 
             if (grpAdministrador.Rows.Count > 0)
             {

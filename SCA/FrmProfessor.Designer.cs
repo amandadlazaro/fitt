@@ -115,6 +115,7 @@
             this.txtSenha.Size = new System.Drawing.Size(192, 25);
             this.txtSenha.TabIndex = 9;
             this.txtSenha.Enter += new System.EventHandler(this.txtSenha_Enter);
+            this.txtSenha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSenha_KeyPress);
             // 
             // txtEmail
             // 
@@ -374,7 +375,7 @@
             this.txtBusca.TabIndex = 1;
             this.txtBusca.Text = "Buscar por Professor";
             this.txtBusca.Enter += new System.EventHandler(this.txtBusca_Enter);
-            this.txtBusca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
+            this.txtBusca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBusca_KeyPress);
             this.txtBusca.Leave += new System.EventHandler(this.txtBusca_Leave);
             // 
             // FrmProfessor

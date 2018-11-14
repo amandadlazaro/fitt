@@ -308,6 +308,31 @@ namespace FittSistema.View
                 txtBusca.ForeColor = Color.Silver;
             }
         }
+
+        private void txtBusca_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                btnBuscar.PerformClick();
+            }
+            e.KeyChar = Util.FiltrarTeclas.letraMaiuscula(e.KeyChar);
+        }
+
+        private void txtSenha_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                if (btnCadastrarProfessor.Visible == true)
+                {
+                    btnCadastrarProfessor.PerformClick();
+                }
+
+                else if (btnEditarProfessor.Visible == true)
+                {
+                    btnEditarProfessor.PerformClick();
+                }
+            }
+        }
     }
 }
 

@@ -199,7 +199,10 @@
     <Content Include="Resources\183835017-170667a2.png" />
     <Content Include="Resources\add.jpg" />
     <Content Include="Resources\add1.jpg" />
+    <Content Include="Resources\baseline_account_box_black_48dp.png" />
+    <Content Include="Resources\baseline_search_black_18dp.png" />
     <Content Include="Resources\bg.png" />
+    <Content Include="Resources\cadeadd.png" />
     <Content Include="Resources\cancel.jpg" />
     <Content Include="Resources\cifrão.jpg" />
     <Content Include="Resources\cifrão3.jpg" />
@@ -208,8 +211,15 @@
     <Content Include="Resources\errado2.jpg" />
     <Content Include="Resources\fitt fundoOoo.png" />
     <Content Include="Resources\kisspng-check-mark-computer-icons-clip-art-green-tick-5abe6e2dae5689.4635117015224294857141.jpg" />
+    <Content Include="Resources\LOG OUT.png" />
+    <Content Include="Resources\login %281%29.png" />
+    <Content Include="Resources\login.png" />
     <Content Include="Resources\logo.JPG" />
     <Content Include="Resources\lupa.jpg" />
+    <Content Include="Resources\outline_cancel_black_18dp.png" />
+    <Content Include="Resources\outline_cancel_black_18dpdas.png" />
+    <Content Include="Resources\outline_cancel_black_18dpdasadasdasdasd.png" />
+    <Content Include="Resources\outline_cancel_black_18dpdasadasdasdasddasdasdasda.png" />
     <Content Include="Resources\round_keyboard_backspace_black_18dp.png" />
     <Content Include="Resources\suica-fitness-bola-D_NQ_NP_884311-MLB20526204570_122015-F.jpg" />
     <Content Include="Resources\user-2493635_960_720.png" />

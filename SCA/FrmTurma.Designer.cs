@@ -184,7 +184,7 @@
             this.tabSemanas.Controls.Add(this.tabQuarta);
             this.tabSemanas.Controls.Add(this.tabQuinta);
             this.tabSemanas.Controls.Add(this.tabSexta);
-            this.tabSemanas.Font = new System.Drawing.Font("Century Gothic", 11F);
+            this.tabSemanas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.tabSemanas.Location = new System.Drawing.Point(62, 88);
             this.tabSemanas.Name = "tabSemanas";
             this.tabSemanas.SelectedIndex = 0;
@@ -194,10 +194,10 @@
             // Segunda
             // 
             this.Segunda.Controls.Add(this.grpSegunda);
-            this.Segunda.Location = new System.Drawing.Point(4, 29);
+            this.Segunda.Location = new System.Drawing.Point(4, 22);
             this.Segunda.Name = "Segunda";
             this.Segunda.Padding = new System.Windows.Forms.Padding(3);
-            this.Segunda.Size = new System.Drawing.Size(621, 181);
+            this.Segunda.Size = new System.Drawing.Size(621, 188);
             this.Segunda.TabIndex = 0;
             this.Segunda.Text = "Segunda";
             this.Segunda.UseVisualStyleBackColor = true;
@@ -212,7 +212,7 @@
             this.grpSegunda.ReadOnly = true;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11F);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -225,10 +225,10 @@
             // tabTerca
             // 
             this.tabTerca.Controls.Add(this.grpTerca);
-            this.tabTerca.Location = new System.Drawing.Point(4, 29);
+            this.tabTerca.Location = new System.Drawing.Point(4, 22);
             this.tabTerca.Name = "tabTerca";
             this.tabTerca.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTerca.Size = new System.Drawing.Size(621, 181);
+            this.tabTerca.Size = new System.Drawing.Size(621, 188);
             this.tabTerca.TabIndex = 1;
             this.tabTerca.Text = "Terça";
             this.tabTerca.UseVisualStyleBackColor = true;
@@ -243,7 +243,7 @@
             this.grpTerca.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 11F);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -256,10 +256,10 @@
             // tabQuarta
             // 
             this.tabQuarta.Controls.Add(this.grpQuarta);
-            this.tabQuarta.Location = new System.Drawing.Point(4, 29);
+            this.tabQuarta.Location = new System.Drawing.Point(4, 22);
             this.tabQuarta.Name = "tabQuarta";
             this.tabQuarta.Padding = new System.Windows.Forms.Padding(3);
-            this.tabQuarta.Size = new System.Drawing.Size(621, 181);
+            this.tabQuarta.Size = new System.Drawing.Size(621, 188);
             this.tabQuarta.TabIndex = 2;
             this.tabQuarta.Text = "Quarta";
             this.tabQuarta.UseVisualStyleBackColor = true;
@@ -274,7 +274,7 @@
             this.grpQuarta.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 11F);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -305,7 +305,7 @@
             this.grpQuinta.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 11F);
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -336,7 +336,7 @@
             this.grpSexta.ReadOnly = true;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 11F);
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;

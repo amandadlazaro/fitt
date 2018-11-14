@@ -47,7 +47,6 @@ namespace FittSistema.View
         {
             grpAlunos.Show();
             btnCadastrar.Show();
-            btnVoltar.Hide();
             btnCadastrar.Hide();
             btnBuscar.Show();
             txtBusca.Show();

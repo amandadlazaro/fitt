@@ -173,6 +173,7 @@
             this.btnVoltar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Visible = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click_1);
             // 
             // btnCadastrarAdministrador
             // 
@@ -202,6 +203,7 @@
             this.btnExcluirAdm.Text = "Excluir";
             this.btnExcluirAdm.UseVisualStyleBackColor = false;
             this.btnExcluirAdm.Visible = false;
+            this.btnExcluirAdm.Click += new System.EventHandler(this.btnExcluirAdm_Click);
             // 
             // FrmAdministrador
             // 

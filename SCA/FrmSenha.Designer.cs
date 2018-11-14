@@ -75,7 +75,7 @@
             // btnSair
             // 
             this.btnSair.BackColor = System.Drawing.Color.White;
-            this.btnSair.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnSair.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnSair.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSair.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

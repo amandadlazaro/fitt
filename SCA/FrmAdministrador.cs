@@ -28,7 +28,7 @@ namespace FittSistema.View
         int ID;
         bool emailMudou = false;
 
-        public bool testaSenha(string senha)
+        public int testaSenha(string senha)
         {
             FrmSenha frmSenha = new FrmSenha();
             DialogResult dialogResult = frmSenha.ShowDialog(this);
@@ -40,12 +40,12 @@ namespace FittSistema.View
                 pass = Util.Util.criptografarSenha(pass);
 
                 if (pass == senha)
-                    return true;
+                    return 1;
                 else
-                    return false;
+                    return 2;
             }
             else
-                return false;
+                return 3;
         }
 
         private void FrmAdministrador_Load(object sender, EventArgs e)
@@ -92,6 +92,7 @@ namespace FittSistema.View
                     btnCadastrarAdministrador.Show();
                     btnVoltar.Hide();
                     btnEditarAdministrador.Hide();
+                    btnExcluirAdm.Hide();
                 }
             }
 
@@ -174,8 +175,6 @@ namespace FittSistema.View
 
         private void grpAdministrador_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (grpAdministrador.Rows.Count <= 0)
-                return;
 
             grpAdministrador.DataSource = administradorBLL.ProcurarEmailComSenha(grpAdministrador.CurrentRow.Cells["Email"].Value.ToString());
 
@@ -187,13 +186,16 @@ namespace FittSistema.View
             grpAdministrador.Columns.RemoveAt(2);
             grpAdministrador.Columns.RemoveAt(0);
 
-            if (!testaSenha(senha))
+            int result = testaSenha(senha);
+            if (result == 2)
             {
                 listarAdministrador();
                 grpAdministrador.Columns.RemoveAt(0);
                 MessageBox.Show("Senha incorreta");
                 return;
             }
+            else if (result == 3)
+                return;
 
             if (grpAdministrador.Rows.Count > 0)
             {
@@ -205,6 +207,7 @@ namespace FittSistema.View
                 grpAdministrador.Hide();
                 btnCadastrarAdministrador.Hide();
                 btnEditarAdministrador.Show();
+                btnExcluirAdm.Show();
                 btnVoltar.Show();
             }
         }
@@ -217,6 +220,7 @@ namespace FittSistema.View
             btnCadastrarAdministrador.Show();
             btnVoltar.Hide();
             btnEditarAdministrador.Hide();
+            btnExcluirAdm.Hide();
         }
 
         private void btnFecharTela_Click_1(object sender, EventArgs e)
@@ -236,6 +240,41 @@ namespace FittSistema.View
         private void txtSenha_KeyPress(object sender, KeyPressEventArgs e)
         {
 
+        }
+
+        private void btnExcluirAdm_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Deseja Deletar esses dados?", "Deletar Administrador", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                grpAdministrador.DataSource = administradorBLL.LerAdministrador();
+                if (grpAdministrador.Rows.Count == 1)
+                {
+                    MessageBox.Show("Não é possível excluir Administrador, pois só há um Administrador", "Erro ao deletar Administrador");
+                    return;
+                }
+                if (ValidaCampos() != "")
+                {
+                    MessageBox.Show(ValidaCampos(), "ERRO!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    adm = new Administrador
+                    {
+                        idAdm = ID,
+                        email = txtEmail.Text,
+                        senha = Util.Util.criptografarSenha(txtSenha.Text)
+                    };
+
+                    MessageBox.Show(administradorBLL.DeletarAdministrador(adm));
+                    listarAdministrador();
+                    grpAdministrador.Columns.RemoveAt(0);
+                    grpAdministrador.Show();
+                    btnCadastrarAdministrador.Show();
+                    btnVoltar.Hide();
+                    btnEditarAdministrador.Hide();
+                    btnExcluirAdm.Hide();
+                }
+            }
         }
     }
 }

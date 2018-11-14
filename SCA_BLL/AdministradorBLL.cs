@@ -125,6 +125,20 @@ namespace SCA_BLL
 
         }
 
-
+        public string DeletarAdministrador(Administrador adm)
+        {
+            try
+            {
+                var a = bd.Administrador.First(ad => ad.idAdm == adm.idAdm);
+                if (a == null) return null;
+                bd.Administrador.Remove(a);
+                bd.SaveChanges();
+                return "Administrador Deletado com Sucesso";
+            }
+            catch (Exception error)
+            {
+                return error.Message;
+            }
+        }
     }
 }

@@ -92,7 +92,7 @@
             this.btnFecharTela.Location = new System.Drawing.Point(713, 4);
             this.btnFecharTela.Name = "btnFecharTela";
             this.btnFecharTela.Size = new System.Drawing.Size(25, 25);
-            this.btnFecharTela.TabIndex = 25;
+            this.btnFecharTela.TabIndex = 253;
             this.btnFecharTela.UseVisualStyleBackColor = true;
             this.btnFecharTela.Click += new System.EventHandler(this.btnFecharTela_Click);
             // 
@@ -116,7 +116,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Agency FB", 18F);
             this.label1.ForeColor = System.Drawing.Color.DeepPink;
-            this.label1.Location = new System.Drawing.Point(34, 21);
+            this.label1.Location = new System.Drawing.Point(40, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 28);
             this.label1.TabIndex = 40;
@@ -229,7 +229,7 @@
             this.rbMensal.Location = new System.Drawing.Point(7, 0);
             this.rbMensal.Name = "rbMensal";
             this.rbMensal.Size = new System.Drawing.Size(68, 28);
-            this.rbMensal.TabIndex = 141;
+            this.rbMensal.TabIndex = 11;
             this.rbMensal.TabStop = true;
             this.rbMensal.Text = "Mensal";
             this.rbMensal.UseVisualStyleBackColor = true;
@@ -243,7 +243,7 @@
             this.rbTrimestral.Location = new System.Drawing.Point(7, 23);
             this.rbTrimestral.Name = "rbTrimestral";
             this.rbTrimestral.Size = new System.Drawing.Size(87, 28);
-            this.rbTrimestral.TabIndex = 143;
+            this.rbTrimestral.TabIndex = 12;
             this.rbTrimestral.Text = "Trimestral";
             this.rbTrimestral.UseVisualStyleBackColor = true;
             this.rbTrimestral.CheckedChanged += new System.EventHandler(this.Tipos_CheckedChanged);
@@ -256,7 +256,7 @@
             this.rbAnual.Location = new System.Drawing.Point(7, 73);
             this.rbAnual.Name = "rbAnual";
             this.rbAnual.Size = new System.Drawing.Size(59, 28);
-            this.rbAnual.TabIndex = 142;
+            this.rbAnual.TabIndex = 14;
             this.rbAnual.Text = "Anual";
             this.rbAnual.UseVisualStyleBackColor = true;
             this.rbAnual.CheckedChanged += new System.EventHandler(this.Tipos_CheckedChanged);
@@ -269,7 +269,7 @@
             this.rbSemestral.Location = new System.Drawing.Point(7, 49);
             this.rbSemestral.Name = "rbSemestral";
             this.rbSemestral.Size = new System.Drawing.Size(82, 28);
-            this.rbSemestral.TabIndex = 144;
+            this.rbSemestral.TabIndex = 13;
             this.rbSemestral.Text = "Semestal";
             this.rbSemestral.UseVisualStyleBackColor = true;
             this.rbSemestral.CheckedChanged += new System.EventHandler(this.Tipos_CheckedChanged);
@@ -306,7 +306,7 @@
             this.rbAula3.Location = new System.Drawing.Point(119, 3);
             this.rbAula3.Name = "rbAula3";
             this.rbAula3.Size = new System.Drawing.Size(36, 28);
-            this.rbAula3.TabIndex = 138;
+            this.rbAula3.TabIndex = 10;
             this.rbAula3.Text = "3";
             this.rbAula3.UseVisualStyleBackColor = true;
             this.rbAula3.CheckedChanged += new System.EventHandler(this.rbAula3_CheckedChanged);
@@ -319,7 +319,7 @@
             this.rbAula2.Location = new System.Drawing.Point(65, 3);
             this.rbAula2.Name = "rbAula2";
             this.rbAula2.Size = new System.Drawing.Size(36, 28);
-            this.rbAula2.TabIndex = 137;
+            this.rbAula2.TabIndex = 9;
             this.rbAula2.Text = "2";
             this.rbAula2.UseVisualStyleBackColor = true;
             this.rbAula2.CheckedChanged += new System.EventHandler(this.rbAula2_CheckedChanged);
@@ -333,7 +333,7 @@
             this.rbAula1.Location = new System.Drawing.Point(14, 3);
             this.rbAula1.Name = "rbAula1";
             this.rbAula1.Size = new System.Drawing.Size(31, 28);
-            this.rbAula1.TabIndex = 136;
+            this.rbAula1.TabIndex = 8;
             this.rbAula1.TabStop = true;
             this.rbAula1.Text = "1";
             this.rbAula1.UseVisualStyleBackColor = true;
@@ -372,7 +372,7 @@
             this.cmbSexo.Location = new System.Drawing.Point(236, 280);
             this.cmbSexo.Name = "cmbSexo";
             this.cmbSexo.Size = new System.Drawing.Size(108, 24);
-            this.cmbSexo.TabIndex = 135;
+            this.cmbSexo.TabIndex = 7;
             // 
             // lblAulas
             // 
@@ -441,7 +441,8 @@
             this.cmbTurma1.Location = new System.Drawing.Point(512, 228);
             this.cmbTurma1.Name = "cmbTurma1";
             this.cmbTurma1.Size = new System.Drawing.Size(100, 24);
-            this.cmbTurma1.TabIndex = 146;
+            this.cmbTurma1.TabIndex = 18;
+            this.cmbTurma1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbTurma1_KeyPress);
             // 
             // cmbSemana1
             // 
@@ -456,7 +457,7 @@
             this.cmbSemana1.Location = new System.Drawing.Point(399, 230);
             this.cmbSemana1.Name = "cmbSemana1";
             this.cmbSemana1.Size = new System.Drawing.Size(100, 24);
-            this.cmbSemana1.TabIndex = 145;
+            this.cmbSemana1.TabIndex = 17;
             this.cmbSemana1.SelectedIndexChanged += new System.EventHandler(this.cmbSemana1_SelectedIndexChanged);
             // 
             // cmbSemana2
@@ -473,7 +474,7 @@
             this.cmbSemana2.Location = new System.Drawing.Point(399, 257);
             this.cmbSemana2.Name = "cmbSemana2";
             this.cmbSemana2.Size = new System.Drawing.Size(100, 24);
-            this.cmbSemana2.TabIndex = 147;
+            this.cmbSemana2.TabIndex = 19;
             this.cmbSemana2.SelectedIndexChanged += new System.EventHandler(this.cmbSemana2_SelectedIndexChanged);
             // 
             // cmbTurma2
@@ -484,7 +485,8 @@
             this.cmbTurma2.Location = new System.Drawing.Point(512, 256);
             this.cmbTurma2.Name = "cmbTurma2";
             this.cmbTurma2.Size = new System.Drawing.Size(100, 24);
-            this.cmbTurma2.TabIndex = 148;
+            this.cmbTurma2.TabIndex = 20;
+            this.cmbTurma2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbTurma2_KeyPress);
             // 
             // cmbSemana3
             // 
@@ -500,7 +502,7 @@
             this.cmbSemana3.Location = new System.Drawing.Point(399, 284);
             this.cmbSemana3.Name = "cmbSemana3";
             this.cmbSemana3.Size = new System.Drawing.Size(100, 24);
-            this.cmbSemana3.TabIndex = 149;
+            this.cmbSemana3.TabIndex = 21;
             this.cmbSemana3.SelectedIndexChanged += new System.EventHandler(this.cmbSemana3_SelectedIndexChanged);
             // 
             // cmbTurma3
@@ -511,7 +513,8 @@
             this.cmbTurma3.Location = new System.Drawing.Point(512, 284);
             this.cmbTurma3.Name = "cmbTurma3";
             this.cmbTurma3.Size = new System.Drawing.Size(100, 24);
-            this.cmbTurma3.TabIndex = 150;
+            this.cmbTurma3.TabIndex = 22;
+            this.cmbTurma3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cmbTurma3_KeyPress);
             // 
             // txtNome
             // 
@@ -519,7 +522,7 @@
             this.txtNome.Location = new System.Drawing.Point(95, 80);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(251, 25);
-            this.txtNome.TabIndex = 129;
+            this.txtNome.TabIndex = 1;
             this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FiltrarLetraMaiuscula);
             // 
             // maskCel
@@ -529,16 +532,16 @@
             this.maskCel.Mask = "(99)0000-0000";
             this.maskCel.Name = "maskCel";
             this.maskCel.Size = new System.Drawing.Size(108, 25);
-            this.maskCel.TabIndex = 131;
+            this.maskCel.TabIndex = 3;
             this.maskCel.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(95, 180);
+            this.txtEmail.Location = new System.Drawing.Point(95, 179);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(251, 25);
-            this.txtEmail.TabIndex = 132;
+            this.txtEmail.TabIndex = 4;
             // 
             // maskCPF
             // 
@@ -547,7 +550,7 @@
             this.maskCPF.Mask = "999.999.999-99";
             this.maskCPF.Name = "maskCPF";
             this.maskCPF.Size = new System.Drawing.Size(115, 25);
-            this.maskCPF.TabIndex = 134;
+            this.maskCPF.TabIndex = 6;
             this.maskCPF.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // txtEndereco
@@ -556,7 +559,7 @@
             this.txtEndereco.Location = new System.Drawing.Point(95, 228);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(251, 25);
-            this.txtEndereco.TabIndex = 133;
+            this.txtEndereco.TabIndex = 5;
             // 
             // txtValorMensal
             // 
@@ -582,30 +585,30 @@
             // 
             // maskDataInicial
             // 
-            this.maskDataInicial.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.maskDataInicial.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maskDataInicial.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.maskDataInicial.Location = new System.Drawing.Point(474, 133);
             this.maskDataInicial.Name = "maskDataInicial";
-            this.maskDataInicial.Size = new System.Drawing.Size(100, 21);
-            this.maskDataInicial.TabIndex = 154;
+            this.maskDataInicial.Size = new System.Drawing.Size(100, 23);
+            this.maskDataInicial.TabIndex = 15;
             // 
             // maskDataFinal
             // 
-            this.maskDataFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.maskDataFinal.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maskDataFinal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.maskDataFinal.Location = new System.Drawing.Point(474, 166);
             this.maskDataFinal.Name = "maskDataFinal";
-            this.maskDataFinal.Size = new System.Drawing.Size(100, 21);
-            this.maskDataFinal.TabIndex = 155;
+            this.maskDataFinal.Size = new System.Drawing.Size(100, 23);
+            this.maskDataFinal.TabIndex = 16;
             // 
             // maskDataNasc
             // 
-            this.maskDataNasc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.maskDataNasc.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maskDataNasc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.maskDataNasc.Location = new System.Drawing.Point(95, 130);
             this.maskDataNasc.Name = "maskDataNasc";
-            this.maskDataNasc.Size = new System.Drawing.Size(100, 21);
-            this.maskDataNasc.TabIndex = 156;
+            this.maskDataNasc.Size = new System.Drawing.Size(100, 23);
+            this.maskDataNasc.TabIndex = 2;
             // 
             // cbStatus
             // 
@@ -632,7 +635,7 @@
             this.btnCadastrar.Location = new System.Drawing.Point(652, 350);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(80, 31);
-            this.btnCadastrar.TabIndex = 158;
+            this.btnCadastrar.TabIndex = 556;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
@@ -648,7 +651,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(566, 350);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(80, 31);
-            this.btnSalvar.TabIndex = 159;
+            this.btnSalvar.TabIndex = 555;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Visible = false;

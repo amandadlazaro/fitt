@@ -51,7 +51,7 @@
             this.btnAlunos.Location = new System.Drawing.Point(141, 80);
             this.btnAlunos.Name = "btnAlunos";
             this.btnAlunos.Size = new System.Drawing.Size(122, 83);
-            this.btnAlunos.TabIndex = 2;
+            this.btnAlunos.TabIndex = 1;
             this.btnAlunos.Text = "Alunos";
             this.btnAlunos.UseVisualStyleBackColor = false;
             this.btnAlunos.Click += new System.EventHandler(this.btnAlunosMatriculados_Click);
@@ -61,10 +61,10 @@
             this.btnTurma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTurma.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTurma.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnTurma.Location = new System.Drawing.Point(307, 80);
+            this.btnTurma.Location = new System.Drawing.Point(446, 80);
             this.btnTurma.Name = "btnTurma";
             this.btnTurma.Size = new System.Drawing.Size(122, 83);
-            this.btnTurma.TabIndex = 4;
+            this.btnTurma.TabIndex = 3;
             this.btnTurma.Text = "Turma";
             this.btnTurma.UseVisualStyleBackColor = true;
             this.btnTurma.Click += new System.EventHandler(this.btnTurma_Click);
@@ -74,10 +74,10 @@
             this.btnProfessor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProfessor.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProfessor.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnProfessor.Location = new System.Drawing.Point(307, 208);
+            this.btnProfessor.Location = new System.Drawing.Point(141, 198);
             this.btnProfessor.Name = "btnProfessor";
             this.btnProfessor.Size = new System.Drawing.Size(122, 83);
-            this.btnProfessor.TabIndex = 5;
+            this.btnProfessor.TabIndex = 4;
             this.btnProfessor.Text = "Professor";
             this.btnProfessor.UseVisualStyleBackColor = true;
             this.btnProfessor.Click += new System.EventHandler(this.btnProfessor_Click);
@@ -87,10 +87,10 @@
             this.btnPagamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPagamento.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPagamento.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnPagamento.Location = new System.Drawing.Point(465, 80);
+            this.btnPagamento.Location = new System.Drawing.Point(298, 198);
             this.btnPagamento.Name = "btnPagamento";
             this.btnPagamento.Size = new System.Drawing.Size(122, 83);
-            this.btnPagamento.TabIndex = 7;
+            this.btnPagamento.TabIndex = 5;
             this.btnPagamento.Text = "Pagamentos";
             this.btnPagamento.UseVisualStyleBackColor = true;
             this.btnPagamento.Click += new System.EventHandler(this.btnPagamento_Click);
@@ -131,7 +131,7 @@
             this.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdmin.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdmin.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnAdmin.Location = new System.Drawing.Point(141, 208);
+            this.btnAdmin.Location = new System.Drawing.Point(446, 198);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Size = new System.Drawing.Size(122, 83);
             this.btnAdmin.TabIndex = 6;
@@ -144,10 +144,10 @@
             this.btnAnamnese.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAnamnese.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnamnese.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnAnamnese.Location = new System.Drawing.Point(465, 208);
+            this.btnAnamnese.Location = new System.Drawing.Point(298, 80);
             this.btnAnamnese.Name = "btnAnamnese";
             this.btnAnamnese.Size = new System.Drawing.Size(122, 83);
-            this.btnAnamnese.TabIndex = 36;
+            this.btnAnamnese.TabIndex = 2;
             this.btnAnamnese.Text = "Anamnese";
             this.btnAnamnese.UseVisualStyleBackColor = true;
             this.btnAnamnese.Click += new System.EventHandler(this.btnAnamnese_Click);
@@ -165,6 +165,7 @@
             this.btnFecharTela.Size = new System.Drawing.Size(25, 25);
             this.btnFecharTela.TabIndex = 37;
             this.btnFecharTela.UseVisualStyleBackColor = true;
+            this.btnFecharTela.Click += new System.EventHandler(this.btnFecharTela_Click);
             // 
             // FrmMenu
             // 

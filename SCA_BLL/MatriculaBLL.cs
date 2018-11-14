@@ -75,6 +75,20 @@ namespace SCA_BLL
         {
             try
             {
+                var anamnese = bd.Anamnese.FirstOrDefault(a => a.idMatricula == matricula);
+                var pagamentos = bd.Boleto.FirstOrDefault(b => b.idMatricula == matricula);
+                if (anamnese != null && pagamentos != null)
+                {
+                    return "Esse aluno tem anamneses e pagamentos cadastrados em seu nome e não pode ser excluído.";
+                }
+                if (anamnese != null)
+                {
+                    return "Esse aluno tem anamneses cadastradas em seu nome e não pode ser excluído.";
+                }
+                if (pagamentos != null)
+                {
+                    return "Esse aluno tem pagamentos cadastrados em seu nome e não pode ser excluído.";
+                }
                 var t = bd.Matricula.First(tm => tm.idMatricula == matricula);
                 if (t == null) return null;
                 bd.Matricula.Remove(t);

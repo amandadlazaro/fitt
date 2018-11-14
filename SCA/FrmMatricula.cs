@@ -556,7 +556,6 @@ namespace FittSistema.View
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(AlunosMatriculadosBLL.CPF);
             DialogResult Confirmacao = MessageBox.Show("Voce quer mesmo excluir essa Matricula ?", "Excluir Matricula", MessageBoxButtons.YesNo);
             if (Confirmacao == DialogResult.No)
             {

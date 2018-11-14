@@ -40,6 +40,7 @@
             this.btnFecharForm = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnCadastrarAdministrador = new System.Windows.Forms.Button();
+            this.btnExcluirAdm = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grpAdministrador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -93,7 +94,7 @@
             this.btnEditarAdministrador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditarAdministrador.Font = new System.Drawing.Font("Agency FB", 14F);
             this.btnEditarAdministrador.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnEditarAdministrador.Location = new System.Drawing.Point(652, 350);
+            this.btnEditarAdministrador.Location = new System.Drawing.Point(566, 350);
             this.btnEditarAdministrador.Name = "btnEditarAdministrador";
             this.btnEditarAdministrador.Size = new System.Drawing.Size(80, 31);
             this.btnEditarAdministrador.TabIndex = 90;
@@ -187,12 +188,28 @@
             this.btnCadastrarAdministrador.UseVisualStyleBackColor = false;
             this.btnCadastrarAdministrador.Click += new System.EventHandler(this.btnCadastrarAdministrador_Click);
             // 
+            // btnExcluirAdm
+            // 
+            this.btnExcluirAdm.BackColor = System.Drawing.Color.DeepPink;
+            this.btnExcluirAdm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluirAdm.Font = new System.Drawing.Font("Agency FB", 14F);
+            this.btnExcluirAdm.ForeColor = System.Drawing.Color.White;
+            this.btnExcluirAdm.Location = new System.Drawing.Point(652, 350);
+            this.btnExcluirAdm.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnExcluirAdm.Name = "btnExcluirAdm";
+            this.btnExcluirAdm.Size = new System.Drawing.Size(80, 31);
+            this.btnExcluirAdm.TabIndex = 102;
+            this.btnExcluirAdm.Text = "Excluir";
+            this.btnExcluirAdm.UseVisualStyleBackColor = false;
+            this.btnExcluirAdm.Visible = false;
+            // 
             // FrmAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(743, 387);
+            this.Controls.Add(this.btnExcluirAdm);
             this.Controls.Add(this.btnCadastrarAdministrador);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnFecharForm);
@@ -229,5 +246,6 @@
         private System.Windows.Forms.Button btnFecharForm;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnCadastrarAdministrador;
+        private System.Windows.Forms.Button btnExcluirAdm;
     }
 }

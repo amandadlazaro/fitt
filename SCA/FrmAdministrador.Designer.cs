@@ -96,7 +96,7 @@
             this.btnEditarAdministrador.Location = new System.Drawing.Point(652, 350);
             this.btnEditarAdministrador.Name = "btnEditarAdministrador";
             this.btnEditarAdministrador.Size = new System.Drawing.Size(80, 31);
-            this.btnEditarAdministrador.TabIndex = 90;
+            this.btnEditarAdministrador.TabIndex = 4;
             this.btnEditarAdministrador.Text = "Salvar";
             this.btnEditarAdministrador.UseVisualStyleBackColor = false;
             this.btnEditarAdministrador.Visible = false;
@@ -153,7 +153,7 @@
             this.btnFecharForm.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnFecharForm.Name = "btnFecharForm";
             this.btnFecharForm.Size = new System.Drawing.Size(25, 25);
-            this.btnFecharForm.TabIndex = 99;
+            this.btnFecharForm.TabIndex = 6;
             this.btnFecharForm.UseVisualStyleBackColor = true;
             this.btnFecharForm.Click += new System.EventHandler(this.btnFecharTela_Click_1);
             // 
@@ -168,7 +168,7 @@
             this.btnVoltar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(40, 38);
-            this.btnVoltar.TabIndex = 100;
+            this.btnVoltar.TabIndex = 5;
             this.btnVoltar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Visible = false;
@@ -182,7 +182,7 @@
             this.btnCadastrarAdministrador.Location = new System.Drawing.Point(652, 350);
             this.btnCadastrarAdministrador.Name = "btnCadastrarAdministrador";
             this.btnCadastrarAdministrador.Size = new System.Drawing.Size(80, 31);
-            this.btnCadastrarAdministrador.TabIndex = 101;
+            this.btnCadastrarAdministrador.TabIndex = 3;
             this.btnCadastrarAdministrador.Text = "Cadastrar";
             this.btnCadastrarAdministrador.UseVisualStyleBackColor = false;
             this.btnCadastrarAdministrador.Click += new System.EventHandler(this.btnCadastrarAdministrador_Click);

@@ -236,7 +236,7 @@ namespace FittSistema.View
             if (!professor.Any()) MessageBox.Show("Nenhum aluno encontrado");
             else grpProfessores.DataSource = professor.ToList();
         }
-        
+
         private void grpProfessores_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -274,19 +274,21 @@ namespace FittSistema.View
             e.KeyChar = Util.FiltrarTeclas.letraMaiuscula(e.KeyChar);
         }
 
-        
+
         private void txtSenha_Enter(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Deseja alterar a senha?", "Alterar senha", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (txtSenha.Text != "")
             {
-                txtSenha.Text = "";
-                mudouSenha = true;
+                if (MessageBox.Show("Deseja alterar a senha?", "Alterar senha", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    txtSenha.Text = "";
+                    mudouSenha = true;
+                }
+                else
+                {
+                    txtCPF.Focus();
+                }
             }
-            else
-            {
-                txtCPF.Focus();
-            }
-
         }
 
         private void txtBusca_Enter(object sender, EventArgs e)

@@ -53,12 +53,24 @@ namespace FittSistema.View
         {
             if (grpAluno.Visible == false)
             {
+                if (txtBusca.Text.Trim() == "")
+                {
+                    listarAlunos();
+                    return;
+                }
+
                 var alunos = alunoBLL.LerAlunosPorNome(txtBusca.Text);
                 if (!alunos.Any()) MessageBox.Show("Nenhum aluno encontrado");
                 grpAnamnese.DataSource = alunos.ToList();
             }
             else
             {
+                if (txtBusca.Text.Trim() == "")
+                {
+                    grpAluno.DataSource = alunoBLL.LerAlunos();
+                    return;
+                }
+
                 var alunos = alunoBLL.LerAlunosPorNome(txtBusca.Text);
                 if (!alunos.Any()) MessageBox.Show("Nenhum aluno encontrado");
                 grpAluno.DataSource = alunos.ToList();
@@ -87,6 +99,8 @@ namespace FittSistema.View
             btnVoltar.Show();
             limpaCampos();
             btnCadastrar.Hide();
+            btnBuscarAnamnese.Hide();
+            txtBusca.Hide();
 
             #region Propriedades GRID
             var mat = grpAnamnese.CurrentRow.Cells["idMatricula"].Value.ToString();
@@ -105,37 +119,20 @@ namespace FittSistema.View
             txtMatricula.Text = mat == null ? "" : mat.ToString();
             
             IDs = txtMatricula.Text;
-
-            grpAnamnese.DataSource = anamneseBLL.ProcurarAnamnese(int.Parse(IDs));
-            if (grpAnamnese.Rows.Count > 0)
-            {
-                txtAnamnese.Text = grpAnamnese.CurrentRow.Cells["idAnamnese"].Value.ToString();
-                dtpDataAnamnese.Text = grpAnamnese.CurrentRow.Cells["DtAnamnese"].Value.ToString();
-                txtMatricula.Text = grpAnamnese.CurrentRow.Cells["idMatricula"].Value.ToString();
-                txtQP.Text = qp == null ? "" : qp.ToString();
-                txtHM.Text = hm == null ? "" : hm.ToString();
-                txtEsporte.Text = esp == null ? "" : esp.ToString();
-                txtPosicao.Text = pos == null ? "" :  pos.ToString();
-                txtHumor.Text = humor == null ? "" : humor.ToString();
-                txtDor.Text = dor == null ? "" : dor.ToString();
-                txtDescricao.Text = desc == null ?  "" : desc.ToString();
-                txtDiagnostico.Text = diag == null ? "" : diag.ToString();
-                txtMedicacao.Text = med == null ? "" : med.ToString();
-                txtPatologias.Text = pat == null ? "" : pat.ToString();
-            }
-            else
-            {
-                if (MessageBox.Show("Aluno não tem Anamnese Cadastrada. Deseja Cadastrar Nova Anamnese?", "Sem Cadastro de Anamnese", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                {
-                    btnCadastrar.PerformClick();
-                }
-                else
-                {
-                    return;
-                }
-
-            }
-
+            
+            txtAnamnese.Text = grpAnamnese.CurrentRow.Cells["idAnamnese"].Value.ToString();
+            dtpDataAnamnese.Text = grpAnamnese.CurrentRow.Cells["DtAnamnese"].Value.ToString();
+            txtMatricula.Text = grpAnamnese.CurrentRow.Cells["idMatricula"].Value.ToString();
+            txtQP.Text = qp == null ? "" : qp.ToString();
+            txtHM.Text = hm == null ? "" : hm.ToString();
+            txtEsporte.Text = esp == null ? "" : esp.ToString();
+            txtPosicao.Text = pos == null ? "" :  pos.ToString();
+            txtHumor.Text = humor == null ? "" : humor.ToString();
+            txtDor.Text = dor == null ? "" : dor.ToString();
+            txtDescricao.Text = desc == null ?  "" : desc.ToString();
+            txtDiagnostico.Text = diag == null ? "" : diag.ToString();
+            txtMedicacao.Text = med == null ? "" : med.ToString();
+            txtPatologias.Text = pat == null ? "" : pat.ToString();
         }
         
         private void btnExcluirAnamese_Click(object sender, EventArgs e)
@@ -186,12 +183,16 @@ namespace FittSistema.View
                 grpAnamnese.Show();
                 btnCadastrar.Show();
                 btnVoltar.Hide();
+                btnBuscarAnamnese.Show();
+                txtBusca.Show();
             }
             else if (btnCadastrar.Visible == true && grpAluno.Visible == false && grpAnamnese.Visible == false)
             {
                 btnCadastrar.Hide();
                 grpAluno.DataSource = alunoBLL.LerAlunos();
                 grpAluno.Show();
+                btnBuscarAnamnese.Show();
+                txtBusca.Show();
             }
 
 
@@ -277,6 +278,7 @@ namespace FittSistema.View
             {
                 btnBuscarAnamnese.PerformClick();
             }
+
             e.KeyChar = Util.FiltrarTeclas.letraMaiuscula(e.KeyChar);
         }
 
@@ -328,6 +330,8 @@ namespace FittSistema.View
                     entrou = false;
                     label1.Text = "Anamneses";
                     btnVoltar.Hide();
+                    btnBuscarAnamnese.Show();
+                    txtBusca.Show();
                 }
                 catch (Exception ex)
                 {
@@ -344,21 +348,10 @@ namespace FittSistema.View
             IDs = grpAluno.CurrentRow.Cells["CPF"].Value.ToString();
 
             grpAluno.DataSource = matriculaBLL.ProcurarMatricula(IDs);
-            AlunosMatriculadosBLL.idMatricula = Int32.Parse(grpAluno.CurrentRow.Cells["idMatricula"].Value.ToString());
+            AlunosMatriculadosBLL.idMatricula = int.Parse(grpAluno.CurrentRow.Cells["idMatricula"].Value.ToString());
             txtMatricula.Text = AlunosMatriculadosBLL.idMatricula.ToString();
 
             IDs = txtMatricula.Text;
-
-            grpAnamnese.DataSource = anamneseBLL.ProcurarAnamnese(int.Parse(IDs));
-            if (grpAnamnese.Rows.Count > 0)
-            {
-                MessageBox.Show("Anamnese de Aluno já Cadastrada");
-                grpAnamnese.Show();
-                grpAluno.Hide();
-                btnVoltar.Hide();
-                btnCadastrar.Show();
-                return;
-            }
 
             grpAnamnese.Hide();
             grpAluno.Hide();

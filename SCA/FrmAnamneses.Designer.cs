@@ -112,7 +112,7 @@
             this.btnFecharForm.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnFecharForm.Name = "btnFecharForm";
             this.btnFecharForm.Size = new System.Drawing.Size(25, 25);
-            this.btnFecharForm.TabIndex = 111;
+            this.btnFecharForm.TabIndex = 15;
             this.btnFecharForm.UseVisualStyleBackColor = true;
             this.btnFecharForm.Click += new System.EventHandler(this.btnFecharForm_Click);
             // 
@@ -141,7 +141,7 @@
             this.btnExcluirAnamnese.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnExcluirAnamnese.Name = "btnExcluirAnamnese";
             this.btnExcluirAnamnese.Size = new System.Drawing.Size(80, 31);
-            this.btnExcluirAnamnese.TabIndex = 38;
+            this.btnExcluirAnamnese.TabIndex = 14;
             this.btnExcluirAnamnese.Text = "Excluir";
             this.btnExcluirAnamnese.UseVisualStyleBackColor = false;
             this.btnExcluirAnamnese.Visible = false;
@@ -387,7 +387,7 @@
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(80, 31);
-            this.btnSalvar.TabIndex = 60;
+            this.btnSalvar.TabIndex = 12;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Visible = false;
@@ -404,7 +404,7 @@
             this.btnVoltar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(40, 38);
-            this.btnVoltar.TabIndex = 723;
+            this.btnVoltar.TabIndex = 14;
             this.btnVoltar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Visible = false;
@@ -469,7 +469,7 @@
             this.btnCadastrar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(80, 31);
-            this.btnCadastrar.TabIndex = 77;
+            this.btnCadastrar.TabIndex = 13;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);

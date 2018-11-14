@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAnamneses));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtBusca = new System.Windows.Forms.TextBox();
             this.btnBuscarAnamnese = new System.Windows.Forms.Button();
             this.btnFecharForm = new System.Windows.Forms.Button();
@@ -73,12 +73,12 @@
             // 
             // txtBusca
             // 
-            this.txtBusca.Font = new System.Drawing.Font("Bahnschrift Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBusca.Font = new System.Drawing.Font("Gadugi", 13F);
             this.txtBusca.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtBusca.Location = new System.Drawing.Point(196, 42);
             this.txtBusca.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtBusca.Name = "txtBusca";
-            this.txtBusca.Size = new System.Drawing.Size(401, 30);
+            this.txtBusca.Size = new System.Drawing.Size(401, 31);
             this.txtBusca.TabIndex = 1;
             this.txtBusca.Text = "Buscar por Aluno";
             this.txtBusca.Enter += new System.EventHandler(this.txtBusca_Enter);
@@ -97,7 +97,7 @@
             this.btnBuscarAnamnese.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnBuscarAnamnese.Name = "btnBuscarAnamnese";
             this.btnBuscarAnamnese.Size = new System.Drawing.Size(30, 30);
-            this.btnBuscarAnamnese.TabIndex = 2;
+            this.btnBuscarAnamnese.TabIndex = 333;
             this.btnBuscarAnamnese.UseVisualStyleBackColor = false;
             this.btnBuscarAnamnese.Click += new System.EventHandler(this.btnBuscarAnamnese_Click);
             // 
@@ -112,7 +112,7 @@
             this.btnFecharForm.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnFecharForm.Name = "btnFecharForm";
             this.btnFecharForm.Size = new System.Drawing.Size(25, 25);
-            this.btnFecharForm.TabIndex = 11;
+            this.btnFecharForm.TabIndex = 111;
             this.btnFecharForm.UseVisualStyleBackColor = true;
             this.btnFecharForm.Click += new System.EventHandler(this.btnFecharForm_Click);
             // 
@@ -175,11 +175,12 @@
             // 
             // txtQP
             // 
+            this.txtQP.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQP.Location = new System.Drawing.Point(164, 97);
             this.txtQP.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtQP.Name = "txtQP";
-            this.txtQP.Size = new System.Drawing.Size(528, 20);
-            this.txtQP.TabIndex = 41;
+            this.txtQP.Size = new System.Drawing.Size(528, 23);
+            this.txtQP.TabIndex = 2;
             // 
             // lblHM
             // 
@@ -195,11 +196,12 @@
             // 
             // txtHM
             // 
+            this.txtHM.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHM.Location = new System.Drawing.Point(203, 133);
             this.txtHM.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtHM.Name = "txtHM";
-            this.txtHM.Size = new System.Drawing.Size(489, 20);
-            this.txtHM.TabIndex = 43;
+            this.txtHM.Size = new System.Drawing.Size(489, 23);
+            this.txtHM.TabIndex = 3;
             // 
             // lblEsporte
             // 
@@ -207,7 +209,7 @@
             this.lblEsporte.BackColor = System.Drawing.Color.Transparent;
             this.lblEsporte.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEsporte.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.lblEsporte.Location = new System.Drawing.Point(54, 162);
+            this.lblEsporte.Location = new System.Drawing.Point(54, 164);
             this.lblEsporte.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEsporte.Name = "lblEsporte";
             this.lblEsporte.Size = new System.Drawing.Size(58, 25);
@@ -216,18 +218,19 @@
             // 
             // txtEsporte
             // 
+            this.txtEsporte.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEsporte.Location = new System.Drawing.Point(118, 167);
             this.txtEsporte.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtEsporte.Name = "txtEsporte";
-            this.txtEsporte.Size = new System.Drawing.Size(118, 20);
-            this.txtEsporte.TabIndex = 45;
+            this.txtEsporte.Size = new System.Drawing.Size(118, 23);
+            this.txtEsporte.TabIndex = 4;
             // 
             // lblPosicao
             // 
             this.lblPosicao.BackColor = System.Drawing.Color.Transparent;
             this.lblPosicao.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPosicao.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.lblPosicao.Location = new System.Drawing.Point(266, 162);
+            this.lblPosicao.Location = new System.Drawing.Point(266, 163);
             this.lblPosicao.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPosicao.Name = "lblPosicao";
             this.lblPosicao.Size = new System.Drawing.Size(126, 27);
@@ -236,11 +239,12 @@
             // 
             // txtPosicao
             // 
+            this.txtPosicao.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPosicao.Location = new System.Drawing.Point(388, 167);
             this.txtPosicao.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtPosicao.Name = "txtPosicao";
-            this.txtPosicao.Size = new System.Drawing.Size(304, 20);
-            this.txtPosicao.TabIndex = 47;
+            this.txtPosicao.Size = new System.Drawing.Size(304, 23);
+            this.txtPosicao.TabIndex = 5;
             // 
             // lblHumor
             // 
@@ -248,7 +252,7 @@
             this.lblHumor.BackColor = System.Drawing.Color.Transparent;
             this.lblHumor.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHumor.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.lblHumor.Location = new System.Drawing.Point(54, 262);
+            this.lblHumor.Location = new System.Drawing.Point(54, 264);
             this.lblHumor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHumor.Name = "lblHumor";
             this.lblHumor.Size = new System.Drawing.Size(52, 25);
@@ -257,11 +261,12 @@
             // 
             // txtHumor
             // 
+            this.txtHumor.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHumor.Location = new System.Drawing.Point(103, 267);
             this.txtHumor.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtHumor.Name = "txtHumor";
-            this.txtHumor.Size = new System.Drawing.Size(196, 20);
-            this.txtHumor.TabIndex = 49;
+            this.txtHumor.Size = new System.Drawing.Size(196, 23);
+            this.txtHumor.TabIndex = 10;
             // 
             // lblDor
             // 
@@ -269,7 +274,7 @@
             this.lblDor.BackColor = System.Drawing.Color.Transparent;
             this.lblDor.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDor.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.lblDor.Location = new System.Drawing.Point(54, 194);
+            this.lblDor.Location = new System.Drawing.Point(54, 197);
             this.lblDor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDor.Name = "lblDor";
             this.lblDor.Size = new System.Drawing.Size(34, 25);
@@ -278,18 +283,19 @@
             // 
             // txtDor
             // 
+            this.txtDor.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDor.Location = new System.Drawing.Point(94, 201);
             this.txtDor.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtDor.Name = "txtDor";
-            this.txtDor.Size = new System.Drawing.Size(142, 20);
-            this.txtDor.TabIndex = 51;
+            this.txtDor.Size = new System.Drawing.Size(142, 23);
+            this.txtDor.TabIndex = 6;
             // 
             // lblDescricao
             // 
             this.lblDescricao.BackColor = System.Drawing.Color.Transparent;
             this.lblDescricao.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescricao.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.lblDescricao.Location = new System.Drawing.Point(266, 196);
+            this.lblDescricao.Location = new System.Drawing.Point(266, 197);
             this.lblDescricao.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDescricao.Name = "lblDescricao";
             this.lblDescricao.Size = new System.Drawing.Size(116, 30);
@@ -298,18 +304,19 @@
             // 
             // txtDescricao
             // 
+            this.txtDescricao.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescricao.Location = new System.Drawing.Point(388, 201);
             this.txtDescricao.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(304, 20);
-            this.txtDescricao.TabIndex = 53;
+            this.txtDescricao.Size = new System.Drawing.Size(304, 23);
+            this.txtDescricao.TabIndex = 7;
             // 
             // lblDiagnostico
             // 
             this.lblDiagnostico.BackColor = System.Drawing.Color.Transparent;
             this.lblDiagnostico.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDiagnostico.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.lblDiagnostico.Location = new System.Drawing.Point(312, 227);
+            this.lblDiagnostico.Location = new System.Drawing.Point(312, 232);
             this.lblDiagnostico.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDiagnostico.Name = "lblDiagnostico";
             this.lblDiagnostico.Size = new System.Drawing.Size(151, 28);
@@ -318,11 +325,12 @@
             // 
             // txtDiagnostico
             // 
+            this.txtDiagnostico.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiagnostico.Location = new System.Drawing.Point(456, 234);
             this.txtDiagnostico.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtDiagnostico.Name = "txtDiagnostico";
-            this.txtDiagnostico.Size = new System.Drawing.Size(236, 20);
-            this.txtDiagnostico.TabIndex = 55;
+            this.txtDiagnostico.Size = new System.Drawing.Size(236, 23);
+            this.txtDiagnostico.TabIndex = 9;
             // 
             // lblMedicacao
             // 
@@ -330,7 +338,7 @@
             this.lblMedicacao.BackColor = System.Drawing.Color.Transparent;
             this.lblMedicacao.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMedicacao.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.lblMedicacao.Location = new System.Drawing.Point(54, 227);
+            this.lblMedicacao.Location = new System.Drawing.Point(54, 230);
             this.lblMedicacao.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMedicacao.Name = "lblMedicacao";
             this.lblMedicacao.Size = new System.Drawing.Size(74, 25);
@@ -339,11 +347,12 @@
             // 
             // txtMedicacao
             // 
+            this.txtMedicacao.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMedicacao.Location = new System.Drawing.Point(134, 232);
             this.txtMedicacao.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtMedicacao.Name = "txtMedicacao";
-            this.txtMedicacao.Size = new System.Drawing.Size(165, 20);
-            this.txtMedicacao.TabIndex = 57;
+            this.txtMedicacao.Size = new System.Drawing.Size(165, 23);
+            this.txtMedicacao.TabIndex = 8;
             // 
             // lblPatologias
             // 
@@ -351,7 +360,7 @@
             this.lblPatologias.BackColor = System.Drawing.Color.Transparent;
             this.lblPatologias.Font = new System.Drawing.Font("Agency FB", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPatologias.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.lblPatologias.Location = new System.Drawing.Point(312, 262);
+            this.lblPatologias.Location = new System.Drawing.Point(312, 264);
             this.lblPatologias.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPatologias.Name = "lblPatologias";
             this.lblPatologias.Size = new System.Drawing.Size(73, 25);
@@ -360,11 +369,13 @@
             // 
             // txtPatologias
             // 
+            this.txtPatologias.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPatologias.Location = new System.Drawing.Point(388, 267);
             this.txtPatologias.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtPatologias.Name = "txtPatologias";
-            this.txtPatologias.Size = new System.Drawing.Size(304, 20);
-            this.txtPatologias.TabIndex = 59;
+            this.txtPatologias.Size = new System.Drawing.Size(304, 23);
+            this.txtPatologias.TabIndex = 11;
+            this.txtPatologias.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPatologias_KeyPress);
             // 
             // btnSalvar
             // 
@@ -393,7 +404,7 @@
             this.btnVoltar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(40, 38);
-            this.btnVoltar.TabIndex = 72;
+            this.btnVoltar.TabIndex = 723;
             this.btnVoltar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Visible = false;
@@ -407,14 +418,14 @@
             this.grpAnamnese.Location = new System.Drawing.Point(0, 92);
             this.grpAnamnese.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.grpAnamnese.Name = "grpAnamnese";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grpAnamnese.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grpAnamnese.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grpAnamnese.Size = new System.Drawing.Size(750, 203);
             this.grpAnamnese.TabIndex = 71;
             this.grpAnamnese.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpAnamnese_CellDoubleClick);
@@ -425,7 +436,7 @@
             this.txtMatricula.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtMatricula.Name = "txtMatricula";
             this.txtMatricula.Size = new System.Drawing.Size(100, 20);
-            this.txtMatricula.TabIndex = 73;
+            this.txtMatricula.TabIndex = 736;
             this.txtMatricula.Visible = false;
             // 
             // txtAnamnese
@@ -434,7 +445,7 @@
             this.txtAnamnese.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtAnamnese.Name = "txtAnamnese";
             this.txtAnamnese.Size = new System.Drawing.Size(100, 20);
-            this.txtAnamnese.TabIndex = 74;
+            this.txtAnamnese.TabIndex = 745;
             this.txtAnamnese.Visible = false;
             // 
             // dtpDataAnamnese
@@ -469,27 +480,27 @@
             this.grpAluno.AllowUserToDeleteRows = false;
             this.grpAluno.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.grpAluno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 11F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grpAluno.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 11F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grpAluno.DefaultCellStyle = dataGridViewCellStyle2;
             this.grpAluno.GridColor = System.Drawing.Color.LightCoral;
             this.grpAluno.Location = new System.Drawing.Point(0, 92);
             this.grpAluno.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.grpAluno.Name = "grpAluno";
             this.grpAluno.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grpAluno.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grpAluno.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.grpAluno.Size = new System.Drawing.Size(750, 203);
             this.grpAluno.TabIndex = 78;
             this.grpAluno.Visible = false;

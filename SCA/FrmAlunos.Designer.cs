@@ -149,7 +149,7 @@
             this.txtBusca.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtBusca.Name = "txtBusca";
             this.txtBusca.Size = new System.Drawing.Size(401, 31);
-            this.txtBusca.TabIndex = 74;
+            this.txtBusca.TabIndex = 1;
             this.txtBusca.Text = "Buscar por Aluno";
             this.txtBusca.Enter += new System.EventHandler(this.txtBusca_Enter);
             this.txtBusca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBusca_KeyPress);

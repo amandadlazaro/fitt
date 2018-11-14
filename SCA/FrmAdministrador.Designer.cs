@@ -34,12 +34,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.btnEditarAdministrador = new System.Windows.Forms.Button();
-            this.btnCadastrarAdministrador = new System.Windows.Forms.Button();
             this.grpAdministrador = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnFecharForm = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
+            this.btnCadastrarAdministrador = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grpAdministrador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -48,72 +48,59 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Agency FB", 15F);
             this.label6.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(47, 150);
+            this.label6.Location = new System.Drawing.Point(116, 149);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 25);
+            this.label6.Size = new System.Drawing.Size(47, 24);
             this.label6.TabIndex = 86;
             this.label6.Text = "E-mail";
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(125, 156);
+            this.txtEmail.Font = new System.Drawing.Font("Gadugi", 9.75F);
+            this.txtEmail.Location = new System.Drawing.Point(169, 149);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(384, 20);
-            this.txtEmail.TabIndex = 85;
+            this.txtEmail.Size = new System.Drawing.Size(384, 25);
+            this.txtEmail.TabIndex = 1;
             this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Agency FB", 15F);
             this.label1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(47, 197);
+            this.label1.Location = new System.Drawing.Point(117, 198);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 25);
+            this.label1.Size = new System.Drawing.Size(46, 24);
             this.label1.TabIndex = 88;
             this.label1.Text = "Senha";
             // 
             // txtSenha
             // 
-            this.txtSenha.Location = new System.Drawing.Point(125, 203);
+            this.txtSenha.Font = new System.Drawing.Font("Gadugi", 9.75F);
+            this.txtSenha.Location = new System.Drawing.Point(169, 197);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
-            this.txtSenha.Size = new System.Drawing.Size(384, 20);
-            this.txtSenha.TabIndex = 87;
+            this.txtSenha.Size = new System.Drawing.Size(384, 25);
+            this.txtSenha.TabIndex = 2;
+            this.txtSenha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSenha_KeyPress);
             // 
             // btnEditarAdministrador
             // 
             this.btnEditarAdministrador.BackColor = System.Drawing.Color.Transparent;
             this.btnEditarAdministrador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditarAdministrador.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarAdministrador.Font = new System.Drawing.Font("Agency FB", 14F);
             this.btnEditarAdministrador.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnEditarAdministrador.Location = new System.Drawing.Point(612, 356);
+            this.btnEditarAdministrador.Location = new System.Drawing.Point(652, 350);
             this.btnEditarAdministrador.Name = "btnEditarAdministrador";
-            this.btnEditarAdministrador.Size = new System.Drawing.Size(119, 27);
+            this.btnEditarAdministrador.Size = new System.Drawing.Size(80, 31);
             this.btnEditarAdministrador.TabIndex = 90;
-            this.btnEditarAdministrador.Text = "Salvar alterações";
+            this.btnEditarAdministrador.Text = "Salvar";
             this.btnEditarAdministrador.UseVisualStyleBackColor = false;
             this.btnEditarAdministrador.Visible = false;
             this.btnEditarAdministrador.Click += new System.EventHandler(this.btnEditarAdministrador_Click);
-            // 
-            // btnCadastrarAdministrador
-            // 
-            this.btnCadastrarAdministrador.BackColor = System.Drawing.Color.Transparent;
-            this.btnCadastrarAdministrador.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCadastrarAdministrador.BackgroundImage")));
-            this.btnCadastrarAdministrador.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCadastrarAdministrador.FlatAppearance.BorderSize = 0;
-            this.btnCadastrarAdministrador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrarAdministrador.Font = new System.Drawing.Font("Agency FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrarAdministrador.ForeColor = System.Drawing.Color.DeepPink;
-            this.btnCadastrarAdministrador.Location = new System.Drawing.Point(649, 340);
-            this.btnCadastrarAdministrador.Name = "btnCadastrarAdministrador";
-            this.btnCadastrarAdministrador.Size = new System.Drawing.Size(56, 43);
-            this.btnCadastrarAdministrador.TabIndex = 95;
-            this.btnCadastrarAdministrador.UseVisualStyleBackColor = false;
-            this.btnCadastrarAdministrador.Click += new System.EventHandler(this.btnCadastrarAdministrador_Click);
             // 
             // grpAdministrador
             // 
@@ -133,7 +120,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Agency FB", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DeepPink;
-            this.label2.Location = new System.Drawing.Point(35, 30);
+            this.label2.Location = new System.Drawing.Point(43, 34);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(174, 42);
@@ -186,17 +173,31 @@
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Visible = false;
             // 
+            // btnCadastrarAdministrador
+            // 
+            this.btnCadastrarAdministrador.BackColor = System.Drawing.Color.Transparent;
+            this.btnCadastrarAdministrador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrarAdministrador.Font = new System.Drawing.Font("Agency FB", 14F);
+            this.btnCadastrarAdministrador.ForeColor = System.Drawing.Color.DeepPink;
+            this.btnCadastrarAdministrador.Location = new System.Drawing.Point(652, 350);
+            this.btnCadastrarAdministrador.Name = "btnCadastrarAdministrador";
+            this.btnCadastrarAdministrador.Size = new System.Drawing.Size(80, 31);
+            this.btnCadastrarAdministrador.TabIndex = 101;
+            this.btnCadastrarAdministrador.Text = "Cadastrar";
+            this.btnCadastrarAdministrador.UseVisualStyleBackColor = false;
+            this.btnCadastrarAdministrador.Click += new System.EventHandler(this.btnCadastrarAdministrador_Click);
+            // 
             // FrmAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(743, 387);
+            this.Controls.Add(this.btnCadastrarAdministrador);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnFecharForm);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnCadastrarAdministrador);
             this.Controls.Add(this.btnEditarAdministrador);
             this.Controls.Add(this.grpAdministrador);
             this.Controls.Add(this.label1);
@@ -222,11 +223,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Button btnEditarAdministrador;
-        private System.Windows.Forms.Button btnCadastrarAdministrador;
         private System.Windows.Forms.DataGridView grpAdministrador;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button btnFecharForm;
         private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.Button btnCadastrarAdministrador;
     }
 }

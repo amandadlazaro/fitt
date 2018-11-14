@@ -273,6 +273,10 @@ namespace FittSistema.View
 
         private void txtBusca_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if(e.KeyChar == 13)
+            {
+                btnBuscarAnamnese.PerformClick();
+            }
             e.KeyChar = Util.FiltrarTeclas.letraMaiuscula(e.KeyChar);
         }
 
@@ -364,6 +368,22 @@ namespace FittSistema.View
             txtBusca.Hide();
             btnBuscarAnamnese.Hide();
             label1.Text = "Dados da Anamnese";
+        }
+
+        private void txtPatologias_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                if (btnCadastrar.Visible == true)
+                {
+                btnCadastrar.PerformClick();
+                }
+
+                else if (btnSalvar.Visible == true)
+                {
+                btnSalvar.PerformClick();
+                }
+            }
         }
     }
 }

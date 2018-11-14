@@ -232,5 +232,10 @@ namespace FittSistema.View
         {
             emailMudou = true;
         }
+
+        private void txtSenha_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
     }
 }

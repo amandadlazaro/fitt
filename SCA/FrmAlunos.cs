@@ -179,6 +179,10 @@ namespace FittSistema.View
 
         private void txtBusca_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (e.KeyChar == 13)
+            {
+                btnBuscar.PerformClick();
+            }
             e.KeyChar = Util.FiltrarTeclas.letraMaiuscula(e.KeyChar);
         }
     }

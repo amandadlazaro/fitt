@@ -124,7 +124,7 @@
             // 
             // cmbForma
             // 
-            this.cmbForma.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbForma.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbForma.FormattingEnabled = true;
             this.cmbForma.Items.AddRange(new object[] {
             "Dinheiro",
@@ -132,16 +132,16 @@
             "Cartão de Crédito"});
             this.cmbForma.Location = new System.Drawing.Point(479, 162);
             this.cmbForma.Name = "cmbForma";
-            this.cmbForma.Size = new System.Drawing.Size(121, 27);
-            this.cmbForma.TabIndex = 43;
+            this.cmbForma.Size = new System.Drawing.Size(121, 24);
+            this.cmbForma.TabIndex = 4;
             // 
             // txtDesconto
             // 
-            this.txtDesconto.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDesconto.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDesconto.Location = new System.Drawing.Point(119, 226);
             this.txtDesconto.Name = "txtDesconto";
-            this.txtDesconto.Size = new System.Drawing.Size(62, 27);
-            this.txtDesconto.TabIndex = 44;
+            this.txtDesconto.Size = new System.Drawing.Size(62, 23);
+            this.txtDesconto.TabIndex = 5;
             this.txtDesconto.Text = "0";
             this.txtDesconto.TextChanged += new System.EventHandler(this.txtDesconto_TextChanged);
             this.txtDesconto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDesconto_KeyPress);
@@ -170,11 +170,11 @@
             // txtNome
             // 
             this.txtNome.Enabled = false;
-            this.txtNome.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(98, 107);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(387, 27);
-            this.txtNome.TabIndex = 75;
+            this.txtNome.Size = new System.Drawing.Size(387, 23);
+            this.txtNome.TabIndex = 1;
             this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
             // 
             // txtValorInicial
@@ -200,12 +200,12 @@
             // 
             // dtpDtPag
             // 
-            this.dtpDtPag.Font = new System.Drawing.Font("Malgun Gothic", 10F);
+            this.dtpDtPag.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDtPag.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDtPag.Location = new System.Drawing.Point(178, 161);
             this.dtpDtPag.Name = "dtpDtPag";
-            this.dtpDtPag.Size = new System.Drawing.Size(146, 25);
-            this.dtpDtPag.TabIndex = 157;
+            this.dtpDtPag.Size = new System.Drawing.Size(146, 23);
+            this.dtpDtPag.TabIndex = 3;
             // 
             // btnFecharTela
             // 
@@ -224,15 +224,15 @@
             // 
             // cmbStatus
             // 
-            this.cmbStatus.Font = new System.Drawing.Font("Bahnschrift Condensed", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbStatus.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbStatus.FormattingEnabled = true;
             this.cmbStatus.Items.AddRange(new object[] {
             "Pago",
             "Não Pago"});
             this.cmbStatus.Location = new System.Drawing.Point(557, 107);
             this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(121, 27);
-            this.cmbStatus.TabIndex = 163;
+            this.cmbStatus.Size = new System.Drawing.Size(121, 24);
+            this.cmbStatus.TabIndex = 2;
             // 
             // label5
             // 

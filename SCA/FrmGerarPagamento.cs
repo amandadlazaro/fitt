@@ -213,6 +213,19 @@ namespace FittSistema.View
 
         private void txtDesconto_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (e.KeyChar == 13)
+            {
+                if (btnRegistrar.Visible == true)
+                {
+                    btnRegistrar.PerformClick();
+                }
+
+                else if (btnSalvar.Visible == true)
+                {
+                    btnSalvar.PerformClick();
+                }
+            }
+                
             e.KeyChar = Util.FiltrarTeclas.numero(e.KeyChar, txtDesconto.Text);
         }
 

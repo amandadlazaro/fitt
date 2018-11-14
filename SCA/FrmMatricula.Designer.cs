@@ -155,7 +155,7 @@
             this.lblSexo.BackColor = System.Drawing.Color.Transparent;
             this.lblSexo.Font = new System.Drawing.Font("Agency FB", 15F);
             this.lblSexo.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.lblSexo.Location = new System.Drawing.Point(237, 251);
+            this.lblSexo.Location = new System.Drawing.Point(233, 254);
             this.lblSexo.Name = "lblSexo";
             this.lblSexo.Size = new System.Drawing.Size(38, 24);
             this.lblSexo.TabIndex = 98;
@@ -364,14 +364,14 @@
             // 
             // cmbSexo
             // 
-            this.cmbSexo.Font = new System.Drawing.Font("Bahnschrift Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSexo.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSexo.FormattingEnabled = true;
             this.cmbSexo.Items.AddRange(new object[] {
             "Feminino",
             "Masculino"});
-            this.cmbSexo.Location = new System.Drawing.Point(240, 277);
+            this.cmbSexo.Location = new System.Drawing.Point(236, 280);
             this.cmbSexo.Name = "cmbSexo";
-            this.cmbSexo.Size = new System.Drawing.Size(108, 22);
+            this.cmbSexo.Size = new System.Drawing.Size(108, 24);
             this.cmbSexo.TabIndex = 135;
             // 
             // lblAulas
@@ -436,16 +436,16 @@
             // 
             // cmbTurma1
             // 
-            this.cmbTurma1.Font = new System.Drawing.Font("Bahnschrift Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTurma1.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTurma1.FormattingEnabled = true;
             this.cmbTurma1.Location = new System.Drawing.Point(512, 228);
             this.cmbTurma1.Name = "cmbTurma1";
-            this.cmbTurma1.Size = new System.Drawing.Size(100, 22);
+            this.cmbTurma1.Size = new System.Drawing.Size(100, 24);
             this.cmbTurma1.TabIndex = 146;
             // 
             // cmbSemana1
             // 
-            this.cmbSemana1.Font = new System.Drawing.Font("Bahnschrift Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSemana1.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSemana1.FormattingEnabled = true;
             this.cmbSemana1.Items.AddRange(new object[] {
             "Segunda",
@@ -455,14 +455,14 @@
             "Sexta"});
             this.cmbSemana1.Location = new System.Drawing.Point(399, 230);
             this.cmbSemana1.Name = "cmbSemana1";
-            this.cmbSemana1.Size = new System.Drawing.Size(100, 22);
+            this.cmbSemana1.Size = new System.Drawing.Size(100, 24);
             this.cmbSemana1.TabIndex = 145;
             this.cmbSemana1.SelectedIndexChanged += new System.EventHandler(this.cmbSemana1_SelectedIndexChanged);
             // 
             // cmbSemana2
             // 
             this.cmbSemana2.Enabled = false;
-            this.cmbSemana2.Font = new System.Drawing.Font("Bahnschrift Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSemana2.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSemana2.FormattingEnabled = true;
             this.cmbSemana2.Items.AddRange(new object[] {
             "Segunda",
@@ -472,24 +472,24 @@
             "Sexta"});
             this.cmbSemana2.Location = new System.Drawing.Point(399, 257);
             this.cmbSemana2.Name = "cmbSemana2";
-            this.cmbSemana2.Size = new System.Drawing.Size(100, 22);
+            this.cmbSemana2.Size = new System.Drawing.Size(100, 24);
             this.cmbSemana2.TabIndex = 147;
             this.cmbSemana2.SelectedIndexChanged += new System.EventHandler(this.cmbSemana2_SelectedIndexChanged);
             // 
             // cmbTurma2
             // 
             this.cmbTurma2.Enabled = false;
-            this.cmbTurma2.Font = new System.Drawing.Font("Bahnschrift Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTurma2.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTurma2.FormattingEnabled = true;
             this.cmbTurma2.Location = new System.Drawing.Point(512, 256);
             this.cmbTurma2.Name = "cmbTurma2";
-            this.cmbTurma2.Size = new System.Drawing.Size(100, 22);
+            this.cmbTurma2.Size = new System.Drawing.Size(100, 24);
             this.cmbTurma2.TabIndex = 148;
             // 
             // cmbSemana3
             // 
             this.cmbSemana3.Enabled = false;
-            this.cmbSemana3.Font = new System.Drawing.Font("Bahnschrift Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSemana3.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSemana3.FormattingEnabled = true;
             this.cmbSemana3.Items.AddRange(new object[] {
             "Segunda",
@@ -499,63 +499,63 @@
             "Sexta"});
             this.cmbSemana3.Location = new System.Drawing.Point(399, 284);
             this.cmbSemana3.Name = "cmbSemana3";
-            this.cmbSemana3.Size = new System.Drawing.Size(100, 22);
+            this.cmbSemana3.Size = new System.Drawing.Size(100, 24);
             this.cmbSemana3.TabIndex = 149;
             this.cmbSemana3.SelectedIndexChanged += new System.EventHandler(this.cmbSemana3_SelectedIndexChanged);
             // 
             // cmbTurma3
             // 
             this.cmbTurma3.Enabled = false;
-            this.cmbTurma3.Font = new System.Drawing.Font("Bahnschrift Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTurma3.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTurma3.FormattingEnabled = true;
             this.cmbTurma3.Location = new System.Drawing.Point(512, 284);
             this.cmbTurma3.Name = "cmbTurma3";
-            this.cmbTurma3.Size = new System.Drawing.Size(100, 22);
+            this.cmbTurma3.Size = new System.Drawing.Size(100, 24);
             this.cmbTurma3.TabIndex = 150;
             // 
             // txtNome
             // 
-            this.txtNome.Font = new System.Drawing.Font("Bahnschrift Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(95, 80);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(251, 22);
+            this.txtNome.Size = new System.Drawing.Size(251, 25);
             this.txtNome.TabIndex = 129;
             this.txtNome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.FiltrarLetraMaiuscula);
             // 
             // maskCel
             // 
-            this.maskCel.Font = new System.Drawing.Font("Bahnschrift Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskCel.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maskCel.Location = new System.Drawing.Point(238, 131);
             this.maskCel.Mask = "(99)0000-0000";
             this.maskCel.Name = "maskCel";
-            this.maskCel.Size = new System.Drawing.Size(108, 22);
+            this.maskCel.Size = new System.Drawing.Size(108, 25);
             this.maskCel.TabIndex = 131;
             this.maskCel.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // txtEmail
             // 
-            this.txtEmail.Font = new System.Drawing.Font("Bahnschrift Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(95, 180);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(251, 22);
+            this.txtEmail.Size = new System.Drawing.Size(251, 25);
             this.txtEmail.TabIndex = 132;
             // 
             // maskCPF
             // 
-            this.maskCPF.Font = new System.Drawing.Font("Bahnschrift Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskCPF.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maskCPF.Location = new System.Drawing.Point(95, 279);
             this.maskCPF.Mask = "999.999.999-99";
             this.maskCPF.Name = "maskCPF";
-            this.maskCPF.Size = new System.Drawing.Size(115, 22);
+            this.maskCPF.Size = new System.Drawing.Size(115, 25);
             this.maskCPF.TabIndex = 134;
             this.maskCPF.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // txtEndereco
             // 
-            this.txtEndereco.Font = new System.Drawing.Font("Bahnschrift Condensed", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEndereco.Location = new System.Drawing.Point(95, 230);
+            this.txtEndereco.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEndereco.Location = new System.Drawing.Point(95, 228);
             this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(251, 22);
+            this.txtEndereco.Size = new System.Drawing.Size(251, 25);
             this.txtEndereco.TabIndex = 133;
             // 
             // txtValorMensal

@@ -3,6 +3,7 @@ using SCA_BLL;
 using System;
 using System.Globalization;
 using System.Linq;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace FittSistema.View
@@ -33,6 +34,7 @@ namespace FittSistema.View
                 txtBusca.Hide();
                 btnBuscar.Hide();
                 btnVoltar.Show();
+                txtNome.Focus();
                 limpaCampos();
             }
             else if (ValidaCampos() != "")
@@ -285,6 +287,24 @@ namespace FittSistema.View
                 txtCPF.Focus();
             }
 
+        }
+
+        private void txtBusca_Enter(object sender, EventArgs e)
+        {
+            if (txtBusca.Text == "Buscar por Professor")
+            {
+                txtBusca.Text = "";
+                txtBusca.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtBusca_Leave(object sender, EventArgs e)
+        {
+            if (txtBusca.Text == "")
+            {
+                txtBusca.Text = "Buscar por Professor";
+                txtBusca.ForeColor = Color.Silver;
+            }
         }
     }
 }

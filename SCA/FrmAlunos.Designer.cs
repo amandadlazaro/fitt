@@ -127,6 +127,7 @@
             // 
             // txtBusca
             // 
+            this.txtBusca.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBusca.Font = new System.Drawing.Font("Gadugi", 13F);
             this.txtBusca.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtBusca.Location = new System.Drawing.Point(196, 42);
@@ -134,7 +135,7 @@
             this.txtBusca.Name = "txtBusca";
             this.txtBusca.Size = new System.Drawing.Size(401, 31);
             this.txtBusca.TabIndex = 1;
-            this.txtBusca.Text = "Buscar por Aluno";
+            this.txtBusca.Text = "BUSCAR POR ALUNO";
             this.txtBusca.Enter += new System.EventHandler(this.txtBusca_Enter);
             this.txtBusca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBusca_KeyPress);
             this.txtBusca.Leave += new System.EventHandler(this.txtBusca_Leave);

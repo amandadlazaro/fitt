@@ -91,6 +91,7 @@
             // 
             // txtNome
             // 
+            this.txtNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNome.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(114, 107);
             this.txtNome.Name = "txtNome";
@@ -100,6 +101,7 @@
             // 
             // txtEnd
             // 
+            this.txtEnd.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEnd.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEnd.Location = new System.Drawing.Point(136, 150);
             this.txtEnd.Name = "txtEnd";
@@ -347,7 +349,7 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.grpProfessores.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.grpProfessores.Size = new System.Drawing.Size(750, 203);
+            this.grpProfessores.Size = new System.Drawing.Size(748, 203);
             this.grpProfessores.TabIndex = 77;
             this.grpProfessores.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpProfessores_CellDoubleClick);
             // 
@@ -367,13 +369,14 @@
             // 
             // txtBusca
             // 
+            this.txtBusca.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBusca.Font = new System.Drawing.Font("Gadugi", 13F);
             this.txtBusca.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtBusca.Location = new System.Drawing.Point(196, 42);
             this.txtBusca.Name = "txtBusca";
             this.txtBusca.Size = new System.Drawing.Size(401, 31);
             this.txtBusca.TabIndex = 1;
-            this.txtBusca.Text = "Buscar por Professor";
+            this.txtBusca.Text = "BUSCAR POR PROFESSOR";
             this.txtBusca.Enter += new System.EventHandler(this.txtBusca_Enter);
             this.txtBusca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBusca_KeyPress);
             this.txtBusca.Leave += new System.EventHandler(this.txtBusca_Leave);

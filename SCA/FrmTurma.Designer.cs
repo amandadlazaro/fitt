@@ -129,7 +129,7 @@
             // 
             // cmbProfessor
             // 
-            this.cmbProfessor.Font = new System.Drawing.Font("맑은 고딕", 12F);
+            this.cmbProfessor.Font = new System.Drawing.Font("Malgun Gothic", 12F);
             this.cmbProfessor.FormattingEnabled = true;
             this.cmbProfessor.Location = new System.Drawing.Point(211, 110);
             this.cmbProfessor.Name = "cmbProfessor";
@@ -161,7 +161,7 @@
             // 
             // cmbDiaSemana
             // 
-            this.cmbDiaSemana.Font = new System.Drawing.Font("맑은 고딕", 12F);
+            this.cmbDiaSemana.Font = new System.Drawing.Font("Malgun Gothic", 12F);
             this.cmbDiaSemana.FormattingEnabled = true;
             this.cmbDiaSemana.Location = new System.Drawing.Point(211, 163);
             this.cmbDiaSemana.Name = "cmbDiaSemana";
@@ -170,7 +170,7 @@
             // 
             // cmbHorario
             // 
-            this.cmbHorario.Font = new System.Drawing.Font("맑은 고딕", 12F);
+            this.cmbHorario.Font = new System.Drawing.Font("Malgun Gothic", 12F);
             this.cmbHorario.FormattingEnabled = true;
             this.cmbHorario.Location = new System.Drawing.Point(211, 217);
             this.cmbHorario.Name = "cmbHorario";
@@ -287,10 +287,10 @@
             // tabQuinta
             // 
             this.tabQuinta.Controls.Add(this.grpQuinta);
-            this.tabQuinta.Location = new System.Drawing.Point(4, 29);
+            this.tabQuinta.Location = new System.Drawing.Point(4, 22);
             this.tabQuinta.Name = "tabQuinta";
             this.tabQuinta.Padding = new System.Windows.Forms.Padding(3);
-            this.tabQuinta.Size = new System.Drawing.Size(621, 181);
+            this.tabQuinta.Size = new System.Drawing.Size(621, 188);
             this.tabQuinta.TabIndex = 3;
             this.tabQuinta.Text = "Quinta";
             this.tabQuinta.UseVisualStyleBackColor = true;
@@ -318,10 +318,10 @@
             // tabSexta
             // 
             this.tabSexta.Controls.Add(this.grpSexta);
-            this.tabSexta.Location = new System.Drawing.Point(4, 29);
+            this.tabSexta.Location = new System.Drawing.Point(4, 22);
             this.tabSexta.Name = "tabSexta";
             this.tabSexta.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSexta.Size = new System.Drawing.Size(621, 181);
+            this.tabSexta.Size = new System.Drawing.Size(621, 188);
             this.tabSexta.TabIndex = 4;
             this.tabSexta.Text = "Sexta";
             this.tabSexta.UseVisualStyleBackColor = true;

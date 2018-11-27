@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAnamneses));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtBusca = new System.Windows.Forms.TextBox();
             this.btnBuscarAnamnese = new System.Windows.Forms.Button();
             this.btnFecharForm = new System.Windows.Forms.Button();
@@ -73,6 +73,7 @@
             // 
             // txtBusca
             // 
+            this.txtBusca.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBusca.Font = new System.Drawing.Font("Gadugi", 13F);
             this.txtBusca.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtBusca.Location = new System.Drawing.Point(196, 42);
@@ -80,7 +81,7 @@
             this.txtBusca.Name = "txtBusca";
             this.txtBusca.Size = new System.Drawing.Size(401, 31);
             this.txtBusca.TabIndex = 1;
-            this.txtBusca.Text = "Buscar por Aluno";
+            this.txtBusca.Text = "BUSCAR POR ALUNO";
             this.txtBusca.Enter += new System.EventHandler(this.txtBusca_Enter);
             this.txtBusca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBusca_KeyPress);
             this.txtBusca.Leave += new System.EventHandler(this.txtBusca_Leave);
@@ -175,6 +176,7 @@
             // 
             // txtQP
             // 
+            this.txtQP.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtQP.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQP.Location = new System.Drawing.Point(164, 97);
             this.txtQP.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -196,6 +198,7 @@
             // 
             // txtHM
             // 
+            this.txtHM.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtHM.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHM.Location = new System.Drawing.Point(203, 133);
             this.txtHM.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -218,6 +221,7 @@
             // 
             // txtEsporte
             // 
+            this.txtEsporte.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEsporte.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEsporte.Location = new System.Drawing.Point(118, 167);
             this.txtEsporte.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -239,6 +243,7 @@
             // 
             // txtPosicao
             // 
+            this.txtPosicao.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPosicao.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPosicao.Location = new System.Drawing.Point(388, 167);
             this.txtPosicao.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -261,6 +266,7 @@
             // 
             // txtHumor
             // 
+            this.txtHumor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtHumor.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHumor.Location = new System.Drawing.Point(103, 267);
             this.txtHumor.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -283,6 +289,7 @@
             // 
             // txtDor
             // 
+            this.txtDor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDor.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDor.Location = new System.Drawing.Point(94, 201);
             this.txtDor.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -304,6 +311,7 @@
             // 
             // txtDescricao
             // 
+            this.txtDescricao.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDescricao.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescricao.Location = new System.Drawing.Point(388, 201);
             this.txtDescricao.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -325,6 +333,7 @@
             // 
             // txtDiagnostico
             // 
+            this.txtDiagnostico.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDiagnostico.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiagnostico.Location = new System.Drawing.Point(456, 234);
             this.txtDiagnostico.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -347,6 +356,7 @@
             // 
             // txtMedicacao
             // 
+            this.txtMedicacao.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMedicacao.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMedicacao.Location = new System.Drawing.Point(134, 232);
             this.txtMedicacao.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -369,6 +379,7 @@
             // 
             // txtPatologias
             // 
+            this.txtPatologias.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPatologias.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPatologias.Location = new System.Drawing.Point(388, 267);
             this.txtPatologias.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -418,15 +429,15 @@
             this.grpAnamnese.Location = new System.Drawing.Point(0, 92);
             this.grpAnamnese.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.grpAnamnese.Name = "grpAnamnese";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grpAnamnese.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.grpAnamnese.Size = new System.Drawing.Size(750, 203);
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grpAnamnese.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.grpAnamnese.Size = new System.Drawing.Size(745, 203);
             this.grpAnamnese.TabIndex = 71;
             this.grpAnamnese.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpAnamnese_CellDoubleClick);
             // 
@@ -480,28 +491,28 @@
             this.grpAluno.AllowUserToDeleteRows = false;
             this.grpAluno.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.grpAluno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 11F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grpAluno.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 11F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grpAluno.DefaultCellStyle = dataGridViewCellStyle2;
             this.grpAluno.GridColor = System.Drawing.Color.LightCoral;
             this.grpAluno.Location = new System.Drawing.Point(0, 92);
             this.grpAluno.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.grpAluno.Name = "grpAluno";
             this.grpAluno.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grpAluno.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.grpAluno.Size = new System.Drawing.Size(750, 203);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grpAluno.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.grpAluno.Size = new System.Drawing.Size(745, 203);
             this.grpAluno.TabIndex = 78;
             this.grpAluno.Visible = false;
             this.grpAluno.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grpAluno_CellDoubleClick);

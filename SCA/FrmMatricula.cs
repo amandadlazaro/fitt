@@ -154,6 +154,12 @@ namespace FittSistema.View
                 return false;
             }
 
+            if (!Util.Util.validarCPF(maskCPF.Text))
+            {
+                MessageBox.Show("CPF Inválido");
+                return false;
+            }
+
             if (!Util.Util.validarEmail(txtEmail.Text))
             {
                 MessageBox.Show("Email Inválido");
@@ -487,7 +493,13 @@ namespace FittSistema.View
             {
                 return;
             }
-            
+
+            if (alunoBLL.ExisteCPF(maskCPF.Text))
+            {
+                MessageBox.Show("Já existe um aluno com esse CPF");
+                return;
+            }
+
             try
             {
                 int? turmaDois = null;
@@ -534,8 +546,7 @@ namespace FittSistema.View
             var mensagemAluno = alunoBLL.AdicionarAluno(aluno);
             if (mensagemAluno != "Aluno Cadastrado com Sucesso")
             {
-                // MessageBox.Show(mensagemAluno);
-                MessageBox.Show("Já existe um aluno com esse CPF");
+                MessageBox.Show(mensagemAluno);
                 alunoBLL = new AlunoBLL();
                 return;
             }

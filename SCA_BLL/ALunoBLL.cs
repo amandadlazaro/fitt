@@ -162,6 +162,17 @@ namespace SCA_BLL
             return lista;
         }
 
+        public bool ExisteCPF(string cpf)
+        {
+            var procurarAluno = bd.Aluno.FirstOrDefault(a => a.CPF == cpf);
+            if (procurarAluno == null)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
         #endregion
     }
 }
